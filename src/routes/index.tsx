@@ -70,13 +70,14 @@ function Index() {
       <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
         {/* Avatar */}
         <div
-          className="animate-fade-in-up animate-pulse-glow rounded-full p-[3px]"
+          className="animate-fade-in-up animate-pulse-glow inline-flex rounded-full p-[3px]"
           style={{ background: "var(--gradient-brand)" }}
         >
           <img
             src={jorgeAvatar}
             alt="Jorge Junior"
-            className="h-24 w-24 rounded-full object-cover"
+            className="block h-28 w-28 rounded-full object-cover"
+            style={{ objectPosition: "50% 25%" }}
           />
         </div>
 
