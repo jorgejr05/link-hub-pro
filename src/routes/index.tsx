@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import jorgeAvatar from "@/assets/jorge-avatar.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -69,10 +70,14 @@ function Index() {
       <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
         {/* Avatar */}
         <div
-          className="animate-fade-in-up animate-pulse-glow flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold text-brand-foreground"
+          className="animate-fade-in-up animate-pulse-glow rounded-full p-[3px]"
           style={{ background: "var(--gradient-brand)" }}
         >
-          JJ
+          <img
+            src={jorgeAvatar}
+            alt="Jorge Junior"
+            className="h-24 w-24 rounded-full object-cover"
+          />
         </div>
 
         {/* Identidade */}
