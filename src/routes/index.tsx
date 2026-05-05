@@ -21,7 +21,6 @@ export const Route = createFileRoute("/")({
 });
 
 type LinkItem = {
-  emoji: string;
   title: string;
   subtitle?: string;
   href: string;
@@ -30,27 +29,23 @@ type LinkItem = {
 
 const links: LinkItem[] = [
   {
-    emoji: "🗂️",
     title: "Organize sua rotina com IA",
     subtitle: "Crie disciplina e consistência no seu dia",
     href: "#",
     variant: "primary",
   },
   {
-    emoji: "🎙️",
     title: "Melhore sua comunicação",
     subtitle: "Grave vídeos com confiança e clareza",
     href: "#",
     variant: "primary",
   },
   {
-    emoji: "📚",
     title: "Ver meus conteúdos",
     href: "#",
     variant: "ghost",
   },
   {
-    emoji: "✉️",
     title: "Falar comigo",
     href: "#",
     variant: "ghost",
@@ -60,7 +55,6 @@ const links: LinkItem[] = [
 function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden px-5 py-12 sm:py-16">
-      {/* ambient glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
@@ -68,7 +62,6 @@ function Index() {
       />
 
       <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
-        {/* Avatar */}
         <div
           className="animate-fade-in-up animate-pulse-glow inline-flex rounded-full p-[3px]"
           style={{ background: "var(--gradient-brand)" }}
@@ -81,7 +74,6 @@ function Index() {
           />
         </div>
 
-        {/* Identidade */}
         <h1
           className="animate-fade-in-up mt-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           style={{ animationDelay: "80ms" }}
@@ -96,7 +88,6 @@ function Index() {
           Criando Projetos de IA que me ajudam diariamente.
         </p>
 
-        {/* Links */}
         <div className="mt-10 flex w-full flex-col gap-4">
           {links.map((link, i) => (
             <a
@@ -121,8 +112,7 @@ function Index() {
                     : "rounded-[14px] px-5 py-4"
                 }
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{link.emoji}</span>
+                <div className="flex items-center">
                   <div className="flex-1 text-left">
                     <p className="text-sm font-semibold text-foreground sm:text-base">
                       {link.title}
@@ -139,7 +129,6 @@ function Index() {
           ))}
         </div>
 
-        {/* Footer */}
         <p
           className="animate-fade-in-up mt-12 text-center text-xs italic text-muted-foreground/80"
           style={{ animationDelay: "900ms" }}
