@@ -158,7 +158,6 @@
     background: var(--gradient-bg);
     min-height: 100vh;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    overflow: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
