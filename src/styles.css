@@ -145,11 +145,29 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
+  *::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  html,
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
   }
 }
 
@@ -158,12 +176,6 @@
     background: var(--gradient-bg);
     min-height: 100vh;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
   }
 }
 
