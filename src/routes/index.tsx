@@ -110,12 +110,12 @@ function Index() {
               <div
                 className={
                   link.variant === "primary"
-                    ? "rounded-[14px] bg-background/40 px-5 py-4 backdrop-blur-md transition-colors group-hover:bg-background/20"
-                    : "rounded-[14px] px-5 py-4"
+                    ? "rounded-[14px] bg-background/40 px-5 py-4 text-center backdrop-blur-md transition-colors group-hover:bg-background/20"
+                    : "rounded-[14px] px-5 py-4 text-center"
                 }
               >
-                <div className="flex items-center">
-                  <div className="flex-1 text-left">
+                <div className="flex items-center justify-center">
+                  <div className="text-center">
                     <p className="text-sm font-semibold text-foreground sm:text-base">
                       {link.title}
                     </p>
