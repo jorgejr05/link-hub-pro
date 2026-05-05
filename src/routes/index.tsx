@@ -90,13 +90,6 @@ function Index() {
         </h1>
 
         <p
-          className="animate-fade-in-up mt-3 max-w-xs text-center text-base text-muted-foreground"
-          style={{ animationDelay: "160ms" }}
-        >
-          Te ajudo a sair do zero e se posicionar na internet usando IA
-        </p>
-
-        <p
           className="animate-fade-in-up mt-2 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground/70"
           style={{ animationDelay: "240ms" }}
         >
