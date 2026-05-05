@@ -31,23 +31,23 @@ const links: LinkItem[] = [
   {
     title: "Organize sua rotina com IA",
     subtitle: "Crie disciplina e consistência no seu dia",
-    href: "#",
+    href: "https://ju-ai2026.vercel.app/",
     variant: "primary",
   },
   {
     title: "Melhore sua comunicação",
     subtitle: "Grave vídeos com confiança e clareza",
-    href: "#",
+    href: "https://gravaproai.vercel.app/dashboard",
     variant: "primary",
   },
   {
     title: "Ver meus conteúdos",
-    href: "#",
+    href: "https://www.tiktok.com/@jorgejr.ai?_r=1&_t=ZS-95QriY32Il7",
     variant: "ghost",
   },
   {
     title: "Falar comigo",
-    href: "#",
+    href: "https://wa.me/5518981697905",
     variant: "ghost",
   },
 ];
@@ -93,6 +93,8 @@ function Index() {
             <a
               key={link.title}
               href={link.href}
+              target="_blank"
+              rel="noreferrer"
               className={
                 link.variant === "primary"
                   ? "btn-link animate-fade-in-up group block rounded-2xl p-[1.5px]"
