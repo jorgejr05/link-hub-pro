@@ -86,7 +86,7 @@ function Index() {
           className="animate-fade-in-up mt-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           style={{ animationDelay: "80ms" }}
         >
-          Jorge Junior
+          Jorge Jr
         </h1>
 
         <p
