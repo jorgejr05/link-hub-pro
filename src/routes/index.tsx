@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { MessageCircleMore, Music2 } from "lucide-react";
 import jorgeAvatar from "@/assets/jorge-avatar.jpg";
 
 export const Route = createFileRoute("/")({
@@ -40,15 +41,18 @@ const links: LinkItem[] = [
     href: "https://gravaproai.vercel.app/dashboard",
     variant: "primary",
   },
+];
+
+const socialLinks = [
   {
     title: "Ver meus conteúdos",
     href: "https://www.tiktok.com/@jorgejr.ai?_r=1&_t=ZS-95QriY32Il7",
-    variant: "ghost",
+    icon: Music2,
   },
   {
     title: "Falar comigo",
     href: "https://wa.me/5518981697905",
-    variant: "ghost",
+    icon: MessageCircleMore,
   },
 ];
 
@@ -88,47 +92,55 @@ function Index() {
           Criando Projetos de IA que me ajudam diariamente.
         </p>
 
-        <div className="mt-10 flex w-full flex-col gap-4">
+        <div className="animate-fade-in-up mt-8 w-full" style={{ animationDelay: "300ms" }}>
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground/80">
+            Projetos
+          </p>
+        </div>
+
+        <div className="mt-6 flex w-full flex-col gap-4">
           {links.map((link, i) => (
             <a
               key={link.title}
               href={link.href}
               target="_blank"
               rel="noreferrer"
-              className={
-                link.variant === "primary"
-                  ? "btn-link animate-fade-in-up group block rounded-2xl p-[1.5px]"
-                  : "btn-link animate-fade-in-up group block rounded-2xl border border-border bg-card backdrop-blur-md"
-              }
+              className="btn-link animate-fade-in-up group block rounded-2xl p-[1.5px]"
               style={{
                 animationDelay: `${320 + i * 90}ms`,
-                ...(link.variant === "primary"
-                  ? { background: "var(--gradient-brand)" }
-                  : {}),
+                background: "var(--gradient-brand)",
               }}
             >
-              <div
-                className={
-                  link.variant === "primary"
-                    ? "rounded-[14px] bg-background/40 px-5 py-4 text-center backdrop-blur-md transition-colors group-hover:bg-background/20"
-                    : "rounded-[14px] px-5 py-4 text-center"
-                }
-              >
-                <div className="flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="text-sm font-semibold text-foreground sm:text-base">
-                      {link.title}
-                    </p>
-                    {link.subtitle && (
-                      <p className="mt-0.5 text-xs text-muted-foreground">
-                        {link.subtitle}
-                      </p>
-                    )}
-                  </div>
-                </div>
+              <div className="rounded-[14px] bg-background/40 px-5 py-4 text-center backdrop-blur-md transition-colors group-hover:bg-background/20">
+                <p className="text-sm font-semibold text-foreground sm:text-base">
+                  {link.title}
+                </p>
+                {link.subtitle && (
+                  <p className="mt-0.5 text-xs text-muted-foreground">{link.subtitle}</p>
+                )}
               </div>
             </a>
           ))}
+
+          {socialLinks.map((link, i) => {
+            const Icon = link.icon;
+
+            return (
+              <a
+                key={link.title}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-link animate-fade-in-up group flex items-center justify-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 text-center backdrop-blur-md transition-colors hover:bg-accent"
+                style={{ animationDelay: `${500 + i * 90}ms` }}
+              >
+                <Icon className="h-5 w-5 text-foreground" aria-hidden="true" />
+                <span className="text-sm font-semibold text-foreground sm:text-base">
+                  {link.title}
+                </span>
+              </a>
+            );
+          })}
         </div>
 
         <p
