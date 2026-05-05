@@ -93,7 +93,7 @@ function Index() {
           className="animate-fade-in-up mt-2 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground/70"
           style={{ animationDelay: "240ms" }}
         >
-          Organização • Comunicação • Consistência
+          Criando Projetos de IA que me ajudam diariamente.
         </p>
 
         {/* Links */}
