@@ -30,27 +30,27 @@ type LinkItem = {
 
 const links: LinkItem[] = [
   {
-    emoji: "🧠",
+    emoji: "🗂️",
     title: "Organize sua rotina com IA",
     subtitle: "Crie disciplina e consistência no seu dia",
     href: "#",
     variant: "primary",
   },
   {
-    emoji: "🎥",
+    emoji: "🎙️",
     title: "Melhore sua comunicação",
     subtitle: "Grave vídeos com confiança e clareza",
     href: "#",
     variant: "primary",
   },
   {
-    emoji: "🎬",
+    emoji: "📚",
     title: "Ver meus conteúdos",
     href: "#",
     variant: "ghost",
   },
   {
-    emoji: "💬",
+    emoji: "✉️",
     title: "Falar comigo",
     href: "#",
     variant: "ghost",
