@@ -135,7 +135,7 @@ function Index() {
           className="animate-fade-in-up mt-12 text-center text-xs italic text-muted-foreground/80"
           style={{ animationDelay: "900ms" }}
         >
-          Consistência constrói. Comunicação escala.
+          A mente que se expande, jamais voltará ao seu estado original.
         </p>
       </div>
     </main>
