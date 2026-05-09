@@ -38,7 +38,7 @@ const links: LinkItem[] = [
   {
     title: "Melhore sua comunicação",
     subtitle: "Grave vídeos com confiança e clareza",
-    href: "https://gravaproai.vercel.app/dashboard",
+    href: "https://gravaproai.vercel.app/",
     variant: "primary",
   },
 ];
