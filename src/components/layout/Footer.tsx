@@ -40,7 +40,7 @@ export function Footer() {
           </a>
         </nav>
         <p className="font-body-md text-body-md text-outline-variant text-center">
-          © 2024 JORGE JR. HUB DE AUTORIDADE. TODOS OS DIREITOS RESERVADOS.
+          © 2026 Jorge Jr. - Todos os Direitos Reservados.
         </p>
       </div>
     </motion.footer>
