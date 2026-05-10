@@ -12,7 +12,7 @@ export function BottomNavBar() {
       <div className="flex justify-around items-center p-2">
         <Link
           to="/"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary w-16 h-14 [&.active]:bg-primary-container/20 [&.active]:text-primary [&.active]:rounded-full"
+          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 [&.active]:bg-primary-container/10 [&.active]:text-primary-container [&.active]:rounded-full transition-colors"
         >
           <span className="material-symbols-outlined mb-1" data-icon="home">
             home
@@ -23,7 +23,7 @@ export function BottomNavBar() {
         </Link>
         <Link
           to="/blog"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary w-16 h-14 [&.active]:bg-primary-container/20 [&.active]:text-primary [&.active]:rounded-full"
+          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 [&.active]:bg-primary-container/10 [&.active]:text-primary-container [&.active]:rounded-full transition-colors"
         >
           <span className="material-symbols-outlined mb-1" data-icon="article">
             article
@@ -34,7 +34,7 @@ export function BottomNavBar() {
         </Link>
         <a
           href="#"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary w-16 h-14"
+          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 transition-colors"
         >
           <span className="material-symbols-outlined mb-1" data-icon="rocket_launch">
             rocket_launch
@@ -47,7 +47,7 @@ export function BottomNavBar() {
           href="https://www.tiktok.com/@jorgejr.ai"
           target="_blank"
           rel="noreferrer"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-secondary w-16 h-14"
+          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 transition-colors"
         >
           <span className="material-symbols-outlined mb-1" data-icon="dynamic_feed">
             dynamic_feed

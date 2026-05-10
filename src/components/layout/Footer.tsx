@@ -13,33 +13,33 @@ export function Footer() {
         <h2 className="font-headline-md text-headline-md text-primary tracking-widest uppercase mb-4">
           Jorge Jr.
         </h2>
-        <nav className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8">
+        <nav className="flex flex-wrap justify-center gap-6 md:gap-12 mb-8 font-label-caps text-label-caps uppercase tracking-widest">
           <a
-            className="font-body-md text-body-md text-outline hover:text-secondary underline decoration-secondary/30 underline-offset-4 transition-all duration-300"
+            className="text-outline hover:text-primary transition-colors duration-300"
             href="#"
           >
             Manifesto
           </a>
           <a
-            className="font-body-md text-body-md text-outline hover:text-secondary underline decoration-secondary/30 underline-offset-4 transition-all duration-300"
+            className="text-outline hover:text-primary transition-colors duration-300"
             href="#"
           >
             Privacidade
           </a>
           <a
-            className="font-body-md text-body-md text-outline hover:text-secondary underline decoration-secondary/30 underline-offset-4 transition-all duration-300"
+            className="text-outline hover:text-primary transition-colors duration-300"
             href="#"
           >
             Termos de Uso
           </a>
           <a
-            className="font-body-md text-body-md text-outline hover:text-secondary underline decoration-secondary/30 underline-offset-4 transition-all duration-300"
+            className="text-outline hover:text-primary transition-colors duration-300"
             href="#"
           >
             Contato
           </a>
         </nav>
-        <p className="font-body-md text-body-md text-outline-variant text-center">
+        <p className="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant text-center opacity-60">
           © 2026 Jorge Jr. - Todos os Direitos Reservados.
         </p>
       </div>
