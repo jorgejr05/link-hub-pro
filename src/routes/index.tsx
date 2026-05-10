@@ -1,155 +1,166 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircleMore, Music2 } from "lucide-react";
+import { MessageCircleMore, Music2, Brain, Video, ArrowUpRight, Sparkles } from "lucide-react";
 import jorgeAvatar from "@/assets/jorge-avatar.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Jorge Junior — Organização, Comunicação e IA" },
+      { title: "Jorge Junior — IA, Performance e Consistência" },
       {
         name: "description",
         content:
-          "Te ajudo a sair do zero e se posicionar na internet usando IA. Organização, comunicação e consistência.",
+          "Estrategista de IA focado em transformar caos em rotinas de alto desempenho e comunicação de escala.",
       },
-      { property: "og:title", content: "Jorge Junior" },
-      {
-        property: "og:description",
-        content: "Consistência constrói. Comunicação escala.",
-      },
+      { property: "og:title", content: "Jorge Junior | IA & Performance" },
     ],
   }),
 });
 
-type LinkItem = {
-  title: string;
-  subtitle?: string;
-  href: string;
-  variant: "primary" | "ghost";
-};
-
-const links: LinkItem[] = [
-  {
-    title: "Organize sua rotina com IA",
-    subtitle: "Crie disciplina e consistência no seu dia",
-    href: "https://ju-ai2026.vercel.app/",
-    variant: "primary",
-  },
-  {
-    title: "Melhore sua comunicação",
-    subtitle: "Grave vídeos com confiança e clareza",
-    href: "https://gravaproai.vercel.app/",
-    variant: "primary",
-  },
-];
-
-const socialLinks = [
-  {
-    title: "Ver meus conteúdos",
-    href: "https://www.tiktok.com/@jorgejr.ai?_r=1&_t=ZS-95QriY32Il7",
-    icon: Music2,
-  },
-  {
-    title: "Falar comigo",
-    href: "https://wa.me/5518981697905",
-    icon: MessageCircleMore,
-  },
-];
-
 function Index() {
-  return (
-    <main className="relative min-h-screen overflow-hidden px-5 py-12 sm:py-16">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-        style={{ background: "var(--gradient-brand)" }}
-      />
+  const projects = [
+    {
+      title: "Ju AI",
+      tag: "Mente & Rotina",
+      description: "A assistente de IA mais humanizada do mundo. Gerencie sua mente, rotina e finanças por voz.",
+      href: "https://ju-ai2026.vercel.app/",
+      icon: Brain,
+      color: "from-violet-500/20 to-purple-500/20",
+    },
+    {
+      title: "GravaPro AI",
+      tag: "Comunicação",
+      description: "Destrave sua comunicação em vídeo. Tenha clareza, confiança e estrutura guiada por IA.",
+      href: "https://gravaproai.vercel.app/",
+      icon: Video,
+      color: "from-blue-500/20 to-indigo-500/20",
+    },
+  ];
 
-      <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
-        <div
-          className="animate-fade-in-up animate-pulse-glow inline-flex rounded-full p-[3px]"
-          style={{ background: "var(--gradient-brand)" }}
-        >
+  const socials = [
+    {
+      title: "TikTok — Build in Public",
+      subtitle: "Acompanhe a construção dos projetos",
+      href: "https://www.tiktok.com/@jorgejr.ai",
+      icon: Music2,
+    },
+    {
+      title: "WhatsApp — Networking",
+      subtitle: "Fale diretamente comigo",
+      href: "https://wa.me/5518981697905",
+      icon: MessageCircleMore,
+    },
+  ];
+
+  return (
+    <div className="mx-auto min-h-screen max-w-2xl px-6 py-16 sm:py-24">
+      {/* Header Section */}
+      <header className="flex flex-col items-center text-center">
+        <div className="glow-avatar">
           <img
             src={jorgeAvatar}
             alt="Jorge Junior"
-            className="block h-28 w-28 rounded-full object-cover"
+            className="h-32 w-32 rounded-full border-2 border-background object-cover"
             style={{ objectPosition: "50% 25%" }}
           />
         </div>
-
-        <h1
-          className="animate-fade-in-up mt-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
-          style={{ animationDelay: "80ms" }}
-        >
-          Jorge Jr
-        </h1>
-
-        <p
-          className="animate-fade-in-up mt-2 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground/70"
-          style={{ animationDelay: "240ms" }}
-        >
-          Criando Projetos de IA que me ajudam diariamente.
-        </p>
-
-        <div className="animate-fade-in-up mt-8 w-full" style={{ animationDelay: "300ms" }}>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground/80">
-            Projetos
+        
+        <div className="animate-in-up mt-8" style={{ animationDelay: "100ms" }}>
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
+            <Sparkles className="h-3 w-3" />
+            Estrategista de IA
+          </div>
+          <h1 className="text-4xl font-black tracking-tight text-foreground sm:text-5xl">
+            Jorge Jr
+          </h1>
+          <p className="mt-4 text-sm font-medium leading-relaxed text-muted-foreground/80 sm:text-base">
+            Criando sistemas de Inteligência Artificial <br className="hidden sm:block" /> 
+            que transformam o caos em clareza diária.
           </p>
         </div>
+      </header>
 
-        <div className="mt-6 flex w-full flex-col gap-4">
-          {links.map((link, i) => (
-            <a
-              key={link.title}
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-link animate-fade-in-up group block rounded-2xl p-[1.5px]"
-              style={{
-                animationDelay: `${320 + i * 90}ms`,
-                background: "var(--gradient-brand)",
-              }}
-            >
-              <div className="rounded-[14px] bg-background/40 px-5 py-4 text-center backdrop-blur-md transition-colors group-hover:bg-background/20">
-                <p className="text-sm font-semibold text-foreground sm:text-base">
-                  {link.title}
-                </p>
-                {link.subtitle && (
-                  <p className="mt-0.5 text-xs text-muted-foreground">{link.subtitle}</p>
-                )}
-              </div>
-            </a>
-          ))}
+      {/* Projects Grid */}
+      <section className="mt-16 space-y-6">
+        <div className="animate-in-up flex items-center gap-4" style={{ animationDelay: "200ms" }}>
+          <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/50">
+            Ecossistema de Soluções
+          </h2>
+          <div className="h-px flex-1 bg-border/50" />
+        </div>
 
-          {socialLinks.map((link, i) => {
-            const Icon = link.icon;
-
+        <div className="grid gap-4">
+          {projects.map((project, i) => {
+            const Icon = project.icon;
             return (
               <a
-                key={link.title}
-                href={link.href}
+                key={project.title}
+                href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="btn-link animate-fade-in-up group flex items-center justify-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 text-center backdrop-blur-md transition-colors hover:bg-accent"
-                style={{ animationDelay: `${500 + i * 90}ms` }}
+                className="glass-card animate-in-up group p-6"
+                style={{ animationDelay: `${300 + i * 100}ms` }}
               >
-                <Icon className="h-5 w-5 text-foreground" aria-hidden="true" />
-                <span className="text-sm font-semibold text-foreground sm:text-base">
-                  {link.title}
-                </span>
+                <div className="flex items-start justify-between">
+                  <div className={`rounded-xl bg-gradient-to-br ${project.color} p-3 transition-transform duration-500 group-hover:scale-110`}>
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground/30 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+                </div>
+                <div className="mt-5">
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
+                    {project.tag}
+                  </div>
+                  <h3 className="mt-1 text-xl font-bold text-foreground">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                </div>
               </a>
             );
           })}
         </div>
+      </section>
 
-        <p
-          className="animate-fade-in-up mt-12 text-center text-xs italic text-muted-foreground/80"
-          style={{ animationDelay: "900ms" }}
-        >
-          A mente que se expande, jamais voltará ao seu estado original.
+      {/* Social Hub */}
+      <section className="mt-12 space-y-4">
+        <div className="grid gap-3">
+          {socials.map((social, i) => {
+            const Icon = social.icon;
+            return (
+              <a
+                key={social.title}
+                href={social.href}
+                target="_blank"
+                rel="noreferrer"
+                className="glass-card animate-in-up flex items-center gap-4 p-4 hover:bg-white/[0.08]"
+                style={{ animationDelay: `${500 + i * 100}ms` }}
+              >
+                <div className="rounded-lg bg-white/5 p-2.5">
+                  <Icon className="h-5 w-5 text-foreground/80" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-sm font-bold text-foreground">{social.title}</h4>
+                  <p className="text-[11px] text-muted-foreground">{social.subtitle}</p>
+                </div>
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground/20" />
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Footer Manifesto */}
+      <footer className="animate-in-up mt-20 text-center" style={{ animationDelay: "800ms" }}>
+        <p className="text-xs font-medium italic tracking-wide text-muted-foreground/40">
+          "A mente que se expande, jamais voltará ao seu estado original."
         </p>
-      </div>
-    </main>
+        <div className="mt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground/20">
+          Jorge Jr © 2026
+        </div>
+      </footer>
+    </div>
   );
-}
+}
