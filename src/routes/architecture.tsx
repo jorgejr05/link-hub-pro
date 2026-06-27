@@ -281,34 +281,34 @@ const techDomains = [
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 export default function Architecture() {
   return (
-    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24">
+    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-16 md:pb-24">
       {/* Botão Voltar */}
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
-        <Link to="/" className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-sm mb-12">
+        <Link to="/" className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-xs md:text-sm mb-8 md:mb-12">
           <span className="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
           Voltar para a Home
         </Link>
       </motion.div>
 
       {/* Hero */}
-      <motion.section initial="hidden" animate="show" variants={staggerContainer} className="mb-24">
-        <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-6">
+      <motion.section initial="hidden" animate="show" variants={staggerContainer} className="mb-16 md:mb-24">
+        <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-4 md:mb-6">
           <span className="w-2 h-2 rounded-full bg-primary-container neon-glow" />
-          <span className="font-label-caps text-label-caps text-primary-container uppercase tracking-widest">Solution Architecture Portfolio</span>
+          <span className="font-label-caps text-[10px] md:text-label-caps text-primary-container uppercase tracking-widest">Solution Architecture Portfolio</span>
         </motion.div>
-        <motion.h1 variants={fadeInUp} className="font-headline-xl text-headline-xl text-primary uppercase mb-6 leading-tight">
+        <motion.h1 variants={fadeInUp} className="font-headline-xl text-2xl md:text-4xl lg:text-5xl text-primary uppercase mb-4 md:mb-6 leading-tight">
           Como Eu <span className="neon-text">Projeto</span> Sistemas
         </motion.h1>
-        <motion.p variants={fadeInUp} className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-10">
+        <motion.p variants={fadeInUp} className="text-sm md:text-base lg:text-lg text-on-surface-variant max-w-3xl mb-6 md:mb-10 leading-relaxed">
           Não me limito a escrever código. Projeto arquiteturas que resolvem problemas de negócio reais —
           com decisões conscientes de trade-offs, escalabilidade e manutenibilidade em mente desde o primeiro commit.
         </motion.p>
-        <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-          <Link to="/case-study/plugeefy" className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md px-6 py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest">
+        <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 md:gap-4">
+          <Link to="/case-study/plugeefy" className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest text-[10px] md:text-sm">
             Ver Case Study: Plugeefy
             <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
           </Link>
-          <a href="https://plugeefy.cloud" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-6 py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest">
+          <a href="https://plugeefy.cloud" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest text-[10px] md:text-sm">
             Ver Projeto ao Vivo
             <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
           </a>
@@ -321,22 +321,28 @@ export default function Architecture() {
         whileInView="show"
         viewport={{ once: true, margin: "-80px" }}
         variants={staggerContainer}
-        className="mb-24"
+        className="mb-16 md:mb-24"
       >
-        <motion.div variants={fadeInUp} className="mb-8">
-          <h2 className="font-headline-xl text-headline-xl text-primary uppercase mb-3">
+        <motion.div variants={fadeInUp} className="mb-6 md:mb-8">
+          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mb-2 md:mb-3">
             Ecossistema <span className="neon-text">Plugeefy</span>
           </h2>
-          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+          <p className="text-on-surface-variant text-sm md:text-base max-w-2xl leading-relaxed">
             Diagrama completo de todos os serviços, conexões e fluxos de dados — da Landing Page ao ERP.
             Cada seta representa uma integração real em produção.
           </p>
         </motion.div>
 
-        <motion.div variants={fadeInUp} className="glass-panel rounded-[32px] p-6 md:p-10 relative overflow-hidden">
+        <motion.div variants={fadeInUp} className="glass-panel rounded-[24px] md:rounded-[32px] p-4 md:p-8 lg:p-10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-0.5 bg-primary-container neon-glow" />
           <div className="absolute -top-32 right-0 w-80 h-80 bg-primary-container/3 rounded-full blur-[100px]" />
-          <PlugeefyDiagram />
+          {/* Wrapper para scroll horizontal em telas menores */}
+          <div className="overflow-x-auto overflow-y-hidden pb-2">
+            <div className="min-w-[700px]">
+              <PlugeefyDiagram />
+            </div>
+          </div>
+          <p className="text-center text-outline text-[10px] uppercase tracking-widest mt-3 md:hidden">← Arraste para explorar →</p>
         </motion.div>
       </motion.section>
 
@@ -346,19 +352,19 @@ export default function Architecture() {
         whileInView="show"
         viewport={{ once: true, margin: "-80px" }}
         variants={staggerContainer}
-        className="mb-24"
+        className="mb-16 md:mb-24"
       >
-        <motion.div variants={fadeInUp} className="mb-8">
-          <h2 className="font-headline-xl text-headline-xl text-primary uppercase mb-3">
+        <motion.div variants={fadeInUp} className="mb-6 md:mb-8">
+          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mb-2 md:mb-3">
             Arquitetura do <span className="neon-text">Agente de IA</span>
           </h2>
-          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+          <p className="text-on-surface-variant text-sm md:text-base max-w-2xl leading-relaxed">
             Como o LangGraph orquestra o fluxo completo de venda via WhatsApp —
             do "Olá" ao pedido criado no Bling ERP, com state machine determinística.
           </p>
         </motion.div>
 
-        <motion.div variants={fadeInUp} className="glass-panel rounded-[32px] p-6 md:p-10 relative overflow-hidden">
+        <motion.div variants={fadeInUp} className="glass-panel rounded-[24px] md:rounded-[32px] p-4 md:p-8 lg:p-10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-0.5 bg-primary-container neon-glow" />
           <div className="absolute -top-32 left-0 w-80 h-80 bg-primary-container/3 rounded-full blur-[100px]" />
 

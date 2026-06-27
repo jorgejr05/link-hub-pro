@@ -17,52 +17,52 @@ const stagger = {
 
 function CaseStudyPlugeefy() {
   return (
-    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24">
+    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-16 md:pb-24">
 
       {/* Botão Voltar */}
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
-        <Link to="/" className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-sm mb-12">
+        <Link to="/" className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-xs md:text-sm mb-8 md:mb-12">
           <span className="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
           Voltar para a Home
         </Link>
       </motion.div>
 
       {/* ── Hero ───────────────────────────────────────────────────────────────── */}
-      <motion.section initial="hidden" animate="show" variants={stagger} className="mb-24">
-        <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 mb-6">
-          <span className="px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/30 font-label-caps text-[10px] text-primary-container uppercase tracking-widest">
+      <motion.section initial="hidden" animate="show" variants={stagger} className="mb-16 md:mb-24">
+        <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-2 md:gap-3 mb-4 md:mb-6">
+          <span className="px-2 md:px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/30 font-label-caps text-[9px] md:text-[10px] text-primary-container uppercase tracking-widest">
             Case Study
           </span>
-          <span className="px-3 py-1 rounded-full bg-surface-container border border-white/5 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">
+          <span className="px-2 md:px-3 py-1 rounded-full bg-surface-container border border-white/5 font-label-caps text-[9px] md:text-[10px] text-on-surface-variant uppercase tracking-widest">
             SaaS · AI Commerce · Multi-tenant
           </span>
-          <span className="px-3 py-1 rounded-full bg-surface-container border border-white/5 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">
+          <span className="px-2 md:px-3 py-1 rounded-full bg-surface-container border border-white/5 font-label-caps text-[9px] md:text-[10px] text-on-surface-variant uppercase tracking-widest">
             Em Produção 🟢
           </span>
         </motion.div>
 
-        <motion.h1 variants={fadeInUp} className="font-headline-xl text-headline-xl text-primary uppercase mb-4 leading-tight">
+        <motion.h1 variants={fadeInUp} className="font-headline-xl text-2xl md:text-4xl lg:text-5xl text-primary uppercase mb-3 md:mb-4 leading-tight">
           Plugeefy — <span className="neon-text">AI Commerce</span> Platform
         </motion.h1>
 
-        <motion.p variants={fadeInUp} className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-4">
+        <motion.p variants={fadeInUp} className="text-sm md:text-base lg:text-lg text-on-surface-variant max-w-3xl mb-3 md:mb-4 leading-relaxed">
           Uma plataforma SaaS multi-tenant que resolve um problema crítico e invisível:
           <strong className="text-primary"> e-commerces brasileiros não existem para as IAs.</strong>
         </motion.p>
-        <motion.p variants={fadeInUp} className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-10">
+        <motion.p variants={fadeInUp} className="text-sm md:text-base lg:text-lg text-on-surface-variant max-w-3xl mb-6 md:mb-10 leading-relaxed">
           A Plugeefy torna cada loja <strong className="text-primary">nativamente consultável</strong> por ChatGPT, Gemini e Perplexity
           via servidor MCP próprio — e automatiza vendas via WhatsApp com um agente de IA stateful que vai do "Olá"
           ao pedido criado no ERP, sem intervenção humana.
         </motion.p>
 
-        <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+        <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 md:gap-4">
           <a href="https://plugeefy.cloud" target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md px-6 py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest">
+            className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest text-[10px] md:text-sm">
             Ver Plataforma
             <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
           </a>
           <a href="https://plugeefy.site" target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-6 py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest">
+            className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest text-[10px] md:text-sm">
             Landing Page
             <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
           </a>
@@ -70,21 +70,21 @@ function CaseStudyPlugeefy() {
       </motion.section>
 
       {/* ── 01 — Problema ──────────────────────────────────────────────────────── */}
-      <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-24">
-        <motion.div variants={fadeInUp} className="mb-10">
-          <span className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest">01 — O Problema</span>
-          <h2 className="font-headline-xl text-headline-xl text-primary uppercase mt-2 mb-4">
+      <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-16 md:mb-24">
+        <motion.div variants={fadeInUp} className="mb-6 md:mb-10">
+          <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">01 — O Problema</span>
+          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mt-2 mb-3 md:mb-4 leading-tight">
             E-commerces <span className="neon-text">Invisíveis</span> para IAs
           </h2>
-          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+          <p className="text-on-surface-variant text-sm md:text-base max-w-2xl leading-relaxed">
             Quando um consumidor pergunta ao ChatGPT <em>"onde comprar tênis Nike em Araçatuba?"</em>,
             nenhuma loja local é citada — mesmo que tenha estoque. O problema não é o produto.
             É que as lojas não falam a língua das IAs.
           </p>
         </motion.div>
 
-        <motion.div variants={stagger} className="grid md:grid-cols-2 gap-6">
-          <motion.div variants={fadeInUp} className="glass-panel rounded-2xl p-8">
+        <motion.div variants={stagger} className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <motion.div variants={fadeInUp} className="glass-panel rounded-2xl p-6 md:p-8">
             <span className="material-symbols-outlined text-3xl text-outline mb-4 block" data-icon="visibility_off">visibility_off</span>
             <h3 className="text-primary font-headline-md text-xl mb-4">Antes da Plugeefy</h3>
             <ul className="space-y-3 text-on-surface-variant text-sm">
@@ -104,7 +104,7 @@ function CaseStudyPlugeefy() {
             </ul>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="glass-panel glass-panel-hover rounded-2xl p-8 relative overflow-hidden">
+          <motion.div variants={fadeInUp} className="glass-panel glass-panel-hover rounded-2xl p-6 md:p-8 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-0.5 bg-primary-container neon-glow" />
             <span className="material-symbols-outlined text-3xl text-primary-container mb-4 block" data-icon="visibility">visibility</span>
             <h3 className="text-primary font-headline-md text-xl mb-4">Com a Plugeefy</h3>
@@ -128,13 +128,13 @@ function CaseStudyPlugeefy() {
       </motion.section>
 
       {/* ── 02 — MCP Server (O diferencial) ───────────────────────────────────── */}
-      <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-24">
-        <motion.div variants={fadeInUp} className="mb-8">
-          <span className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest">02 — O Diferencial</span>
-          <h2 className="font-headline-xl text-headline-xl text-primary uppercase mt-2 mb-4">
+      <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-16 md:mb-24">
+        <motion.div variants={fadeInUp} className="mb-6 md:mb-8">
+          <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">02 — O Diferencial</span>
+          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mt-2 mb-3 md:mb-4 leading-tight">
             Servidor <span className="neon-text">MCP Nativo</span>
           </h2>
-          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+          <p className="text-on-surface-variant text-sm md:text-base max-w-2xl leading-relaxed">
             Model Context Protocol (JSON-RPC 2.0) — o padrão lançado pela Anthropic, adotado pela OpenAI e Google.
             A Plugeefy implementa um servidor MCP próprio por loja, tornando cada e-commerce
             <strong className="text-primary"> diretamente consultável</strong> por qualquer LLM em tempo real.
