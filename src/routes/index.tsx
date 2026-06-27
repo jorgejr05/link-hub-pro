@@ -211,9 +211,7 @@ function Index() {
                 </div>
                 <h3 className="font-headline-lg text-4xl text-primary font-bold mb-4 uppercase">Plugeefy AI Commerce</h3>
                 <p className="font-body-md text-on-surface-variant mb-6 leading-relaxed max-w-lg">
-                  Plataforma SaaS que integra ecommerces que utilizam o Bling ERP nativamente a modelos de LLMs globais via servidor MCP próprio, permitindo que Modelos de IAs recomendem produtos com visão do estoque em tempo real, ajudando na jornada de busca, dúvidas e compra e encaminhando para os canais de atendimento do ecommerce e redes sociais. Com um Dashboard completo para análise de dados e tomada de decisões, tanto sobre produtos mais recomendados até de geolocalização para mapear as demandas de busca.
-                  <br /><br />
-                  Além de termos um Ecossistema completo que conecta, Agente de IA personalizado aos canais de atendimento (WhatsApp/Instagram), sistema ERP Bling, Logística e gateway de pagamentos, permitindo que o Agente de IA faça um atendimento completo de ponta a ponta, desde suporte, venda e pós venda.
+                  É uma infraestrutura de IA voltada ao comércio digital. Sua arquitetura integra ERPs, modelos globais de LLM, um servidor MCP proprietário, canais de atendimento, logística e gateways de pagamento, permitindo que Agentes de IA executem jornadas completas de suporte, vendas e pós-venda. O ecossistema também fornece dashboards analíticos em tempo real para apoiar decisões estratégicas e otimizar operações comerciais.
                 </p>
                 <div className="flex gap-4">
                   <Link
