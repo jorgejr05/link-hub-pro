@@ -43,19 +43,7 @@ export function BottomNavBar() {
             Arquit.
           </span>
         </Link>
-        <a
-          href="https://www.tiktok.com/@jorgejr.ai"
-          target="_blank"
-          rel="noreferrer"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 transition-colors"
-        >
-          <span className="material-symbols-outlined mb-1" data-icon="dynamic_feed">
-            dynamic_feed
-          </span>
-          <span className="font-label-caps text-label-caps text-[10px]">
-            TikTok
-          </span>
-        </a>
+
       </div>
     </motion.nav>
   );

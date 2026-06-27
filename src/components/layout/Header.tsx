@@ -53,14 +53,7 @@ export function Header() {
           >
             Currículo
           </Link>
-          <a
-            className="text-on-surface-variant hover:text-primary transition-colors duration-300"
-            href="https://www.tiktok.com/@jorgejr.ai"
-            target="_blank"
-            rel="noreferrer"
-          >
-            TikTok
-          </a>
+
         </nav>
         <button className="hidden md:inline-flex bg-primary-container text-on-primary-container font-label-md px-6 py-2 rounded-full hover:neon-glow transition-all duration-300 uppercase tracking-widest">
           Acesso VIP <span className="material-symbols-outlined align-middle ml-1 text-sm">arrow_outward</span>

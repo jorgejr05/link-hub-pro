@@ -44,7 +44,7 @@ function Index() {
           </motion.h1>
           
           <motion.p variants={fadeInUp} className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-3xl mx-auto">
-            Diagnosticamos sua operação, mapeamos casos de uso reais com alto ROI, prevemos custos com LLMs e arquitetamos soluções autônomas. Deixe de perder tempo com integrações engessadas e escale com tecnologia de ponta.
+            Receba um diagnóstico completo da sua operação, com análise de casos de uso, arquitetura de IA, estimativa de custos com LLMs e um plano estratégico para implementação de soluções inteligentes. Elimine integrações engessadas e escale sua empresa com uma infraestrutura de IA.
           </motion.p>
           
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -105,9 +105,9 @@ function Index() {
           <motion.div variants={fadeInUp} className="glass-panel rounded-3xl p-10 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-primary-container neon-glow" />
             <span className="material-symbols-outlined text-4xl text-primary-container mb-6 block" data-icon="architecture">architecture</span>
-            <h3 className="font-headline-md text-xl text-primary font-bold mb-4">Nossa Solução</h3>
+            <h3 className="font-headline-md text-xl text-primary font-bold mb-4">Como trabalhamos</h3>
             <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
-              Atuamos como arquitetos do seu sucesso tecnológico. Não entregamos apenas código; entregamos estratégia. Unimos profunda engenharia de software com visão de negócios para criar a arquitetura perfeita para a sua operação.
+              Projetamos soluções de IA escaláveis para resolver problemas reais de negócio. Combinamos arquitetura de software, integrações corporativas e automação inteligente para construir plataformas resilientes, preparadas para crescer junto com sua empresa.
             </p>
             <div className="flex items-center gap-2 text-primary-container font-label-caps text-[11px] uppercase tracking-widest">
               <span className="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
