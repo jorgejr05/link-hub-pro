@@ -85,8 +85,8 @@ function Curriculo() {
       edu: "Tecnologia da Informação (em andamento) — Foco em Arquitetura de Software, Sistemas Distribuídos e IA.",
       langLabel: "Idiomas",
       langs: ["Português (Nativo)", "Inglês (Profissional — leitura/escrita técnica)"],
-      download: "Baixar PDF",
-      print: "Imprimir",
+      download: "Download CV em PDF",
+      print: "Visualizar / Imprimir",
     },
     en: {
       title: "AI Solutions Architect & Full-Stack Engineer",
@@ -221,23 +221,21 @@ function Curriculo() {
             <div className="relative z-10">
               <h2 className="font-headline-xl text-headline-xl text-primary uppercase mb-1">Jorge Gomes Jr.</h2>
               <p className="font-body-lg text-body-lg text-primary-container mb-5">{c.title}</p>
-              <div className="flex flex-wrap gap-x-6 gap-y-2 text-on-surface-variant text-sm">
-                <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-base text-outline" data-icon="location_on">location_on</span>
-                  {c.location}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-on-surface-variant text-sm font-medium">
+                <span className="flex items-center">
+                  📍 Araçatuba-SP, Brasil
                 </span>
-                <a href="https://jorgejr.site" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined text-base text-outline" data-icon="language">language</span>
-                  jorgejr.site
+                <span className="text-white/20 hidden md:block">·</span>
+                <a href="https://jorgejr.site" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors">
+                  🌐 jorgejr.site
                 </a>
-                <a href="https://github.com/jorgejr05" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined text-base text-outline" data-icon="code">code</span>
-                  github.com/jorgejr05
+                <span className="text-white/20 hidden md:block">·</span>
+                <a href="https://github.com/jorgejr05" target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors">
+                  🐙 github.com/jorgejr05
                 </a>
-                <a href="https://wa.me/5518988183746" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <span className="material-symbols-outlined text-base text-outline" data-icon="phone_iphone">phone_iphone</span>
-                  +55 (18) 98818-3746
-                </a>
+              </div>
+              <div className="mt-3 text-on-surface-variant text-sm font-medium flex items-center gap-2">
+                contato: <a href="https://wa.me/5518988183746" target="_blank" rel="noreferrer" className="text-primary hover:neon-text transition-colors">55 18988183746 (whatsapp)</a>.
               </div>
             </div>
           </motion.div>
