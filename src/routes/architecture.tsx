@@ -36,9 +36,9 @@ const NODES: DiagramNode[] = [
   { id: "supabase",   x: 553, y: 162, w: 287, h: 74, label: "Supabase BaaS",          sub: "PostgreSQL + Auth + RLS por user_id",    tier: "secondary", icon: "storage" },
   // Row 3 — integrations
   { id: "bling",      x:  18, y: 332, w: 132, h: 56, label: "Bling ERP",              sub: "OAuth 2.0 + Webhooks",                   tier: "dim",       icon: "inventory_2" },
-  { id: "whatsapp",   x: 163, y: 332, w: 118, h: 56, label: "WhatsApp",               sub: "Evolution API",                          tier: "dim",       icon: "chat" },
-  { id: "instagram",  x: 294, y: 332, w: 120, h: 56, label: "Instagram",              sub: "Meta Webhooks",                          tier: "dim",       icon: "photo_camera" },
-  { id: "asaas",      x: 427, y: 332, w: 108, h: 56, label: "Asaas · Payments",      sub: "3 Gateways",                             tier: "dim",       icon: "payments" },
+  { id: "whatsapp",   x: 163, y: 332, w: 130, h: 56, label: "WhatsApp Cloud",          sub: "Cloud API Oficial · Meta",              tier: "dim",       icon: "chat" },
+  { id: "instagram",  x: 306, y: 332, w: 120, h: 56, label: "Instagram",              sub: "Meta Webhooks",                          tier: "dim",       icon: "photo_camera" },
+  { id: "asaas",      x: 439, y: 332, w: 108, h: 56, label: "AppMax",                sub: "Gateway de Pagamento",                   tier: "dim",       icon: "payments" },
   // Row 4 — queue
   { id: "bullmq",     x: 108, y: 448, w: 258, h: 62, label: "Redis + BullMQ",         sub: "4 Filas · 5 Workers · Retry Exponencial",tier: "bright",    icon: "stacked_line_chart" },
   // Row 5 — AI
@@ -63,26 +63,26 @@ interface DiagramEdge {
 }
 
 const EDGES: DiagramEdge[] = [
-  { id: "lp-dash",      d: "M 238 50 L 548 50",                                    label: "CTA", delay: 0 },
-  { id: "dash-api",     d: "M 694 82 C 694 128 150 128 150 162",                   delay: 0.1 },
-  { id: "dash-supa",    d: "M 762 82 L 762 162",                                   delay: 0.12 },
-  { id: "api-supa",     d: "M 283 199 L 553 199",   bidirectional: true, label: "REST", delay: 0.15 },
-  { id: "api-bling",    d: "M 84 236 L 84 332",                                    delay: 0.2 },
-  { id: "api-wa",       d: "M 140 236 C 140 288 222 288 222 332",                  delay: 0.22 },
-  { id: "api-insta",    d: "M 192 236 C 192 288 354 288 354 332",                  delay: 0.24 },
-  { id: "api-asaas",    d: "M 244 236 C 244 288 481 288 481 332",                  delay: 0.26 },
-  { id: "bling-q",      d: "M 84 388 C 84 424 170 424 170 448",                    delay: 0.3 },
-  { id: "wa-q",         d: "M 222 388 C 222 424 218 424 218 448",                  delay: 0.32 },
-  { id: "insta-q",      d: "M 354 388 C 354 424 268 424 268 448",                  delay: 0.34 },
-  { id: "asaas-q",      d: "M 481 388 C 481 424 328 424 328 448",                  delay: 0.36 },
-  { id: "q-mcp",        d: "M 180 510 C 180 548 101 548 101 576",                  delay: 0.4 },
-  { id: "q-lg",         d: "M 237 510 C 237 548 283 548 283 576",                  delay: 0.42 },
-  { id: "q-gem",        d: "M 318 510 C 318 548 472 548 472 576",                  delay: 0.44 },
-  { id: "api-r2",       d: "M 283 180 C 480 180 555 332 682 353",  dim: true, delay: 0.5 },
-  { id: "api-fr",       d: "M 283 188 C 480 188 555 385 682 406",  dim: true, delay: 0.52 },
-  { id: "supa-gsc",     d: "M 840 236 C 840 380 820 415 840 459",  dim: true, delay: 0.54 },
-  { id: "api-push",     d: "M 283 196 C 500 196 555 470 682 512",  dim: true, delay: 0.56 },
-  { id: "api-lc",       d: "M 283 204 C 510 204 560 530 682 565",  dim: true, delay: 0.58 },
+  // LP → Dashboard
+  { id: "lp-dash",   d: "M 238 50 L 548 50",                              label: "CTA", delay: 0 },
+  // Dashboard → plugeefy-api
+  { id: "dash-api",  d: "M 694 82 C 694 128 150 128 150 162",             delay: 0.1 },
+  // plugeefy-api ↔ Supabase (REST bidirecional)
+  { id: "api-supa",  d: "M 283 199 L 553 199", bidirectional: true, label: "REST", delay: 0.15 },
+  // plugeefy-api → Integrações externas
+  { id: "api-bling", d: "M 84 236 L 84 332",                              delay: 0.2 },
+  { id: "api-wa",    d: "M 152 236 C 152 285 228 285 228 332",            delay: 0.22 },
+  { id: "api-insta", d: "M 200 236 C 200 285 366 285 366 332",            delay: 0.24 },
+  { id: "api-asaas", d: "M 248 236 C 248 285 493 285 493 332",            delay: 0.26 },
+  // Integrações → Redis + BullMQ
+  { id: "bling-q",   d: "M 84 388 C 84 422 172 422 172 448",              delay: 0.3 },
+  { id: "wa-q",      d: "M 228 388 C 228 422 222 422 222 448",            delay: 0.32 },
+  { id: "insta-q",   d: "M 366 388 C 366 422 272 422 272 448",            delay: 0.34 },
+  { id: "asaas-q",   d: "M 493 388 C 493 422 330 422 330 448",            delay: 0.36 },
+  // Redis + BullMQ → Camada de IA
+  { id: "q-mcp",     d: "M 178 510 C 178 548 101 548 101 576",            delay: 0.4 },
+  { id: "q-lg",      d: "M 237 510 C 237 548 283 548 283 576",            delay: 0.42 },
+  { id: "q-gem",     d: "M 318 510 C 318 548 472 548 472 576",            delay: 0.44 },
 ];
 
 const TIER_STYLE = {
