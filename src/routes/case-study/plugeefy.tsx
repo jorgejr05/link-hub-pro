@@ -209,42 +209,40 @@ function CaseStudyPlugeefy() {
         </motion.div>
       </motion.section>
 
-      {/* ── 03 — Agente de IA ──────────────────────────────────────────────────── */}
+      {/* ── 03 — Recomendação & Checkout ───────────────────────────────────────── */}
       <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="mb-24">
         <motion.div variants={fadeInUp} className="mb-8">
-          <span className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest">03 — Agente de IA</span>
+          <span className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest">03 — Jornada AI Commerce</span>
           <h2 className="font-headline-xl text-headline-xl text-primary uppercase mt-2 mb-4">
-            Vendas <span className="neon-text">Automatizadas</span> via WhatsApp
+            Da Recomendação ao <span className="neon-text">Checkout Inteligente</span>
           </h2>
           <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
-            Um agente LangGraph stateful gerencia todo o funil de venda via WhatsApp — do primeiro "Olá"
-            ao pedido pago e criado no ERP, sem intervenção humana.
+            A Plugeefy não apenas torna a loja visível, mas cria uma jornada de compra sem atritos. Os modelos
+            (ChatGPT, Gemini) processam os dados estruturados, recomendam produtos e encaminham o cliente
+            para o checkout ou atendimento.
           </p>
         </motion.div>
 
         <motion.div variants={stagger} className="grid md:grid-cols-2 gap-6">
           {/* Flow steps */}
           <motion.div variants={fadeInUp} className="glass-panel rounded-2xl p-8">
-            <p className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-6">Fluxo Completo</p>
+            <p className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-6">Jornada do Consumidor</p>
             <div className="flex flex-col gap-0">
               {[
-                { step: "Cliente envia mensagem",       sub: "WhatsApp ou Instagram" },
-                { step: "Webhook + BullMQ",             sub: "Evento enfileirado com retry automático" },
-                { step: "agentRouter.ts ativado",       sub: "LangGraph state machine" },
-                { step: "Busca cliente no Bling",       sub: "por CPF/CNPJ" },
-                { step: "Pesquisa catálogo",            sub: "fulltext search Supabase" },
-                { step: "Calcula frete",                sub: "Melhor Envio API" },
-                { step: "Exibe resumo + total",         sub: "aguarda confirmação do cliente" },
-                { step: "Processa pagamento",           sub: "AppMax: PIX ou Cartão de Crédito" },
-                { step: "Cria pedido no Bling ERP",     sub: "criarPedidoBling(payload)" },
-                { step: "Confirmação enviada",          sub: "WhatsApp Cloud API" },
+                { step: "Busca na IA",                  sub: "Usuário pesquisa produtos no ChatGPT/Gemini" },
+                { step: "Consulta via MCP Server",      sub: "IA lê dados estruturados da loja em tempo real" },
+                { step: "Recomendação Estruturada",     sub: "IA exibe produtos com preço, estoque e detalhes" },
+                { step: "Encaminhamento de Canal",      sub: "IA sugere o WhatsApp ou Instagram oficial da loja" },
+                { step: "Link de Checkout Personalizado",sub: "IA gera link direto para o carrinho com os itens" },
+                { step: "Cálculo de Logística",         sub: "Frete calculado nativamente via Melhor Envio" },
+                { step: "Pagamento Transparente",       sub: "Conversão rápida no gateway AppMax (PIX/Cartão)" },
               ].map((item, i) => (
                 <div key={item.step} className="flex items-start gap-4">
                   <div className="flex flex-col items-center flex-shrink-0">
                     <div className="w-6 h-6 rounded-full bg-primary-container/15 border border-primary-container/40 flex items-center justify-center">
                       <span className="text-primary-container font-bold text-[10px]">{i + 1}</span>
                     </div>
-                    {i < 9 && <div className="w-px h-6 bg-gradient-to-b from-primary-container/30 to-transparent" />}
+                    {i < 6 && <div className="w-px h-6 bg-gradient-to-b from-primary-container/30 to-transparent" />}
                   </div>
                   <div className="pb-1 pt-0.5">
                     <p className="text-primary text-sm font-medium">{item.step}</p>
@@ -259,24 +257,24 @@ function CaseStudyPlugeefy() {
           <div className="flex flex-col gap-4">
             {[
               {
-                icon: "psychology",
-                title: "Por que LangGraph?",
-                desc: "Um LLM simples alucinaria na criação de pedidos. A state machine força transições determinísticas — o cliente não pula etapas, e o agente nunca cria pedido sem confirmação e pagamento confirmados.",
+                icon: "data_object",
+                title: "Dados 100% Estruturados",
+                desc: "Os catálogos são expostos em um formato que os LLMs entendem perfeitamente. Variações de cor, tamanho e estoque ficam claros, evitando alucinações nas respostas.",
               },
               {
-                icon: "groups",
-                title: "Multi-tenant nativo",
-                desc: "Cada merchant tem seu próprio contexto isolado via Row Level Security no Supabase. O agente de um lojista jamais acessa dados de outro.",
+                icon: "support_agent",
+                title: "Direcionamento Inteligente",
+                desc: "Em vez de apenas informar que o produto existe, a IA direciona o lead quente diretamente para o WhatsApp ou Instagram da loja para fechar a venda.",
+              },
+              {
+                icon: "local_shipping",
+                title: "Logística Nativa",
+                desc: "Integração profunda com Melhor Envio, permitindo que a IA informe estimativas de frete baseadas na localização do usuário antes mesmo do checkout.",
               },
               {
                 icon: "payments",
-                title: "Pagamento integrado (AppMax)",
-                desc: "PIX com QR Code gerado dinamicamente ou link de pagamento por cartão de crédito, tudo dentro da conversa no WhatsApp. Sem redirecionamentos externos.",
-              },
-              {
-                icon: "inventory_2",
-                title: "ERP em tempo real (Bling)",
-                desc: "Após o pagamento confirmado, o pedido é criado automaticamente no Bling com cliente, produtos, frete e forma de pagamento — sem toque humano.",
+                title: "Checkout AppMax",
+                desc: "Links de pagamento gerados dinamicamente com os produtos corretos, garantindo uma transição fluida da janela da IA (ex: ChatGPT) direto para o gateway de pagamento seguro.",
               },
             ].map((card) => (
               <motion.div key={card.title} variants={fadeInUp} className="group glass-panel glass-panel-hover rounded-2xl p-6 transition-all duration-300">
