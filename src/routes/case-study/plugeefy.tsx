@@ -19,18 +19,12 @@ function CaseStudyPlugeefy() {
   return (
     <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24">
 
-      {/* Breadcrumb */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="flex items-center gap-2 mb-12 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest text-[11px]"
-      >
-        <Link to="/" className="hover:text-primary transition-colors">Início</Link>
-        <span>/</span>
-        <Link to="/architecture" className="hover:text-primary transition-colors">Arquitetura</Link>
-        <span>/</span>
-        <span className="text-primary-container">Plugeefy</span>
+      {/* Botão Voltar */}
+      <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4 }}>
+        <Link to="/" className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-md text-sm mb-12">
+          <span className="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+          Voltar para a Home
+        </Link>
       </motion.div>
 
       {/* ── Hero ───────────────────────────────────────────────────────────────── */}

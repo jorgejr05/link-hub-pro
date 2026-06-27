@@ -32,17 +32,7 @@ export function BottomNavBar() {
             Blog
           </span>
         </Link>
-        <Link
-          to="/architecture"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 [&.active]:bg-primary-container/10 [&.active]:text-primary-container [&.active]:rounded-full transition-colors"
-        >
-          <span className="material-symbols-outlined mb-1" data-icon="architecture">
-            architecture
-          </span>
-          <span className="font-label-caps text-label-caps text-[10px]">
-            Arquit.
-          </span>
-        </Link>
+
 
       </div>
     </motion.nav>
