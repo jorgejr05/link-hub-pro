@@ -333,6 +333,230 @@ export default function Architecture() {
         </motion.div>
       </motion.section>
 
+      {/* AI Agent Architecture */}
+      <motion.section
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-80px" }}
+        variants={staggerContainer}
+        className="mb-24"
+      >
+        <motion.div variants={fadeInUp} className="mb-8">
+          <h2 className="font-headline-xl text-headline-xl text-primary uppercase mb-3">
+            Arquitetura do <span className="neon-text">Agente de IA</span>
+          </h2>
+          <p className="text-on-surface-variant font-body-md text-body-md max-w-2xl">
+            Como o LangGraph orquestra o fluxo completo de venda via WhatsApp —
+            do "Olá" ao pedido criado no Bling ERP, com state machine determinística.
+          </p>
+        </motion.div>
+
+        <motion.div variants={fadeInUp} className="glass-panel rounded-[32px] p-6 md:p-10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-0.5 bg-primary-container neon-glow" />
+          <div className="absolute -top-32 left-0 w-80 h-80 bg-primary-container/3 rounded-full blur-[100px]" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row gap-10">
+
+            {/* Left — vertical flow */}
+            <div className="flex flex-col items-center gap-0 flex-1 min-w-0">
+
+              {[
+                { icon: "person",           label: "Usuário (WhatsApp / CRM)",              sub: "Cliente envia mensagem em linguagem natural",                             bright: false, accent: false },
+                { icon: "webhook",          label: "Webhook recebe mensagem",                sub: "Hono API Gateway · validação e parse do payload",                        bright: false, accent: false },
+                { icon: "stacked_line_chart",label: "BullMQ Queue — whatsapp-messages",     sub: "Evento enfileirado · retry exponencial (3×) · removeOnComplete: 100",    bright: true,  accent: false },
+                { icon: "engineering",      label: "Worker processa job",                    sub: "5 workers concorrentes · processamento assíncrono isolado",               bright: false, accent: false },
+              ].map((step, i) => (
+                <motion.div
+                  key={step.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="flex flex-col items-center w-full"
+                >
+                  <div
+                    className="w-full max-w-lg rounded-2xl px-5 py-4 flex items-start gap-3 border"
+                    style={{
+                      borderColor: step.bright ? "rgba(202,243,0,0.5)" : "rgba(255,255,255,0.10)",
+                      background:  step.bright ? "rgba(202,243,0,0.10)" : "rgba(255,255,255,0.03)",
+                    }}
+                  >
+                    <span className="material-symbols-outlined text-xl flex-shrink-0 mt-0.5" data-icon={step.icon}
+                      style={{ color: step.bright ? "#caf300" : "#9ca3af" }}>
+                      {step.icon}
+                    </span>
+                    <div>
+                      <p style={{ fontFamily:"Outfit,sans-serif", fontWeight:700, fontSize:"13px", color: step.bright ? "#caf300" : "#dae2fd" }}>
+                        {step.label}
+                      </p>
+                      <p style={{ fontFamily:"Inter,sans-serif", fontSize:"11px", color:"#6b7280", marginTop:"2px" }}>
+                        {step.sub}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="w-px h-5 bg-gradient-to-b from-primary-container/40 to-primary-container/10" />
+                    <span className="material-symbols-outlined text-primary-container/30 text-sm" data-icon="arrow_downward">arrow_downward</span>
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* State Machine */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.44 }}
+                className="w-full max-w-lg"
+              >
+                <div className="rounded-2xl border border-primary-container/50 overflow-hidden" style={{ background: "rgba(202,243,0,0.06)" }}>
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-primary-container/20" style={{ background: "rgba(202,243,0,0.09)" }}>
+                    <span className="material-symbols-outlined text-primary-container text-xl" data-icon="account_tree">account_tree</span>
+                    <div>
+                      <p style={{ fontFamily:"Outfit,sans-serif", fontWeight:700, fontSize:"13px", color:"#caf300" }}>agentRouter.ts — State Machine</p>
+                      <p style={{ fontFamily:"Inter,sans-serif", fontSize:"10px", color:"#8a9060" }}>LangGraph · src/agent/agentRouter.ts</p>
+                    </div>
+                  </div>
+                  <div className="px-5 py-4 flex flex-col gap-2.5">
+                    {[
+                      { state: "coletarCpf",                desc: "busca cliente no Bling ERP por CPF/CNPJ" },
+                      { state: "buscarProdutos",            desc: "search fulltext no catálogo Supabase" },
+                      { state: "selecionarProduto",         desc: "adiciona item ao carrinho com quantidade" },
+                      { state: "perguntaContinuarAdicionar",desc: "aguarda intenção do usuário" },
+                      { state: "calcularFrete",             desc: "tool: calculateBlingFrete(cep, peso)" },
+                      { state: "confirmarTotal",            desc: "tool: criarPedidoBling(payload)" },
+                      { state: "pedidoCriado",              desc: "confirmação e encerramento do fluxo" },
+                    ].map((s, i) => (
+                      <motion.div
+                        key={s.state}
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: 0.5 + i * 0.06 }}
+                        className="flex items-start gap-3"
+                      >
+                        <div className="flex flex-col items-center flex-shrink-0 pt-1.5">
+                          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "rgba(202,243,0,0.6)" }} />
+                          {i < 6 && <div className="w-px h-4 mt-0.5" style={{ background: "rgba(202,243,0,0.15)" }} />}
+                        </div>
+                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0">
+                          <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#caf300", fontWeight:600 }}>{s.state}</span>
+                          <span style={{ fontFamily:"Inter,sans-serif", fontSize:"11px", color:"#6b7280" }}>→ {s.desc}</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Connector */}
+              <div className="flex flex-col items-center">
+                <div className="w-px h-5 bg-gradient-to-b from-primary-container/40 to-primary-container/10" />
+                <span className="material-symbols-outlined text-primary-container/30 text-sm" data-icon="arrow_downward">arrow_downward</span>
+              </div>
+
+              {/* Tools */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 1.0 }}
+                className="w-full max-w-lg"
+              >
+                <div className="rounded-2xl border border-white/10 overflow-hidden" style={{ background: "rgba(255,255,255,0.03)" }}>
+                  <div className="flex items-center gap-3 px-5 py-3 border-b border-white/8">
+                    <span className="material-symbols-outlined text-on-surface-variant text-xl" data-icon="build">build</span>
+                    <div>
+                      <p style={{ fontFamily:"Outfit,sans-serif", fontWeight:700, fontSize:"13px", color:"#dae2fd" }}>Tools disponíveis</p>
+                      <p style={{ fontFamily:"Inter,sans-serif", fontSize:"10px", color:"#6b7280" }}>src/agent/tools/</p>
+                    </div>
+                  </div>
+                  <div className="px-5 py-4 flex flex-col gap-3">
+                    {[
+                      { fn: "getCustomer(cpf/cnpj)",     target: "Bling API",         icon: "person_search" },
+                      { fn: "getAddressByCep(cep)",       target: "ViaCEP API",         icon: "location_on" },
+                      { fn: "calculateFrete(cep, peso)",  target: "Melhor Envio API",   icon: "local_shipping" },
+                    ].map((tool, i) => (
+                      <motion.div
+                        key={tool.fn}
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: 1.05 + i * 0.08 }}
+                        className="flex items-center gap-3"
+                      >
+                        <div className="w-7 h-7 rounded-lg border border-white/8 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(255,255,255,0.05)" }}>
+                          <span className="material-symbols-outlined text-outline text-sm" data-icon={tool.icon}>{tool.icon}</span>
+                        </div>
+                        <div className="flex flex-wrap items-baseline gap-x-2">
+                          <span style={{ fontFamily:"monospace", fontSize:"12px", color:"#9ca3af" }}>{tool.fn}</span>
+                          <span style={{ fontFamily:"Inter,sans-serif", fontSize:"10px", color:"#4b5563" }}>→ {tool.target}</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Final connector */}
+              <div className="flex flex-col items-center">
+                <div className="w-px h-5 bg-gradient-to-b from-primary-container/40 to-primary-container/10" />
+                <span className="material-symbols-outlined text-primary-container/30 text-sm" data-icon="arrow_downward">arrow_downward</span>
+              </div>
+
+              {/* Output */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 1.3 }}
+                className="w-full max-w-lg"
+              >
+                <div className="rounded-2xl px-5 py-4 flex items-start gap-3 border border-primary-container/50" style={{ background: "rgba(202,243,0,0.10)" }}>
+                  <span className="material-symbols-outlined text-primary-container text-xl flex-shrink-0 mt-0.5" data-icon="send">send</span>
+                  <div>
+                    <p style={{ fontFamily:"Outfit,sans-serif", fontWeight:700, fontSize:"13px", color:"#caf300" }}>
+                      Resposta enviada via Evolution API
+                    </p>
+                    <p style={{ fontFamily:"Inter,sans-serif", fontSize:"11px", color:"#8a9060", marginTop:"2px" }}>
+                      WhatsApp Cloud · mensagem de confirmação do pedido ao cliente
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right — context panel */}
+            <div className="lg:w-64 flex-shrink-0 flex flex-col gap-4">
+              <div className="rounded-2xl border border-white/8 p-5" style={{ background: "rgba(255,255,255,0.03)" }}>
+                <p className="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-3">Por que LangGraph?</p>
+                <p className="text-on-surface-variant text-xs leading-relaxed">
+                  Um agente simples de LLM alucinaria na hora de criar pedidos no ERP.
+                  O LangGraph força <strong className="text-primary">transições determinísticas</strong> — o cliente não pode pular etapas,
+                  e o agente nunca cria pedido sem confirmação explícita.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-white/8 p-5" style={{ background: "rgba(255,255,255,0.03)" }}>
+                <p className="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-3">Stack do Agente</p>
+                <div className="flex flex-col gap-1.5">
+                  {["LangChain ^1.1.5","LangGraph ^1.1.5","@google/genai ^1.25.0","openai ^5.22.0","TypeScript ^5.0","Zod (validação)"].map((item) => (
+                    <span key={item} className="font-mono text-[11px] text-on-surface-variant px-2 py-1 rounded border border-white/5" style={{ background: "rgba(255,255,255,0.03)" }}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-2xl border border-primary-container/20 p-5" style={{ background: "rgba(202,243,0,0.04)" }}>
+                <p className="font-label-caps text-[10px] text-primary-container uppercase tracking-widest mb-3">Fluxo real</p>
+                <p className="text-on-surface-variant text-xs leading-relaxed">
+                  O agente lida com ambiguidade — frases como <em className="text-primary">"quero 2 daquele tênis"</em> são resolvidas via contexto de sessão mantido no estado LangGraph.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.section>
+
       {/* ADRs */}
       <motion.section initial="hidden" whileInView="show" viewport={{ once: true, margin: "-80px" }} variants={staggerContainer} className="mb-24">
         <motion.div variants={fadeInUp} className="mb-10">
