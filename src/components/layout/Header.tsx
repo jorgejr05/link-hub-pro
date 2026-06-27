@@ -45,7 +45,7 @@ export function Header() {
             to="/case-study/plugeefy"
             className="text-on-surface-variant hover:text-primary transition-colors duration-300 [&.active]:text-primary [&.active]:border-b-2 [&.active]:border-primary [&.active]:pb-1"
           >
-            Case Study
+            Caso de Uso
           </Link>
           <Link
             to="/curriculo"
