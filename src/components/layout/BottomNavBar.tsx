@@ -32,17 +32,17 @@ export function BottomNavBar() {
             Blog
           </span>
         </Link>
-        <a
-          href="#"
-          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 transition-colors"
+        <Link
+          to="/architecture"
+          className="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary w-16 h-14 [&.active]:bg-primary-container/10 [&.active]:text-primary-container [&.active]:rounded-full transition-colors"
         >
-          <span className="material-symbols-outlined mb-1" data-icon="rocket_launch">
-            rocket_launch
+          <span className="material-symbols-outlined mb-1" data-icon="architecture">
+            architecture
           </span>
           <span className="font-label-caps text-label-caps text-[10px]">
-            Projetos
+            Arquit.
           </span>
-        </a>
+        </Link>
         <a
           href="https://www.tiktok.com/@jorgejr.ai"
           target="_blank"

@@ -35,12 +35,18 @@ export function Header() {
           >
             Blog
           </Link>
-          <a
-            className="text-on-surface-variant hover:text-primary transition-colors duration-300"
-            href="#"
+          <Link
+            to="/architecture"
+            className="text-on-surface-variant hover:text-primary transition-colors duration-300 [&.active]:text-primary [&.active]:border-b-2 [&.active]:border-primary [&.active]:pb-1"
           >
-            Projetos
-          </a>
+            Arquitetura
+          </Link>
+          <Link
+            to="/case-study/plugeefy"
+            className="text-on-surface-variant hover:text-primary transition-colors duration-300 [&.active]:text-primary [&.active]:border-b-2 [&.active]:border-primary [&.active]:pb-1"
+          >
+            Case Study
+          </Link>
           <a
             className="text-on-surface-variant hover:text-primary transition-colors duration-300"
             href="https://www.tiktok.com/@jorgejr.ai"

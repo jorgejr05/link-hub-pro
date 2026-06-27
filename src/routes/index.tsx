@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/")({
@@ -158,32 +158,73 @@ function Index() {
             </div>
           </motion.div>
 
-          {/* Plugeefy Card */}
-          <motion.div variants={fadeInUp} className="md:col-span-12 glass-panel glass-panel-hover rounded-[32px] p-8 md:p-12 relative overflow-hidden group flex flex-col md:flex-row items-center gap-8 transition-all duration-500">
-            <div className="absolute inset-0 bg-gradient-to-r from-surface-container-high/50 to-transparent pointer-events-none"></div>
-            <div className="relative z-10 flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-primary-container" data-icon="extension">
-                  extension
-                </span>
-                <h3 className="font-headline-lg text-headline-lg text-primary font-bold">Plugeefy</h3>
+          {/* Plugeefy Card — Architecture Portfolio */}
+          <motion.div variants={fadeInUp} className="md:col-span-12 glass-panel glass-panel-hover rounded-[32px] p-8 md:p-12 relative overflow-hidden group transition-all duration-500">
+            <div className="absolute top-0 left-0 w-full h-0.5 bg-primary-container neon-glow" />
+            <div className="absolute -top-20 right-0 w-72 h-72 bg-primary-container/5 rounded-full blur-[80px] group-hover:bg-primary-container/8 transition-all duration-700" />
+            <div className="relative z-10 flex flex-col md:flex-row gap-10">
+              {/* Left: Info */}
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-3 mb-5">
+                  <span className="material-symbols-outlined text-primary-container" data-icon="extension">extension</span>
+                  <h3 className="font-headline-lg text-headline-lg text-primary font-bold">Plugeefy</h3>
+                  <span className="px-2 py-0.5 rounded-full bg-primary-container/10 border border-primary-container/30 font-label-caps text-[10px] text-primary-container uppercase tracking-widest">Em Produção 🟢</span>
+                </div>
+                <p className="font-body-lg text-body-lg text-on-surface-variant mb-3 max-w-xl">
+                  Plataforma SaaS multi-tenant que torna e-commerces visíveis para LLMs (ChatGPT, Gemini, Perplexity) via servidor <strong className="text-primary">MCP nativo</strong>, pipeline de webhooks assíncronos com BullMQ + Redis e agente de IA LangGraph para automação de vendas via WhatsApp.
+                </p>
+                {/* Architecture tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {["MCP Protocol", "BullMQ + Redis", "LangGraph", "Hono API", "Next.js 16", "Supabase RLS", "15+ Integrações"].map((tag) => (
+                    <span key={tag} className="px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-caps text-[10px] border border-white/5 uppercase tracking-widest">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  <Link
+                    to="/case-study/plugeefy"
+                    className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md text-sm px-5 py-2.5 rounded-full hover:neon-glow transition-all uppercase tracking-widest"
+                  >
+                    Ver Case Study
+                    <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                  </Link>
+                  <a
+                    href="https://plugeefy.cloud"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-primary font-label-caps text-[11px] uppercase tracking-widest hover:text-primary-container transition-colors"
+                  >
+                    plugeefy.cloud
+                    <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+                  </a>
+                </div>
               </div>
-              <p className="font-body-lg text-body-lg text-on-surface-variant mb-6 max-w-xl">
-                Integrações robustas para conectar seu ecossistema. Automatize o fluxo de dados entre plataformas sem escrever uma linha de código.
-              </p>
-              <div className="flex gap-4">
-                <span className="px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-caps text-label-caps border border-white/5 uppercase tracking-widest">
-                  API Ready
-                </span>
-                <span className="px-3 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-caps text-label-caps border border-white/5 uppercase tracking-widest">
-                  Webhooks
-                </span>
+              {/* Right: Architecture mini-diagram */}
+              <div className="relative z-10 w-full md:w-72 flex-shrink-0">
+                <div className="rounded-2xl border border-white/10 bg-surface-container-lowest p-5 font-mono text-xs">
+                  <p className="text-primary-container/60 text-[10px] uppercase tracking-widest mb-3 font-sans">Arquitetura</p>
+                  {[
+                    { label: "WhatsApp · Instagram", color: "#caf30044" },
+                    { label: "Hono API Gateway", color: "#caf30022" },
+                    { label: "BullMQ + Redis", color: "#caf30033" },
+                    { label: "LangGraph Agent + MCP", color: "#caf30055" },
+                    { label: "Supabase + Bling ERP", color: "#caf30022" },
+                  ].map((row, i) => (
+                    <div key={row.label} className="flex flex-col items-center">
+                      <div
+                        className="w-full rounded-lg px-3 py-1.5 text-center"
+                        style={{ background: row.color, color: "#caf300", borderColor: row.color }}
+                      >
+                        {row.label}
+                      </div>
+                      {i < 4 && (
+                        <div className="h-3 w-px bg-primary-container/30" />
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="relative z-10 w-full md:w-1/3 aspect-video rounded-xl overflow-hidden border border-white/10 bg-surface-container-lowest flex items-center justify-center">
-              <span className="material-symbols-outlined text-6xl text-surface-bright" data-icon="schema">
-                schema
-              </span>
             </div>
           </motion.div>
         </motion.div>
