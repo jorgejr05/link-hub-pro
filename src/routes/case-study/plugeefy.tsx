@@ -225,9 +225,9 @@ function CaseStudyPlugeefy() {
 
         <motion.div variants={stagger} className="grid md:grid-cols-2 gap-6">
           {/* Flow steps */}
-          <motion.div variants={fadeInUp} className="glass-panel rounded-2xl p-8">
-            <p className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-6">Jornada do Consumidor</p>
-            <div className="flex flex-col gap-0">
+          <motion.div variants={fadeInUp} className="glass-panel rounded-2xl p-8 flex flex-col h-full">
+            <p className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-8">Jornada do Consumidor</p>
+            <div className="flex flex-col gap-0 flex-1">
               {[
                 { step: "Busca na IA",                  sub: "Usuário pesquisa produtos no ChatGPT/Gemini" },
                 { step: "Consulta via MCP Server",      sub: "IA lê dados estruturados da loja em tempo real" },
@@ -242,9 +242,9 @@ function CaseStudyPlugeefy() {
                     <div className="w-6 h-6 rounded-full bg-primary-container/15 border border-primary-container/40 flex items-center justify-center">
                       <span className="text-primary-container font-bold text-[10px]">{i + 1}</span>
                     </div>
-                    {i < 6 && <div className="w-px h-6 bg-gradient-to-b from-primary-container/30 to-transparent" />}
+                    {i < 6 && <div className="w-px h-12 bg-gradient-to-b from-primary-container/30 to-transparent" />}
                   </div>
-                  <div className="pb-1 pt-0.5">
+                  <div className="pb-6 pt-0.5">
                     <p className="text-primary text-sm font-medium">{item.step}</p>
                     <p className="text-on-surface-variant text-xs">{item.sub}</p>
                   </div>
