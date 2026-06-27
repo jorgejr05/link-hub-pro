@@ -218,7 +218,7 @@ function Index() {
                     to="/case-study/plugeefy"
                     className="inline-flex items-center gap-2 font-label-md bg-primary-container text-on-primary-container px-6 py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest text-[11px]"
                   >
-                    Ver Case Study <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                    Ver Caso de Uso <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
                   </Link>
                   <Link
                     to="/architecture"
