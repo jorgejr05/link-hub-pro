@@ -424,8 +424,9 @@ export default function Architecture() {
                       { state: "selecionarProduto",         desc: "adiciona item ao carrinho com quantidade" },
                       { state: "perguntaContinuarAdicionar",desc: "aguarda intenção do usuário" },
                       { state: "calcularFrete",             desc: "tool: calculateBlingFrete(cep, peso)" },
-                      { state: "confirmarTotal",            desc: "tool: criarPedidoBling(payload)" },
-                      { state: "pedidoCriado",              desc: "confirmação e encerramento do fluxo" },
+                      { state: "confirmarTotal",            desc: "exibe resumo: produtos, frete e total ao cliente" },
+                      { state: "processarPagamento",        desc: "tool: appmax.gerarCobranca(PIX | Cartão de Crédito)" },
+                      { state: "pedidoCriado",              desc: "pagamento confirmado · criarPedidoBling(payload) + confirmação" },
                     ].map((s, i) => (
                       <motion.div
                         key={s.state}
@@ -473,9 +474,10 @@ export default function Architecture() {
                   </div>
                   <div className="px-5 py-4 flex flex-col gap-3">
                     {[
-                      { fn: "getCustomer(cpf/cnpj)",     target: "Bling API",         icon: "person_search" },
-                      { fn: "getAddressByCep(cep)",       target: "ViaCEP API",         icon: "location_on" },
-                      { fn: "calculateFrete(cep, peso)",  target: "Melhor Envio API",   icon: "local_shipping" },
+                      { fn: "getCustomer(cpf/cnpj)",         target: "Bling API",          icon: "person_search" },
+                      { fn: "getAddressByCep(cep)",         target: "ViaCEP API",          icon: "location_on" },
+                      { fn: "calculateFrete(cep, peso)",    target: "Melhor Envio API",    icon: "local_shipping" },
+                      { fn: "appmax.gerarCobranca(payload)",target: "AppMax · PIX / Cartão",icon: "payments" },
                     ].map((tool, i) => (
                       <motion.div
                         key={tool.fn}
