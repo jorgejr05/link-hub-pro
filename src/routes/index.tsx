@@ -230,7 +230,7 @@ function Index() {
               </div>
               <div className="hidden md:flex flex-col justify-center items-end opacity-80 group-hover:opacity-100 transition-opacity">
                 {/* Abstração Visual do Plugeefy */}
-                <div className="w-full max-w-sm rounded-xl border border-white/10 bg-surface/50 p-6 font-mono text-xs text-primary-container">
+                <div className="w-full max-w-md rounded-2xl border border-white/10 bg-surface/50 p-8 font-mono text-sm text-primary-container leading-relaxed">
                   <div className="mb-2 text-outline">{"// JSON-RPC Request (MCP Server)"}</div>
                   <div>{"{"}</div>
                   <div className="pl-4">"method": "tools/call",</div>
