@@ -308,10 +308,10 @@ function Index() {
           
           <div className="relative z-10">
             <h2 className="font-headline-xl text-[32px] md:text-[56px] text-primary uppercase mb-6 leading-tight">
-              Qual o próximo <span className="neon-text">gargalo</span><br className="hidden md:block"/> que vamos resolver?
+              Qual <span className="neon-text">desafio</span> vamos<br className="hidden md:block"/> resolver juntos?
             </h2>
             <p className="font-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
-              A revolução da IA já começou. Se o seu negócio não liderar essa mudança, seus concorrentes liderarão. Fale diretamente comigo e vamos desenhar a solução ideal para a sua empresa.
+              Toda empresa possui gargalos que limitam seu crescimento. Nosso trabalho é identificar esses desafios e projetar uma arquitetura de IA capaz de automatizar processos, integrar sistemas e gerar resultados mensuráveis para o seu negócio.
             </p>
             <a 
               href={whatsappUrl} 
@@ -320,7 +320,7 @@ function Index() {
               className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-primary-container text-on-primary-container font-label-md text-base font-bold uppercase tracking-widest hover:neon-glow hover:scale-105 transition-all duration-300"
             >
               <span className="material-symbols-outlined" data-icon="chat">chat</span>
-              Falar com Arquiteto de IA
+              Agendar Diagnóstico
             </a>
           </div>
         </motion.div>
