@@ -35,14 +35,7 @@ function Index() {
           variants={staggerContainer}
           className="text-center max-w-5xl mx-auto relative z-10"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel mb-8 border-primary-container/20">
-            <span
-              className="w-2 h-2 rounded-full bg-primary-container animate-pulse neon-glow"
-            ></span>
-            <span className="font-label-caps text-label-caps text-primary-container tracking-widest uppercase">
-              Consultoria Estratégica em IA
-            </span>
-          </motion.div>
+
           
           <motion.h1 variants={fadeInUp} className="font-display-lg-mobile md:font-display-lg text-[40px] md:text-[72px] mb-6 leading-tight uppercase">
             <span className="text-primary">Inteligência Artificial</span>
@@ -74,23 +67,7 @@ function Index() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: 0.5 }} 
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="font-label-caps text-label-caps text-on-surface-variant uppercase">
-            Descobrir
-          </span>
-          <span
-            className="material-symbols-outlined text-on-surface animate-bounce"
-            data-icon="keyboard_arrow_down"
-          >
-            keyboard_arrow_down
-          </span>
-        </motion.div>
+
       </section>
 
       {/* ── Section 01: Dores Universais & Solução ─────────────────────── */}
@@ -226,7 +203,7 @@ function Index() {
               <div className="flex flex-col h-full justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="px-3 py-1 rounded-full bg-primary-container/10 text-primary-container border border-primary-container/30 font-label-caps text-[10px] uppercase tracking-widest">
-                    B2B & B2C SaaS
+                    Ecossistema/Saas B2B
                   </span>
                   <span className="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant border border-white/5 font-label-caps text-[10px] uppercase tracking-widest">
                     Em Produção 🟢
@@ -234,7 +211,9 @@ function Index() {
                 </div>
                 <h3 className="font-headline-lg text-4xl text-primary font-bold mb-4 uppercase">Plugeefy AI Commerce</h3>
                 <p className="font-body-md text-on-surface-variant mb-6 leading-relaxed max-w-lg">
-                  Plataforma SaaS multi-tenant que integra lojas virtuais nativamente a LLMs via <strong>servidor MCP</strong> próprio. Conta com webhook pipeline distribuído (BullMQ + Redis) e agentes stateful (LangGraph) para automatizar vendas complexas via WhatsApp, sincronizadas em tempo real com ERPs.
+                  Plataforma SaaS que integra ecommerces que utilizam o Bling ERP nativamente a modelos de LLMs globais via servidor MCP próprio, permitindo que Modelos de IAs recomendem produtos com visão do estoque em tempo real, ajudando na jornada de busca, dúvidas e compra e encaminhando para os canais de atendimento do ecommerce e redes sociais. Com um Dashboard completo para análise de dados e tomada de decisões, tanto sobre produtos mais recomendados até de geolocalização para mapear as demandas de busca.
+                  <br /><br />
+                  Além de termos um Ecossistema completo que conecta, Agente de IA personalizado aos canais de atendimento (WhatsApp/Instagram), sistema ERP Bling, Logística e gateway de pagamentos, permitindo que o Agente de IA faça um atendimento completo de ponta a ponta, desde suporte, venda e pós venda.
                 </p>
                 <div className="flex gap-4">
                   <Link
