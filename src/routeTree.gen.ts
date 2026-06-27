@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as CurriculoRouteImport } from './routes/curriculo'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CaseStudyPlugeefyRouteImport } from './routes/case-study/plugeefy'
 
+const CurriculoRoute = CurriculoRouteImport.update({
+  id: '/curriculo',
+  path: '/curriculo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
+  '/curriculo': typeof CurriculoRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
+  '/curriculo': typeof CurriculoRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
 }
 export interface FileRoutesById {
@@ -52,25 +60,45 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/blog': typeof BlogRoute
+  '/curriculo': typeof CurriculoRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/architecture' | '/blog' | '/case-study/plugeefy'
+  fullPaths:
+    | '/'
+    | '/architecture'
+    | '/blog'
+    | '/curriculo'
+    | '/case-study/plugeefy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/architecture' | '/blog' | '/case-study/plugeefy'
-  id: '__root__' | '/' | '/architecture' | '/blog' | '/case-study/plugeefy'
+  to: '/' | '/architecture' | '/blog' | '/curriculo' | '/case-study/plugeefy'
+  id:
+    | '__root__'
+    | '/'
+    | '/architecture'
+    | '/blog'
+    | '/curriculo'
+    | '/case-study/plugeefy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitectureRoute: typeof ArchitectureRoute
   BlogRoute: typeof BlogRoute
+  CurriculoRoute: typeof CurriculoRoute
   CaseStudyPlugeefyRoute: typeof CaseStudyPlugeefyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/curriculo': {
+      id: '/curriculo'
+      path: '/curriculo'
+      fullPath: '/curriculo'
+      preLoaderRoute: typeof CurriculoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog': {
       id: '/blog'
       path: '/blog'
@@ -106,6 +134,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitectureRoute: ArchitectureRoute,
   BlogRoute: BlogRoute,
+  CurriculoRoute: CurriculoRoute,
   CaseStudyPlugeefyRoute: CaseStudyPlugeefyRoute,
 }
 export const routeTree = rootRouteImport
