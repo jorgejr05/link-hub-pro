@@ -10,20 +10,15 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CurriculoRouteImport } from './routes/curriculo'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as CaseStudyPlugeefyRouteImport } from './routes/case-study/plugeefy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const CurriculoRoute = CurriculoRouteImport.update({
   id: '/curriculo',
   path: '/curriculo',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArchitectureRoute = ArchitectureRouteImport.update({
@@ -36,75 +31,81 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudyPlugeefyRoute = CaseStudyPlugeefyRouteImport.update({
   id: '/case-study/plugeefy',
   path: '/case-study/plugeefy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRouteWithChildren
   '/curriculo': typeof CurriculoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRouteWithChildren
   '/curriculo': typeof CurriculoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
-  '/blog': typeof BlogRouteWithChildren
   '/curriculo': typeof CurriculoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/architecture'
-    | '/blog'
     | '/curriculo'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/architecture'
-    | '/blog'
     | '/curriculo'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/blog'
   id:
     | '__root__'
     | '/'
     | '/architecture'
-    | '/blog'
     | '/curriculo'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitectureRoute: typeof ArchitectureRoute
-  BlogRoute: typeof BlogRouteWithChildren
   CurriculoRoute: typeof CurriculoRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   CaseStudyPlugeefyRoute: typeof CaseStudyPlugeefyRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -114,13 +115,6 @@ declare module '@tanstack/react-router' {
       path: '/curriculo'
       fullPath: '/curriculo'
       preLoaderRoute: typeof CurriculoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/architecture': {
@@ -137,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-study/plugeefy': {
       id: '/case-study/plugeefy'
       path: '/case-study/plugeefy'
@@ -146,30 +147,21 @@ declare module '@tanstack/react-router' {
     }
     '/blog/$slug': {
       id: '/blog/$slug'
-      path: '/$slug'
+      path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface BlogRouteChildren {
-  BlogSlugRoute: typeof BlogSlugRoute
-}
-
-const BlogRouteChildren: BlogRouteChildren = {
-  BlogSlugRoute: BlogSlugRoute,
-}
-
-const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitectureRoute: ArchitectureRoute,
-  BlogRoute: BlogRouteWithChildren,
   CurriculoRoute: CurriculoRoute,
+  BlogSlugRoute: BlogSlugRoute,
   CaseStudyPlugeefyRoute: CaseStudyPlugeefyRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
