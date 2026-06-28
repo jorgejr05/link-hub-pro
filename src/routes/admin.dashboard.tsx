@@ -21,16 +21,8 @@ function AdminDashboard() {
   const [genStatus, setGenStatus] = useState("");
 
   useEffect(() => {
-    checkAuth();
     fetchPosts();
   }, []);
-
-  async function checkAuth() {
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) {
-      navigate({ to: "/admin" });
-    }
-  }
 
   async function fetchPosts() {
     const { data } = await supabase.from("blog_posts").select("*").order("created_at", { ascending: false });
