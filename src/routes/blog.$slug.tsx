@@ -44,7 +44,14 @@ function BlogPost() {
 
   useEffect(() => {
     if (post) {
-      supabase.rpc('increment_view', { post_id: post.id }).catch(() => {});
+      const increment = async () => {
+        try {
+          await supabase.rpc('increment_view', { post_id: post.id });
+        } catch (e) {
+          // ignore error
+        }
+      };
+      increment();
     }
   }, [post]);
 
