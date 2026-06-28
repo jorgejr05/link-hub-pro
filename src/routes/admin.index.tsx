@@ -1,88 +1,97 @@
-import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { supabase } from "../lib/supabase";
 
 export const Route = createFileRoute("/admin/")({
-  beforeLoad: async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    if (session) {
-      throw redirect({ to: "/admin/dashboard" });
-    }
-  },
   component: AdminLogin,
 });
 
 function AdminLogin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
 
-    if (error) {
-      setError(error.message);
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    try {
+      const { data, error: authError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (authError) {
+        setError("Erro de Autenticação: " + authError.message);
+        setLoading(false);
+      } else if (data.session) {
+        navigate({ to: "/admin/dashboard" });
+      } else {
+        setError("Erro desconhecido. Verifique suas credenciais.");
+        setLoading(false);
+      }
+    } catch (err: any) {
+      setError("Erro fatal: " + err.message);
       setLoading(false);
-    } else {
-      navigate({ to: "/admin/dashboard" });
     }
   };
 
   return (
-    <main className="min-h-screen bg-background flex items-center justify-center p-6">
-      <div className="w-full max-w-md bg-surface-container/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-8">
+    <main className="min-h-screen bg-background flex flex-col items-center justify-center p-6 text-on-background">
+      <div className="w-full max-w-sm bg-surface-container border border-white/10 rounded-2xl p-8 shadow-2xl">
+        
         <div className="text-center mb-8">
-          <span className="material-symbols-outlined text-primary-container text-4xl mb-4" data-icon="admin_panel_settings">
-            admin_panel_settings
-          </span>
-          <h1 className="font-headline-md text-2xl text-primary">Acesso Restrito</h1>
-          <p className="text-on-surface-variant text-sm mt-2">Hub de Autoridade - Dashboard</p>
+          <h1 className="text-2xl font-bold text-primary mb-2">Supabase Auth</h1>
+          <p className="text-sm text-on-surface-variant">Painel Administrativo</p>
         </div>
 
-        <form onSubmit={handleLogin} className="flex flex-col gap-4">
-          <div>
-            <label className="block text-xs font-label-caps uppercase text-primary-container mb-2 tracking-widest">
+        <form onSubmit={handleLogin} className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
+            <label className="text-xs uppercase tracking-widest text-primary-container font-bold">
               Email
             </label>
             <input
+              name="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-xs font-label-caps uppercase text-primary-container mb-2 tracking-widest">
-              Senha
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all"
+              placeholder="admin@exemplo.com"
+              className="bg-background border border-white/20 rounded-lg p-3 text-white outline-none focus:border-primary transition-colors"
               required
             />
           </div>
 
-          {error && <p className="text-red-400 text-sm">{error}</p>}
+          <div className="flex flex-col gap-2">
+            <label className="text-xs uppercase tracking-widest text-primary-container font-bold">
+              Senha
+            </label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Sua senha secreta"
+              className="bg-background border border-white/20 rounded-lg p-3 text-white outline-none focus:border-primary transition-colors"
+              required
+            />
+          </div>
+
+          {error && (
+            <div className="bg-red-500/10 border border-red-500/50 rounded-lg p-3">
+              <p className="text-red-400 text-sm text-center font-semibold">{error}</p>
+            </div>
+          )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-4 bg-primary-container text-on-primary-container font-bold py-3 rounded-xl hover:neon-glow transition-all disabled:opacity-50"
+            className="mt-2 bg-primary text-on-primary font-bold py-3 rounded-lg hover:brightness-110 transition-all disabled:opacity-50"
           >
-            {loading ? "Autenticando..." : "Entrar no Dashboard"}
+            {loading ? "Conectando ao Supabase..." : "Entrar Seguramente"}
           </button>
         </form>
+
       </div>
     </main>
   );
