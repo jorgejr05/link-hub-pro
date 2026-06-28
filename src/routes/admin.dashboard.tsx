@@ -146,7 +146,7 @@ function AdminDashboard() {
 
         {/* AI Generator Panel */}
         {showGenerator && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="mb-12 overflow-hidden">
+          <div className="mb-12 overflow-hidden animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="bg-surface-container-high border border-primary-container/30 rounded-2xl p-8 relative">
               <h2 className="text-xl text-primary mb-4 font-headline-md">Motor de Automação (Groq LLaMA)</h2>
               <p className="text-on-surface-variant text-sm mb-6 max-w-2xl">
@@ -177,7 +177,7 @@ function AdminDashboard() {
               </div>
               {genStatus && <p className="text-primary-container mt-4 font-label-md text-sm">{genStatus}</p>}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Content Table */}
