@@ -5,6 +5,14 @@ import { supabase } from "../lib/supabase";
 import type { BlogPost as BlogPostType } from "./blog.index";
 
 export const Route = createFileRoute("/blog/$slug")({
+  loader: async ({ params: { slug } }) => {
+    const { data } = await supabase
+      .from("blog_posts")
+      .select("*")
+      .eq("slug", slug)
+      .single();
+    return data as BlogPostType | null;
+  },
   component: BlogPost,
 });
 
@@ -14,37 +22,13 @@ const fadeInUp = {
 };
 
 function BlogPost() {
-  const { slug } = Route.useParams();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [loading, setLoading] = useState(true);
+  const post = Route.useLoaderData();
 
   useEffect(() => {
-    async function fetchPost() {
-      const { data, error } = await supabase
-        .from("blog_posts")
-        .select("*")
-        .eq("slug", slug)
-        .single();
-      
-      if (data) {
-        setPost(data);
-        // Incrementa view sem bloquear a UI (ideal seria uma RPC, mas usaremos a forma simples)
-        // Como o RLS bloqueia update publico, voce precisara de uma Database Function (RPC) para incrementar anonimamente.
-        // Por ora, vamos apenas consumir os dados publicamente. Para o contador real, requeremos a function:
-        supabase.rpc('increment_view', { post_id: data.id }).catch(() => {});
-      }
-      setLoading(false);
+    if (post) {
+      supabase.rpc('increment_view', { post_id: post.id }).catch(() => {});
     }
-    fetchPost();
-  }, [slug]);
-
-  if (loading) {
-    return (
-      <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 text-center">
-        <h1 className="text-xl text-on-surface-variant mb-4 font-label-md">Carregando artigo...</h1>
-      </main>
-    );
-  }
+  }, [post]);
 
   if (!post) {
     return (
