@@ -47,17 +47,20 @@ function AdminLogin() {
         
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-primary mb-2">Supabase Auth</h1>
-          <p className="text-sm text-on-surface-variant">Painel Administrativo</p>
+          <p className="text-sm text-on-surface-variant">Modo de Segurança Anti-Travamento</p>
         </div>
 
-        <form onSubmit={handleLogin} className="flex flex-col gap-5">
+        <form onSubmit={handleLogin} className="flex flex-col gap-5" autoComplete="off">
           <div className="flex flex-col gap-2">
             <label className="text-xs uppercase tracking-widest text-primary-container font-bold">
               Email
             </label>
             <input
               name="email"
-              type="email"
+              type="text"
+              autoComplete="off"
+              data-1p-ignore="true"
+              data-lpignore="true"
               placeholder="admin@exemplo.com"
               className="bg-background border border-white/20 rounded-lg p-3 text-white outline-none focus:border-primary transition-colors"
               required
@@ -70,7 +73,10 @@ function AdminLogin() {
             </label>
             <input
               name="password"
-              type="password"
+              type="text"
+              autoComplete="off"
+              data-1p-ignore="true"
+              data-lpignore="true"
               placeholder="Sua senha secreta"
               className="bg-background border border-white/20 rounded-lg p-3 text-white outline-none focus:border-primary transition-colors"
               required
