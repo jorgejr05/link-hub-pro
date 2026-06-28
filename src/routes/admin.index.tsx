@@ -1,9 +1,14 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
+import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
 import { supabase } from "../lib/supabase";
-import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/admin/")({
+  beforeLoad: async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session) {
+      throw redirect({ to: "/admin/dashboard" });
+    }
+  },
   component: AdminLogin,
 });
 
@@ -13,14 +18,6 @@ function AdminLogin() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) {
-        navigate({ to: "/admin/dashboard" });
-      }
-    });
-  }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,11 +38,7 @@ function AdminLogin() {
 
   return (
     <main className="min-h-screen bg-background flex items-center justify-center p-6">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md bg-surface-container/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-8"
-      >
+      <div className="w-full max-w-md bg-surface-container/50 backdrop-blur-2xl border border-white/10 rounded-3xl p-8">
         <div className="text-center mb-8">
           <span className="material-symbols-outlined text-primary-container text-4xl mb-4" data-icon="admin_panel_settings">
             admin_panel_settings
@@ -90,7 +83,7 @@ function AdminLogin() {
             {loading ? "Autenticando..." : "Entrar no Dashboard"}
           </button>
         </form>
-      </motion.div>
+      </div>
     </main>
   );
 }
