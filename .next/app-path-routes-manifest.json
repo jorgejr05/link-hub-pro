@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/(clean)/curriculo/page": "/curriculo",
+  "/(main)/admin/dashboard/page": "/admin/dashboard",
+  "/(main)/blog/[slug]/page": "/blog/[slug]",
+  "/(main)/admin/page": "/admin",
+  "/(main)/blog/page": "/blog",
+  "/(main)/architecture/page": "/architecture",
+  "/(main)/page": "/"
+}

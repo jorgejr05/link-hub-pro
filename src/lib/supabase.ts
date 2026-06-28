@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const rawUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder.supabase.co';
-const rawKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder';
+const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const rawKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder';
 
 const supabaseUrl = rawUrl.replace(/[^a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]/g, "");
 const supabaseAnonKey = rawKey.replace(/[^a-zA-Z0-9-._~+/=]/g, "");
