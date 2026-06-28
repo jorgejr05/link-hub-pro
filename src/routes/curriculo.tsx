@@ -149,14 +149,25 @@ function Curriculo() {
       {/* Print styles */}
       <style>{`
         @media print {
+          @page { margin: 10mm; }
           .no-print { display: none !important; }
-          body { background: white !important; color: black !important; }
-          .print-area { background: white !important; color: black !important; max-width: 100% !important; padding: 20px !important; }
-          .glass-panel { background: white !important; border: 1px solid #e5e7eb !important; }
+          body { background: white !important; color: black !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          .print-area { background: white !important; color: black !important; max-width: 100% !important; padding: 0 !important; }
+          .glass-panel { 
+            background: white !important; 
+            border: 1px solid #e5e7eb !important; 
+            page-break-inside: avoid; 
+            break-inside: avoid;
+            box-shadow: none !important;
+          }
+          .print-avoid-break {
+            page-break-inside: avoid; 
+            break-inside: avoid;
+          }
         }
       `}</style>
 
-      <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24">
+      <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 print:pt-4 print:pb-0 print:px-0">
         {/* Controls — no-print */}
         <motion.div
           initial="hidden"
@@ -255,7 +266,7 @@ function Curriculo() {
                 <h3 className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-6">{c.expLabel}</h3>
                 <div className="flex flex-col gap-8">
                   {c.jobs.map((job, i) => (
-                    <div key={i} className={i > 0 ? "pt-8 border-t border-white/5" : ""}>
+                    <div key={i} className={`print-avoid-break ${i > 0 ? "pt-8 border-t border-white/5" : ""}`}>
                       <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
                         <div>
                           <h4 className="text-primary font-medium text-base">{job.role}</h4>
