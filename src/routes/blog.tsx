@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { blogPosts } from "../data/posts";
 
 export const Route = createFileRoute("/blog")({
   component: Blog,
@@ -58,77 +59,37 @@ function Blog() {
 
         {/* Article Grid */}
         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Article Card 1 */}
-          <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col cursor-pointer">
-            <div className="relative h-64 overflow-hidden">
-              <img
-                alt="TikTok Retention Graphic"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw45LKJmDkVOULVyH94VHAH6jEvmE1W4nr18dGpy963i4HB8xZa3J7sFKtueaZH0J8Nl0fdA_tTqputzzn-p3zz8oCLbxUWcACGYwEe2Gymcr55dGjK8V4vGRNrJwuaHzas6iQy4pR0sIoiW-0vQ1rbaL5ym8yfduckQyai3sHgZ1rG9S9m3q4r3H0i1SM3n_drNSpjJwjsjPxSdg8o1rqIjOBiwmeDrCXYERZuDAmytodObOqvhXtxafLFncOX6wDZ1qMh1HRH_0"
-              />
-              <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary-container neon-glow"></span>
-                <span className="font-label-caps text-[10px] text-primary uppercase tracking-widest">
-                  Conteúdo & TikTok
-                </span>
-              </div>
-            </div>
-            <div className="p-8 flex flex-col gap-4 flex-grow relative">
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              <h2 className="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors text-2xl">
-                Os 3 principais erros que matam retenção no TikTok
-              </h2>
-              <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                Descubra os padrões comportamentais que fazem sua audiência deslizar
-                para o próximo vídeo e como aplicar engenharia reversa para prender
-                a atenção nos primeiros 3 segundos.
-              </p>
-              <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
-                <span className="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
-                  5 MIN DE LEITURA
-                </span>
-                <span className="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors" data-icon="arrow_forward">
-                  arrow_forward
-                </span>
-              </div>
-            </div>
-          </motion.article>
+          {blogPosts.map((post) => (
+            <Link to={`/blog/${post.slug}`} key={post.id} className="block group">
+              <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col h-full cursor-pointer">
+                <div className="p-8 flex flex-col gap-4 flex-grow relative">
+                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                  
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-container neon-glow"></span>
+                    <span className="font-label-caps text-[10px] text-primary uppercase tracking-widest">
+                      {post.category}
+                    </span>
+                  </div>
 
-          {/* Article Card 2 */}
-          <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col cursor-pointer">
-            <div className="relative h-64 overflow-hidden">
-              <img
-                alt="AI Oratory Graphic"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpZkXpmTM__8XK1VC1KafxoLogaY41b2w3GzxVNP6tUrWxhwM6R2nW7q1s4re0jH9l-_T6X-uVfVY0N9dmAh-5_Iaa3fG6kEmYiRqNwDgRPkisONJp7BgLS29TWLChwihEghNCIyi38taEggoQHX6Wz6XGKlTlT3YVQnJM2aQdn83Mpg5XHIYqkB9gf4dtAfUzjuypJ0d7qGxk6dB4n3fm0QgBQjykWFR_HlrZ37jsuGq_iXMfHibQxDBluzvjKxI4JcbIT78veng"
-              />
-              <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary-container neon-glow"></span>
-                <span className="font-label-caps text-[10px] text-primary uppercase tracking-widest">
-                  IA & Ecommerce
-                </span>
-              </div>
-            </div>
-            <div className="p-8 flex flex-col gap-4 flex-grow relative">
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-              <h2 className="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors text-2xl">
-                Como melhorar oratória com IA
-              </h2>
-              <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                Utilize ferramentas de inteligência artificial para analisar seu tom
-                de voz, ritmo e microexpressões faciais. Um guia prático para
-                comunicação de alta performance.
-              </p>
-              <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
-                <span className="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
-                  7 MIN DE LEITURA
-                </span>
-                <span className="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors" data-icon="arrow_forward">
-                  arrow_forward
-                </span>
-              </div>
-            </div>
-          </motion.article>
+                  <h2 className="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors text-xl md:text-2xl line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
+                    <span className="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
+                      {post.readTime} DE LEITURA
+                    </span>
+                    <span className="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors" data-icon="arrow_forward">
+                      arrow_forward
+                    </span>
+                  </div>
+                </div>
+              </motion.article>
+            </Link>
+          ))}
         </motion.div>
       </motion.div>
 
