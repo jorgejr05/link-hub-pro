@@ -1,6 +1,8 @@
-import { createFileRoute, Link, useParams } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { blogPosts } from "../data/posts";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase";
+import type { BlogPost as BlogPostType } from "./blog.index";
 
 export const Route = createFileRoute("/blog/$slug")({
   component: BlogPost,
@@ -13,7 +15,36 @@ const fadeInUp = {
 
 function BlogPost() {
   const { slug } = Route.useParams();
-  const post = blogPosts.find((p) => p.slug === slug);
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPost() {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .eq("slug", slug)
+        .single();
+      
+      if (data) {
+        setPost(data);
+        // Incrementa view sem bloquear a UI (ideal seria uma RPC, mas usaremos a forma simples)
+        // Como o RLS bloqueia update publico, voce precisara de uma Database Function (RPC) para incrementar anonimamente.
+        // Por ora, vamos apenas consumir os dados publicamente. Para o contador real, requeremos a function:
+        supabase.rpc('increment_view', { post_id: data.id }).catch(() => {});
+      }
+      setLoading(false);
+    }
+    fetchPost();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 text-center">
+        <h1 className="text-xl text-on-surface-variant mb-4 font-label-md">Carregando artigo...</h1>
+      </main>
+    );
+  }
 
   if (!post) {
     return (
@@ -64,7 +95,7 @@ function BlogPost() {
             {post.category}
           </span>
           <span className="px-3 py-1 rounded-full bg-surface-container border border-white/5 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">
-            {post.readTime} DE LEITURA
+            {post.read_time} DE LEITURA
           </span>
         </div>
         <h1 className="font-headline-xl text-3xl md:text-5xl lg:text-6xl text-primary leading-tight mb-6">
@@ -119,34 +150,6 @@ function BlogPost() {
           <span className="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
           Agendar Diagnóstico
         </a>
-      </motion.div>
-
-      {/* Roteiros para Redes Sociais (Só visível no código/admin, mas vou deixar renderizado para você copiar) */}
-      <motion.div className="bg-surface-container/50 border border-white/5 rounded-2xl p-8">
-        <h4 className="font-headline-md text-primary text-xl mb-6 border-b border-white/10 pb-4">
-          Conteúdo Gerado para Redes Sociais (Copie e Cole)
-        </h4>
-        
-        <div className="mb-6">
-          <h5 className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-2">Instagram (Caption)</h5>
-          <div className="bg-background/50 p-4 rounded-lg font-mono text-sm text-on-surface-variant whitespace-pre-wrap">
-            {post.social.instagram}
-          </div>
-        </div>
-        
-        <div className="mb-6">
-          <h5 className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-2">LinkedIn (Artigo Curto)</h5>
-          <div className="bg-background/50 p-4 rounded-lg font-mono text-sm text-on-surface-variant whitespace-pre-wrap">
-            {post.social.linkedin}
-          </div>
-        </div>
-
-        <div>
-          <h5 className="font-label-caps text-[11px] text-primary-container uppercase tracking-widest mb-2">TikTok (Roteiro)</h5>
-          <div className="bg-background/50 p-4 rounded-lg font-mono text-sm text-on-surface-variant whitespace-pre-wrap">
-            {post.social.tiktok}
-          </div>
-        </div>
       </motion.div>
     </main>
   );

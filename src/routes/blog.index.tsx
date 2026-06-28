@@ -1,6 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { blogPosts } from "../data/posts";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase";
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  read_time: string;
+  date: string;
+  author: string;
+  cover_image?: string;
+  views: number;
+}
 
 export const Route = createFileRoute("/blog/")({
   component: Blog,
@@ -22,6 +37,22 @@ const fadeInUp = {
 };
 
 function Blog() {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .order("created_at", { ascending: false });
+      
+      if (data) setPosts(data);
+      setLoading(false);
+    }
+    fetchPosts();
+  }, []);
+
   return (
     <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-gutter">
       {/* Main Content Area (Left Column) */}
@@ -59,37 +90,53 @@ function Blog() {
 
         {/* Article Grid */}
         <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
-            <Link to={`/blog/${post.slug}`} key={post.id} className="block group">
-              <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col h-full cursor-pointer">
-                <div className="p-8 flex flex-col gap-4 flex-grow relative">
-                  <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-                  
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-container neon-glow"></span>
-                    <span className="font-label-caps text-[10px] text-primary uppercase tracking-widest">
-                      {post.category}
-                    </span>
-                  </div>
+          {loading ? (
+             <div className="col-span-1 md:col-span-2 py-12 text-center text-on-surface-variant font-label-md">
+                Buscando artigos no banco de dados...
+             </div>
+          ) : posts.length === 0 ? (
+             <div className="col-span-1 md:col-span-2 py-12 text-center text-on-surface-variant font-label-md">
+                Nenhum artigo publicado ainda.
+             </div>
+          ) : (
+            posts.map((post) => (
+              <Link to={`/blog/${post.slug}`} key={post.id} className="block group">
+                <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col h-full cursor-pointer">
+                  <div className="p-8 flex flex-col gap-4 flex-grow relative">
+                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                    
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary-container neon-glow"></span>
+                        <span className="font-label-caps text-[10px] text-primary uppercase tracking-widest">
+                          {post.category}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1 text-on-surface-variant text-xs">
+                        <span className="material-symbols-outlined text-[14px]" data-icon="visibility">visibility</span>
+                        {post.views}
+                      </div>
+                    </div>
 
-                  <h2 className="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors text-xl md:text-2xl line-clamp-2">
-                    {post.title}
-                  </h2>
-                  <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
-                    <span className="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
-                      {post.readTime} DE LEITURA
-                    </span>
-                    <span className="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors" data-icon="arrow_forward">
-                      arrow_forward
-                    </span>
+                    <h2 className="font-headline-md text-headline-md text-primary group-hover:text-primary-container transition-colors text-xl md:text-2xl line-clamp-2">
+                      {post.title}
+                    </h2>
+                    <p className="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-auto pt-6 flex items-center justify-between border-t border-white/5">
+                      <span className="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-widest">
+                        {post.read_time} DE LEITURA
+                      </span>
+                      <span className="material-symbols-outlined text-outline group-hover:text-primary-container transition-colors" data-icon="arrow_forward">
+                        arrow_forward
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </motion.article>
-            </Link>
-          ))}
+                </motion.article>
+              </Link>
+            ))
+          )}
         </motion.div>
       </motion.div>
 

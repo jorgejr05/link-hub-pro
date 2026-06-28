@@ -13,8 +13,10 @@ import { Route as CurriculoRouteImport } from './routes/curriculo'
 import { Route as ArchitectureRouteImport } from './routes/architecture'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as CaseStudyPlugeefyRouteImport } from './routes/case-study/plugeefy'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 
 const CurriculoRoute = CurriculoRouteImport.update({
   id: '/curriculo',
@@ -36,6 +38,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CaseStudyPlugeefyRoute = CaseStudyPlugeefyRouteImport.update({
   id: '/case-study/plugeefy',
   path: '/case-study/plugeefy',
@@ -46,21 +53,30 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/curriculo': typeof CurriculoRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/curriculo': typeof CurriculoRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/admin': typeof AdminIndexRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -68,8 +84,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/architecture': typeof ArchitectureRoute
   '/curriculo': typeof CurriculoRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/case-study/plugeefy': typeof CaseStudyPlugeefyRoute
+  '/admin/': typeof AdminIndexRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -78,24 +96,30 @@ export interface FileRouteTypes {
     | '/'
     | '/architecture'
     | '/curriculo'
+    | '/admin/dashboard'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/admin/'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/architecture'
     | '/curriculo'
+    | '/admin/dashboard'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/admin'
     | '/blog'
   id:
     | '__root__'
     | '/'
     | '/architecture'
     | '/curriculo'
+    | '/admin/dashboard'
     | '/blog/$slug'
     | '/case-study/plugeefy'
+    | '/admin/'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -103,8 +127,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchitectureRoute: typeof ArchitectureRoute
   CurriculoRoute: typeof CurriculoRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CaseStudyPlugeefyRoute: typeof CaseStudyPlugeefyRoute
+  AdminIndexRoute: typeof AdminIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -138,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/case-study/plugeefy': {
       id: '/case-study/plugeefy'
       path: '/case-study/plugeefy'
@@ -152,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -159,8 +199,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchitectureRoute: ArchitectureRoute,
   CurriculoRoute: CurriculoRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
   BlogSlugRoute: BlogSlugRoute,
   CaseStudyPlugeefyRoute: CaseStudyPlugeefyRoute,
+  AdminIndexRoute: AdminIndexRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
