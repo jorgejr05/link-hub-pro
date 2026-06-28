@@ -20,7 +20,7 @@ function AdminLogin() {
         navigate({ to: "/admin/dashboard" });
       }
     });
-  }, [navigate]);
+  }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
