@@ -71,16 +71,16 @@ function Blog() {
         variants={staggerContainer}
         className="lg:col-span-8 flex flex-col gap-12"
       >
-        {/* Category Menu (Glassmorphism Pill Nav) */}
-        <motion.nav variants={fadeInUp} className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] gap-4 p-2 bg-surface-container/50 backdrop-blur-xl border border-white/5 rounded-full w-full max-w-full">
+        {/* Category Menu (Scrollable Pills) */}
+        <motion.nav variants={fadeInUp} className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] gap-3 pb-4 w-full">
           {categories.map((cat) => (
             <button 
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-2 rounded-full font-label-md uppercase tracking-widest transition-all whitespace-nowrap ${
+              className={`px-6 py-2.5 rounded-full font-label-md uppercase tracking-widest transition-all whitespace-nowrap flex-shrink-0 ${
                 selectedCategory === cat 
-                  ? "bg-primary-container/10 text-primary-container border border-primary-container/30 shadow-[0_0_15px_rgba(202,243,0,0.1)]" 
-                  : "text-on-surface-variant hover:text-primary hover:bg-white/5 border border-transparent"
+                  ? "bg-primary-container/15 text-primary-container border border-primary-container/30 shadow-[0_0_15px_rgba(202,243,0,0.1)]" 
+                  : "bg-surface-container/50 text-on-surface-variant border border-white/5 hover:bg-white/10 hover:text-primary backdrop-blur-md"
               }`}
             >
               {cat}
