@@ -40,6 +40,7 @@ function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("Todos");
 
   useEffect(() => {
     async function fetchPosts() {
@@ -58,8 +59,11 @@ function Blog() {
     fetchPosts();
   }, []);
 
+  const categories = ["Todos", ...Array.from(new Set(posts.map(p => p.category)))];
+  const filteredPosts = selectedCategory === "Todos" ? posts : posts.filter(p => p.category === selectedCategory);
+
   return (
-    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <main className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-32 pb-40 grid grid-cols-1 lg:grid-cols-12 gap-gutter relative items-start">
       {/* Main Content Area (Left Column) */}
       <motion.div 
         initial="hidden"
@@ -68,22 +72,20 @@ function Blog() {
         className="lg:col-span-8 flex flex-col gap-12"
       >
         {/* Category Menu (Glassmorphism Pill Nav) */}
-        <motion.nav variants={fadeInUp} className="flex flex-wrap gap-4 p-2 bg-surface-container/50 backdrop-blur-xl border border-white/5 rounded-full w-fit">
-          <button className="px-6 py-2 rounded-full bg-primary-container/10 text-primary-container font-label-md uppercase tracking-widest border border-primary-container/30 shadow-[0_0_15px_rgba(202,243,0,0.1)]">
-            Todos
-          </button>
-          <button className="px-6 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-white/5 font-label-md uppercase tracking-widest transition-all">
-            Conteúdo & TikTok
-          </button>
-          <button className="px-6 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-white/5 font-label-md uppercase tracking-widest transition-all">
-            Produtividade & Disciplina
-          </button>
-          <button className="px-6 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-white/5 font-label-md uppercase tracking-widest transition-all">
-            IA & Ecommerce
-          </button>
-          <button className="px-6 py-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-white/5 font-label-md uppercase tracking-widest transition-all">
-            Startups
-          </button>
+        <motion.nav variants={fadeInUp} className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] gap-4 p-2 bg-surface-container/50 backdrop-blur-xl border border-white/5 rounded-full w-full max-w-full">
+          {categories.map((cat) => (
+            <button 
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-6 py-2 rounded-full font-label-md uppercase tracking-widest transition-all whitespace-nowrap ${
+                selectedCategory === cat 
+                  ? "bg-primary-container/10 text-primary-container border border-primary-container/30 shadow-[0_0_15px_rgba(202,243,0,0.1)]" 
+                  : "text-on-surface-variant hover:text-primary hover:bg-white/5 border border-transparent"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </motion.nav>
 
         <motion.div variants={fadeInUp} className="flex items-center gap-4">
@@ -103,12 +105,12 @@ function Blog() {
              <div className="col-span-1 md:col-span-2 py-12 text-center text-red-400 font-label-md">
                 Erro ao buscar artigos: {errorMsg}
              </div>
-          ) : posts.length === 0 ? (
+          ) : filteredPosts.length === 0 ? (
              <div className="col-span-1 md:col-span-2 py-12 text-center text-on-surface-variant font-label-md">
-                Nenhum artigo publicado ainda.
+                Nenhum artigo publicado ainda para esta categoria.
              </div>
           ) : (
-            posts.map((post) => (
+            filteredPosts.map((post) => (
               <Link to={`/blog/${post.slug}`} key={post.id} className="block group">
                 <motion.article variants={fadeInUp} className="group relative bg-surface-container-low/40 backdrop-blur-2xl border border-white/10 rounded-2xl overflow-hidden hover:neon-border transition-all duration-500 hover:neon-glow flex flex-col h-full cursor-pointer">
                   <div className="p-8 flex flex-col gap-4 flex-grow relative">
@@ -154,7 +156,7 @@ function Blog() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="lg:col-span-4 flex flex-col gap-8"
+        className="lg:col-span-4 flex flex-col gap-8 lg:sticky lg:top-32 h-fit pb-12"
       >
         {/* Profile Bento Card */}
         <div className="bg-surface-container/60 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 relative overflow-hidden flex flex-col items-center text-center">
@@ -174,15 +176,20 @@ function Blog() {
             Construindo o ecossistema digital do futuro. Explorando a interseção
             entre criação de conteúdo, IA e negócios de alta performance.
           </p>
-          <div className="flex gap-4 w-full">
-            <button className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 flex justify-center items-center transition-colors">
-              <span className="material-symbols-outlined text-primary" data-icon="share">
-                share
+          <div className="flex gap-3 w-full">
+            <button className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 flex justify-center items-center transition-colors tooltip relative group" title="Instagram">
+              <span className="material-symbols-outlined text-primary group-hover:text-primary-container transition-colors" data-icon="photo_camera">
+                photo_camera
               </span>
             </button>
-            <button className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 flex justify-center items-center transition-colors">
-              <span className="material-symbols-outlined text-primary" data-icon="mail">
-                mail
+            <button className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 flex justify-center items-center transition-colors tooltip relative group" title="LinkedIn">
+              <span className="material-symbols-outlined text-primary group-hover:text-primary-container transition-colors" data-icon="work">
+                work
+              </span>
+            </button>
+            <button className="flex-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 flex justify-center items-center transition-colors tooltip relative group" title="TikTok">
+              <span className="material-symbols-outlined text-primary group-hover:text-primary-container transition-colors" data-icon="music_note">
+                music_note
               </span>
             </button>
           </div>
