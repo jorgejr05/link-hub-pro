@@ -39,6 +39,7 @@ const fadeInUp = {
 function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     async function fetchPosts() {
@@ -47,6 +48,10 @@ function Blog() {
         .select("*")
         .order("created_at", { ascending: false });
       
+      if (error) {
+        console.error("Supabase Error:", error);
+        setErrorMsg(error.message);
+      }
       if (data) setPosts(data);
       setLoading(false);
     }
@@ -93,6 +98,10 @@ function Blog() {
           {loading ? (
              <div className="col-span-1 md:col-span-2 py-12 text-center text-on-surface-variant font-label-md">
                 Buscando artigos no banco de dados...
+             </div>
+          ) : errorMsg ? (
+             <div className="col-span-1 md:col-span-2 py-12 text-center text-red-400 font-label-md">
+                Erro ao buscar artigos: {errorMsg}
              </div>
           ) : posts.length === 0 ? (
              <div className="col-span-1 md:col-span-2 py-12 text-center text-on-surface-variant font-label-md">
