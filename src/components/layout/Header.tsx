@@ -7,7 +7,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-2xl border-b border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-all duration-500 ease-in-out"
+      className="fixed top-0 w-full z-50 bg-surface border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-all duration-500 ease-in-out"
     >
       <div className="flex items-center px-margin-mobile md:px-margin-desktop h-20 max-w-[1440px] mx-auto relative">
         <Link to="/" className="flex items-center gap-4 group">

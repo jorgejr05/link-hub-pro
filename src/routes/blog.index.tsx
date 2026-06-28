@@ -252,8 +252,7 @@ function Blog() {
 
         {/* Newsletter Capture */}
         <div className="bg-surface-container-high border border-white/10 rounded-3xl p-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-primary-container neon-glow"></div>
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary-container/10 rounded-full blur-[50px] pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-primary-container"></div>
           <span
             className="material-symbols-outlined text-primary-container text-4xl mb-4 block"
             data-icon="bolt"
@@ -261,7 +260,7 @@ function Blog() {
             bolt
           </span>
           <h4 className="font-headline-lg text-headline-lg text-primary mb-2 uppercase">
-            Acesse a <span className="neon-text">Rede Neural</span>
+            Acesse a <span className="text-primary-container">Rede Neural</span>
           </h4>
           <p className="font-body-md text-body-md text-on-surface-variant mb-6">
             Receba atualizações criptografadas sobre as últimas táticas de mercado antes que se tornem padrão.
@@ -269,13 +268,14 @@ function Blog() {
           <form className="flex flex-col gap-4">
             <div className="relative">
               <input
-                className="w-full bg-background border border-white/10 rounded-full px-6 py-3 text-primary font-label-md placeholder-white/30 focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all uppercase tracking-widest text-sm"
+                className="w-full bg-background border border-white/10 rounded-full px-6 py-3 text-primary font-label-md placeholder-white/30 focus:outline-none focus:border-primary-container focus:bg-surface-container uppercase tracking-widest text-sm"
                 placeholder="ENDEREÇO DE EMAIL"
-                type="email"
+                type="text"
+                autoComplete="off"
               />
             </div>
             <button
-              className="w-full bg-primary-container text-on-primary-container font-label-md text-sm py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest font-bold"
+              className="w-full bg-primary-container text-on-primary-container font-label-md text-sm py-3 rounded-full hover:brightness-110 uppercase tracking-widest font-bold"
               type="button"
             >
               Ingressar
