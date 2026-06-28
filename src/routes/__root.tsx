@@ -1,4 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNavBar } from "@/components/layout/BottomNavBar";
@@ -61,12 +61,15 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
+
   return (
     <>
-      <Header />
+      {!isAdmin && <Header />}
       <Outlet />
-      <Footer />
-      <BottomNavBar />
+      {!isAdmin && <Footer />}
+      {!isAdmin && <BottomNavBar />}
     </>
   );
 }
