@@ -62,14 +62,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const isAdmin = pathname.startsWith("/admin");
+  const isNoLayoutRoute = pathname.startsWith("/admin") || pathname.startsWith("/curriculo");
 
   return (
     <>
-      {!isAdmin && <Header />}
+      {!isNoLayoutRoute && <Header />}
       <Outlet />
-      {!isAdmin && <Footer />}
-      {!isAdmin && <BottomNavBar />}
+      {!isNoLayoutRoute && <Footer />}
+      {!isNoLayoutRoute && <BottomNavBar />}
     </>
   );
 }
