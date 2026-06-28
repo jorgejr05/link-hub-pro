@@ -6,12 +6,30 @@ import type { BlogPost as BlogPostType } from "./blog.index";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: async ({ params: { slug } }) => {
-    const { data } = await supabase
-      .from("blog_posts")
-      .select("*")
-      .eq("slug", slug)
-      .single();
-    return data as BlogPostType | null;
+    try {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .eq("slug", slug)
+        .single();
+      
+      if (error) {
+        console.error("Supabase Error:", error);
+        return null;
+      }
+      return data as BlogPostType | null;
+    } catch (e) {
+      console.error("Loader fetch error:", e);
+      return null;
+    }
+  },
+  errorComponent: ({ error }) => {
+    return (
+      <div className="pt-32 text-center text-red-500">
+        <h1>Erro na página do artigo:</h1>
+        <pre>{error.message}</pre>
+      </div>
+    )
   },
   component: BlogPost,
 });
