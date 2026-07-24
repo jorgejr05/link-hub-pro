@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,article,settings,visibility,arrow_forward,photo_camera,work,music_note,videocam,smart_toy,chevron_right,bolt,schema,cases,code,download,print" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
       </head>
       <body className="bg-background text-on-background font-body-lg min-h-screen selection:bg-primary-container selection:text-on-primary-container relative">
         {children}
