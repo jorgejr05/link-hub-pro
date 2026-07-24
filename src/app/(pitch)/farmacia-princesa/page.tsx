@@ -28,38 +28,37 @@ export default function FarmaciaPrincesaPitch() {
             + Inteligência Artificial
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
-          O primeiro ecossistema farmacêutico verdadeiramente preparado para a era da IA no interior paulista.
+        <p className="text-lg md:text-2xl text-slate-500 max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500 font-medium">
+          Transformando buscas em clientes.<br/>
+          <span className="text-base md:text-lg font-normal mt-2 block">A próxima geração de aquisição de clientes para a Farmácia Princesa através do Google, ChatGPT, Gemini e assistentes de IA.</span>
         </p>
       </section>
 
-      {/* ── 02. O COMPORTAMENTO MUDOU ────────────────────────────────────────── */}
+      {/* ── 02. O COMPORTAMENTO MUDOU & O PROBLEMA ───────────────────────────── */}
       <section className="py-24 px-6 bg-white border-y border-slate-100">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">O comportamento mudou.</h2>
-          <p className="text-lg text-slate-500">Hoje o cliente não começa comprando. Ele começa perguntando.</p>
-        </div>
-
-        {/* Balões flutuantes */}
-        <div className="relative max-w-3xl mx-auto h-[400px]">
-          <div className="absolute top-0 left-[10%] bg-slate-50 border border-slate-200 px-5 py-3 rounded-2xl rounded-bl-sm shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[100ms]">
-            <p className="text-sm font-medium text-slate-700">"qual remédio para dor de garganta"</p>
-          </div>
-          <div className="absolute top-[25%] right-[5%] bg-slate-50 border border-slate-200 px-5 py-3 rounded-2xl rounded-br-sm shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[300ms]">
-            <p className="text-sm font-medium text-slate-700">"farmácia aberta agora"</p>
-          </div>
-          <div className="absolute top-[50%] left-[5%] bg-slate-50 border border-slate-200 px-5 py-3 rounded-2xl rounded-bl-sm shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[500ms]">
-            <p className="text-sm font-medium text-slate-700">"onde comprar creatina"</p>
-          </div>
-          <div className="absolute top-[75%] right-[15%] bg-slate-50 border border-slate-200 px-5 py-3 rounded-2xl rounded-br-sm shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms]">
-            <p className="text-sm font-medium text-slate-700">"qual farmácia entrega agora"</p>
-          </div>
-          
-          {/* Funil Central */}
-          <div className="absolute inset-0 flex items-center justify-center animate-in fade-in duration-1000 delay-[1000ms]">
-            <div className="w-[1px] h-[300px] bg-gradient-to-b from-transparent via-emerald-300 to-emerald-500 relative">
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
+          <p className="text-xl text-slate-500 font-medium">Hoje o cliente não começa comprando. Ele começa perguntando.</p>
+          <div className="mt-12 text-left bg-red-50/50 border border-red-100 rounded-3xl p-8 md:p-12 shadow-sm">
+            <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center gap-2">
+              <span className="material-symbols-outlined">warning</span> O Problema
+            </h3>
+            <p className="text-lg text-slate-700 mb-8">Todos os dias, milhares de pessoas pegam o celular e pesquisam:</p>
+            
+            {/* Balões flutuantes adaptados para lista inline */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              <div className="bg-white border border-slate-200 px-5 py-3 rounded-2xl rounded-bl-sm shadow-sm"><p className="text-sm font-medium text-slate-700">"qual remédio para dor de garganta"</p></div>
+              <div className="bg-white border border-slate-200 px-5 py-3 rounded-2xl rounded-br-sm shadow-sm"><p className="text-sm font-medium text-slate-700">"farmácia aberta agora"</p></div>
+              <div className="bg-white border border-slate-200 px-5 py-3 rounded-2xl rounded-bl-sm shadow-sm"><p className="text-sm font-medium text-slate-700">"onde comprar creatina"</p></div>
+              <div className="bg-white border border-slate-200 px-5 py-3 rounded-2xl rounded-br-sm shadow-sm"><p className="text-sm font-medium text-slate-700">"farmácia entrega no meu bairro"</p></div>
             </div>
+
+            <p className="text-lg font-medium text-red-900">
+              Mas a Farmácia Princesa só participa da conversa quando o cliente <span className="underline decoration-red-300 underline-offset-4 font-bold">já decidiu</span> entrar em contato.
+            </p>
+            <p className="text-xl font-bold text-red-700 mt-4">
+              Estamos deixando oportunidades na mesa.
+            </p>
           </div>
         </div>
       </section>
@@ -69,7 +68,7 @@ export default function FarmaciaPrincesaPitch() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">O Fim do Atrito</h2>
-            <p className="text-lg text-slate-500 max-w-2xl mx-auto">A comparação que vende praticamente sozinha.</p>
+            <p className="text-lg text-slate-500 max-w-2xl mx-auto">A evolução natural da jornada de compra.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -103,31 +102,41 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* ── 04. A OPORTUNIDADE ───────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
-        {/* Abstract Map Background */}
+      {/* ── 04. POSICIONAMENTO ESTRATÉGICO ───────────────────────────────────── */}
+      <section className="py-24 px-6 bg-slate-900 text-white text-center">
+        <div className="max-w-4xl mx-auto">
+          <span className="material-symbols-outlined text-5xl text-emerald-400 mb-8 opacity-80">psychology</span>
+          
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
+            Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a <span className="text-emerald-400">Farmácia Princesa</span> poderá estar presente no momento exato em que a necessidade surge: durante a busca por informações, recomendações e soluções em assistentes de IA.
+          </h2>
+        </div>
+      </section>
+
+      {/* ── 05. A OPORTUNIDADE ───────────────────────────────────────────────── */}
+      <section className="py-24 px-6 bg-emerald-900 text-white relative overflow-hidden">
+        {/* Abstract Background */}
         <div className="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
           <div className="w-[800px] h-[800px] border-[1px] border-emerald-500 rounded-full"></div>
           <div className="absolute w-[600px] h-[600px] border-[1px] border-emerald-400 rounded-full"></div>
-          <div className="absolute w-[400px] h-[400px] border-[1px] border-emerald-300 rounded-full"></div>
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <span className="material-symbols-outlined text-4xl text-emerald-400 mb-6">location_on</span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Nossa Oportunidade</h2>
-          <div className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 mb-6">
-            + de 10.000
+          <span className="material-symbols-outlined text-4xl text-emerald-400 mb-6">explore</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">A Oportunidade</h2>
+          <div className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-emerald-200 mb-6">
+            Milhares de pesquisas
           </div>
-          <p className="text-xl md:text-2xl font-light text-slate-300 mb-4 max-w-2xl mx-auto">
-            Pesquisas por medicamentos e sintomas acontecem todos os dias em Araçatuba e Birigui.
+          <p className="text-xl md:text-2xl font-light text-emerald-100 mb-4 max-w-2xl mx-auto">
+            relacionadas a medicamentos, saúde, suplementos e farmácias acontecem todos os dias na região de Araçatuba e Birigui.
           </p>
-          <div className="inline-block px-6 py-3 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-medium">
+          <div className="inline-block px-6 py-3 rounded-full bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 font-medium mt-4">
             Hoje, praticamente NENHUMA é convertida por recomendação estratégica.
           </div>
         </div>
       </section>
 
-      {/* ── 05. O PROJETO PILOTO ─────────────────────────────────────────────── */}
+      {/* ── 06. O PROJETO PILOTO ─────────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
@@ -162,92 +171,55 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* ── 06. ARQUITETURA ──────────────────────────────────────────────────── */}
+      {/* ── 07. POR QUE A FARMÁCIA PRINCESA? ─────────────────────────────────── */}
       <section className="py-24 px-6 bg-slate-50 border-y border-slate-100">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">A Arquitetura de IA</h2>
-            <p className="text-lg text-slate-500">Como os sistemas se comunicam em tempo real.</p>
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Por que começar pela Farmácia Princesa?</h2>
+            <p className="text-lg text-slate-500">O momento exato para capturar a liderança tecnológica local.</p>
           </div>
-
-          <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-x-auto">
-            <div className="flex flex-col items-center min-w-[800px]">
-              
-              {/* Nível 1: ERP -> DB */}
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex flex-col items-center gap-2 w-40">
-                  <div className="w-16 h-16 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center shadow-sm">
-                    <span className="material-symbols-outlined text-slate-500">store</span>
+          
+          <div className="bg-white p-8 md:p-12 rounded-3xl border border-slate-200 shadow-sm">
+            <ul className="space-y-6">
+              {[
+                "Marca consolidada na região",
+                "Presença física em Araçatuba e Birigui",
+                "Capacidade logística já existente",
+                "Estoque amplo e diversificado",
+                "Potencial para se tornar referência nacional em aquisição de clientes através de IA no segmento farmacêutico"
+              ].map((reason, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="material-symbols-outlined text-emerald-600 text-sm font-bold">check</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-600 text-center">ERP da Farmácia<br/><span className="font-normal text-[10px]">Catálogo Primário</span></span>
-                </div>
-                <span className="material-symbols-outlined text-slate-300">arrow_right_alt</span>
-                <div className="flex flex-col items-center gap-2 w-40">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shadow-sm">
-                    <span className="material-symbols-outlined text-emerald-600">database</span>
-                  </div>
-                  <span className="text-xs font-bold text-emerald-700 text-center">Banco de Dados<br/><span className="font-normal text-[10px]">Sincronização em Tempo Real</span></span>
-                </div>
-              </div>
-
-              {/* Nível 2: Bifurcação (Indexação e IA) */}
-              <div className="flex flex-col items-center mb-4">
-                <div className="w-px h-8 bg-slate-200"></div>
-                <div className="w-[400px] h-px bg-slate-200"></div>
-                <div className="flex justify-between w-[400px]">
-                  <div className="w-px h-8 bg-slate-200"></div>
-                  <div className="w-px h-8 bg-slate-200"></div>
-                </div>
-                
-                <div className="flex justify-between w-[560px]">
-                  <div className="flex flex-col items-center gap-2 w-40">
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center shadow-sm">
-                      <span className="material-symbols-outlined text-blue-600">travel_explore</span>
-                    </div>
-                    <span className="text-xs font-bold text-blue-700 text-center">Motores de Busca<br/><span className="font-normal text-[10px]">Google, Bing (SEO/GEO)</span></span>
-                  </div>
-                  <div className="flex flex-col items-center gap-2 w-40">
-                    <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shadow-sm">
-                      <span className="material-symbols-outlined text-indigo-600">forum</span>
-                    </div>
-                    <span className="text-xs font-bold text-indigo-700 text-center">Inteligências Artificiais<br/><span className="font-normal text-[10px]">ChatGPT, Gemini (MCP)</span></span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Nível 3: Cliente Final */}
-              <div className="flex flex-col items-center">
-                <div className="flex justify-between w-[400px]">
-                  <div className="w-px h-8 bg-slate-200"></div>
-                  <div className="w-px h-8 bg-slate-200"></div>
-                </div>
-                <div className="w-[400px] h-px bg-slate-200"></div>
-                <div className="w-px h-8 bg-slate-200"></div>
-                
-                <div className="flex flex-col items-center gap-2 w-64">
-                  <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center shadow-sm">
-                    <span className="material-symbols-outlined text-emerald-400">shopping_bag</span>
-                  </div>
-                  <span className="text-xs font-bold text-slate-800 text-center">Cliente Final<br/><span className="font-normal text-[10px] text-slate-500">Recomendação & Checkout Rápido</span></span>
-                </div>
-              </div>
-
-            </div>
+                  <span className="text-xl md:text-2xl text-slate-800 font-medium leading-relaxed">{reason}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-
-
       {/* ── 08. DASHBOARD MOCKUPS ────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-slate-100 border-t border-slate-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <section className="py-24 px-6 bg-slate-100 border-t border-slate-200 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto relative">
+          
+          {/* BADGE DE PROJEÇÃO */}
+          <div className="absolute -top-12 md:top-12 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 bg-indigo-600 text-white px-8 py-4 rounded-xl shadow-[0_20px_50px_rgba(79,70,229,0.5)] border-4 border-indigo-200 z-20 text-center transform md:rotate-3 scale-110">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <span className="material-symbols-outlined text-indigo-300">visibility</span>
+              <span className="text-sm font-black tracking-widest text-indigo-200 uppercase">Projeção</span>
+            </div>
+            <div className="text-lg font-bold">Exemplo ilustrativo de métricas</div>
+            <div className="text-xs text-indigo-100 font-medium mt-1">para demonstrar o potencial estratégico de dados</div>
+          </div>
+
+          <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6 pt-16 md:pt-0">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Demanda em IAs <span className="inline-block px-2 py-1 bg-indigo-600 text-white text-[10px] uppercase tracking-wider rounded-md ml-2 align-middle">Tempo Real</span></h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Demanda em IAs <span className="inline-block px-2 py-1 bg-emerald-600 text-white text-[10px] uppercase tracking-wider rounded-md ml-2 align-middle">Tempo Real</span></h2>
               <p className="text-sm text-slate-500 max-w-2xl">Descubra exatamente como a farmácia está sendo recomendada pelos motores de IA, quais bairros lideram a demanda e quais canais convertem mais.</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 relative z-10">
               <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-600 shadow-sm flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">filter_list</span> Todos Motores (IA)
               </div>
@@ -258,7 +230,7 @@ export default function FarmaciaPrincesaPitch() {
           </div>
 
           {/* Top KPIs */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 opacity-80 pointer-events-none">
             <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
               <div className="text-xs text-slate-500 font-medium mb-1 flex justify-between">Total de Buscas (IA) <span className="material-symbols-outlined text-indigo-500 text-[16px]">query_stats</span></div>
               <div className="text-3xl font-bold text-slate-900">4.208</div>
@@ -281,7 +253,7 @@ export default function FarmaciaPrincesaPitch() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-6 opacity-80 pointer-events-none">
             {/* Chart placeholder / Map */}
             <div className="md:col-span-2 bg-slate-900 rounded-xl border border-slate-800 shadow-sm p-6 relative overflow-hidden h-[400px]">
               <div className="absolute top-6 left-6 z-10">
@@ -348,7 +320,7 @@ export default function FarmaciaPrincesaPitch() {
           </div>
 
           {/* Search Log Table */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden opacity-80 pointer-events-none">
             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-2 font-medium text-slate-900 mb-1">
@@ -359,7 +331,7 @@ export default function FarmaciaPrincesaPitch() {
               </div>
               <div className="relative">
                 <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
-                <input type="text" placeholder="Filtrar intenção..." className="pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-indigo-500 w-64" />
+                <input type="text" placeholder="Filtrar intenção..." className="pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-indigo-500 w-64 bg-slate-50" readOnly />
               </div>
             </div>
             
@@ -402,29 +374,97 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* ── 09. POSICIONAMENTO E FECHAMENTO ──────────────────────────────────── */}
+      {/* ── 09. ARQUITETURA ──────────────────────────────────────────────────── */}
+      <section className="py-24 px-6 bg-white border-y border-slate-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">A Arquitetura de IA</h2>
+            <p className="text-lg text-slate-500">Como os sistemas se comunicam em tempo real.</p>
+          </div>
+
+          <div className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-x-auto">
+            <div className="flex flex-col items-center min-w-[800px]">
+              
+              {/* Nível 1: ERP -> DB */}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex flex-col items-center gap-2 w-40">
+                  <div className="w-16 h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-slate-500">store</span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-600 text-center">ERP da Farmácia<br/><span className="font-normal text-[10px]">Catálogo Primário</span></span>
+                </div>
+                <span className="material-symbols-outlined text-slate-300">arrow_right_alt</span>
+                <div className="flex flex-col items-center gap-2 w-40">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-emerald-600">database</span>
+                  </div>
+                  <span className="text-xs font-bold text-emerald-700 text-center">Banco de Dados<br/><span className="font-normal text-[10px]">Sincronização em Tempo Real</span></span>
+                </div>
+              </div>
+
+              {/* Nível 2: Bifurcação (Indexação e IA) */}
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-px h-8 bg-slate-200"></div>
+                <div className="w-[400px] h-px bg-slate-200"></div>
+                <div className="flex justify-between w-[400px]">
+                  <div className="w-px h-8 bg-slate-200"></div>
+                  <div className="w-px h-8 bg-slate-200"></div>
+                </div>
+                
+                <div className="flex justify-between w-[560px]">
+                  <div className="flex flex-col items-center gap-2 w-40">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center shadow-sm">
+                      <span className="material-symbols-outlined text-blue-600">travel_explore</span>
+                    </div>
+                    <span className="text-xs font-bold text-blue-700 text-center">Motores de Busca<br/><span className="font-normal text-[10px]">Google, Bing (SEO/GEO)</span></span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-40">
+                    <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shadow-sm">
+                      <span className="material-symbols-outlined text-indigo-600">forum</span>
+                    </div>
+                    <span className="text-xs font-bold text-indigo-700 text-center">Inteligências Artificiais<br/><span className="font-normal text-[10px]">ChatGPT, Gemini (MCP)</span></span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Nível 3: Cliente Final */}
+              <div className="flex flex-col items-center">
+                <div className="flex justify-between w-[400px]">
+                  <div className="w-px h-8 bg-slate-200"></div>
+                  <div className="w-px h-8 bg-slate-200"></div>
+                </div>
+                <div className="w-[400px] h-px bg-slate-200"></div>
+                <div className="w-px h-8 bg-slate-200"></div>
+                
+                <div className="flex flex-col items-center gap-2 w-64">
+                  <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-emerald-400">shopping_bag</span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-800 text-center">Cliente Final<br/><span className="font-normal text-[10px] text-slate-500">Recomendação & Checkout Rápido</span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 10. APRESENTAÇÃO DO JORGE ────────────────────────────────────────── */}
       <section className="py-32 px-6 bg-slate-900 text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <span className="material-symbols-outlined text-5xl text-emerald-400 mb-8 opacity-80">psychology</span>
-          
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-12 tracking-tight">
-            Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a <span className="text-emerald-400">Farmácia Princesa</span> poderá estar presente no momento em que a necessidade surge: durante a busca por informações, recomendações e soluções em assistentes de IA.
-          </h2>
-
-          <div className="w-px h-24 bg-gradient-to-b from-emerald-500 to-transparent mx-auto mb-12"></div>
-
-          <div className="bg-slate-800/50 border border-slate-700 p-8 rounded-3xl inline-block text-left max-w-lg w-full backdrop-blur-sm">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-slate-700 border-2 border-emerald-500 flex items-center justify-center overflow-hidden">
-                <span className="material-symbols-outlined text-3xl text-slate-400">person</span>
+          <div className="bg-slate-800/50 border border-slate-700 p-8 md:p-12 rounded-3xl inline-block text-left max-w-2xl w-full backdrop-blur-sm shadow-2xl">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-6">
+              <div className="w-24 h-24 rounded-full bg-slate-700 border-2 border-emerald-500 flex items-center justify-center overflow-hidden flex-shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+                <span className="material-symbols-outlined text-4xl text-slate-400">person</span>
               </div>
-              <div>
-                <div className="text-xl font-bold text-white">Jorge Junior</div>
-                <div className="text-sm font-medium text-emerald-400">Head de Inteligência Artificial</div>
+              <div className="text-center md:text-left">
+                <div className="text-3xl font-bold text-white mb-2">Jorge Junior</div>
+                <div className="text-lg font-medium text-emerald-400">Head de Inteligência Artificial</div>
               </div>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              Responsável pela estratégia, arquitetura de software e evolução contínua do ecossistema de IA da Farmácia Princesa. Não sou apenas um desenvolvedor; sou o arquiteto que fará essa visão se tornar realidade operacional.
+            <div className="w-full h-px bg-slate-700 mb-6"></div>
+            <p className="text-slate-300 text-lg leading-relaxed text-center md:text-left">
+              Responsável pela estratégia, arquitetura tecnológica, inteligência artificial e evolução contínua do projeto.
             </p>
           </div>
         </div>
