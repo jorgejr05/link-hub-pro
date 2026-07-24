@@ -116,13 +116,13 @@ export default function FarmaciaPrincesaPitch() {
           <span className="material-symbols-outlined text-4xl text-emerald-400 mb-6">location_on</span>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Nossa Oportunidade</h2>
           <div className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500 mb-6">
-            10.000+
+            + de 10.000
           </div>
           <p className="text-xl md:text-2xl font-light text-slate-300 mb-4 max-w-2xl mx-auto">
             Pesquisas por medicamentos e sintomas acontecem todos os dias em Araçatuba e Birigui.
           </p>
           <div className="inline-block px-6 py-3 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-medium">
-            Hoje, praticamente NENHUMA é convertida através de IA.
+            Hoje, praticamente NENHUMA é convertida por recomendação estratégica.
           </div>
         </div>
       </section>
@@ -170,41 +170,66 @@ export default function FarmaciaPrincesaPitch() {
             <p className="text-lg text-slate-500">Como os sistemas se comunicam em tempo real.</p>
           </div>
 
-          <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-sm overflow-x-auto">
+            <div className="flex flex-col items-center min-w-[800px]">
               
-              <div className="flex flex-col items-center gap-2 w-full md:w-1/5">
-                <div className="w-16 h-16 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-slate-500">store</span>
+              {/* Nível 1: ERP -> DB */}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="flex flex-col items-center gap-2 w-40">
+                  <div className="w-16 h-16 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-slate-500">store</span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-600 text-center">ERP da Farmácia<br/><span className="font-normal text-[10px]">Catálogo Primário</span></span>
                 </div>
-                <span className="text-xs font-bold text-slate-600">ERP da Farmácia</span>
+                <span className="material-symbols-outlined text-slate-300">arrow_right_alt</span>
+                <div className="flex flex-col items-center gap-2 w-40">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-emerald-600">database</span>
+                  </div>
+                  <span className="text-xs font-bold text-emerald-700 text-center">Banco de Dados<br/><span className="font-normal text-[10px]">Sincronização em Tempo Real</span></span>
+                </div>
               </div>
 
-              <span className="material-symbols-outlined text-slate-300 md:rotate-270">arrow_right_alt</span>
-
-              <div className="flex flex-col items-center gap-2 w-full md:w-1/5">
-                <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-emerald-600">api</span>
+              {/* Nível 2: Bifurcação (Indexação e IA) */}
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-px h-8 bg-slate-200"></div>
+                <div className="w-[400px] h-px bg-slate-200"></div>
+                <div className="flex justify-between w-[400px]">
+                  <div className="w-px h-8 bg-slate-200"></div>
+                  <div className="w-px h-8 bg-slate-200"></div>
                 </div>
-                <span className="text-xs font-bold text-emerald-700">Plugeefy MCP</span>
+                
+                <div className="flex justify-between w-[560px]">
+                  <div className="flex flex-col items-center gap-2 w-40">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center shadow-sm">
+                      <span className="material-symbols-outlined text-blue-600">travel_explore</span>
+                    </div>
+                    <span className="text-xs font-bold text-blue-700 text-center">Motores de Busca<br/><span className="font-normal text-[10px]">Google, Bing (SEO/GEO)</span></span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 w-40">
+                    <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shadow-sm">
+                      <span className="material-symbols-outlined text-indigo-600">forum</span>
+                    </div>
+                    <span className="text-xs font-bold text-indigo-700 text-center">Inteligências Artificiais<br/><span className="font-normal text-[10px]">ChatGPT, Gemini (MCP)</span></span>
+                  </div>
+                </div>
               </div>
 
-              <span className="material-symbols-outlined text-slate-300 md:rotate-270">arrow_right_alt</span>
-
-              <div className="flex flex-col items-center gap-2 w-full md:w-1/5">
-                <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-indigo-600">forum</span>
+              {/* Nível 3: Cliente Final */}
+              <div className="flex flex-col items-center">
+                <div className="flex justify-between w-[400px]">
+                  <div className="w-px h-8 bg-slate-200"></div>
+                  <div className="w-px h-8 bg-slate-200"></div>
                 </div>
-                <span className="text-xs font-bold text-indigo-700">ChatGPT / Gemini</span>
-              </div>
-
-              <span className="material-symbols-outlined text-slate-300 md:rotate-270">arrow_right_alt</span>
-
-              <div className="flex flex-col items-center gap-2 w-full md:w-1/5">
-                <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-white">person</span>
+                <div className="w-[400px] h-px bg-slate-200"></div>
+                <div className="w-px h-8 bg-slate-200"></div>
+                
+                <div className="flex flex-col items-center gap-2 w-64">
+                  <div className="w-16 h-16 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center shadow-sm">
+                    <span className="material-symbols-outlined text-emerald-400">shopping_bag</span>
+                  </div>
+                  <span className="text-xs font-bold text-slate-800 text-center">Cliente Final<br/><span className="font-normal text-[10px] text-slate-500">Recomendação & Checkout Rápido</span></span>
                 </div>
-                <span className="text-xs font-bold text-slate-800">Cliente (Checkout)</span>
               </div>
 
             </div>
@@ -212,91 +237,168 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* ── 07. FEATURES & ROADMAP ───────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
-          
-          {/* Features */}
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 tracking-tight">O que será desenvolvido</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                "Catálogo Inteligente", "Busca Semântica", "Recomendação IA", "Dashboard Customizado", 
-                "Métricas Avançadas", "Analytics", "Atendimento Integrado", "WhatsApp Automático", 
-                "Observabilidade", "Automações Internas", "SEO Técnico", "GEO (AI Optimization)", 
-                "AI Discovery", "Indexação Semântica", "Monitoramento Contínuo", "Relatórios de ROI"
-              ].map((feat, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-[12px] text-emerald-700 font-bold">check</span>
-                  </div>
-                  <span className="text-sm font-medium text-slate-700">{feat}</span>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Roadmap */}
-          <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Roadmap de Execução</h2>
-            <div className="space-y-6">
-              {[
-                { month: "Mês 1", title: "Infraestrutura Base", desc: "Integração do catálogo e setup do MCP Server." },
-                { month: "Mês 2", title: "Indexação e Visibilidade", desc: "Configuração SEO/GEO e submissão aos motores de busca." },
-                { month: "Mês 3", title: "Atendimento IA", desc: "Testes e implementação do agente via WhatsApp." },
-                { month: "Mês 4", title: "Otimizações e Escala", desc: "Análise de métricas, conversões e redução do CAC." },
-              ].map((step, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-emerald-500 mt-1"></div>
-                    {i !== 3 && <div className="w-px h-full bg-slate-200 mt-2"></div>}
-                  </div>
-                  <div className="pb-6">
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{step.month}</div>
-                    <div className="text-lg font-bold text-slate-800 mb-1">{step.title}</div>
-                    <div className="text-sm text-slate-500">{step.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
 
       {/* ── 08. DASHBOARD MOCKUPS ────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Dashboard de Resultados</h2>
-            <p className="text-lg text-slate-500">Métricas que realmente importam para o negócio.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* KPI Card */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="material-symbols-outlined text-emerald-500 mb-4">trending_up</span>
-              <div className="text-sm font-medium text-slate-500 mb-1">Aquisição via IA</div>
-              <div className="text-3xl font-black text-slate-900">+42%</div>
+      <section className="py-24 px-6 bg-slate-100 border-t border-slate-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">Demanda em IAs <span className="inline-block px-2 py-1 bg-indigo-600 text-white text-[10px] uppercase tracking-wider rounded-md ml-2 align-middle">Tempo Real</span></h2>
+              <p className="text-sm text-slate-500 max-w-2xl">Descubra exatamente como a farmácia está sendo recomendada pelos motores de IA, quais bairros lideram a demanda e quais canais convertem mais.</p>
             </div>
-            {/* KPI Card */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="material-symbols-outlined text-blue-500 mb-4">shopping_bag</span>
-              <div className="text-sm font-medium text-slate-500 mb-1">Medicamentos mais buscados</div>
-              <div className="text-lg font-bold text-slate-900">1. Dipirona M. <br/>2. Neosoro</div>
-            </div>
-            {/* KPI Card */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-              <span className="material-symbols-outlined text-purple-500 mb-4">query_stats</span>
-              <div className="text-sm font-medium text-slate-500 mb-1">Origem do Tráfego IA</div>
-              <div className="flex flex-col gap-2 mt-2">
-                <div className="flex items-center justify-between text-xs font-medium text-slate-600"><span>ChatGPT</span> <span>65%</span></div>
-                <div className="w-full bg-slate-100 rounded-full h-1.5"><div className="bg-slate-800 h-1.5 rounded-full" style={{width: '65%'}}></div></div>
-                <div className="flex items-center justify-between text-xs font-medium text-slate-600 mt-2"><span>Gemini</span> <span>35%</span></div>
-                <div className="w-full bg-slate-100 rounded-full h-1.5"><div className="bg-emerald-500 h-1.5 rounded-full" style={{width: '35%'}}></div></div>
+            <div className="flex gap-2">
+              <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-600 shadow-sm flex items-center gap-2">
+                <span className="material-symbols-outlined text-sm">filter_list</span> Todos Motores (IA)
+              </div>
+              <div className="px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-600 shadow-sm flex items-center gap-2">
+                <span className="material-symbols-outlined text-sm">location_on</span> Araçatuba / Birigui
               </div>
             </div>
           </div>
+
+          {/* Top KPIs */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="text-xs text-slate-500 font-medium mb-1 flex justify-between">Total de Buscas (IA) <span className="material-symbols-outlined text-indigo-500 text-[16px]">query_stats</span></div>
+              <div className="text-3xl font-bold text-slate-900">4.208</div>
+              <div className="text-xs text-emerald-500 mt-1 font-medium flex items-center"><span className="material-symbols-outlined text-[14px]">trending_up</span> +34% este mês</div>
+            </div>
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="text-xs text-slate-500 font-medium mb-1 flex justify-between">Bairro Mais Quente <span className="material-symbols-outlined text-orange-500 text-[16px]">local_fire_department</span></div>
+              <div className="text-xl font-bold text-slate-900 mt-2">Jardim Nova York</div>
+              <div className="text-xs text-slate-400 mt-1">Araçatuba, SP</div>
+            </div>
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+              <div className="text-xs text-slate-500 font-medium mb-1 flex justify-between">Taxa de Conversão (IA) <span className="material-symbols-outlined text-blue-500 text-[16px]">ads_click</span></div>
+              <div className="text-3xl font-bold text-slate-900">12.4%</div>
+              <div className="text-xs text-slate-400 mt-1">Acima da média do varejo</div>
+            </div>
+            <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-emerald-500">
+              <div className="text-xs text-slate-500 font-medium mb-1 flex justify-between">Canal Mais Acionado <span className="material-symbols-outlined text-emerald-500 text-[16px]">forum</span></div>
+              <div className="text-2xl font-bold text-emerald-600 mt-1">WhatsApp</div>
+              <div className="text-xs text-emerald-600 mt-1 font-medium">68% das conversões</div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
+            {/* Chart placeholder / Map */}
+            <div className="md:col-span-2 bg-slate-900 rounded-xl border border-slate-800 shadow-sm p-6 relative overflow-hidden h-[400px]">
+              <div className="absolute top-6 left-6 z-10">
+                <div className="flex items-center gap-2 text-white font-medium mb-1"><span className="material-symbols-outlined text-emerald-400">location_on</span> Mapa de Calor Local</div>
+                <div className="text-xs text-slate-400">Concentração de pesquisas convertidas por região.</div>
+              </div>
+              
+              {/* Abstract Map Nodes */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-80">
+                <div className="relative w-[300px] h-[200px]">
+                  {/* Araçatuba Center */}
+                  <div className="absolute top-[40%] left-[30%] w-24 h-24 bg-emerald-500/20 rounded-full blur-xl animate-pulse"></div>
+                  <div className="absolute top-[45%] left-[35%] w-4 h-4 bg-emerald-400 rounded-full shadow-[0_0_15px_#34d399] border-2 border-slate-900"></div>
+                  <div className="absolute top-[35%] left-[45%] w-3 h-3 bg-teal-400 rounded-full shadow-[0_0_10px_#2dd4bf] border-2 border-slate-900"></div>
+                  
+                  {/* Birigui Center */}
+                  <div className="absolute top-[60%] right-[20%] w-16 h-16 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-700"></div>
+                  <div className="absolute top-[65%] right-[25%] w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_10px_#60a5fa] border-2 border-slate-900"></div>
+                  
+                  {/* Connecting lines */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" viewBox="0 0 300 200">
+                    <path d="M110,95 L140,75 L215,130" fill="none" stroke="#94a3b8" strokeWidth="1" strokeDasharray="4 4" />
+                  </svg>
+                </div>
+              </div>
+
+              <div className="absolute bottom-6 left-6 right-6 flex gap-4 text-[10px] uppercase font-bold text-slate-400">
+                <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-emerald-400"></div> Alta Demanda</div>
+                <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-teal-400"></div> Demanda Média</div>
+                <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-blue-400"></div> Expansão</div>
+              </div>
+            </div>
+
+            {/* Top Products */}
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col">
+              <div className="flex items-center gap-2 font-medium text-slate-900 mb-1">
+                <span className="material-symbols-outlined text-indigo-500 text-[18px]">inventory_2</span>
+                Top Medicamentos
+              </div>
+              <div className="text-xs text-slate-500 mb-6">Mais mencionados em respostas do ChatGPT e Gemini.</div>
+              
+              <div className="flex flex-col gap-4 flex-1">
+                {[
+                  { name: "Dipirona Monoidratada 1g", stock: "145 unid.", price: "R$ 8,90", tag: "Alta Recomendação" },
+                  { name: "Neosoro Solução Nasal", stock: "89 unid.", price: "R$ 6,50", tag: "Alta Recomendação" },
+                  { name: "Vitamina C Targifor C", stock: "32 unid.", price: "R$ 24,90", tag: "Média Recomendação" },
+                  { name: "Creatina Creapure 300g", stock: "12 unid.", price: "R$ 119,90", tag: "Ticket Alto" },
+                ].map((prod, i) => (
+                  <div key={i} className="flex justify-between items-center border-b border-slate-100 pb-3 last:border-0 last:pb-0">
+                    <div className="flex items-start gap-3">
+                      <div className="text-xs font-bold text-slate-400 mt-0.5">{i+1}.</div>
+                      <div>
+                        <div className="text-sm font-bold text-slate-800">{prod.name}</div>
+                        <div className="text-[10px] text-slate-500">Estoque: {prod.stock} • {prod.price}</div>
+                      </div>
+                    </div>
+                    <div className="text-[9px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md whitespace-nowrap">
+                      {prod.tag}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Search Log Table */}
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+              <div>
+                <div className="flex items-center gap-2 font-medium text-slate-900 mb-1">
+                  <span className="material-symbols-outlined text-purple-500 text-[18px]">search_insights</span>
+                  Intenções de Busca em Tempo Real
+                </div>
+                <div className="text-xs text-slate-500">Lista detalhada das perguntas que acionaram a farmácia.</div>
+              </div>
+              <div className="relative">
+                <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                <input type="text" placeholder="Filtrar intenção..." className="pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-indigo-500 w-64" />
+              </div>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-slate-50 text-xs text-slate-500 uppercase font-medium">
+                  <tr>
+                    <th className="px-6 py-4 border-b border-slate-100">Pergunta do Usuário (IA)</th>
+                    <th className="px-6 py-4 border-b border-slate-100">Motor / IA</th>
+                    <th className="px-6 py-4 border-b border-slate-100">Bairro</th>
+                    <th className="px-6 py-4 border-b border-slate-100 text-right">Impressões</th>
+                    <th className="px-6 py-4 border-b border-slate-100">Intenção</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {[
+                    { q: `"farmácia aberta agora entrega no Jd. Nova York"`, engine: "ChatGPT", loc: "Araçatuba (Nova York)", imp: 142, int: "Urgência (Checkout)" },
+                    { q: `"qual o genérico do roacutan tem em estoque?"`, engine: "Gemini", loc: "Birigui (Centro)", imp: 89, int: "Informativa" },
+                    { q: `"comprar fralda pampers tamanho M promoção"`, engine: "Google AI", loc: "Araçatuba (Ipanema)", imp: 215, int: "Preço / Oferta" },
+                    { q: `"remédio para cólica bebê mais recomendado"`, engine: "Perplexity", loc: "Birigui (Silvares)", imp: 56, int: "Recomendação" },
+                  ].map((row, i) => (
+                    <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-slate-700">{row.q}</td>
+                      <td className="px-6 py-4 text-slate-600 flex items-center gap-2">
+                        <div className={`w-2 h-2 rounded-full ${row.engine === 'ChatGPT' ? 'bg-emerald-500' : row.engine === 'Gemini' ? 'bg-blue-500' : row.engine === 'Perplexity' ? 'bg-slate-800' : 'bg-red-500'}`}></div>
+                        {row.engine}
+                      </td>
+                      <td className="px-6 py-4 text-slate-500">{row.loc}</td>
+                      <td className="px-6 py-4 text-slate-600 text-right font-mono">{row.imp}</td>
+                      <td className="px-6 py-4">
+                        <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-[10px] uppercase font-bold tracking-wider">{row.int}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
       </section>
 
