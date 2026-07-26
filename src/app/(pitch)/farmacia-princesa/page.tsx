@@ -106,7 +106,7 @@ export default function FarmaciaPrincesaPitch() {
                 <div className="max-w-xl mx-auto bg-[#fffbf2] border border-[#fce6a8] rounded-xl p-4 flex items-start gap-4 shadow-sm relative z-10">
                   <div>
                     <h4 className="font-bold text-amber-900 text-sm mb-1">Onde estamos perdendo:</h4>
-                    <p className="text-[12px] text-amber-800 font-medium">Se não estamos presentes nas etapas 1, 2 e 3, o cliente nem sabe que a Farmácia Princesa existe.</p>
+                    <p className="text-[12px] text-amber-800 font-medium">Se não estamos presentes nas etapas 1, 2 e 3, o cliente tende a ir para a concorrência.</p>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function FarmaciaPrincesaPitch() {
                   {[
                     { i: 1, icon: "person", title: "Pessoa", desc: "A necessidade continua sendo o ponto de partida.", badge: "Foco no que importa", badgeIcon: "target", iconColor: "text-blue-500" },
                     { i: 2, icon: "auto_awesome", title: "ChatGPT / Gemini / Perplexity", desc: "O cliente já recebe respostas na conversa.", badge: "Resposta imediata", badgeIcon: "bolt", iconColor: "text-indigo-500" },
-                    { i: 3, icon: "star", title: "Recomendação Estruturada", desc: "Opções personalizadas e confiáveis.", badge: "Confiança e clareza", badgeIcon: "verified_user", iconColor: "text-blue-600" },
+                    { i: 3, icon: "tips_and_updates", title: "Recomendação Estruturada", desc: "Opções personalizadas e confiáveis.", badge: "Confiança e clareza", badgeIcon: "verified_user", iconColor: "text-blue-600" },
                     { i: 4, icon: "shopping_cart", title: "Checkout Rápido", desc: "Poucos cliques para finalizar.", badge: "Agilidade total", badgeIcon: "rocket_launch", iconColor: "text-emerald-500" },
                     { i: 5, icon: "local_shipping", title: "Entrega", desc: "Rápida, rastreável e sem complicação.", badge: "Satisfação garantida", badgeIcon: "favorite", iconColor: "text-emerald-500" },
                   ].map((step, idx) => (
@@ -553,7 +553,7 @@ export default function FarmaciaPrincesaPitch() {
                 { icon: "location_on", title: "Presença física em\nAraçatuba e Birigui", desc: "Atuação estratégica em duas cidades-chave,\ncom forte conexão com a comunidade local.", iconBg: "bg-teal-50", iconColor: "text-teal-500", checkColor: "text-teal-500" },
                 { icon: "local_shipping", title: "Capacidade logística\njá existente", desc: "Estrutura pronta para atender com agilidade\ne eficiência em toda a região.", iconBg: "bg-purple-50", iconColor: "text-purple-600", checkColor: "text-purple-500" },
                 { icon: "inventory_2", title: "Estoque amplo e\ndiversificado", desc: "Variedade de produtos que atende diferentes\nnecessidades e perfis de clientes.", iconBg: "bg-orange-50", iconColor: "text-orange-500", checkColor: "text-orange-500" },
-                { icon: "trending_up", title: "Potencial para se tornar\nreferência regional em\naquisição de clientes\natravés de motor de buscas e IA", desc: "Adoção antecipada de Inteligência Artificial para\nliderar uma nova era no varejo farmacêutico.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" }
+                { icon: "trending_up", title: "Potencial para se tornar\nreferência regional em\naquisição de clientes\natravés de motores de busca e IA", desc: "Adoção antecipada de Inteligência Artificial para\nliderar uma nova era no varejo farmacêutico.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col md:flex-row md:items-center py-6 gap-6 group hover:bg-slate-50/50 transition-colors px-4 rounded-xl">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${item.iconBg}`}>
