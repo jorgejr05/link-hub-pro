@@ -313,176 +313,437 @@ export default function FarmaciaPrincesaPitch() {
       </section>
 
       {/* ── 04. POSICIONAMENTO ESTRATÉGICO ───────────────────────────────────── */}
-      <section className="py-32 px-6 bg-slate-900 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight font-serif">
-            "Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a Farmácia Princesa poderá estar presente no momento exato em que a necessidade surge: durante a busca por informações e recomendações em IAs."
-          </h2>
+      <section className="py-24 px-6 bg-[#0B0F19] border-t border-slate-800">
+        <div className="max-w-6xl mx-auto">
+          {/* Main quote box */}
+          <div className="border border-purple-900/50 rounded-[32px] p-8 md:p-16 mb-16 relative bg-[#0B0F19] shadow-[0_0_60px_-15px_rgba(147,51,234,0.15)] mt-8">
+            {/* Top floating quote icon */}
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center border-4 border-[#0B0F19] shadow-[0_0_30px_rgba(79,70,229,0.5)]">
+              <span className="text-4xl text-white font-serif leading-none mt-2">"</span>
+            </div>
+            
+            <h2 className="text-2xl md:text-4xl font-serif text-slate-300 text-center leading-relaxed max-w-4xl mx-auto font-medium mt-4">
+              "Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a Farmácia Princesa poderá estar presente <span className="text-indigo-400 font-bold">no momento exato</span> em que a <span className="text-indigo-400 font-bold">necessidade surge</span>: durante a busca por informações e recomendações <span className="text-indigo-400 font-bold">em IAs</span>."
+            </h2>
+
+            {/* Bottom decorative star */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-full max-w-md hidden md:flex">
+              <div className="h-px bg-slate-800 flex-1"></div>
+              <span className="material-symbols-outlined text-indigo-400 text-lg">magic_button</span>
+              <div className="h-px bg-slate-800 flex-1"></div>
+            </div>
+          </div>
+
+          {/* Label: O QUE ISSO SIGNIFICA? */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-[#1e1b4b] border border-[#312e81] text-indigo-300 text-xs font-bold px-6 py-2 rounded-full tracking-widest uppercase shadow-sm">
+              O que isso significa?
+            </div>
+          </div>
+
+          {/* Flow Cards */}
+          <div className="flex flex-col lg:flex-row gap-4 mb-16 relative">
+            {/* Arrows */}
+            <div className="hidden lg:flex absolute top-1/2 left-0 w-full justify-between px-16 -z-10 -translate-y-1/2">
+              <span className="material-symbols-outlined text-indigo-500/50">arrow_forward</span>
+              <span className="material-symbols-outlined text-indigo-500/50">arrow_forward</span>
+              <span className="material-symbols-outlined text-teal-500/50">arrow_forward</span>
+              <span className="material-symbols-outlined text-green-500/50">arrow_forward</span>
+            </div>
+
+            {[
+              { icon: "search", title: "Necessidade\nsurge", desc: "O cliente sente algo e começa a buscar por respostas.", color: "text-purple-400", bg: "bg-[#2e1065]", cardBorder: "border-[#4c1d95]" },
+              { icon: "chat", title: "Busca por\ninformações", desc: "Ele pesquisa em Google, ChatGPT, Gemini e outras IAs.", color: "text-blue-400", bg: "bg-[#1e3a8a]", cardBorder: "border-[#1e40af]" },
+              { icon: "auto_awesome", title: "Recomendações\nem IAs", desc: "As IAs apresentam opções, comparações e sugestões.", color: "text-teal-400", bg: "bg-[#134e4a]", cardBorder: "border-[#0f766e]" },
+              { icon: "location_on", title: "Decisão de\ncompra", desc: "O cliente já decide onde comprar com segurança.", color: "text-green-400", bg: "bg-[#14532d]", cardBorder: "border-[#166534]" },
+              { icon: "shopping_bag", title: "Farmácia\nPrincesa presente", desc: "Estamos lá desde o início, sendo a escolha natural.", color: "text-fuchsia-400", bg: "bg-[#701a75]", cardBorder: "border-[#86198f]" }
+            ].map((card, i) => (
+              <div key={i} className={`flex-1 bg-[#131722] border-t-2 ${card.cardBorder} rounded-xl p-6 shadow-lg border-x border-b border-x-slate-800 border-b-slate-800`}>
+                <div className={`w-12 h-12 ${card.bg} rounded-full flex items-center justify-center mb-6`}>
+                  <span className={`material-symbols-outlined ${card.color} text-[24px]`}>{card.icon}</span>
+                </div>
+                <h4 className="text-white font-bold text-sm mb-3 whitespace-pre-line leading-tight">{card.title}</h4>
+                <p className="text-slate-400 text-xs leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="bg-[#151a28] border border-slate-800 rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center gap-8 shadow-sm">
+            <div className="flex items-center gap-5 lg:w-1/2">
+              <div className="w-16 h-16 rounded-full bg-[#064e3b] flex flex-shrink-0 items-center justify-center border border-[#059669]">
+                <span className="material-symbols-outlined text-3xl text-emerald-400">adjust</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-1">Menos concorrência. Mais relevância. Mais escolha.</h3>
+                <p className="text-xs text-slate-400 font-medium">Estar presente no momento certo é o que transforma buscas em clientes fiéis.</p>
+              </div>
+            </div>
+            
+            <div className="w-px h-16 bg-slate-800 hidden lg:block"></div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:w-1/2">
+              {[
+                { icon: "groups", title: "Mais visibilidade\nnas buscas" },
+                { icon: "verified_user", title: "Mais confiança\ne autoridade" },
+                { icon: "trending_up", title: "Mais vendas\ne fidelização" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-emerald-400 text-[24px]">{item.icon}</span>
+                  <span className="text-[11px] font-medium text-slate-300 leading-tight whitespace-pre-line">{item.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── 05. A OPORTUNIDADE ───────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white border-b border-slate-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-slate-900">A Oportunidade</h2>
-          <div className="text-5xl md:text-7xl font-black text-slate-200 mb-6">
-            Milhares de pesquisas
+      <section className="py-24 px-6 bg-white border-b border-slate-100 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 relative z-10">
+            <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-8 shadow-sm">
+              <span className="material-symbols-outlined text-indigo-500 text-sm">search</span>
+              <span className="text-xs font-bold text-indigo-600">Oportunidade Real. Impacto Gigante.</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold mb-2 tracking-tight text-slate-900">A Oportunidade</h2>
+            <div className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-6 pb-2">
+              Milhares de pesquisas
+            </div>
+            <p className="text-lg md:text-xl font-medium text-slate-500 max-w-3xl mx-auto">
+              Relacionadas a medicamentos, saúde e farmácias acontecem todos <br className="hidden md:block" /> os dias em <span className="text-indigo-600 font-bold">Araçatuba</span> e <span className="text-indigo-600 font-bold">Birigui</span>.
+            </p>
           </div>
-          <p className="text-xl md:text-2xl font-light text-slate-600 mb-8 max-w-2xl mx-auto">
-            relacionadas a medicamentos, saúde e farmácias acontecem todos os dias em Araçatuba e Birigui.
-          </p>
-          <div className="inline-block px-6 py-3 border-2 border-slate-900 text-slate-900 font-bold uppercase tracking-wider text-sm">
-            Hoje, praticamente NENHUMA é convertida por recomendação estratégica.
+
+          {/* Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 relative z-10">
+            {[
+              { icon: "search", title: "Milhares", subtitle: "de pesquisas por dia", desc: "Pessoas buscando respostas todos os dias.", color: "text-purple-500" },
+              { icon: "medication", title: "Diversos temas", subtitle: "saúde, medicamentos\ne bem-estar", desc: "Dúvidas, indicações, comparações e muito mais.", color: "text-emerald-500" },
+              { icon: "store", title: "Múltiplas fontes", subtitle: "Google, sites, redes\ne indicações", desc: "O cliente pesquisa em vários lugares antes de decidir.", color: "text-blue-500" },
+              { icon: "group", title: "Decisões diárias", subtitle: "que movimentam\no mercado", desc: "Cada busca é uma oportunidade de conexão e venda.", color: "text-amber-500" }
+            ].map((card, i) => (
+              <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col relative overflow-hidden group hover:-translate-y-1 transition-transform">
+                <div className={`w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-6`}>
+                  <span className={`material-symbols-outlined text-3xl ${card.color}`}>{card.icon}</span>
+                </div>
+                <h3 className={`text-2xl font-bold mb-1 ${card.color}`}>{card.title}</h3>
+                <p className="text-sm font-bold text-slate-700 whitespace-pre-line mb-6 h-10">{card.subtitle}</p>
+                <div className="w-full h-px border-b border-dashed border-slate-200 mb-6"></div>
+                <p className="text-xs font-medium text-slate-500 leading-relaxed mt-auto">{card.desc}</p>
+              </div>
+            ))}
           </div>
+
+          {/* Bottom Banner */}
+          <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10 mx-auto max-w-4xl shadow-sm">
+            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm flex-shrink-0">
+              <span className="material-symbols-outlined text-3xl text-indigo-500">adjust</span>
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-1">
+                HOJE, PRATICAMENTE NENHUMA É CONVERTIDA <br className="hidden lg:block"/> POR <span className="text-indigo-600">RECOMENDAÇÃO ESTRATÉGICA.</span>
+              </h3>
+              <p className="text-sm text-slate-600 font-medium">Estar presente no momento certo transforma buscas em clientes fiéis.</p>
+            </div>
+            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm flex-shrink-0">
+              <span className="material-symbols-outlined text-3xl text-indigo-500">trending_up</span>
+            </div>
+          </div>
+          
+          {/* Decorative background lines */}
+          <svg className="absolute bottom-0 left-0 w-full h-[500px] -z-0 opacity-40 pointer-events-none" viewBox="0 0 1440 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-100 400 C 300 400, 400 100, 800 200 S 1200 400, 1500 100" stroke="url(#paint0_linear)" strokeWidth="1.5" strokeDasharray="4 4"/>
+            <path d="M-100 450 C 300 450, 400 150, 800 250 S 1200 450, 1500 150" stroke="url(#paint1_linear)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="-100" y1="250" x2="1500" y2="250" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#6366f1" stopOpacity="0"/>
+                <stop offset="0.5" stopColor="#6366f1"/>
+                <stop offset="1" stopColor="#6366f1" stopOpacity="0"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear" x1="-100" y1="300" x2="1500" y2="300" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#8b5cf6" stopOpacity="0"/>
+                <stop offset="0.5" stopColor="#8b5cf6"/>
+                <stop offset="1" stopColor="#8b5cf6" stopOpacity="0"/>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </section>
 
       {/* ── 06. O PROJETO PILOTO ─────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-slate-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">O Projeto Piloto</h2>
-            <p className="text-lg text-slate-500 font-light">Execução dividida em 4 etapas claras.</p>
+      <section className="py-24 px-6 bg-slate-50 border-b border-slate-100 relative">
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">O Projeto Piloto</h2>
+            <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+              Execução dividida em 4 etapas claras para transformar <br/> seu e-commerce em uma <span className="text-blue-600 font-bold">operação preparada para IA.</span>
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "Etapa 1", title: "Posicionamento", items: ["SEO Estruturado", "GEO (Engine Optimization)", "AI Commerce Setup"] },
-              { step: "Etapa 2", title: "Catálogo", items: ["Integração com ERP", "Sincronização", "Normalização de Dados"] },
-              { step: "Etapa 3", title: "Recomendação", items: ["Integração ChatGPT", "Indexação Gemini/Claude", "Busca Semântica"] },
-              { step: "Etapa 4", title: "Checkout", items: ["Link de Pagamento", "Logística Automatizada", "Métricas"] }
-            ].map((card, i) => (
-              <div key={i} className="bg-white p-6 border border-slate-200">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">{card.step}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-6">{card.title}</h3>
-                <ul className="space-y-3">
-                  {card.items.map((item, j) => (
-                    <li key={j} className="text-sm text-slate-600 flex items-center gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="relative mb-16">
+            {/* Connecting Line with numbers */}
+            <div className="hidden lg:flex absolute top-[28px] left-[12%] right-[12%] h-[2px] bg-blue-100 items-center justify-between -z-10">
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            </div>
+
+            {/* Cards Grid */}
+            <div className="grid lg:grid-cols-4 gap-6 pt-4 lg:pt-0">
+              {[
+                { step: "01", icon: "explore", title: "Posicionamento", items: ["SEO Estruturado", "GEO (Engine Optimization)", "AI Commerce Setup"], result: "Seu catálogo passa a ser compreendido por buscadores e inteligências artificiais.", color: "text-blue-600", bgIcon: "bg-blue-50 border-blue-100", checkColor: "text-blue-500", resultBg: "bg-[#f4f7ff]", giantNumber: "01" },
+                { step: "02", icon: "database", title: "Catálogo", items: ["Integração com ERP", "Sincronização", "Normalização de Dados"], result: "Todos os produtos ficam organizados, atualizados e prontos para IA.", color: "text-emerald-500", bgIcon: "bg-emerald-50 border-emerald-100", checkColor: "text-emerald-500", resultBg: "bg-[#f2fbf6]", giantNumber: "02" },
+                { step: "03", icon: "auto_awesome", title: "Recomendação", items: ["Integração ChatGPT", "Indexação Gemini/Claude", "Busca Semântica"], result: "Clientes recebem recomendações inteligentes e respostas mais precisas em tempo real.", color: "text-purple-500", bgIcon: "bg-purple-50 border-purple-100", checkColor: "text-purple-500", resultBg: "bg-[#f9f5ff]", giantNumber: "03" },
+                { step: "04", icon: "credit_card", title: "Checkout", items: ["Link de Pagamento", "Logística Automatizada", "Métricas e Monitoramento"], result: "Compra concluída com eficiência, logística integrada e dados para decisões melhores.", color: "text-amber-500", bgIcon: "bg-amber-50 border-amber-100", checkColor: "text-amber-500", resultBg: "bg-[#fffbf2]", giantNumber: "04" }
+              ].map((card, i) => (
+                <div key={i} className="flex flex-col relative mt-8 lg:mt-0 group hover:-translate-y-1 transition-transform">
+                  {/* Step bubble top */}
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-2 border-blue-100 flex items-center justify-center shadow-sm z-20">
+                    <span className="text-base font-bold text-blue-600">{card.step}</span>
+                  </div>
+
+                  <div className="bg-white rounded-[32px] p-8 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.03)] flex flex-col flex-1 relative overflow-hidden pt-10">
+                    {/* Giant background number */}
+                    <div className="absolute top-6 right-6 text-6xl font-black text-slate-50 pointer-events-none select-none">
+                      {card.giantNumber}
+                    </div>
+
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${card.bgIcon} mb-8 relative z-10`}>
+                      <span className={`material-symbols-outlined text-[24px] ${card.color}`}>{card.icon}</span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-slate-900 mb-6">{card.title}</h3>
+                    
+                    <ul className="space-y-4 mb-8 flex-1 relative z-10">
+                      {card.items.map((item, j) => (
+                        <li key={j} className="text-[13px] font-medium text-slate-600 flex items-start gap-3">
+                          <span className={`material-symbols-outlined text-[16px] ${card.checkColor} mt-0.5`}>check_circle</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className={`${card.resultBg} rounded-2xl p-5 mt-auto relative z-10`}>
+                      <div className={`text-xs font-bold ${card.color} flex items-center gap-1.5 mb-2`}>
+                        <span className="material-symbols-outlined text-[14px]">auto_awesome</span>
+                        Resultado
+                      </div>
+                      <p className="text-[12px] font-medium text-slate-700 leading-relaxed">{card.result}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Banner */}
+          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-full p-4 flex items-center gap-4 shadow-sm">
+            <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-blue-600 text-2xl">track_changes</span>
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-blue-900 mb-0.5">Foco em resultado</h4>
+              <p className="text-[11px] text-slate-500 font-medium">Metodologia validada, execução rápida e mensuração contínua.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── 07. POR QUE A FARMÁCIA PRINCESA? ─────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white border-y border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Por que começar pela Farmácia Princesa?</h2>
-            <p className="text-lg text-slate-500 font-light">O momento exato para capturar a liderança tecnológica local.</p>
+      <section className="py-24 px-6 bg-[#f8fafc] border-b border-slate-100">
+        <div className="max-w-5xl mx-auto">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row gap-6 items-start mb-16">
+            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+              <span className="material-symbols-outlined text-blue-600 text-3xl">star</span>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-3 tracking-tight">Por que começar pela<br className="hidden md:block"/>Farmácia Princesa?</h2>
+              <p className="text-lg text-slate-500 font-medium">O momento exato para capturar a <span className="text-blue-600 font-bold">liderança tecnológica local.</span></p>
+            </div>
           </div>
           
-          <div className="bg-slate-50 p-8 md:p-12 border border-slate-200">
-            <ul className="space-y-6">
+          <div className="bg-white rounded-3xl p-6 md:p-10 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)]">
+            <div className="flex flex-col divide-y divide-slate-50">
               {[
-                "Marca consolidada na região",
-                "Presença física em Araçatuba e Birigui",
-                "Capacidade logística já existente",
-                "Estoque amplo e diversificado",
-                "Potencial para se tornar referência nacional em aquisição de clientes através de IA"
-              ].map((reason, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-slate-900 rounded-full"></div>
+                { icon: "emoji_events", title: "Marca consolidada\nna região", desc: "Reconhecimento e confiança construídos ao longo\ndo tempo pela excelência no atendimento.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" },
+                { icon: "location_on", title: "Presença física em\nAraçatuba e Birigui", desc: "Atuação estratégica em duas cidades-chave,\ncom forte conexão com a comunidade local.", iconBg: "bg-teal-50", iconColor: "text-teal-500", checkColor: "text-teal-500" },
+                { icon: "local_shipping", title: "Capacidade logística\njá existente", desc: "Estrutura pronta para atender com agilidade\ne eficiência em toda a região.", iconBg: "bg-purple-50", iconColor: "text-purple-600", checkColor: "text-purple-500" },
+                { icon: "inventory_2", title: "Estoque amplo e\ndiversificado", desc: "Variedade de produtos que atende diferentes\nnecessidades e perfis de clientes.", iconBg: "bg-orange-50", iconColor: "text-orange-500", checkColor: "text-orange-500" },
+                { icon: "trending_up", title: "Potencial para se tornar\nreferência nacional em\naquisição de clientes\natravés de IA", desc: "Adoção antecipada de Inteligência Artificial para\nliderar uma nova era no varejo farmacêutico.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" }
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col md:flex-row md:items-center py-6 gap-6 group hover:bg-slate-50/50 transition-colors px-4 rounded-xl">
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${item.iconBg}`}>
+                    <span className={`material-symbols-outlined text-2xl ${item.iconColor}`}>{item.icon}</span>
                   </div>
-                  <span className="text-xl md:text-2xl text-slate-800 font-light leading-relaxed">{reason}</span>
-                </li>
+                  <div className="flex-1 grid md:grid-cols-2 gap-4 items-center">
+                    <h3 className="text-base font-bold text-slate-800 whitespace-pre-line leading-tight">{item.title}</h3>
+                    <p className="text-[13px] font-medium text-slate-500 whitespace-pre-line leading-relaxed">{item.desc}</p>
+                  </div>
+                  <div className="hidden md:flex w-8 h-8 rounded-full bg-slate-50 items-center justify-center shadow-sm flex-shrink-0">
+                    <span className={`material-symbols-outlined text-[16px] ${item.checkColor}`}>check</span>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── 08. DASHBOARD MOCKUPS ────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+      <section className="py-24 px-6 bg-[#f8fafc] border-b border-slate-200 relative overflow-hidden">
         <div className="max-w-6xl mx-auto relative">
           
-          <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="mb-10 flex flex-col md:flex-row gap-4 items-start">
+            <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center flex-shrink-0 shadow-sm">
+              <span className="material-symbols-outlined text-blue-600 text-3xl">bar_chart</span>
+            </div>
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2 uppercase tracking-widest">Painel de Métricas (Projeção)</h2>
-              <p className="text-sm text-slate-500 max-w-2xl font-light">Exemplo ilustrativo para demonstrar o potencial estratégico de dados. Acompanhe demanda, conversão e origem.</p>
+              <h2 className="text-2xl font-bold text-slate-900 mb-1 uppercase tracking-widest">Painel de Métricas (Projeção)</h2>
+              <p className="text-sm text-slate-500 font-medium">Exemplo ilustrativo para demonstrar o potencial estratégico de dados.<br/><span className="text-blue-600 font-bold">Acompanhe demanda, conversão e origem.</span></p>
             </div>
           </div>
 
           {/* Top KPIs */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 opacity-70 pointer-events-none">
-            <div className="bg-white p-5 border border-slate-200">
-              <div className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-wider">Total de Buscas (IA)</div>
-              <div className="text-3xl font-bold text-slate-900">4.208</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-blue-600">search</span>
+                </div>
+              </div>
+              <div className="text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wider">Total de Buscas (IA)</div>
+              <div className="text-4xl font-bold text-blue-700 mb-3">4.208</div>
+              <div className="text-[11px] font-bold text-emerald-500 flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px]">trending_up</span>
+                +23% vs. período anterior
+              </div>
             </div>
-            <div className="bg-white p-5 border border-slate-200">
-              <div className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-wider">Bairro Mais Quente</div>
-              <div className="text-xl font-bold text-slate-900 mt-2">Jardim Nova York</div>
-            </div>
-            <div className="bg-white p-5 border border-slate-200">
-              <div className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-wider">Taxa de Conversão</div>
-              <div className="text-3xl font-bold text-slate-900">12.4%</div>
-            </div>
-            <div className="bg-slate-900 p-5 border border-slate-900 text-white">
-              <div className="text-xs text-slate-400 font-medium mb-1 uppercase tracking-wider">Canal Principal</div>
-              <div className="text-2xl font-bold mt-1">WhatsApp (68%)</div>
-            </div>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-6 opacity-70 pointer-events-none">
-            <div className="bg-white p-6 border border-slate-200 flex flex-col col-span-3">
-              <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Top Medicamentos (Recomendados por IA)</div>
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-teal-600">location_on</span>
+                </div>
+              </div>
+              <div className="text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wider">Bairro Mais Quente</div>
+              <div className="text-2xl font-bold text-slate-800 mb-3 leading-tight">Jardim Nova<br/>York</div>
+              <div className="text-[10px] font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded-md self-start uppercase tracking-wider">
+                Alta demanda local
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-purple-600">trending_up</span>
+                </div>
+              </div>
+              <div className="text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-wider">Taxa de Conversão</div>
+              <div className="text-4xl font-bold text-purple-700 mb-3">12.4%</div>
+              <div className="text-[11px] font-bold text-emerald-500 flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px]">trending_up</span>
+                +3.2pp vs. período anterior
+              </div>
+            </div>
+
+            <div className="bg-[#0f172a] rounded-2xl p-6 shadow-lg border border-slate-800 flex flex-col justify-between hover:-translate-y-1 transition-transform relative overflow-hidden">
+              {/* Glow effect */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-                {[
-                  { name: "Dipirona Monoidratada 1g", stock: "145 unid.", tag: "Alta Recomendação" },
-                  { name: "Neosoro Solução Nasal", stock: "89 unid.", tag: "Alta Recomendação" },
-                  { name: "Vitamina C Targifor C", stock: "32 unid.", tag: "Média Recomendação" },
-                  { name: "Creatina Creapure 300g", stock: "12 unid.", tag: "Ticket Alto" },
-                ].map((prod, i) => (
-                  <div key={i} className="flex justify-between items-center border-b border-slate-100 pb-3">
-                    <div className="flex items-start gap-3">
-                      <div>
-                        <div className="text-sm font-bold text-slate-800">{prod.name}</div>
-                        <div className="text-[10px] text-slate-500">Estoque: {prod.stock}</div>
-                      </div>
-                    </div>
-                    <div className="text-[9px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-1 rounded-sm">
-                      {prod.tag}
-                    </div>
-                  </div>
-                ))}
+              <div className="flex justify-between items-start mb-4 relative z-10">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-blue-500/20">
+                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                </div>
+              </div>
+              <div className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wider relative z-10">Canal Principal</div>
+              <div className="text-2xl font-bold text-white mb-3 relative z-10">WhatsApp (68%)</div>
+              <div className="text-[10px] font-bold text-blue-400 bg-blue-900/40 px-2 py-1 rounded-md self-start border border-blue-800/50 uppercase tracking-wider relative z-10">
+                Principal origem de conversão
               </div>
             </div>
           </div>
 
+          {/* Top Medicamentos Tabela */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-6">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-blue-500 text-[18px]">star</span>
+                </div>
+                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800">Top Medicamentos (Recomendados por IA)</h3>
+              </div>
+              <button className="text-[11px] font-bold text-slate-500 flex items-center gap-1 hover:text-blue-600 transition-colors">
+                Ver todos <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+              {[
+                { name: "Dipirona Monoidratada 1g", stock: "145 unid.", tag: "Alta Recomendação", tagColor: "text-emerald-600", color: "bg-blue-600", shortName: "DIP" },
+                { name: "Neosoro Solução Nasal", stock: "89 unid.", tag: "Alta Recomendação", tagColor: "text-emerald-600", color: "bg-sky-400", shortName: "NEO" },
+                { name: "Vitamina C Targifor C", stock: "32 unid.", tag: "Média Recomendação", tagColor: "text-blue-600", color: "bg-yellow-400", shortName: "VIT" },
+                { name: "Creatina Creapure 300g", stock: "12 unid.", tag: "Ticket Alto", tagColor: "text-red-500", color: "bg-slate-900", shortName: "CRE" },
+              ].map((prod, i) => (
+                <div key={i} className="flex justify-between items-center border-b border-slate-50 pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-[10px] shadow-sm ${prod.color}`}>
+                      {prod.shortName}
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-slate-800">{prod.name}</div>
+                      <div className="text-[11px] font-medium text-slate-500 mt-0.5">Estoque: {prod.stock}</div>
+                    </div>
+                  </div>
+                  <div className={`text-[9px] font-bold uppercase tracking-wider ${prod.tagColor}`}>
+                    {prod.tag}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Search Log Table */}
-          <div className="bg-white border border-slate-200 overflow-hidden opacity-70 pointer-events-none">
-            <div className="p-5 border-b border-slate-100">
-              <div className="text-xs font-bold uppercase tracking-widest text-slate-400">Intenções de Busca em Tempo Real</div>
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+            <div className="p-6 border-b border-slate-100 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                <span className="material-symbols-outlined text-blue-500 text-[18px]">search</span>
+              </div>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800">Intenções de Busca em Tempo Real</h3>
             </div>
             
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm">
-                <thead className="bg-slate-50 text-xs text-slate-400 uppercase font-medium">
+                <thead className="bg-white text-[10px] text-slate-400 uppercase font-bold tracking-widest border-b border-slate-100">
                   <tr>
-                    <th className="px-6 py-4 border-b border-slate-100">Pergunta do Usuário</th>
-                    <th className="px-6 py-4 border-b border-slate-100">Motor</th>
-                    <th className="px-6 py-4 border-b border-slate-100">Intenção</th>
+                    <th className="px-6 py-4 font-bold w-[45%]">Pergunta do Usuário</th>
+                    <th className="px-6 py-4 font-bold w-[25%]">Motor</th>
+                    <th className="px-6 py-4 font-bold w-[30%]">Intenção</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 text-slate-600">
+                <tbody className="divide-y divide-slate-50 text-slate-600 bg-white">
                   {[
-                    { q: `"farmácia aberta agora entrega no Jd. Nova York"`, engine: "ChatGPT", int: "Urgência (Checkout)" },
-                    { q: `"qual o genérico do roacutan tem em estoque?"`, engine: "Gemini", int: "Informativa" },
-                    { q: `"comprar fralda pampers tamanho M promoção"`, engine: "Google AI", int: "Preço / Oferta" },
-                    { q: `"remédio para cólica bebê mais recomendado"`, engine: "Perplexity", int: "Recomendação" },
+                    { q: `"farmácia aberta agora entrega no Jd. Nova York"`, engine: "ChatGPT", engineIcon: "auto_awesome", engineColor: "text-emerald-500", int: "Urgência (Checkout)", intIcon: "bolt", intColor: "text-red-500 bg-red-50 border-red-100" },
+                    { q: `"qual o genérico do roacutan tem em estoque?"`, engine: "Gemini", engineIcon: "temp_preferences_custom", engineColor: "text-blue-500", int: "Informativa", intIcon: "info", intColor: "text-blue-500 bg-blue-50 border-blue-100" },
+                    { q: `"comprar fralda pampers tamanho M promoção"`, engine: "Google AI", engineIcon: "travel_explore", engineColor: "text-orange-500", int: "Preço / Oferta", intIcon: "sell", intColor: "text-orange-500 bg-orange-50 border-orange-100" },
+                    { q: `"remédio para cólica bebê mais recomendado"`, engine: "Perplexity", engineIcon: "adjust", engineColor: "text-purple-500", int: "Recomendação", intIcon: "thumb_up", intColor: "text-emerald-500 bg-emerald-50 border-emerald-100" },
                   ].map((row, i) => (
-                    <tr key={i}>
-                      <td className="px-6 py-4 font-medium text-slate-800">{row.q}</td>
-                      <td className="px-6 py-4">{row.engine}</td>
-                      <td className="px-6 py-4">
-                        <span className="text-xs font-bold text-slate-400 uppercase">{row.int}</span>
+                    <tr key={i} className="hover:bg-slate-50/50 transition-colors">
+                      <td className="px-6 py-5 text-[13px] font-medium text-slate-700">{row.q}</td>
+                      <td className="px-6 py-5">
+                        <div className="flex items-center gap-2">
+                          <span className={`material-symbols-outlined text-[16px] ${row.engineColor}`}>{row.engineIcon}</span>
+                          <span className="text-[13px] font-semibold text-slate-700">{row.engine}</span>
+                        </div>
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border ${row.intColor}`}>
+                          <span className="material-symbols-outlined text-[14px]">{row.intIcon}</span>
+                          <span className="text-[10px] font-bold uppercase tracking-wider">{row.int}</span>
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -495,74 +756,135 @@ export default function FarmaciaPrincesaPitch() {
       </section>
 
       {/* ── 09. ARQUITETURA ──────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-white border-y border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">A Arquitetura</h2>
-            <p className="text-lg text-slate-500 font-light">Como os dados fluem do ERP até a recomendação.</p>
+      <section className="py-32 px-6 bg-[#0B0F19] border-y border-slate-800 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-20 text-center relative z-10">
+            <div className="inline-flex items-center gap-2 bg-indigo-900/30 border border-indigo-500/20 px-4 py-2 rounded-full mb-6">
+              <span className="material-symbols-outlined text-indigo-400 text-sm">account_tree</span>
+              <span className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Fluxo de Dados</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">A Arquitetura de IA</h2>
+            <p className="text-lg text-slate-400 font-light max-w-2xl mx-auto">Como os sistemas se comunicam em <span className="text-white font-medium">tempo real</span>, conectando o estoque físico à decisão de compra online.</p>
           </div>
 
-          <div className="border border-slate-200 p-8 md:p-12 overflow-x-auto bg-slate-50">
-            <div className="flex flex-col items-center min-w-[700px]">
+          <div className="relative mt-16 max-w-5xl mx-auto">
+            {/* Background connecting line (horizontal for desktop, vertical for mobile) */}
+            <div className="hidden lg:block absolute top-1/2 left-[10%] right-[10%] h-[2px] bg-slate-800 -translate-y-1/2 z-0"></div>
+            <div className="block lg:hidden absolute top-[10%] bottom-[10%] left-1/2 w-[2px] bg-slate-800 -translate-x-1/2 z-0"></div>
+            
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-4 relative z-10">
               
-              <div className="flex items-center gap-4 mb-8">
-                <div className="bg-white border border-slate-300 px-6 py-4 text-center w-48">
-                  <span className="text-sm font-bold text-slate-800 block mb-1">ERP da Farmácia</span>
-                  <span className="text-[10px] text-slate-500 uppercase tracking-widest">Catálogo Base</span>
+              {/* Step 1: ERP */}
+              <div className="flex flex-col items-center group w-full lg:w-56 bg-[#0f172a] p-6 rounded-3xl border border-slate-800 shadow-xl relative">
+                <div className="absolute -top-4 -right-4 w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center border-4 border-[#0B0F19] shadow-sm">
+                  <span className="text-sm font-black text-slate-400">1</span>
                 </div>
-                <div className="w-8 h-px bg-slate-400"></div>
-                <div className="bg-slate-900 text-white px-6 py-4 text-center w-48">
-                  <span className="text-sm font-bold block mb-1">Banco de Dados</span>
-                  <span className="text-[10px] text-slate-400 uppercase tracking-widest">Tempo Real</span>
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined text-3xl text-blue-400">storefront</span>
                 </div>
+                <h3 className="text-base font-bold text-white mb-3 text-center">ERP da Farmácia</h3>
+                <p className="text-[12px] text-slate-400 text-center font-medium leading-relaxed">Canal principal que centraliza estoque, preços e produtos.</p>
               </div>
 
-              <div className="flex flex-col items-center mb-8">
-                <div className="w-px h-8 bg-slate-400"></div>
-                <div className="w-[300px] h-px bg-slate-400"></div>
-                <div className="flex justify-between w-[300px]">
-                  <div className="w-px h-8 bg-slate-400"></div>
-                  <div className="w-px h-8 bg-slate-400"></div>
+              {/* Arrow */}
+              <div className="hidden lg:flex text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_right_alt</span>
+              </div>
+              <div className="flex lg:hidden text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_downward</span>
+              </div>
+
+              {/* Step 2: Database */}
+              <div className="flex flex-col items-center group w-full lg:w-56 bg-[#0f172a] p-6 rounded-3xl border border-slate-800 shadow-xl relative">
+                <div className="absolute -top-4 -right-4 w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center border-4 border-[#0B0F19] shadow-sm">
+                  <span className="text-sm font-black text-slate-400">2</span>
                 </div>
-                
-                <div className="flex justify-between w-[400px]">
-                  <div className="bg-white border border-slate-300 px-4 py-3 text-center w-40">
-                    <span className="text-sm font-bold text-slate-800 block">Motores de Busca</span>
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined text-3xl text-purple-400">database</span>
+                </div>
+                <h3 className="text-base font-bold text-white mb-3 text-center">Base de Conhecimento</h3>
+                <p className="text-[12px] text-slate-400 text-center font-medium leading-relaxed">Alimentada em tempo real com dados estruturados.</p>
+              </div>
+
+              {/* Arrow */}
+              <div className="hidden lg:flex text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_right_alt</span>
+              </div>
+              <div className="flex lg:hidden text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_downward</span>
+              </div>
+
+              {/* Step 3: Engines & IA */}
+              <div className="flex flex-col gap-4 w-full lg:w-64 relative">
+                <div className="absolute -top-4 -right-4 w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center border-4 border-[#0B0F19] shadow-sm z-20">
+                  <span className="text-sm font-black text-slate-400">3</span>
+                </div>
+                <div className="flex flex-row lg:flex-col items-center bg-[#0f172a] p-5 rounded-2xl border border-slate-800 gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-2xl text-emerald-400">travel_explore</span>
                   </div>
-                  <div className="bg-white border border-slate-300 px-4 py-3 text-center w-40">
-                    <span className="text-sm font-bold text-slate-800 block">Assistentes IA</span>
+                  <div className="text-left lg:text-center">
+                    <h3 className="text-[13px] font-bold text-white mb-1">Motores de Busca</h3>
+                    <p className="text-[11px] text-slate-400 font-medium">Google e IA de buscas indexam todo o catálogo.</p>
+                  </div>
+                </div>
+                <div className="flex flex-row lg:flex-col items-center bg-[#0f172a] p-5 rounded-2xl border border-slate-800 gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-2xl text-amber-400">auto_awesome</span>
+                  </div>
+                  <div className="text-left lg:text-center">
+                    <h3 className="text-[13px] font-bold text-white mb-1">Assistentes IA</h3>
+                    <p className="text-[11px] text-slate-400 font-medium">ChatGPT e Gemini recomendam seus produtos.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="flex justify-between w-[200px]">
-                  <div className="w-px h-8 bg-slate-400"></div>
-                  <div className="w-px h-8 bg-slate-400"></div>
-                </div>
-                <div className="w-[200px] h-px bg-slate-400"></div>
-                <div className="w-px h-8 bg-slate-400"></div>
-                
-                <div className="bg-slate-100 border-2 border-slate-900 px-8 py-4 text-center w-64">
-                  <span className="text-sm font-bold text-slate-900 block mb-1">Cliente Final</span>
-                  <span className="text-[10px] text-slate-600 uppercase tracking-widest">Recomendação & Venda</span>
-                </div>
+              {/* Arrow */}
+              <div className="hidden lg:flex text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_right_alt</span>
+              </div>
+              <div className="flex lg:hidden text-slate-700">
+                <span className="material-symbols-outlined text-4xl">arrow_downward</span>
               </div>
 
+              {/* Step 4: Client */}
+              <div className="flex flex-col items-center group w-full lg:w-56 bg-gradient-to-b from-indigo-900/40 to-[#0f172a] p-6 rounded-3xl border border-indigo-500/30 shadow-[0_0_40px_rgba(79,70,229,0.15)] relative">
+                <div className="absolute -top-4 -right-4 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center border-4 border-[#0B0F19] shadow-sm">
+                  <span className="text-sm font-black text-white">4</span>
+                </div>
+                <div className="w-16 h-16 rounded-full bg-indigo-500 flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20">
+                  <span className="material-symbols-outlined text-3xl text-white">sentiment_satisfied</span>
+                </div>
+                <h3 className="text-base font-bold text-white mb-3 text-center">Cliente Final</h3>
+                <p className="text-[12px] text-indigo-200/70 text-center font-medium leading-relaxed">Recebe recomendações precisas e toma a decisão de compra.</p>
+              </div>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* ── 10. APRESENTAÇÃO DO JORGE ────────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-slate-900 text-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-left border-l-4 border-slate-500 pl-8 md:pl-12">
-            <div className="text-3xl font-bold text-white mb-2">Jorge Junior</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-8">Head de Inteligência Artificial</div>
+      <section className="py-32 px-6 bg-[#040810] text-white">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Avatar / Visual */}
+          <div className="w-40 h-40 rounded-[2.5rem] bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-1 rotate-3 shadow-[0_0_50px_rgba(79,70,229,0.2)] flex-shrink-0">
+            <div className="w-full h-full rounded-[2.3rem] bg-[#040810] flex items-center justify-center overflow-hidden border-2 border-[#040810]">
+              <div className="w-full h-full bg-slate-800/50 flex items-center justify-center">
+                <span className="material-symbols-outlined text-6xl text-slate-500">person</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Jorge Junior</h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-sm font-bold uppercase tracking-widest text-slate-300 mb-8 shadow-sm">
+              <span className="material-symbols-outlined text-blue-500 text-sm">memory</span>
+              Head de Inteligência Artificial
+            </div>
             
-            <p className="text-slate-300 text-lg leading-relaxed font-light">
-              Responsável pela estratégia, arquitetura tecnológica, inteligência artificial e evolução contínua do projeto.
+            <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
+              Responsável pela estratégia, arquitetura tecnológica, inteligência artificial e evolução contínua do projeto, focando em garantir a <span className="text-white font-medium">liderança digital da Farmácia Princesa.</span>
             </p>
           </div>
         </div>
