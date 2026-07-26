@@ -8,7 +8,7 @@ export default function FarmaciaPrincesaPitch() {
       {/* ── 01. HERO SECTION ─────────────────────────────────────────────────── */}
       <section className="min-h-[70vh] flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto pt-20">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-700">
-          Transformando buscas <br className="hidden md:block" /> em clientes.
+          Transformando buscas <br className="hidden md:block" /> em clientes
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 font-light">
           A aquisição de clientes para a Farmácia Princesa através do Google, motores de buscas e modelos de IAs.
@@ -21,7 +21,7 @@ export default function FarmaciaPrincesaPitch() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              O comportamento mudou<span className="text-red-500">.</span>
+              O comportamento mudou
             </h2>
             <p className="text-xl text-slate-500 mb-2 font-medium">Hoje o cliente não começa comprando.</p>
             <p className="text-xl font-bold text-indigo-500 relative inline-block">
@@ -104,9 +104,6 @@ export default function FarmaciaPrincesaPitch() {
 
                 {/* Onde estamos perdendo Box */}
                 <div className="max-w-xl mx-auto bg-[#fffbf2] border border-[#fce6a8] rounded-xl p-4 flex items-start gap-4 shadow-sm relative z-10">
-                  <div className="w-8 h-8 flex-shrink-0 rounded-full bg-white flex items-center justify-center border border-amber-200 mt-1">
-                    <span className="material-symbols-outlined text-amber-500 text-sm">bolt</span>
-                  </div>
                   <div>
                     <h4 className="font-bold text-amber-900 text-sm mb-1">Onde estamos perdendo:</h4>
                     <p className="text-[12px] text-amber-800 font-medium">Se não estamos presentes nas etapas 1, 2 e 3, o cliente nem sabe que a Farmácia Princesa existe.</p>
@@ -231,7 +228,6 @@ export default function FarmaciaPrincesaPitch() {
               <div className="mb-8">
                 <h3 className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-4">Como Vai Ser Amanhã</h3>
                 <div className="inline-flex items-center gap-2 bg-[#f2fbf6] border border-[#d1f4e0] px-4 py-1.5 rounded-full">
-                  <span className="material-symbols-outlined text-emerald-500 text-sm">bolt</span>
                   <span className="text-[11px] font-semibold text-emerald-700">Jornada fluida e sem atrito</span>
                 </div>
               </div>
@@ -323,15 +319,8 @@ export default function FarmaciaPrincesaPitch() {
             </div>
             
             <h2 className="text-2xl md:text-4xl font-serif text-slate-300 text-center leading-relaxed max-w-4xl mx-auto font-medium mt-4">
-              "Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a Farmácia Princesa poderá estar presente <span className="text-indigo-400 font-bold">no momento exato</span> em que a <span className="text-indigo-400 font-bold">necessidade surge</span>: durante a busca por informações e recomendações <span className="text-indigo-400 font-bold">em IAs</span>."
+              "Enquanto outras farmácias disputam clientes apenas quando eles já decidiram onde comprar, a Farmácia Princesa poderá estar presente <span className="text-indigo-400 font-bold">no momento exato</span> em que a <span className="text-indigo-400 font-bold">necessidade surge</span>: durante a busca por informações e recomendações."
             </h2>
-
-            {/* Bottom decorative star */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center justify-center gap-4 w-full max-w-md hidden md:flex">
-              <div className="h-px bg-slate-800 flex-1"></div>
-              <span className="material-symbols-outlined text-indigo-400 text-lg">magic_button</span>
-              <div className="h-px bg-slate-800 flex-1"></div>
-            </div>
           </div>
 
           {/* Label: O QUE ISSO SIGNIFICA? */}
@@ -403,11 +392,6 @@ export default function FarmaciaPrincesaPitch() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 relative z-10">
-            <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-8 shadow-sm">
-              <span className="material-symbols-outlined text-indigo-500 text-sm">search</span>
-              <span className="text-xs font-bold text-indigo-600">Oportunidade Real. Impacto Gigante.</span>
-            </div>
-            
             <h2 className="text-4xl md:text-6xl font-bold mb-2 tracking-tight text-slate-900">A Oportunidade</h2>
             <div className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-6 pb-2">
               Milhares de pesquisas
@@ -480,7 +464,7 @@ export default function FarmaciaPrincesaPitch() {
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">O Projeto Piloto</h2>
             <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
-              Execução dividida em 4 etapas claras para transformar <br/> seu e-commerce em uma <span className="text-blue-600 font-bold">operação preparada para IA.</span>
+              Execução dividida em 4 etapas claras para transformar <br/> a Farmácia Princesa em uma <span className="text-blue-600 font-bold">operação preparada para IA.</span>
             </p>
           </div>
 
@@ -494,10 +478,10 @@ export default function FarmaciaPrincesaPitch() {
             {/* Cards Grid */}
             <div className="grid lg:grid-cols-4 gap-6 pt-4 lg:pt-0">
               {[
-                { step: "01", icon: "explore", title: "Posicionamento", items: ["SEO Estruturado", "GEO (Engine Optimization)", "AI Commerce Setup"], result: "Seu catálogo passa a ser compreendido por buscadores e inteligências artificiais.", color: "text-blue-600", bgIcon: "bg-blue-50 border-blue-100", checkColor: "text-blue-500", resultBg: "bg-[#f4f7ff]", giantNumber: "01" },
-                { step: "02", icon: "database", title: "Catálogo", items: ["Integração com ERP", "Sincronização", "Normalização de Dados"], result: "Todos os produtos ficam organizados, atualizados e prontos para IA.", color: "text-emerald-500", bgIcon: "bg-emerald-50 border-emerald-100", checkColor: "text-emerald-500", resultBg: "bg-[#f2fbf6]", giantNumber: "02" },
-                { step: "03", icon: "auto_awesome", title: "Recomendação", items: ["Integração ChatGPT", "Indexação Gemini/Claude", "Busca Semântica"], result: "Clientes recebem recomendações inteligentes e respostas mais precisas em tempo real.", color: "text-purple-500", bgIcon: "bg-purple-50 border-purple-100", checkColor: "text-purple-500", resultBg: "bg-[#f9f5ff]", giantNumber: "03" },
-                { step: "04", icon: "credit_card", title: "Checkout", items: ["Link de Pagamento", "Logística Automatizada", "Métricas e Monitoramento"], result: "Compra concluída com eficiência, logística integrada e dados para decisões melhores.", color: "text-amber-500", bgIcon: "bg-amber-50 border-amber-100", checkColor: "text-amber-500", resultBg: "bg-[#fffbf2]", giantNumber: "04" }
+                { step: "01", icon: "explore", title: "Posicionamento", items: ["SEO Estruturado", "GEO (Engine Optimization)", "Setup de Curadoria"], result: "A farmácia passa a ser compreendida por motores de buscas e inteligências artificiais.", color: "text-blue-600", bgIcon: "bg-blue-50 border-blue-100", checkColor: "text-blue-500", resultBg: "bg-[#f4f7ff]", giantNumber: "01" },
+                { step: "02", icon: "database", title: "Produtos", items: ["Integração com ERP", "Sincronização", "Normalização de Dados"], result: "Todos os produtos ficam organizados, atualizados e prontos para IA.", color: "text-emerald-500", bgIcon: "bg-emerald-50 border-emerald-100", checkColor: "text-emerald-500", resultBg: "bg-[#f2fbf6]", giantNumber: "02" },
+                { step: "03", icon: "auto_awesome", title: "Recomendação", items: ["Integração em tempo real", "Indexação motores de buscas", "Busca Semântica por modelos de IA"], result: "Clientes recebem recomendações inteligentes e respostas mais precisas em tempo real.", color: "text-purple-500", bgIcon: "bg-purple-50 border-purple-100", checkColor: "text-purple-500", resultBg: "bg-[#f9f5ff]", giantNumber: "03" },
+                { step: "04", icon: "credit_card", title: "Compra", items: ["Link para pedido personalizado", "Pedido integrado ao sistema", "logística inteligente"], result: "Compra concluída com eficiência, logística integrada e dados para decisões melhores.", color: "text-amber-500", bgIcon: "bg-amber-50 border-amber-100", checkColor: "text-amber-500", resultBg: "bg-[#fffbf2]", giantNumber: "04" }
               ].map((card, i) => (
                 <div key={i} className="flex flex-col relative mt-8 lg:mt-0 group hover:-translate-y-1 transition-transform">
                   {/* Step bubble top */}
@@ -528,7 +512,6 @@ export default function FarmaciaPrincesaPitch() {
 
                     <div className={`${card.resultBg} rounded-2xl p-5 mt-auto relative z-10`}>
                       <div className={`text-xs font-bold ${card.color} flex items-center gap-1.5 mb-2`}>
-                        <span className="material-symbols-outlined text-[14px]">auto_awesome</span>
                         Resultado
                       </div>
                       <p className="text-[12px] font-medium text-slate-700 leading-relaxed">{card.result}</p>
@@ -557,9 +540,6 @@ export default function FarmaciaPrincesaPitch() {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="flex flex-col md:flex-row gap-6 items-start mb-16">
-            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
-              <span className="material-symbols-outlined text-blue-600 text-3xl">star</span>
-            </div>
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-3 tracking-tight">Por que começar pela<br className="hidden md:block"/>Farmácia Princesa?</h2>
               <p className="text-lg text-slate-500 font-medium">O momento exato para capturar a <span className="text-blue-600 font-bold">liderança tecnológica local.</span></p>
@@ -573,7 +553,7 @@ export default function FarmaciaPrincesaPitch() {
                 { icon: "location_on", title: "Presença física em\nAraçatuba e Birigui", desc: "Atuação estratégica em duas cidades-chave,\ncom forte conexão com a comunidade local.", iconBg: "bg-teal-50", iconColor: "text-teal-500", checkColor: "text-teal-500" },
                 { icon: "local_shipping", title: "Capacidade logística\njá existente", desc: "Estrutura pronta para atender com agilidade\ne eficiência em toda a região.", iconBg: "bg-purple-50", iconColor: "text-purple-600", checkColor: "text-purple-500" },
                 { icon: "inventory_2", title: "Estoque amplo e\ndiversificado", desc: "Variedade de produtos que atende diferentes\nnecessidades e perfis de clientes.", iconBg: "bg-orange-50", iconColor: "text-orange-500", checkColor: "text-orange-500" },
-                { icon: "trending_up", title: "Potencial para se tornar\nreferência nacional em\naquisição de clientes\natravés de IA", desc: "Adoção antecipada de Inteligência Artificial para\nliderar uma nova era no varejo farmacêutico.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" }
+                { icon: "trending_up", title: "Potencial para se tornar\nreferência regional em\naquisição de clientes\natravés de motor de buscas e IA", desc: "Adoção antecipada de Inteligência Artificial para\nliderar uma nova era no varejo farmacêutico.", iconBg: "bg-blue-50", iconColor: "text-blue-600", checkColor: "text-blue-500" }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col md:flex-row md:items-center py-6 gap-6 group hover:bg-slate-50/50 transition-colors px-4 rounded-xl">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${item.iconBg}`}>
