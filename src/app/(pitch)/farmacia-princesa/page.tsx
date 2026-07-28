@@ -5,7 +5,7 @@ export default function FarmaciaPrincesaPitch() {
     <main className="w-full bg-white text-slate-900 font-sans selection:bg-slate-200">
 
       {/* 01. HERO */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto">
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-12 md:pt-20 max-w-4xl mx-auto">
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.08] animate-in fade-in slide-in-from-bottom-4 duration-700">
           {"Todos os dias, milhares de pessoas procuram "}
@@ -367,7 +367,7 @@ export default function FarmaciaPrincesaPitch() {
               {[
                 "Produtos indexados e compreendidos por assistentes de Inteligência Artificial e motores de buscas.",
                 "Ser recomendado quando alguém pesquisa sobre produtos relacionados na região.",
-                "Convertendo clientes de forma orgânica, atuando desde a camada de busca até a tomada de decisão.",
+                "Convertendo clientes de forma orgânica desde a busca até a compra.",
                 "Posicionamento estratégico escalando o alcance em Araçatuba e Birigui.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-5">
@@ -380,7 +380,7 @@ export default function FarmaciaPrincesaPitch() {
             </ul>
           </div>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="material-symbols-outlined text-indigo-300/60 text-6xl mb-6 block">format_quote</span>
+
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
               {"Quem liderar essa transformação primeiro não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão a farmácia nos "}
               <span className="text-indigo-200">{"próximos anos."}</span>
