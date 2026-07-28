@@ -855,15 +855,19 @@ export default function FarmaciaPrincesaPitch() {
           </div>
           
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Jorge Junior</h2>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-sm font-bold uppercase tracking-widest text-slate-300 mb-8 shadow-sm">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">Jorge Júnior</h2>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-sm font-bold uppercase tracking-widest text-slate-300 mb-6 shadow-sm">
               <span className="material-symbols-outlined text-blue-500 text-sm">memory</span>
-              Head de Inteligência Artificial
+              Head de IA e Arquitetura
             </div>
             
-            <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
-              Responsável pela estratégia, arquitetura tecnológica, inteligência artificial e evolução contínua do projeto, focando em garantir a <span className="text-white font-medium">liderança digital da Farmácia Princesa.</span>
+            <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light mb-6">
+              Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua do projeto, conectando dados, automação e software para posicionar a Farmácia Princesa como <span className="text-white font-medium">referência em inovação digital no varejo farmacêutico</span>, impulsionando descoberta, recomendação inteligente e aquisição de clientes por IA.
             </p>
+
+            <div className="text-xs md:text-sm font-semibold tracking-wider text-slate-500 uppercase">
+              IA • Arquitetura • Dados • Automação • Estratégia Digital
+            </div>
           </div>
         </div>
       </section>
