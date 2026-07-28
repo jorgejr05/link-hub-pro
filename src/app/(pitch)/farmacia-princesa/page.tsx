@@ -12,7 +12,7 @@ export default function FarmaciaPrincesaPitch() {
           <span className="text-indigo-600">{"exatamente o que a Farmácia Princesa vende."}</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed font-light animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          {"O objetivo deste projeto é garantir que essas pesquisas resultem em novos clientes para a Farmácia Princesa."}
+          {"O objetivo é garantir que essas pesquisas resultem em novos clientes para a Farmácia Princesa."}
         </p>
         <div className="mt-20 flex flex-col items-center animate-in fade-in duration-700 delay-500">
           <div className="w-px h-12 bg-gradient-to-b from-transparent to-slate-300"></div>
