@@ -850,9 +850,7 @@ export default function FarmaciaPrincesaPitch() {
           {/* Avatar / Visual */}
           <div className="w-40 h-40 rounded-[2.5rem] bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-1 rotate-3 shadow-[0_0_50px_rgba(79,70,229,0.2)] flex-shrink-0">
             <div className="w-full h-full rounded-[2.3rem] bg-[#040810] flex items-center justify-center overflow-hidden border-2 border-[#040810]">
-              <div className="w-full h-full bg-slate-800/50 flex items-center justify-center">
-                <span className="material-symbols-outlined text-6xl text-slate-500">person</span>
-              </div>
+              <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover -rotate-3" />
             </div>
           </div>
           
