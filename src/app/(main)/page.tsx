@@ -5,19 +5,19 @@ export default function Home() {
   const whatsappUrl = `https://wa.me/5518988183746?text=${whatsappMsg}`;
 
   return (
-    <main className="pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-      {/* ── Hero Section ────────────────────────── */}
+    <>
+      <main className="pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+        {/* ── Hero Section ────────────────────────── */}
       <section className="relative min-h-[80vh] md:min-h-[85vh] flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
         <div className="absolute inset-0 bg-gradient-aurora z-[-1]"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10">
           <h1 className="font-display-lg-mobile md:font-display-lg text-[32px] md:text-[52px] lg:text-[72px] mb-4 md:mb-6 leading-tight uppercase">
-            <span className="text-primary">Inteligência Artificial</span>
-            <br />
-            <span className="neon-text">Sob Medida</span> para o seu negócio.
+            Sua empresa <span className="neon-text">já tem dados.</span><br />
+            Nós os transformamos em vantagem competitiva.
           </h1>
           
           <p className="text-sm md:text-base lg:text-lg text-on-surface-variant mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2 md:px-0">
-            Receba um diagnóstico completo da sua operação, com análise de casos de uso, arquitetura de IA, estimativa de custos com LLMs e um plano estratégico para implementação de soluções inteligentes.
+            Ajudamos empresas a crescer utilizando Inteligência Artificial aplicada aos seus processos. Identificamos onde a IA realmente gera retorno e construímos soluções integradas ao seu negócio.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-4 sm:px-0">
@@ -29,7 +29,7 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <span className="material-symbols-outlined text-base md:text-xl" data-icon="rocket_launch">rocket_launch</span>
-              Agendar Diagnóstico Gratuito
+              Solicitar Diagnóstico Estratégico
             </a>
             <a 
               href="#cases" 
@@ -41,16 +41,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Section Nova: Posicionamento e Transformação ─────────────────────── */}
+      <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-primary font-headline-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            Não vendemos ferramentas de IA. Projetamos <span className="neon-text">arquiteturas personalizadas</span> que resolvem problemas reais de negócio, integrando dados, sistemas e processos para gerar retorno mensurável.
+          </p>
+        </div>
+
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase leading-tight">
+            A IA só faz sentido quando <br className="hidden md:block" /> resolve um <span className="neon-text">problema real</span>.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          {[
+            { title: "Redução de Custos", icon: "trending_down", desc: "Automatização de tarefas repetitivas que drenam tempo e dinheiro." },
+            { title: "Automação Operacional", icon: "precision_manufacturing", desc: "Processos escaláveis operando 24/7 sem intervenção humana." },
+            { title: "Aumento de Receita", icon: "payments", desc: "Vendas ativas, catálogo inteligente e conversão automatizada." },
+            { title: "Decisões Inteligentes", icon: "lightbulb", desc: "Integração do seu ERP com IA para insights estratégicos reais." },
+          ].map((item, i) => (
+            <div key={i} className="glass-panel rounded-2xl p-6 md:p-8 hover:neon-glow transition-all duration-300 flex flex-col items-center text-center">
+              <span className="material-symbols-outlined text-primary-container text-4xl mb-4" data-icon={item.icon}>{item.icon}</span>
+              <h3 className="font-headline-md text-lg text-primary font-bold mb-2">{item.title}</h3>
+              <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── Section 01: Dores Universais & Solução ─────────────────────── */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">O Cenário Atual</span>
             <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mt-2 mb-4 md:mb-6 leading-tight">
-              A complexidade de <span className="neon-text">implementar IA</span>
+              Por que tantos projetos de IA <span className="neon-text">fracassam?</span>
             </h2>
             <p className="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 leading-relaxed">
-              Empresas de todos os tamanhos sabem que precisam de Inteligência Artificial para não ficarem para trás. O problema é a <strong>falta de clareza tecnológica</strong>.
+              Muitas empresas compram ferramentas genéricas de Inteligência Artificial esperando milagres, mas acabam com <strong>soluções desconectadas</strong> que não falam com seus sistemas internos e não geram retorno financeiro.
             </p>
             <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               {[
@@ -123,6 +153,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Prova Social / Números ────────────────────────────── */}
+      <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
+        <div className="glass-panel rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          <div className="absolute inset-0 bg-primary-container/5 blur-3xl"></div>
+          
+          <div className="relative z-10 w-full md:w-1/3 flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0">
+            <span className="text-4xl md:text-5xl lg:text-6xl text-primary-container font-headline-xl font-bold mb-2">3</span>
+            <span className="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs md:text-sm">Produtos Proprietários</span>
+          </div>
+
+          <div className="relative z-10 w-full md:w-1/3 flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0 md:pl-8">
+            <span className="text-4xl md:text-5xl lg:text-6xl text-primary-container font-headline-xl font-bold mb-2">12+</span>
+            <span className="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs md:text-sm">Integrações</span>
+          </div>
+
+          <div className="relative z-10 w-full md:w-1/3 flex flex-col items-center md:items-start md:pl-8">
+            <span className="text-4xl md:text-5xl lg:text-6xl text-primary-container font-headline-xl font-bold mb-2">100%</span>
+            <span className="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs md:text-sm">Arquiteturas Personalizadas</span>
+          </div>
+        </div>
+
+        {/* Expertise Tags */}
+        <div className="mt-8 flex flex-wrap justify-center gap-3 opacity-70">
+          {["Especialista em:", "IA Generativa", "LLMs", "Protocolo MCP", "Sistemas RAG", "Integrações ERP", "Automação B2B", "Search & SEO"].map((tag, i) => (
+            <span key={i} className={`text-xs md:text-sm ${i === 0 ? 'text-on-surface-variant font-semibold' : 'px-3 py-1 bg-surface-container border border-white/5 rounded-full text-on-surface'}`}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      </section>
+
       {/* ── Section 03: Casos de Sucesso ────────── */}
       <section id="cases" className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
         <div className="mb-10 md:mb-16">
@@ -169,14 +230,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden md:flex flex-col justify-center items-end opacity-80 group-hover:opacity-100 transition-opacity">
-                <div className="w-full max-w-md rounded-2xl border border-white/10 bg-surface/50 p-6 lg:p-8 font-mono text-xs md:text-sm text-primary-container leading-relaxed overflow-x-auto">
-                  <div className="mb-2 text-outline">{"// JSON-RPC Request (MCP Server)"}</div>
-                  <div>{"{"}</div>
-                  <div className="pl-4">"method": "tools/call",</div>
-                  <div className="pl-4">"params": {"{"}  "name": "search_catalog" {"}"}</div>
-                  <div>{"}"}</div>
-                  <div className="mt-4 text-outline">{"// Agent State Transition"}</div>
-                  <div className="text-green-400">[Bling ERP] → [Melhor Envio] → [AppMax]</div>
+                <div className="w-full max-w-md rounded-2xl border border-white/10 bg-surface/50 p-6 lg:p-8 text-xs md:text-sm leading-relaxed">
+                  <div className="mb-4">
+                    <h4 className="font-headline-md text-primary mb-3 text-sm uppercase tracking-widest">Escopo de Solução</h4>
+                    <ul className="space-y-2 text-on-surface-variant">
+                      <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary-container text-sm">check_circle</span> ERP integrado bidirecionalmente</li>
+                      <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary-container text-sm">check_circle</span> Catálogo inteligente consultável via LLMs</li>
+                      <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary-container text-sm">check_circle</span> Atendimento e suporte automatizado</li>
+                      <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary-container text-sm">check_circle</span> IA autônoma para jornadas de vendas</li>
+                    </ul>
+                  </div>
+                  <div className="pt-4 border-t border-white/10">
+                    <h4 className="font-headline-md text-primary mb-2 text-sm uppercase tracking-widest">Resultado Esperado</h4>
+                    <p className="text-primary-container font-bold text-sm">Redução drástica de processos manuais. Escalabilidade comercial sem aumento de equipe. Estoque preparado para a era da IA.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,13 +319,26 @@ export default function Home() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 md:gap-3 px-7 py-4 md:px-10 md:py-5 rounded-full bg-primary-container text-on-primary-container font-label-md text-sm md:text-base font-bold uppercase tracking-widest hover:neon-glow hover:scale-105 transition-all duration-300"
             >
-              <span className="material-symbols-outlined text-lg md:text-xl" data-icon="chat">chat</span>
-              Agendar Diagnóstico
+              <span className="material-symbols-outlined text-lg md:text-xl" data-icon="search_insights">search_insights</span>
+              Receber Diagnóstico da Operação
             </a>
           </div>
         </div>
       </section>
 
     </main>
+      
+      {/* ── Footer ────────────────────────────────────── */}
+      <footer className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-10 border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+        <div className="text-on-surface-variant text-sm text-center md:text-left">
+          &copy; {new Date().getFullYear()} Jorge Júnior. Todos os direitos reservados.
+        </div>
+        <div className="flex flex-wrap justify-center gap-6">
+          <a href="https://github.com/jorgejr05" target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">GitHub</a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">WhatsApp</a>
+          <a href="mailto:contato@jorgejr.site" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">E-mail</a>
+        </div>
+      </footer>
+    </>
   );
 }
