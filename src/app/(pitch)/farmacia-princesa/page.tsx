@@ -6,9 +6,7 @@ export default function FarmaciaPrincesaPitch() {
 
       {/* 01. HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto">
-        <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-8 animate-in fade-in duration-500">
-          {"Araçatuba & Birigui"}
-        </p>
+
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.08] animate-in fade-in slide-in-from-bottom-4 duration-700">
           {"Todos os dias, milhares de pessoas procuram "}
           <span className="text-indigo-600">{"exatamente o que a Farmácia Princesa vende."}</span>
@@ -35,7 +33,7 @@ export default function FarmaciaPrincesaPitch() {
             {[
               { number: "300 mil+", label: "habitantes na região de atuação", featured: false },
               { number: "64 mil+", label: "buscas mensais pelos principais produtos vendidos pela Farmácia Princesa", featured: false },
-              { number: "≈ 1.800", label: "pesquisas por dia relacionadas ao que a farmácia vende", featured: true },
+              { number: "1.800", label: "pesquisas por dia relacionadas ao que a farmácia vende", featured: true },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center w-full">
                 <div className={`w-full text-center py-8 px-6 rounded-2xl border ${item.featured ? "bg-indigo-600 border-indigo-500 shadow-[0_0_60px_rgba(79,70,229,0.3)]" : "bg-slate-900 border-slate-800"}`}>
@@ -162,8 +160,8 @@ export default function FarmaciaPrincesaPitch() {
               <div className="flex justify-between items-end mb-10">
                 <div>
                   <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{"Buscas Mensais — Região"}</h3>
-                  <div className="text-4xl font-black text-slate-900">{"≈ 64.000"}</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">{"≈ 1.800 por dia"}</div>
+                  <div className="text-4xl font-black text-slate-900">{"64.000"}</div>
+                  <div className="text-sm text-slate-500 font-medium mt-1">{"1.800 por dia"}</div>
                 </div>
                 <div className="text-right">
                   <div className="text-xs text-slate-400 font-medium">{"Fonte: Google Keyword Planner"}</div>
@@ -220,7 +218,7 @@ export default function FarmaciaPrincesaPitch() {
           <div className="text-center mb-20">
             <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-4">{"Como vamos fazer"}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              {"Projeto Descoberta"}
+              {"Indexação nos motores de buscas e IA"}
             </h2>
             <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
               {"Aquisição orgânica de clientes por busca e IA. "}
@@ -290,9 +288,15 @@ export default function FarmaciaPrincesaPitch() {
               {"Por que começar pela Farmácia Princesa?"}
             </h2>
             <p className="text-lg text-slate-500 font-medium">
-              {"O momento exato para capturar a "}
-              <span className="text-indigo-600 font-bold">{"liderança digital local."}</span>
+              {"O momento exato para "}
+              <span className="text-indigo-600 font-bold">{"Liderar a Recomendação local."}</span>
             </p>
+            <div className="mt-8 bg-slate-100 border border-slate-200 text-slate-600 p-5 rounded-2xl max-w-2xl mx-auto text-left flex items-start gap-4">
+              <span className="material-symbols-outlined text-indigo-500 text-2xl">insights</span>
+              <p className="text-sm font-medium leading-relaxed">
+                {"Os concorrentes ainda não entenderam esse lado do jogo. Quem estruturar essa presença primeiro se consolida e ganha a preferência."}
+              </p>
+            </div>
           </div>
           <div className="flex flex-col divide-y divide-slate-100">
             {[
@@ -355,16 +359,16 @@ export default function FarmaciaPrincesaPitch() {
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-              {"Onde a Farmácia Princesa estará em 12 meses?"}
+              {"Onde a Farmácia Princesa estará nos próximos meses?"}
             </h2>
           </div>
           <div className="bg-indigo-700/50 border border-indigo-500/50 rounded-[2rem] p-8 md:p-12 mb-24 shadow-2xl backdrop-blur-sm">
             <ul className="space-y-6">
               {[
-                "Catálogo de produtos indexado e compreendido por assistentes de Inteligência Artificial.",
-                "Aparecendo nas respostas do ChatGPT, Gemini e Google quando alguém pesquisa sobre saúde na região.",
-                "Convertendo buscas em clientes de forma orgânica, sem depender exclusivamente de mídia paga.",
-                "Posição de liderança consolidada como a farmácia mais bem posicionada digitalmente em Araçatuba e Birigui.",
+                "Produtos indexados e compreendidos por assistentes de Inteligência Artificial e motores de buscas.",
+                "Ser recomendado quando alguém pesquisa sobre produtos relacionados na região.",
+                "Convertendo clientes de forma orgânica, atuando desde a camada de busca até a tomada de decisão.",
+                "Posicionamento estratégico escalando o alcance em Araçatuba e Birigui.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-5">
                   <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -378,8 +382,8 @@ export default function FarmaciaPrincesaPitch() {
           <div className="text-center max-w-3xl mx-auto">
             <span className="material-symbols-outlined text-indigo-300/60 text-6xl mb-6 block">format_quote</span>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
-              {"Quem liderar essa transformação primeiro não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão farmácias na "}
-              <span className="text-indigo-200">{"próxima década."}</span>
+              {"Quem liderar essa transformação primeiro não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão a farmácia nos "}
+              <span className="text-indigo-200">{"próximos anos."}</span>
             </h3>
             <div className="w-20 h-1 bg-indigo-400/60 mx-auto rounded-full"></div>
           </div>
