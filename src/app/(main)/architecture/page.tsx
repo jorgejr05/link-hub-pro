@@ -278,10 +278,7 @@ export default function Architecture() {
             Ver Case Study: Plugeefy
             <span className="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
           </Link>
-          <a href="https://plugeefy.cloud" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest text-[10px] md:text-sm">
-            Ver Projeto ao Vivo
-            <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
-          </a>
+
         </div>
       </section>
 
