@@ -40,11 +40,7 @@ export default function CaseStudyPlugeefy() {
         </p>
 
         <div className="flex flex-wrap gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300">
-          <a href="https://plugeefy.cloud" target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-glow transition-all uppercase tracking-widest text-[10px] md:text-sm">
-            Ver Plataforma
-            <span className="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
-          </a>
+
           <a href="https://plugeefy.site" target="_blank" rel="noreferrer"
             className="inline-flex items-center gap-2 glass-panel text-primary font-label-md px-5 py-2 md:px-6 md:py-3 rounded-full hover:neon-border transition-all uppercase tracking-widest text-[10px] md:text-sm">
             Landing Page

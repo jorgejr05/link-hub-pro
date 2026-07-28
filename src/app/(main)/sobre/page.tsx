@@ -19,9 +19,7 @@ export default function SobreMim() {
             <img src="/jorge-junior.jpg" alt="Jorge Gomes Jr." className="w-full h-full object-cover object-top" />
           </div>
           
-          <p className="font-label-caps text-label-caps text-primary-container uppercase tracking-widest mb-6 animate-in fade-in duration-500">
-            {"Conheça o criador"}
-          </p>
+
           
           <h1 className="font-headline-xl text-headline-xl md:text-display-lg text-primary uppercase mb-8 leading-[1.08] animate-in fade-in slide-in-from-bottom-4 duration-700">
             {"Jorge "}
@@ -146,12 +144,7 @@ export default function SobreMim() {
                 desc: "Plataforma SaaS multi-tenant que expõe catálogos de e-commerce para LLMs via servidor MCP nativo. Pipeline assíncrono com BullMQ e agente IA LangGraph.",
                 icon: "hub",
               },
-              {
-                title: "Link-Hub Pro",
-                url: "jorgejr.site",
-                desc: "Plataforma centralizadora de links e branding digital de altíssima conversão, com interfaces ultra modernas e animações fluidas.",
-                icon: "link",
-              },
+
               {
                 title: "Ju AI",
                 url: "ju-ai2026.vercel.app",
@@ -194,9 +187,7 @@ export default function SobreMim() {
             <a href="https://wa.me/5518988183746" target="_blank" rel="noreferrer" className="px-8 py-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-sm tracking-widest uppercase transition-all hover:neon-glow hover:-translate-y-1">
               Chamar no WhatsApp
             </a>
-            <a href="https://github.com/jorgejr05" target="_blank" rel="noreferrer" className="px-8 py-4 rounded-full glass-panel text-primary font-label-md text-sm tracking-widest uppercase transition-all hover:border-primary-container hover:-translate-y-1">
-              Ver GitHub
-            </a>
+
           </div>
         </div>
       </section>
