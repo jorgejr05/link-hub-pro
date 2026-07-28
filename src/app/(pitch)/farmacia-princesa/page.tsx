@@ -328,7 +328,7 @@ export default function FarmaciaPrincesaPitch() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-900/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-10 relative z-10 text-center">
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl flex-shrink-0 border-4 border-[#040810]">
-            <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover" />
+            <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover object-top" />
           </div>
           <div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">{"Jorge Júnior"}</h2>
@@ -336,7 +336,7 @@ export default function FarmaciaPrincesaPitch() {
               {"Head de IA e Arquitetura"}
             </p>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
-              {"Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua do projeto, conectando dados, automação e software para posicionar a Farmácia Princesa como "}
+              {"Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua, conectando dados, automação e software para posicionar a Farmácia Princesa como "}
               <span className="text-white font-medium">{"referência em inovação digital no varejo farmacêutico"}</span>.
             </p>
           </div>
@@ -372,7 +372,7 @@ export default function FarmaciaPrincesaPitch() {
           <div className="text-center max-w-3xl mx-auto">
 
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
-              {"Quem liderar essa transformação primeiro não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão a farmácia nos "}
+              {"Liderar essa transformação não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão a farmácia nos "}
               <span className="text-indigo-200">{"próximos anos."}</span>
             </h3>
             <div className="w-20 h-1 bg-indigo-400/60 mx-auto rounded-full"></div>
