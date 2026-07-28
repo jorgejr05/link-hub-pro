@@ -16,7 +16,7 @@ export function Header() {
             <img
               alt="Jorge Jr. Professional Portrait"
               className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQlZKtJasO00jioHp00qUcdoTPsTGOg1WGvlIgaxUVMuukzvDJNch1_tRH3Ec3pV59h7zBb-XfptGEuTv4YaI9HrGtlKpDGGTTAtElrROr1eGiC71rHIHuz6Et3_R0anK2z1pIdqaHatkP6zcDdpV9bR5TAAxyXDq2H3GSSjf2tI0Nid4ZXHtmG9euSbN5VI1zRN5CcRlZlqxo9HrhmCsD1MdejJLR7lJh9HblyqlB1fzbXs2Vokv_jt8J_cYhoHme050PyA8TQD0"
+              src="/jorge-junior.jpg"
             />
           </div>
           <span className="font-display-lg text-headline-md font-bold tracking-tighter text-primary">

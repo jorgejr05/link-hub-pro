@@ -15,8 +15,8 @@ export default function SobreMim() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden neon-glow mb-10 border border-primary-container/30">
-            <img src="/jorge-junior.jpg" alt="Jorge Gomes Jr." className="w-full h-full object-cover object-top" />
+          <div className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full overflow-hidden mb-10 shadow-2xl">
+            <img src="/jorge-trabalhando.jpg" alt="Jorge Gomes Jr." className="w-full h-full object-cover" />
           </div>
           
 
