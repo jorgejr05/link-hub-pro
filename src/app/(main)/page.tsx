@@ -113,7 +113,6 @@ export default function Home() {
             }
           ].map((item) => (
             <div key={item.step} className="glass-panel glass-panel-hover rounded-2xl p-6 md:p-8 relative group transition-all duration-300">
-              <div className="text-primary-container/20 font-display-lg text-5xl md:text-6xl absolute top-3 right-4 font-bold group-hover:text-primary-container/40 transition-colors">{item.step}</div>
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary-container/10 border border-primary-container/20 flex items-center justify-center mb-4 md:mb-6">
                 <span className="material-symbols-outlined text-primary-container text-lg md:text-xl" data-icon={item.icon}>{item.icon}</span>
               </div>
