@@ -14,21 +14,20 @@ export default function SobreMim() {
       <section className="relative pt-32 pb-24 px-margin-mobile md:px-margin-desktop">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/5 rounded-full blur-[120px] pointer-events-none"></div>
         
-        <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <div className="w-56 h-56 md:w-72 md:h-72 mx-auto rounded-full overflow-hidden mb-10 shadow-2xl">
-            <img src="/jorge-trabalhando.jpg" alt="Jorge Gomes Jr." className="w-full h-full object-cover" />
+        <div className="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-16">
+          <div className="w-full max-w-sm md:w-1/2 rounded-[2rem] overflow-hidden shadow-2xl shrink-0 animate-in fade-in slide-in-from-bottom-4 duration-700 border border-white/5">
+            <img src="/jorge-trabalhando.jpg" alt="Jorge Gomes Jr." className="w-full h-auto object-cover aspect-[4/5]" />
           </div>
           
-
-          
-          <h1 className="font-headline-xl text-headline-xl md:text-display-lg text-primary uppercase mb-8 leading-[1.08] animate-in fade-in slide-in-from-bottom-4 duration-700">
-            {"Jorge "}
-            <span className="neon-text">{"Júnior"}</span>
-          </h1>
-          
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-            {"Arquiteto de Soluções de IA e Engenheiro Full-Stack construindo a próxima geração de ecossistemas digitais."}
-          </p>
+          <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+            <h1 className="font-headline-xl text-headline-xl md:text-display-lg text-primary uppercase mb-6 leading-[1.08]">
+              {"Jorge Júnior"}
+            </h1>
+            
+            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              {"Arquiteto de Soluções de IA e Engenheiro Full-Stack construindo a próxima geração de ecossistemas digitais."}
+            </p>
+          </div>
         </div>
       </section>
 
