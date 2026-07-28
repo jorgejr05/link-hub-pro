@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jorge Jr. - Hub de Autoridade",
+  title: "Jorge jr - Como eu arquiteto soluções com IA",
   description: "Hub de alta performance focado em ecossistemas de IA, automação de conteúdo e construção de autoridade real.",
 };
 
