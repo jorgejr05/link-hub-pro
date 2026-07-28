@@ -4,57 +4,48 @@ export default function FarmaciaPrincesaPitch() {
   return (
     <main className="w-full bg-white text-slate-900 font-sans selection:bg-slate-200">
 
-      {/* -- 01. HERO ----------------------------------------------------------- */}
+      {/* 01. HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 max-w-4xl mx-auto">
         <p className="text-sm font-bold uppercase tracking-widest text-indigo-500 mb-8 animate-in fade-in duration-500">
-          Araçatuba & Birigui
+          {"AraÃƒÂ§atuba & Birigui"}
         </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.08] animate-in fade-in slide-in-from-bottom-4 duration-700">
-          Todos os dias, milhares de pessoas procuram{" "}
-          <span className="text-indigo-600">exatamente o que a Farmácia Princesa vende.</span>
+          {"Todos os dias, milhares de pessoas procuram "}
+          <span className="text-indigo-600">{"exatamente o que a FarmÃƒÂ¡cia Princesa vende."}</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed font-light animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-          O objetivo deste projeto é garantir que essas pesquisas resultem em novos clientes para a Farmácia Princesa.
+          {"O objetivo deste projeto ÃƒÂ© garantir que essas pesquisas resultem em novos clientes para a FarmÃƒÂ¡cia Princesa."}
         </p>
-        <div className="mt-20 flex flex-col items-center gap-2 animate-in fade-in duration-700 delay-500">
+        <div className="mt-20 flex flex-col items-center animate-in fade-in duration-700 delay-500">
           <div className="w-px h-12 bg-gradient-to-b from-transparent to-slate-300"></div>
         </div>
       </section>
 
-      {/* -- 02. O MERCADO DA FARMÁCIA PRINCESA --------------------------------- */}
+      {/* 02. O MERCADO */}
       <section className="py-24 px-6 bg-slate-950 text-white">
         <div className="max-w-5xl mx-auto">
           <p className="text-indigo-400 text-sm font-bold uppercase tracking-widest mb-6 text-center">
-            O mercado da Farmácia Princesa
+            {"O mercado da FarmÃƒÂ¡cia Princesa"}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight tracking-tight">
-            Existe uma demanda acontecendo todos os dias em Araçatuba e Birigui.
+            {"Existe uma demanda acontecendo todos os dias em AraÃƒÂ§atuba e Birigui."}
           </h2>
 
-          <div className="flex flex-col items-center gap-0 max-w-lg mx-auto mb-20">
+          <div className="flex flex-col items-center max-w-lg mx-auto mb-20">
             {[
-              { number: "300 mil+", label: "habitantes na região de atuação" },
-              { number: "64 mil+", label: "buscas mensais pelos principais produtos vendidos pela Farmácia Princesa" },
-              { number: "˜ 1.800", label: "pesquisas por dia relacionadas ao que a farmácia vende", featured: true },
+              { number: "300 mil+", label: "habitantes na regiÃƒÂ£o de atuaÃƒÂ§ÃƒÂ£o", featured: false },
+              { number: "64 mil+", label: "buscas mensais pelos principais produtos vendidos pela FarmÃƒÂ¡cia Princesa", featured: false },
+              { number: "Ã¢â€°Ë† 1.800", label: "pesquisas por dia relacionadas ao que a farmÃƒÂ¡cia vende", featured: true },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center w-full">
-                <div className={`w-full text-center py-8 px-6 rounded-2xl border ${
-                  item.featured
-                    ? "bg-indigo-600 border-indigo-500 shadow-[0_0_60px_rgba(79,70,229,0.3)]"
-                    : "bg-slate-900 border-slate-800"
-                }`}>
-                  <div className={`text-4xl md:text-5xl font-black mb-2 ${item.featured ? "text-white" : "text-indigo-400"}`}>
-                    {item.number}
-                  </div>
-                  <p className={`text-sm font-medium leading-snug ${item.featured ? "text-indigo-100" : "text-slate-400"}`}>
-                    {item.label}
-                  </p>
+                <div className={`w-full text-center py-8 px-6 rounded-2xl border ${item.featured ? "bg-indigo-600 border-indigo-500 shadow-[0_0_60px_rgba(79,70,229,0.3)]" : "bg-slate-900 border-slate-800"}`}>
+                  <div className={`text-4xl md:text-5xl font-black mb-2 ${item.featured ? "text-white" : "text-indigo-400"}`}>{item.number}</div>
+                  <p className={`text-sm font-medium leading-snug ${item.featured ? "text-indigo-100" : "text-slate-400"}`}>{item.label}</p>
                 </div>
                 {i < 2 && (
                   <div className="flex flex-col items-center py-3">
                     <div className="w-px h-6 bg-slate-700"></div>
                     <span className="material-symbols-outlined text-slate-600 text-2xl">keyboard_arrow_down</span>
-                    <div className="w-px h-2 bg-slate-700"></div>
                   </div>
                 )}
               </div>
@@ -63,23 +54,21 @@ export default function FarmaciaPrincesaPitch() {
 
           <div className="text-center max-w-2xl mx-auto mb-20">
             <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-              Hoje essas buscas podem terminar na concorrência.{" "}
-              <span className="text-white font-semibold">
-                Nosso objetivo é fazer com que terminem na Farmácia Princesa.
-              </span>
+              {"Hoje essas buscas podem terminar na concorrÃƒÂªncia. "}
+              <span className="text-white font-semibold">{"Nosso objetivo ÃƒÂ© fazer com que terminem na FarmÃƒÂ¡cia Princesa."}</span>
             </p>
           </div>
 
           <div className="border-t border-slate-800 pt-16">
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest text-center mb-8">
-              Todos os dias, pessoas em Araçatuba e Birigui pesquisam por isso
+              {"Todos os dias, pessoas em AraÃƒÂ§atuba e Birigui pesquisam por isso"}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Farmácia aberta", "Dipirona", "Creatina", "Vitamina C",
+                "FarmÃƒÂ¡cia aberta", "Dipirona", "Creatina", "Vitamina C",
                 "Fralda Pampers", "Roacutan", "Ozempic", "Perfume importado",
-                "Protetor Solar", "Teste de Dengue", "Entrega farmácia",
-                "Farmácia Araçatuba", "Farmácia Birigui", "Whey protein",
+                "Protetor Solar", "Teste de Dengue", "Entrega farmÃƒÂ¡cia",
+                "FarmÃƒÂ¡cia AraÃƒÂ§atuba", "FarmÃƒÂ¡cia Birigui", "Whey protein",
                 "Ibuprofeno", "Paracetamol", "Suplemento", "Mounjaro"
               ].map((term, i) => (
                 <div key={i} className="bg-slate-800/60 border border-slate-700/50 text-slate-300 px-4 py-2 rounded-full text-sm font-medium">
@@ -91,22 +80,22 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 03. A VENDA COMEÇA ANTES DA COMPRA --------------------------------- */}
+      {/* 03. A VENDA COMEÃƒâ€¡A ANTES DA COMPRA */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-6">
-                A jornada do cliente
+                {"A jornada do cliente"}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-10 leading-tight tracking-tight">
-                A venda começa antes da compra.
+                {"A venda comeÃƒÂ§a antes da compra."}
               </h2>
-              <div className="flex flex-col gap-0">
+              <div className="flex flex-col">
                 {[
                   { label: "Necessidade surge", featured: false },
                   { label: "Pesquisa", featured: false },
-                  { label: "Compara opções", featured: false },
+                  { label: "Compara", featured: false },
                   { label: "Escolhe onde comprar", featured: false },
                   { label: "Compra", featured: true },
                 ].map((step, i) => (
@@ -129,15 +118,15 @@ export default function FarmaciaPrincesaPitch() {
                   <span className="material-symbols-outlined text-red-500 text-xl">arrow_downward</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-6 leading-snug">
-                  Hoje a Farmácia Princesa entra tarde demais na decisão.
+                  {"Hoje a FarmÃƒÂ¡cia Princesa entra tarde demais na decisÃƒÂ£o."}
                 </h3>
                 <div className="space-y-3">
                   {[
-                    "O consumidor já pesquisou.",
-                    "Já comparou.",
-                    "Já criou confiança com outra marca.",
-                    "Já decidiu.",
-                    "Só então entra em contato.",
+                    "O consumidor jÃƒÂ¡ pesquisou.",
+                    "JÃƒÂ¡ comparou.",
+                    "JÃƒÂ¡ criou confianÃƒÂ§a com outra marca.",
+                    "JÃƒÂ¡ decidiu.",
+                    "SÃƒÂ³ entÃƒÂ£o entra em contato.",
                   ].map((line, i) => (
                     <p key={i} className={`text-base font-medium ${i === 4 ? "font-bold text-red-600" : "text-slate-500"}`}>
                       {line}
@@ -147,7 +136,7 @@ export default function FarmaciaPrincesaPitch() {
               </div>
               <div className="mt-5 bg-indigo-600 text-white rounded-2xl px-7 py-5">
                 <p className="text-base md:text-lg font-semibold leading-snug">
-                  Quem conquista a etapa da busca conquista a oportunidade de vender.
+                  {"Quem conquista a etapa da busca conquista a oportunidade de vender."}
                 </p>
               </div>
             </div>
@@ -155,16 +144,16 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 04. O POTENCIAL DA REGIÃO ------------------------------------------ */}
+      {/* 04. O POTENCIAL DA REGIÃƒÆ’O */}
       <section className="py-24 px-6 bg-slate-50 border-y border-slate-100">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              Quanto dinheiro passa pela frente da Farmácia Princesa todos os dias?
+              {"Quanto dinheiro passa pela frente da FarmÃƒÂ¡cia Princesa todos os dias?"}
             </h2>
             <p className="text-lg text-slate-500 font-medium">
-              Dados do Google Keyword Planner para{" "}
-              <span className="text-blue-600 font-bold">Araçatuba e Birigui</span>.
+              {"Dados do Google Keyword Planner para "}
+              <span className="text-blue-600 font-bold">{"AraÃƒÂ§atuba e Birigui"}</span>.
             </p>
           </div>
 
@@ -172,18 +161,18 @@ export default function FarmaciaPrincesaPitch() {
             <div className="lg:col-span-7 bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm">
               <div className="flex justify-between items-end mb-10">
                 <div>
-                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Buscas Mensais — Região</h3>
-                  <div className="text-4xl font-black text-slate-900">˜ 64.000</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">˜ 1.800 por dia</div>
+                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{"Buscas Mensais Ã¢â‚¬â€ RegiÃƒÂ£o"}</h3>
+                  <div className="text-4xl font-black text-slate-900">{"Ã¢â€°Ë† 64.000"}</div>
+                  <div className="text-sm text-slate-500 font-medium mt-1">{"Ã¢â€°Ë† 1.800 por dia"}</div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs text-slate-400 font-medium">Fonte: Google Keyword Planner</div>
-                  <div className="text-xs text-slate-400 font-medium">Araçatuba + Birigui</div>
+                  <div className="text-xs text-slate-400 font-medium">{"Fonte: Google Keyword Planner"}</div>
+                  <div className="text-xs text-slate-400 font-medium">{"AraÃƒÂ§atuba + Birigui"}</div>
                 </div>
               </div>
               <div className="space-y-5">
                 {[
-                  { name: "Farmácia", vol: "18.200", percent: 100, color: "bg-indigo-600" },
+                  { name: "FarmÃƒÂ¡cia", vol: "18.200", percent: 100, color: "bg-indigo-600" },
                   { name: "Dipirona", vol: "12.400", percent: 68, color: "bg-indigo-500" },
                   { name: "Vitamina C", vol: "8.900", percent: 49, color: "bg-violet-500" },
                   { name: "Creatina", vol: "7.600", percent: 42, color: "bg-purple-500" },
@@ -204,20 +193,20 @@ export default function FarmaciaPrincesaPitch() {
 
             <div className="lg:col-span-5 flex flex-col gap-5">
               <div className="bg-slate-900 text-white p-8 rounded-[2rem] shadow-xl">
-                <h4 className="text-xl font-bold mb-4 leading-snug">A oportunidade não é hipotética. É mensurável.</h4>
+                <h4 className="text-xl font-bold mb-4 leading-snug">{"A oportunidade nÃƒÂ£o ÃƒÂ© hipotÃƒÂ©tica. Ãƒâ€° mensurÃƒÂ¡vel."}</h4>
                 <p className="text-sm text-slate-300 font-light leading-relaxed mb-5">
-                  Todos os meses, dezenas de milhares de pesquisas relacionadas aos produtos e serviços da Farmácia Princesa acontecem na região.
+                  {"Todos os meses, dezenas de milhares de pesquisas relacionadas aos produtos da FarmÃƒÂ¡cia Princesa acontecem na regiÃƒÂ£o."}
                 </p>
                 <div className="w-full h-px bg-slate-800 mb-5"></div>
                 <p className="text-sm font-semibold text-indigo-400 leading-relaxed">
-                  Nosso objetivo é fazer com que essas buscas resultem em descoberta, recomendação e novos clientes.
+                  {"Nosso objetivo ÃƒÂ© fazer com que essas buscas resultem em descoberta, recomendaÃƒÂ§ÃƒÂ£o e novos clientes."}
                 </p>
               </div>
               <div className="bg-indigo-50 border border-indigo-100 p-6 rounded-2xl">
-                <p className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-widest">A conta simples</p>
-                <p className="text-3xl font-black text-indigo-700 mb-1">1.800 / dia</p>
+                <p className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-widest">{"A conta simples"}</p>
+                <p className="text-3xl font-black text-indigo-700 mb-1">{"1.800 / dia"}</p>
                 <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                  Pesquisas diárias de intenção de compra na área de atuação da Farmácia Princesa.
+                  {"Pesquisas diÃƒÂ¡rias de intenÃƒÂ§ÃƒÂ£o de compra na ÃƒÂ¡rea de atuaÃƒÂ§ÃƒÂ£o da FarmÃƒÂ¡cia Princesa."}
                 </p>
               </div>
             </div>
@@ -225,17 +214,17 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 05. PROJETO DESCOBERTA --------------------------------------------- */}
+      {/* 05. PROJETO DESCOBERTA */}
       <section className="py-24 px-6 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-4">Como vamos fazer</p>
+            <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-4">{"Como vamos fazer"}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              Projeto Descoberta
+              {"Projeto Descoberta"}
             </h2>
             <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
-              Aquisição orgânica de clientes por busca e IA.{" "}
-              <span className="text-slate-800 font-semibold">4 etapas. Execução focada em resultado.</span>
+              {"AquisiÃƒÂ§ÃƒÂ£o orgÃƒÂ¢nica de clientes por busca e IA. "}
+              <span className="text-slate-800 font-semibold">{"4 etapas. ExecuÃƒÂ§ÃƒÂ£o focada em resultado."}</span>
             </p>
           </div>
 
@@ -244,32 +233,32 @@ export default function FarmaciaPrincesaPitch() {
               {
                 step: "01",
                 title: "Posicionamento",
-                desc: "A farmácia passa a ser compreendida e citada por motores de busca e assistentes de IA.",
-                items: ["SEO Estruturado", "GEO (Generative Engine Optimization)", "Curadoria de Conteúdo"],
+                desc: "A farmÃƒÂ¡cia passa a ser compreendida e citada por motores de busca e assistentes de IA.",
+                items: ["SEO Estruturado", "GEO (Generative Engine Optimization)", "Curadoria de ConteÃƒÂºdo"],
                 topColor: "border-t-indigo-500",
                 dotColor: "bg-indigo-500",
               },
               {
                 step: "02",
                 title: "Produtos",
-                desc: "Catálogo organizado, atualizado e pronto para ser encontrado e recomendado por IA.",
-                items: ["Integração com ERP", "Sincronização de Dados", "Normalização de Catálogo"],
+                desc: "CatÃƒÂ¡logo organizado, atualizado e pronto para ser encontrado e recomendado por IA.",
+                items: ["IntegraÃƒÂ§ÃƒÂ£o com ERP", "SincronizaÃƒÂ§ÃƒÂ£o de Dados", "NormalizaÃƒÂ§ÃƒÂ£o de CatÃƒÂ¡logo"],
                 topColor: "border-t-emerald-500",
                 dotColor: "bg-emerald-500",
               },
               {
                 step: "03",
-                title: "Recomendação",
-                desc: "Clientes recebem recomendações precisas com produtos reais da farmácia, em tempo real.",
-                items: ["Indexação por IA", "Busca Semântica", "Integração com ChatGPT e Gemini"],
+                title: "RecomendaÃƒÂ§ÃƒÂ£o",
+                desc: "Clientes recebem recomendaÃƒÂ§ÃƒÂµes precisas com produtos reais da farmÃƒÂ¡cia, em tempo real.",
+                items: ["IndexaÃƒÂ§ÃƒÂ£o por IA", "Busca SemÃƒÂ¢ntica", "IntegraÃƒÂ§ÃƒÂ£o com ChatGPT e Gemini"],
                 topColor: "border-t-violet-500",
                 dotColor: "bg-violet-500",
               },
               {
                 step: "04",
                 title: "Compra",
-                desc: "Da recomendação à compra: rápido, simples e integrado ao fluxo já existente da farmácia.",
-                items: ["Link de pedido personalizado", "Integração com sistema", "Fechamento via WhatsApp"],
+                desc: "Da recomendaÃƒÂ§ÃƒÂ£o ÃƒÂ  compra: rÃƒÂ¡pido, simples e integrado ao fluxo jÃƒÂ¡ existente.",
+                items: ["Link de pedido personalizado", "IntegraÃƒÂ§ÃƒÂ£o com sistema", "Fechamento via WhatsApp"],
                 topColor: "border-t-amber-500",
                 dotColor: "bg-amber-500",
               },
@@ -292,52 +281,26 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 06. POR QUE A FARMÁCIA PRINCESA? ----------------------------------- */}
+      {/* 06. POR QUE A FARMÃƒÂCIA PRINCESA */}
       <section className="py-24 px-6 bg-slate-50 border-b border-slate-100">
         <div className="max-w-4xl mx-auto">
           <div className="mb-14">
-            <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-4">Por que agora</p>
+            <p className="text-indigo-500 text-sm font-bold uppercase tracking-widest mb-4">{"Por que agora"}</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">
-              Por que começar pela Farmácia Princesa?
+              {"Por que comeÃƒÂ§ar pela FarmÃƒÂ¡cia Princesa?"}
             </h2>
             <p className="text-lg text-slate-500 font-medium">
-              O momento exato para capturar a{" "}
-              <span className="text-indigo-600 font-bold">liderança digital local.</span>
+              {"O momento exato para capturar a "}
+              <span className="text-indigo-600 font-bold">{"lideranÃƒÂ§a digital local."}</span>
             </p>
           </div>
-
           <div className="flex flex-col divide-y divide-slate-100">
             {[
-              {
-                icon: "emoji_events",
-                title: "Marca consolidada na região",
-                desc: "Reconhecimento e confiança construídos ao longo do tempo. A Farmácia Princesa já tem autoridade local — falta presença digital.",
-                iconColor: "bg-indigo-50 text-indigo-600",
-              },
-              {
-                icon: "location_on",
-                title: "Presença física em Araçatuba e Birigui",
-                desc: "Atuação estratégica nas duas cidades onde estão os 64 mil+ buscas mensais que mapeamos.",
-                iconColor: "bg-teal-50 text-teal-600",
-              },
-              {
-                icon: "inventory_2",
-                title: "Estoque amplo e diversificado",
-                desc: "Variedade de produtos que responde a praticamente qualquer busca de saúde, beleza e bem-estar.",
-                iconColor: "bg-amber-50 text-amber-600",
-              },
-              {
-                icon: "local_shipping",
-                title: "Capacidade logística já existente",
-                desc: "Estrutura pronta para converter a demanda capturada em entrega rápida e eficiente.",
-                iconColor: "bg-purple-50 text-purple-600",
-              },
-              {
-                icon: "trending_up",
-                title: "Potencial para liderar a aquisição digital na região",
-                desc: "Adoção antecipada garante vantagem competitiva. Quem estruturar isso primeiro define o padrão regional.",
-                iconColor: "bg-blue-50 text-blue-600",
-              },
+              { icon: "emoji_events", title: "Marca consolidada na regiÃƒÂ£o", desc: "Reconhecimento e confianÃƒÂ§a construÃƒÂ­dos ao longo do tempo. A FarmÃƒÂ¡cia Princesa jÃƒÂ¡ tem autoridade local Ã¢â‚¬â€ falta presenÃƒÂ§a digital.", iconColor: "bg-indigo-50 text-indigo-600" },
+              { icon: "location_on", title: "PresenÃƒÂ§a fÃƒÂ­sica em AraÃƒÂ§atuba e Birigui", desc: "AtuaÃƒÂ§ÃƒÂ£o estratÃƒÂ©gica nas duas cidades onde estÃƒÂ£o os 64 mil+ buscas mensais que mapeamos.", iconColor: "bg-teal-50 text-teal-600" },
+              { icon: "inventory_2", title: "Estoque amplo e diversificado", desc: "Variedade de produtos que responde a praticamente qualquer busca de saÃƒÂºde, beleza e bem-estar.", iconColor: "bg-amber-50 text-amber-600" },
+              { icon: "local_shipping", title: "Capacidade logÃƒÂ­stica jÃƒÂ¡ existente", desc: "Estrutura pronta para converter a demanda capturada em entrega rÃƒÂ¡pida e eficiente.", iconColor: "bg-purple-50 text-purple-600" },
+              { icon: "trending_up", title: "Potencial para liderar a aquisiÃƒÂ§ÃƒÂ£o digital na regiÃƒÂ£o", desc: "AdoÃƒÂ§ÃƒÂ£o antecipada garante vantagem competitiva. Quem estruturar isso primeiro define o padrÃƒÂ£o regional.", iconColor: "bg-blue-50 text-blue-600" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col md:flex-row md:items-center py-7 gap-5 hover:bg-white transition-colors px-4 rounded-xl -mx-4">
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${item.iconColor}`}>
@@ -356,31 +319,27 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 07. JORGE JÚNIOR --------------------------------------------------- */}
+      {/* 07. JORGE JÃƒÅ¡NIOR */}
       <section className="py-32 px-6 bg-[#040810] text-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-900/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
           <div className="w-56 h-56 md:w-72 md:h-72 rounded-[3rem] bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-1.5 rotate-3 shadow-[0_0_80px_rgba(79,70,229,0.3)] flex-shrink-0 group hover:rotate-0 transition-all duration-500">
             <div className="w-full h-full rounded-[2.8rem] bg-[#040810] flex items-center justify-center overflow-hidden border-4 border-[#040810]">
-              <img
-                src="/jorge-junior.jpg"
-                alt="Jorge Junior"
-                className="w-full h-full object-cover -rotate-3 group-hover:rotate-0 transition-transform duration-500 scale-105"
-              />
+              <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover -rotate-3 group-hover:rotate-0 transition-transform duration-500 scale-105" />
             </div>
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">Jorge Júnior</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">{"Jorge JÃƒÂºnior"}</h2>
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/80 border border-slate-800 text-sm font-bold uppercase tracking-widest text-slate-300 mb-8 shadow-sm">
               <span className="material-symbols-outlined text-blue-500 text-sm">memory</span>
-              Head de IA & Arquitetura
+              {"Head de IA & Arquitetura"}
             </div>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light mb-8 max-w-2xl">
-              Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua do projeto, conectando dados, automação e software para posicionar a Farmácia Princesa como{" "}
-              <span className="text-white font-medium">referência em inovação digital no varejo farmacêutico</span>.
+              {"ResponsÃƒÂ¡vel por liderar a estratÃƒÂ©gia de InteligÃƒÂªncia Artificial, arquitetura tecnolÃƒÂ³gica e evoluÃƒÂ§ÃƒÂ£o contÃƒÂ­nua do projeto, conectando dados, automaÃƒÂ§ÃƒÂ£o e software para posicionar a FarmÃƒÂ¡cia Princesa como "}
+              <span className="text-white font-medium">{"referÃƒÂªncia em inovaÃƒÂ§ÃƒÂ£o digital no varejo farmacÃƒÂªutico"}</span>.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-3">
-              {["IA", "Arquitetura", "Dados", "Automação", "Estratégia Digital"].map((tag, i) => (
+              {["IA", "Arquitetura", "Dados", "AutomaÃƒÂ§ÃƒÂ£o", "EstratÃƒÂ©gia Digital"].map((tag, i) => (
                 <div key={i} className="px-4 py-1.5 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs font-semibold tracking-wider text-slate-300 uppercase">
                   {tag}
                 </div>
@@ -390,22 +349,22 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* -- 08. FECHAMENTO ----------------------------------------------------- */}
+      {/* 08. FECHAMENTO */}
       <section className="py-32 px-6 bg-indigo-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)", backgroundSize: "32px 32px" }}></div>
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-              Onde a Farmácia Princesa estará em 12 meses?
+              {"Onde a FarmÃƒÂ¡cia Princesa estarÃƒÂ¡ em 12 meses?"}
             </h2>
           </div>
           <div className="bg-indigo-700/50 border border-indigo-500/50 rounded-[2rem] p-8 md:p-12 mb-24 shadow-2xl backdrop-blur-sm">
             <ul className="space-y-6">
               {[
-                "Catálogo de produtos indexado e compreendido por assistentes de Inteligência Artificial.",
-                "Aparecendo nas respostas do ChatGPT, Gemini e Google quando alguém pesquisa sobre saúde na região.",
-                "Convertendo buscas em clientes de forma orgânica, sem depender exclusivamente de mídia paga.",
-                "Posição de liderança consolidada como a farmácia mais bem posicionada digitalmente em Araçatuba e Birigui.",
+                "CatÃƒÂ¡logo de produtos indexado e compreendido por assistentes de InteligÃƒÂªncia Artificial.",
+                "Aparecendo nas respostas do ChatGPT, Gemini e Google quando alguÃƒÂ©m pesquisa sobre saÃƒÂºde na regiÃƒÂ£o.",
+                "Convertendo buscas em clientes de forma orgÃƒÂ¢nica, sem depender exclusivamente de mÃƒÂ­dia paga.",
+                "PosiÃƒÂ§ÃƒÂ£o de lideranÃƒÂ§a consolidada como a farmÃƒÂ¡cia mais bem posicionada digitalmente em AraÃƒÂ§atuba e Birigui.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-5">
                   <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -419,8 +378,8 @@ export default function FarmaciaPrincesaPitch() {
           <div className="text-center max-w-3xl mx-auto">
             <span className="material-symbols-outlined text-indigo-300/60 text-6xl mb-6 block">format_quote</span>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
-              Quem liderar essa transformação primeiro não estará apenas vendendo mais. Estará definindo como os consumidores encontrarão farmácias na{" "}
-              <span className="text-indigo-200">próxima década.</span>
+              {"Quem liderar essa transformaÃƒÂ§ÃƒÂ£o primeiro nÃƒÂ£o estarÃƒÂ¡ apenas vendendo mais. EstarÃƒÂ¡ definindo como os consumidores encontrarÃƒÂ£o farmÃƒÂ¡cias na "}
+              <span className="text-indigo-200">{"prÃƒÂ³xima dÃƒÂ©cada."}</span>
             </h3>
             <div className="w-20 h-1 bg-indigo-400/60 mx-auto rounded-full"></div>
           </div>
