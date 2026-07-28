@@ -326,29 +326,19 @@ export default function FarmaciaPrincesaPitch() {
       {/* 07. JORGE JÚNIOR */}
       <section className="py-32 px-6 bg-[#040810] text-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-indigo-900/20 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-[3rem] bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-1.5 rotate-3 shadow-[0_0_80px_rgba(79,70,229,0.3)] flex-shrink-0 group hover:rotate-0 transition-all duration-500">
-            <div className="w-full h-full rounded-[2.8rem] bg-[#040810] flex items-center justify-center overflow-hidden border-4 border-[#040810]">
-              <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover -rotate-3 group-hover:rotate-0 transition-transform duration-500 scale-105" />
-            </div>
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-10 relative z-10 text-center">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl flex-shrink-0 border-4 border-[#040810]">
+            <img src="/jorge-junior.jpg" alt="Jorge Junior" className="w-full h-full object-cover" />
           </div>
-          <div className="flex-1 text-center md:text-left">
+          <div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">{"Jorge Júnior"}</h2>
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900/80 border border-slate-800 text-sm font-bold uppercase tracking-widest text-slate-300 mb-8 shadow-sm">
-              <span className="material-symbols-outlined text-blue-500 text-sm">memory</span>
-              {"Head de IA & Arquitetura"}
-            </div>
-            <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light mb-8 max-w-2xl">
+            <p className="text-indigo-400 text-sm md:text-base font-bold uppercase tracking-widest mb-8">
+              {"Head de IA e Arquitetura"}
+            </p>
+            <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
               {"Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua do projeto, conectando dados, automação e software para posicionar a Farmácia Princesa como "}
               <span className="text-white font-medium">{"referência em inovação digital no varejo farmacêutico"}</span>.
             </p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-3">
-              {["IA", "Arquitetura", "Dados", "Automação", "Estratégia Digital"].map((tag, i) => (
-                <div key={i} className="px-4 py-1.5 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs font-semibold tracking-wider text-slate-300 uppercase">
-                  {tag}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
