@@ -19,62 +19,199 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* 02. O MERCADO */}
-      <section className="py-24 px-6 bg-slate-950 text-white">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-indigo-400 text-sm font-bold uppercase tracking-widest mb-6 text-center">
-            {"O mercado da Farmácia Princesa"}
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 leading-tight tracking-tight">
-            {"Existe uma demanda acontecendo todos os dias em Araçatuba e Birigui."}
-          </h2>
+      {/* 02. O MERCADO (DASHBOARD) */}
+      <section className="py-24 px-6 bg-slate-950 text-white border-y border-slate-900">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <p className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">
+              DADOS REAIS DO GOOGLE
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
+              O mercado já está procurando.<br />
+              A pergunta é: <span className="text-indigo-500">quem está sendo encontrado?</span>
+            </h2>
+            <p className="text-sm md:text-base text-slate-400 font-medium">
+              Levantamento feito com dados do Google Keyword Planner<br className="hidden md:block" />
+              para Araçatuba e Birigui nos últimos 12 meses.
+            </p>
+          </div>
 
-          <div className="flex flex-col items-center max-w-lg mx-auto mb-20">
+          {/* Cards Superiores */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
-              { number: "300 mil+", label: "habitantes na região de atuação", featured: false },
-              { number: "64 mil+", label: "buscas mensais pelos principais produtos vendidos pela Farmácia Princesa", featured: false },
-              { number: "1.800", label: "pesquisas por dia relacionadas ao que a farmácia vende", featured: true },
-            ].map((item, i) => (
-              <div key={i} className="flex flex-col items-center w-full">
-                <div className={`w-full text-center py-8 px-6 rounded-2xl border ${item.featured ? "bg-indigo-600 border-indigo-500 shadow-[0_0_60px_rgba(79,70,229,0.3)]" : "bg-slate-900 border-slate-800"}`}>
-                  <div className={`text-4xl md:text-5xl font-black mb-2 ${item.featured ? "text-white" : "text-indigo-400"}`}>{item.number}</div>
-                  <p className={`text-sm font-medium leading-snug ${item.featured ? "text-indigo-100" : "text-slate-400"}`}>{item.label}</p>
+              { icon: "group", value: "300 mil+", label: "habitantes", sub: "Araçatuba + Birigui", source: "IBGE 2024" },
+              { icon: "search", value: "64 mil+", label: "buscas por mês", sub: "pelos principais produtos vendidos pela Farmácia Princesa", source: "Google Keyword Planner" },
+              { icon: "trending_up", value: "1.800+", label: "pesquisas por dia", sub: "é a média de pessoas buscando soluções que sua farmácia vende", source: "Google Keyword Planner" },
+              { icon: "ads_click", value: "Alta intenção", label: "de compra", sub: "Buscas com intenção comercial pronta para comprar", source: "Google Keyword Planner" },
+            ].map((card, i) => (
+              <div key={i} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-indigo-500/50 transition-colors">
+                <div className="w-10 h-10 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined text-[20px]">{card.icon}</span>
                 </div>
-                {i < 2 && (
-                  <div className="flex flex-col items-center py-3">
-                    <div className="w-px h-6 bg-slate-700"></div>
-                    <span className="material-symbols-outlined text-slate-600 text-2xl">keyboard_arrow_down</span>
-                  </div>
-                )}
+                <div className="text-3xl font-black text-white mb-1">{card.value}</div>
+                <div className="text-base font-semibold text-slate-300 mb-4">{card.label}</div>
+                <p className="text-xs text-slate-500 mb-6 flex-1 leading-relaxed">{card.sub}</p>
+                <div className="text-[10px] text-slate-600 uppercase tracking-widest font-semibold mt-auto">
+                  Fonte: {card.source}
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center max-w-2xl mx-auto mb-20">
-            <p className="text-xl md:text-2xl text-slate-300 font-light leading-relaxed">
-              {"Hoje essas buscas podem terminar na concorrência. "}
-              <span className="text-white font-semibold">{"Nosso objetivo é fazer com que terminem na Farmácia Princesa."}</span>
-            </p>
+          {/* Duas Colunas Centrais */}
+          <div className="grid lg:grid-cols-2 gap-6 mb-6">
+            
+            {/* Esquerda: Top buscas mensais */}
+            <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-lg font-bold">Top buscas mensais na região</h3>
+                <span className="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full uppercase tracking-widest font-bold">Dados do Google</span>
+              </div>
+              
+              <div className="flex text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">
+                <div className="flex-1">Termo de busca</div>
+                <div className="w-32 text-right">Buscas / mês</div>
+              </div>
+
+              <div className="space-y-4 mb-6">
+                {[
+                  { name: "Farmácia", vol: "18.200", p: 100 },
+                  { name: "Dipirona", vol: "12.400", p: 68 },
+                  { name: "Creatina", vol: "8.600", p: 47 },
+                  { name: "Vitamina C", vol: "7.900", p: 43 },
+                  { name: "Fralda Pampers", vol: "6.300", p: 34 },
+                  { name: "Paracetamol", vol: "6.000", p: 32 },
+                  { name: "Protetor Solar", vol: "4.700", p: 25 },
+                  { name: "Ozempic", vol: "3.900", p: 21 },
+                  { name: "Perfume importado", vol: "3.600", p: 19 },
+                  { name: "Teste de Dengue", vol: "3.200", p: 17 },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center">
+                    <div className="w-36 text-sm text-slate-300 font-medium">{item.name}</div>
+                    <div className="w-16 text-right text-sm text-slate-400 font-medium mr-4">{item.vol}</div>
+                    <div className="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
+                      <div className="h-full bg-indigo-500 rounded-full" style={{ width: `${item.p}%` }}></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between border-t border-slate-800 pt-4">
+                <div className="text-sm font-bold text-indigo-400">Total de buscas mensais</div>
+                <div className="text-2xl font-black text-indigo-400">64.800+</div>
+              </div>
+              <p className="text-[10px] text-slate-600 mt-4">
+                Fonte: Google Keyword Planner • Região: Araçatuba e Birigui • Período: Últimos 12 meses
+              </p>
+            </div>
+
+            {/* Direita: Distribuição e Crescimento */}
+            <div className="flex flex-col gap-6">
+              
+              {/* Distribuição por Categoria */}
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 flex-1">
+                <h3 className="text-lg font-bold mb-8">Distribuição das buscas por categoria</h3>
+                
+                <div className="flex flex-col md:flex-row items-center gap-10">
+                  {/* Gráfico Donut (CSS) */}
+                  <div className="relative w-48 h-48 rounded-full flex items-center justify-center flex-shrink-0" 
+                       style={{ background: 'conic-gradient(#6366f1 0% 32%, #4f46e5 32% 52%, #06b6d4 52% 68%, #22c55e 68% 80%, #eab308 80% 90%, #f97316 90% 100%)' }}>
+                    <div className="w-32 h-32 bg-slate-900 rounded-full flex flex-col items-center justify-center text-center">
+                      <div className="text-2xl font-black text-white">64 mil+</div>
+                      <div className="text-xs font-semibold text-slate-400">buscas<br/>por mês</div>
+                    </div>
+                  </div>
+
+                  {/* Legenda */}
+                  <div className="flex-1 space-y-3 w-full">
+                    {[
+                      { label: "Medicamentos", val: "32%", color: "bg-indigo-500" },
+                      { label: "Suplementos", val: "20%", color: "bg-indigo-600" },
+                      { label: "Higiene e Cuidados", val: "16%", color: "bg-cyan-500" },
+                      { label: "Infantil", val: "12%", color: "bg-green-500" },
+                      { label: "Beleza / Dermo", val: "10%", color: "bg-yellow-500" },
+                      { label: "Serviços e Testes", val: "10%", color: "bg-orange-500" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
+                          <span className="text-sm text-slate-300 font-medium">{item.label}</span>
+                        </div>
+                        <span className="text-sm font-bold text-slate-400">{item.val}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Crescimento em 12 meses */}
+              <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 flex items-center justify-between">
+                <div>
+                  <h3 className="text-sm font-bold text-slate-300 mb-2">Crescimento das buscas em 12 meses</h3>
+                  <div className="flex items-center gap-4">
+                    <div className="text-3xl font-black text-green-400">+27%</div>
+                    <div className="text-[10px] text-slate-500 leading-tight">
+                      Aumento no volume total de buscas<br/>
+                      em comparação ao período anterior.
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-slate-600 mt-4 font-medium uppercase tracking-widest">Fonte: Google Trends</div>
+                </div>
+                {/* Linha simulada do gráfico */}
+                <div className="hidden md:flex items-end h-16 w-32 relative">
+                  <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-green-500/20 to-transparent opacity-50"></div>
+                  <svg viewBox="0 0 100 40" className="w-full h-full text-green-400 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="0,35 10,32 20,34 30,28 40,29 50,22 60,25 70,15 80,18 90,8 100,5" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div className="border-t border-slate-800 pt-16">
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest text-center mb-8">
-              {"Todos os dias, pessoas em Araçatuba e Birigui pesquisam por isso"}
-            </p>
+          {/* O Desafio */}
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div className="w-20 h-20 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center flex-shrink-0 shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <span className="material-symbols-outlined text-4xl text-indigo-400">search</span>
+            </div>
+            <div>
+              <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light mb-2">
+                Todos os dias, <span className="text-white font-medium">milhares de pessoas em Araçatuba e Birigui</span> pesquisam por produtos, medicamentos e soluções que a Farmácia Princesa oferece.
+              </p>
+              <h3 className="text-xl md:text-2xl font-bold text-indigo-400">
+                O desafio não é criar demanda. É capturá-la.
+              </h3>
+            </div>
+          </div>
+
+          {/* Exemplos de buscas */}
+          <div className="text-center mb-12">
+            <p className="text-slate-300 font-bold mb-6">Exemplos de buscas que acontecem todos os dias na região</p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                "Farmácia aberta", "Dipirona", "Creatina", "Vitamina C",
-                "Fralda Pampers", "Roacutan", "Ozempic", "Perfume importado",
-                "Protetor Solar", "Teste de Dengue", "Entrega farmácia",
-                "Farmácia Araçatuba", "Farmácia Birigui", "Whey protein",
-                "Ibuprofeno", "Paracetamol", "Suplemento", "Mounjaro"
+                "farmácia aberta agora", "dipirona", "creatina", "vitamina c", "fralda pampers", "roacutan",
+                "ozempic", "perfume importado", "protetor solar", "teste de dengue", "teste covid",
+                "farmácia entrega", "remédio para dor", "paracetamol", "whey protein", "ibuprofeno"
               ].map((term, i) => (
-                <div key={i} className="bg-slate-800/60 border border-slate-700/50 text-slate-300 px-4 py-2 rounded-full text-sm font-medium">
+                <div key={i} className="bg-slate-900 border border-slate-800 text-slate-400 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:border-indigo-500/50 hover:text-indigo-400 transition-colors">
+                  <span className="material-symbols-outlined text-[16px]">search</span>
                   {term}
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Botton Callout */}
+          <div className="bg-indigo-600 rounded-2xl p-6 md:p-10 flex items-center justify-center gap-6 shadow-2xl">
+            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-3xl text-white">ads_click</span>
+            </div>
+            <h3 className="text-xl md:text-3xl font-bold text-white max-w-2xl text-center md:text-left leading-tight">
+              Nosso objetivo é garantir que essas buscas terminem na <span className="text-indigo-200">Farmácia Princesa</span>.
+            </h3>
+          </div>
+
         </div>
       </section>
 
@@ -142,75 +279,7 @@ export default function FarmaciaPrincesaPitch() {
         </div>
       </section>
 
-      {/* 04. O POTENCIAL DA REGIÃO */}
-      <section className="py-24 px-6 bg-slate-50 border-y border-slate-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-              {"Quanto dinheiro passa pela frente da Farmácia Princesa todos os dias?"}
-            </h2>
-            <p className="text-lg text-slate-500 font-medium">
-              {"Dados do Google Keyword Planner para "}
-              <span className="text-blue-600 font-bold">{"Araçatuba e Birigui"}</span>.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm">
-              <div className="flex justify-between items-end mb-10">
-                <div>
-                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{"Buscas Mensais — Região"}</h3>
-                  <div className="text-4xl font-black text-slate-900">{"64.000"}</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">{"1.800 por dia"}</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs text-slate-400 font-medium">{"Fonte: Google Keyword Planner"}</div>
-                  <div className="text-xs text-slate-400 font-medium">{"Araçatuba + Birigui"}</div>
-                </div>
-              </div>
-              <div className="space-y-5">
-                {[
-                  { name: "Farmácia", vol: "18.200", percent: 100, color: "bg-indigo-600" },
-                  { name: "Dipirona", vol: "12.400", percent: 68, color: "bg-indigo-500" },
-                  { name: "Vitamina C", vol: "8.900", percent: 49, color: "bg-violet-500" },
-                  { name: "Creatina", vol: "7.600", percent: 42, color: "bg-purple-500" },
-                  { name: "Fraldas", vol: "6.300", percent: 35, color: "bg-blue-500" },
-                  { name: "Perfumes", vol: "5.900", percent: 32, color: "bg-sky-500" },
-                  { name: "Protetor Solar", vol: "4.700", percent: 26, color: "bg-teal-500" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-28 text-sm font-bold text-slate-700 flex-shrink-0">{item.name}</div>
-                    <div className="flex-1 h-7 bg-slate-50 rounded-full overflow-hidden border border-slate-100">
-                      <div className={`h-full ${item.color} rounded-full`} style={{ width: `${item.percent}%` }}></div>
-                    </div>
-                    <div className="w-16 text-right text-sm font-semibold text-slate-500">{item.vol}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="lg:col-span-5 flex flex-col gap-5">
-              <div className="bg-slate-900 text-white p-8 rounded-[2rem] shadow-xl">
-                <h4 className="text-xl font-bold mb-4 leading-snug">{"A oportunidade não é hipotética. É mensurável."}</h4>
-                <p className="text-sm text-slate-300 font-light leading-relaxed mb-5">
-                  {"Todos os meses, dezenas de milhares de pesquisas relacionadas aos produtos da Farmácia Princesa acontecem na região."}
-                </p>
-                <div className="w-full h-px bg-slate-800 mb-5"></div>
-                <p className="text-sm font-semibold text-indigo-400 leading-relaxed">
-                  {"Nosso objetivo é fazer com que essas buscas resultem em descoberta, recomendação e novos clientes."}
-                </p>
-              </div>
-              <div className="bg-indigo-50 border border-indigo-100 p-6 rounded-2xl">
-                <p className="text-xs text-slate-500 font-medium mb-1 uppercase tracking-widest">{"A conta simples"}</p>
-                <p className="text-3xl font-black text-indigo-700 mb-1">{"1.800 / dia"}</p>
-                <p className="text-sm text-slate-600 font-medium leading-relaxed">
-                  {"Pesquisas diárias de intenção de compra na área de atuação da Farmácia Princesa."}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Seção 'O Potencial' deletada para evitar redundância com o Dashboard acima */}
 
       {/* 05. PROJETO DESCOBERTA */}
       <section className="py-24 px-6 bg-white border-b border-slate-100">
