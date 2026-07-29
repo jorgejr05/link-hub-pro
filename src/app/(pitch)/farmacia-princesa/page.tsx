@@ -331,7 +331,6 @@ export default function FarmaciaPrincesaPitch() {
               },
             ].map((card, i) => (
               <div key={i} className={`bg-white rounded-[2rem] border-t-4 ${card.topColor} border-x border-b border-slate-100 p-8 shadow-sm hover:-translate-y-1 transition-transform flex flex-col`}>
-                <div className="text-5xl font-black text-slate-50 mb-4 -ml-1">{card.step}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{card.title}</h3>
                 <p className="text-sm text-slate-500 font-medium leading-relaxed mb-6">{card.desc}</p>
                 <ul className="space-y-2 mt-auto">
