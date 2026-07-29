@@ -1,5 +1,6 @@
 import React from "react";
 import { Viewport } from "next";
+import { ContextMenuBlocker } from "./ContextMenuBlocker";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -10,10 +11,8 @@ export const viewport: Viewport = {
 
 export default function FarmaciaPrincesaPitch() {
   return (
-    <main 
-      className="w-full bg-white text-slate-900 font-sans selection:bg-transparent select-none"
-      onContextMenu={(e) => e.preventDefault()}
-    >
+    <main className="w-full bg-white text-slate-900 font-sans selection:bg-transparent select-none">
+      <ContextMenuBlocker />
 
       {/* 01. HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-12 md:pt-20 max-w-4xl mx-auto">
