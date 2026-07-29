@@ -1,8 +1,19 @@
 import React from "react";
+import { Viewport } from "next";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export default function FarmaciaPrincesaPitch() {
   return (
-    <main className="w-full bg-white text-slate-900 font-sans selection:bg-slate-200">
+    <main 
+      className="w-full bg-white text-slate-900 font-sans selection:bg-transparent select-none"
+      onContextMenu={(e) => e.preventDefault()}
+    >
 
       {/* 01. HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-12 md:pt-20 max-w-4xl mx-auto">
