@@ -40,7 +40,7 @@ export default function FarmaciaPrincesaPitch() {
           {/* Cards Superiores */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
-              { icon: "group", value: "300 mil+", label: "habitantes", sub: "Araçatuba + Birigui", source: "IBGE 2024" },
+              { icon: "group", value: "300 mil+", label: "habitantes", sub: "Araçatuba + Birigui", source: "IBGE 2026" },
               { icon: "search", value: "64 mil+", label: "buscas por mês", sub: "pelos principais produtos vendidos pela Farmácia Princesa", source: "Google Keyword Planner" },
               { icon: "trending_up", value: "1.800+", label: "pesquisas por dia", sub: "é a média de pessoas buscando soluções que sua farmácia vende", source: "Google Keyword Planner" },
               { icon: "ads_click", value: "Alta intenção", label: "de compra", sub: "Buscas com intenção comercial pronta para comprar", source: "Google Keyword Planner" },
