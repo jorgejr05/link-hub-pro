@@ -27,7 +27,7 @@ export default function FarmaciaPrincesaPitch() {
             <p className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">
               DADOS REAIS DO GOOGLE
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
+            <h2 className="text-2xl md:text-5xl font-bold mb-4 leading-tight tracking-tight">
               O mercado já está procurando.<br />
               A pergunta é: <span className="text-indigo-500">quem está sendo encontrado?</span>
             </h2>
@@ -64,14 +64,14 @@ export default function FarmaciaPrincesaPitch() {
             
             {/* Esquerda: Top buscas mensais */}
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8">
-              <div className="flex items-center justify-between mb-8">
-                <h3 className="text-lg font-bold">Top buscas mensais na região</h3>
-                <span className="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full uppercase tracking-widest font-bold">Dados do Google</span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <h3 className="text-base md:text-lg font-bold">Top buscas mensais na região</h3>
+                <span className="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full uppercase tracking-widest font-bold self-start md:self-auto">Dados do Google</span>
               </div>
               
-              <div className="flex text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">
+              <div className="flex text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">
                 <div className="flex-1">Termo de busca</div>
-                <div className="w-32 text-right">Buscas / mês</div>
+                <div className="w-24 md:w-32 text-right">Buscas / mês</div>
               </div>
 
               <div className="space-y-4 mb-6">
@@ -88,8 +88,8 @@ export default function FarmaciaPrincesaPitch() {
                   { name: "Teste de Dengue", vol: "3.200", p: 17 },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center">
-                    <div className="w-36 text-sm text-slate-300 font-medium">{item.name}</div>
-                    <div className="w-16 text-right text-sm text-slate-400 font-medium mr-4">{item.vol}</div>
+                    <div className="w-32 md:w-36 text-xs md:text-sm text-slate-300 font-medium truncate pr-2">{item.name}</div>
+                    <div className="w-16 text-right text-xs md:text-sm text-slate-400 font-medium mr-4">{item.vol}</div>
                     <div className="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
                       <div className="h-full bg-indigo-500 rounded-full" style={{ width: `${item.p}%` }}></div>
                     </div>
@@ -111,15 +111,15 @@ export default function FarmaciaPrincesaPitch() {
               
               {/* Distribuição por Categoria */}
               <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 flex-1">
-                <h3 className="text-lg font-bold mb-8">Distribuição das buscas por categoria</h3>
+                <h3 className="text-base md:text-lg font-bold mb-8">Distribuição das buscas por categoria</h3>
                 
-                <div className="flex flex-col md:flex-row items-center gap-10">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
                   {/* Gráfico Donut (CSS) */}
-                  <div className="relative w-48 h-48 rounded-full flex items-center justify-center flex-shrink-0" 
+                  <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full flex items-center justify-center flex-shrink-0" 
                        style={{ background: 'conic-gradient(#6366f1 0% 32%, #4f46e5 32% 52%, #06b6d4 52% 68%, #22c55e 68% 80%, #eab308 80% 90%, #f97316 90% 100%)' }}>
-                    <div className="w-32 h-32 bg-slate-900 rounded-full flex flex-col items-center justify-center text-center">
-                      <div className="text-2xl font-black text-white">64 mil+</div>
-                      <div className="text-xs font-semibold text-slate-400">buscas<br/>por mês</div>
+                    <div className="w-24 h-24 md:w-32 md:h-32 bg-slate-900 rounded-full flex flex-col items-center justify-center text-center">
+                      <div className="text-xl md:text-2xl font-black text-white">64 mil+</div>
+                      <div className="text-[10px] md:text-xs font-semibold text-slate-400">buscas<br/>por mês</div>
                     </div>
                   </div>
 
@@ -136,9 +136,9 @@ export default function FarmaciaPrincesaPitch() {
                       <div key={i} className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
-                          <span className="text-sm text-slate-300 font-medium">{item.label}</span>
+                          <span className="text-xs md:text-sm text-slate-300 font-medium">{item.label}</span>
                         </div>
-                        <span className="text-sm font-bold text-slate-400">{item.val}</span>
+                        <span className="text-xs md:text-sm font-bold text-slate-400">{item.val}</span>
                       </div>
                     ))}
                   </div>
@@ -171,15 +171,15 @@ export default function FarmaciaPrincesaPitch() {
           </div>
 
           {/* O Desafio */}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-8 mb-12">
-            <div className="w-20 h-20 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center flex-shrink-0 shadow-[0_0_40px_rgba(99,102,241,0.2)]">
-              <span className="material-symbols-outlined text-4xl text-indigo-400">search</span>
+          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-12 text-center md:text-left">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center flex-shrink-0 shadow-[0_0_40px_rgba(99,102,241,0.2)]">
+              <span className="material-symbols-outlined text-3xl md:text-4xl text-indigo-400">search</span>
             </div>
             <div>
-              <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light mb-2">
+              <p className="text-base md:text-xl text-slate-400 leading-relaxed font-light mb-2">
                 Todos os dias, <span className="text-white font-medium">milhares de pessoas em Araçatuba e Birigui</span> pesquisam por produtos, medicamentos e soluções que a Farmácia Princesa oferece.
               </p>
-              <h3 className="text-xl md:text-2xl font-bold text-indigo-400">
+              <h3 className="text-lg md:text-2xl font-bold text-indigo-400">
                 O desafio não é criar demanda. É capturá-la.
               </h3>
             </div>
@@ -187,15 +187,15 @@ export default function FarmaciaPrincesaPitch() {
 
           {/* Exemplos de buscas */}
           <div className="text-center mb-12">
-            <p className="text-slate-300 font-bold mb-6">Exemplos de buscas que acontecem todos os dias na região</p>
-            <div className="flex flex-wrap justify-center gap-3">
+            <p className="text-sm md:text-base text-slate-300 font-bold mb-6">Exemplos de buscas que acontecem todos os dias na região</p>
+            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
               {[
                 "farmácia aberta agora", "dipirona", "creatina", "vitamina c", "fralda pampers", "roacutan",
                 "ozempic", "perfume importado", "protetor solar", "teste de dengue", "teste covid",
                 "farmácia entrega", "remédio para dor", "paracetamol", "whey protein", "ibuprofeno"
               ].map((term, i) => (
-                <div key={i} className="bg-slate-900 border border-slate-800 text-slate-400 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:border-indigo-500/50 hover:text-indigo-400 transition-colors">
-                  <span className="material-symbols-outlined text-[16px]">search</span>
+                <div key={i} className="bg-slate-900 border border-slate-800 text-slate-400 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium flex items-center gap-2 hover:border-indigo-500/50 hover:text-indigo-400 transition-colors">
+                  <span className="material-symbols-outlined text-[14px] md:text-[16px]">search</span>
                   {term}
                 </div>
               ))}
@@ -203,11 +203,11 @@ export default function FarmaciaPrincesaPitch() {
           </div>
 
           {/* Botton Callout */}
-          <div className="bg-indigo-600 rounded-2xl p-6 md:p-10 flex items-center justify-center gap-6 shadow-2xl">
-            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-3xl text-white">ads_click</span>
+          <div className="bg-indigo-600 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 shadow-2xl">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-2xl md:text-3xl text-white">ads_click</span>
             </div>
-            <h3 className="text-xl md:text-3xl font-bold text-white max-w-2xl text-center md:text-left leading-tight">
+            <h3 className="text-lg md:text-3xl font-bold text-white max-w-2xl text-center md:text-left leading-tight">
               Nosso objetivo é garantir que essas buscas terminem na <span className="text-indigo-200">Farmácia Princesa</span>.
             </h3>
           </div>
