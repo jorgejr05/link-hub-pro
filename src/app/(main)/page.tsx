@@ -11,7 +11,7 @@ export default function Home() {
       <section className="relative min-h-[80vh] md:min-h-[85vh] flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
         <div className="absolute inset-0 bg-gradient-aurora z-[-1]"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10">
-          <h1 className="font-display-lg-mobile md:font-display-lg text-[32px] md:text-[52px] lg:text-[72px] mb-4 md:mb-6 leading-tight uppercase">
+          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 md:mb-6 leading-[1.1] uppercase tracking-tight">
             Sua empresa <span className="neon-text">já tem dados.</span><br />
             Nós os transformamos em vantagem competitiva.
           </h1>
@@ -44,13 +44,13 @@ export default function Home() {
       {/* ── Section Nova: Posicionamento e Transformação ─────────────────────── */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-primary font-headline-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-primary font-headline-md text-base md:text-xl max-w-4xl mx-auto leading-relaxed">
             Não vendemos ferramentas de IA. Projetamos <span className="neon-text">arquiteturas personalizadas</span> que resolvem problemas reais de negócio, integrando dados, sistemas e processos para gerar retorno mensurável.
           </p>
         </div>
 
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase leading-tight">
+          <h2 className="font-headline-xl text-headline-md md:text-headline-xl text-primary uppercase leading-tight">
             A IA só faz sentido quando <br className="hidden md:block" /> resolve um <span className="neon-text">problema real</span>.
           </h2>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
           ].map((item, i) => (
             <div key={i} className="glass-panel rounded-2xl p-6 md:p-8 hover:neon-glow transition-all duration-300 flex flex-col items-center text-center">
               <span className="material-symbols-outlined text-primary-container text-4xl mb-4" data-icon={item.icon}>{item.icon}</span>
-              <h3 className="font-headline-md text-lg text-primary font-bold mb-2">{item.title}</h3>
+              <h3 className="font-headline-md text-base text-primary font-bold mb-2">{item.title}</h3>
               <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div>
             <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">O Cenário Atual</span>
-            <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mt-2 mb-4 md:mb-6 leading-tight">
+            <h2 className="font-headline-xl text-headline-md md:text-headline-xl text-primary uppercase mt-2 mb-4 md:mb-6 leading-tight">
               Por que tantos projetos de IA <span className="neon-text">fracassam?</span>
             </h2>
             <p className="text-sm md:text-base text-on-surface-variant mb-4 md:mb-6 leading-relaxed">
@@ -116,7 +116,7 @@ export default function Home() {
       <section className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32">
         <div className="text-center mb-10 md:mb-16">
           <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">Como Trabalhamos</span>
-          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary uppercase mt-2">
+          <h2 className="font-headline-xl text-headline-md md:text-headline-xl text-primary uppercase mt-2">
             Metodologia <span className="neon-text">Consultiva</span>
           </h2>
         </div>
@@ -188,7 +188,7 @@ export default function Home() {
       <section id="cases" className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-16 md:mb-24 lg:mb-32 scroll-mt-24">
         <div className="mb-10 md:mb-16">
           <span className="font-label-caps text-[10px] md:text-[11px] text-primary-container uppercase tracking-widest">Prova Técnica</span>
-          <h2 className="font-headline-xl text-2xl md:text-3xl lg:text-4xl text-primary mt-2 mb-3 md:mb-4 uppercase">
+          <h2 className="font-headline-xl text-headline-md md:text-headline-xl text-primary mt-2 mb-3 md:mb-4 uppercase">
             O que já <span className="neon-text">construímos</span>
           </h2>
           <p className="text-sm md:text-base text-on-surface-variant max-w-2xl leading-relaxed">
@@ -210,7 +210,7 @@ export default function Home() {
                     Em Produção 🟢
                   </span>
                 </div>
-                <h3 className="font-headline-lg text-2xl md:text-3xl lg:text-4xl text-primary font-bold mb-3 md:mb-4 uppercase">Plugeefy AI Commerce</h3>
+                <h3 className="font-headline-lg text-headline-md md:text-headline-lg text-primary font-bold mb-3 md:mb-4 uppercase">Plugeefy AI Commerce</h3>
                 <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed mb-4 md:mb-6 max-w-lg">
                   É uma infraestrutura de IA voltada ao comércio digital. Sua arquitetura integra ERPs, modelos globais de LLM, um servidor MCP proprietário, canais de atendimento, logística e gateways de pagamento, permitindo que Agentes de IA executem jornadas completas de suporte, vendas e pós-venda.
                 </p>
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="absolute bottom-0 right-0 w-48 md:w-64 h-48 md:h-64 bg-primary-container/5 rounded-full blur-[80px] group-hover:bg-primary-container/10 transition-all duration-500"></div>
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-6 md:mb-12">
-                <h3 className="font-headline-lg text-2xl md:text-3xl text-primary font-bold uppercase">Ju AI</h3>
+                <h3 className="font-headline-lg text-headline-md md:text-headline-lg text-primary font-bold uppercase">Ju AI</h3>
                 <span className="px-2 md:px-3 py-1 rounded-full bg-surface-container text-on-surface-variant border border-white/5 font-label-caps text-[9px] md:text-[10px] uppercase tracking-widest">
                   Content &amp; SEO
                 </span>
@@ -283,7 +283,7 @@ export default function Home() {
               >
                 mic
               </span>
-              <h3 className="font-headline-md text-xl md:text-2xl text-primary font-bold mb-2 md:mb-3 uppercase">GravaPro AI</h3>
+              <h3 className="font-headline-md text-base md:text-xl text-primary font-bold mb-2 md:mb-3 uppercase">GravaPro AI</h3>
               <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed mb-4 md:mb-6">
                 Plataforma voltada para automação audiovisual. Setup perfeito e edição inteligente utilizando processamento distribuído.
               </p>
@@ -307,7 +307,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-2xl bg-primary-container/10 blur-[100px] rounded-full"></div>
           
           <div className="relative z-10">
-            <h2 className="font-headline-xl text-[26px] md:text-[40px] lg:text-[56px] text-primary uppercase mb-4 md:mb-6 leading-tight">
+            <h2 className="font-headline-xl text-headline-md md:text-headline-xl text-primary uppercase mb-4 md:mb-6 leading-tight">
               Qual <span className="neon-text">desafio</span> vamos<br className="hidden sm:block"/> resolver juntos?
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-on-surface-variant mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed">

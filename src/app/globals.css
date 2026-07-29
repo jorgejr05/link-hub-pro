@@ -79,7 +79,7 @@
   --text-body-md--letter-spacing: 0.01em;
   --text-body-md--font-weight: 400;
 
-  --text-display-lg: 72px;
+  --text-display-lg: 56px;
   --text-display-lg--line-height: 1.1;
   --text-display-lg--letter-spacing: -0.04em;
   --text-display-lg--font-weight: 800;
@@ -94,21 +94,21 @@
   --text-label-md--letter-spacing: 0.05em;
   --text-label-md--font-weight: 600;
 
-  --text-headline-xl: 48px;
+  --text-headline-xl: 40px;
   --text-headline-xl--line-height: 1.2;
   --text-headline-xl--letter-spacing: -0.02em;
   --text-headline-xl--font-weight: 700;
 
-  --text-headline-lg: 48px;
+  --text-headline-lg: 32px;
   --text-headline-lg--line-height: 1.2;
   --text-headline-lg--font-weight: 700;
 
-  --text-display-lg-mobile: 40px;
+  --text-display-lg-mobile: 36px;
   --text-display-lg-mobile--line-height: 1.2;
   --text-display-lg-mobile--letter-spacing: -0.01em;
   --text-display-lg-mobile--font-weight: 700;
 
-  --text-headline-md: 32px;
+  --text-headline-md: 24px;
   --text-headline-md--line-height: 1.3;
   --text-headline-md--font-weight: 600;
 }
