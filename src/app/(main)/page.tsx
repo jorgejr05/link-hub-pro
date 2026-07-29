@@ -125,19 +125,19 @@ export default function Home() {
           {[
             {
               step: "01",
-              title: "Diagnóstico & Descoberta",
+              title: "Diagnóstico e Descoberta",
               desc: "Mergulhamos na sua operação para entender gargalos, processos e fluxos de dados. Identificamos os casos de uso onde a IA trará o maior ROI no menor tempo.",
               icon: "search_insights"
             },
             {
               step: "02",
-              title: "Seleção & Arquitetura",
+              title: "Seleção e Arquitetura",
               desc: "Desenhamos a solução sob medida. Escolhemos o LLM ideal para o seu caso (custo vs. performance) e arquitetamos os padrões corretos (RAG, Agentes, MCP Servers, Integrações).",
               icon: "design_services"
             },
             {
               step: "03",
-              title: "Desenvolvimento & Integração",
+              title: "Desenvolvimento e Integração",
               desc: "Mão na massa. Construímos a solução com stacks modernas, conectamos com seus sistemas (ERPs, CRMs) e entregamos uma operação autônoma e escalável.",
               icon: "terminal"
             }
