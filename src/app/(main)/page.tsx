@@ -11,7 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-24 md:pt-32">
+      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-24 md:pt-32 overflow-hidden">
         <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
           
           {/* HEADER / INTRO */}
@@ -37,14 +37,19 @@ export default function Home() {
         </article>
 
         {/* Fluxograma Escuro Premium (Pipeline 7 Steps) */}
-        <div className="w-full max-w-[1000px] mx-auto px-4 mb-16 md:mb-24">
+        <div className="w-full max-w-[1200px] mx-auto mb-16 md:mb-24">
           <div className="relative w-full">
-            <div className="overflow-x-auto custom-scrollbar pt-8 pb-12">
-              <div className="min-w-max relative z-10 px-8 md:px-12 py-4">
-                <div className="flex items-start justify-between gap-6 md:gap-8 relative">
+            {/* Margens negativas no mobile para o scroll ir de ponta a ponta na tela sem encavalar */}
+            <div className="overflow-x-auto custom-scrollbar pt-8 pb-12 w-full">
+              <div className="min-w-max relative z-10 py-4 flex">
+                
+                {/* Spacer Left Invisível - Força o respiro esquerdo */}
+                <div className="w-6 md:w-12 shrink-0"></div>
+                
+                <div className="flex items-start justify-between gap-6 relative">
                   
                   {/* Linha conectora de fundo com pontilhados/glow */}
-                  <div className="absolute top-8 left-10 right-10 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-6">
+                  <div className="absolute top-8 left-8 right-8 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#30D158] shadow-[0_0_8px_#30D158]"></div>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
@@ -59,8 +64,8 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">person</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">01</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Cliente</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">O cliente inicia a conversa</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Cliente</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">O cliente inicia a conversa</p>
                   </div>
 
                   {/* 02. WhatsApp (Glow Verde) */}
@@ -70,8 +75,8 @@ export default function Home() {
                       <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-[#30D158]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     </div>
                     <span className="bg-[#30D158]/20 text-[#30D158] text-[9px] font-bold px-3 py-1 rounded-md mb-2">02</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">WhatsApp</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">Recebe a mensagem nos canais</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">WhatsApp</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Recebe a mensagem nos canais</p>
                   </div>
 
                   {/* 03. Agente */}
@@ -80,8 +85,8 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">smart_toy</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">03</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Agente</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">IA compreende e inicia o atendimento</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Agente</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">IA compreende e inicia o atendimento</p>
                   </div>
 
                   {/* 04. ERP */}
@@ -90,8 +95,8 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">database</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">04</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">ERP</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">Consulta dados e informações</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">ERP</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Consulta dados e informações</p>
                   </div>
 
                   {/* 05. Estoque */}
@@ -100,8 +105,8 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">inventory_2</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">05</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Estoque</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">Verifica disponibilidade de produtos</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Estoque</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Verifica disponibilidade de produtos</p>
                   </div>
 
                   {/* 06. Frete */}
@@ -110,8 +115,8 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">local_shipping</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">06</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Frete</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">Calcula o melhor frete e prazo</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Frete</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Calcula o melhor frete e prazo</p>
                   </div>
 
                   {/* 07. Pedido */}
@@ -120,11 +125,15 @@ export default function Home() {
                       <span className="material-symbols-outlined text-[24px] text-white/80">shopping_bag</span>
                     </div>
                     <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">07</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Pedido</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed">Cria o pedido e acompanha o processo</p>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Pedido</h4>
+                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Cria pedido e acompanha processo</p>
                   </div>
 
                 </div>
+                
+                {/* Spacer Right Invisível - Força o respiro direito IMPEDINDO O CORTE */}
+                <div className="w-10 md:w-16 shrink-0"></div>
+                
               </div>
             </div>
           </div>
@@ -203,22 +212,25 @@ export default function Home() {
         </article>
 
         {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) */}
-        <div className="w-full max-w-[800px] mx-auto px-4 mb-16 md:mb-24">
+        <div className="w-full max-w-[1000px] mx-auto mb-16 md:mb-24">
           <div className="relative w-full">
-            <div className="overflow-x-auto custom-scrollbar pt-12 pb-16">
-              <div className="min-w-max relative z-10 px-8 md:px-12 py-4">
+            <div className="overflow-x-auto custom-scrollbar pt-12 pb-16 w-full">
+              <div className="min-w-max relative z-10 py-4 flex">
                 
-                {/* Linha conectora de fundo com pontilhados/glow */}
-                <div className="absolute top-10 left-20 right-20 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-12">
-                  <div className="w-2 h-2 rounded-full bg-[#5E5CE6] shadow-[0_0_10px_#5E5CE6]"></div>
-                  <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
-                  <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
-                </div>
+                {/* Spacer Left Invisível */}
+                <div className="w-6 md:w-16 shrink-0"></div>
 
-                <div className="flex items-start justify-between gap-12 relative">
+                <div className="flex items-start justify-between gap-10 md:gap-14 relative">
                   
+                  {/* Linha conectora de fundo com pontilhados/glow */}
+                  <div className="absolute top-10 left-16 right-16 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-10">
+                    <div className="w-2 h-2 rounded-full bg-[#5E5CE6] shadow-[0_0_10px_#5E5CE6]"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
+                  </div>
+
                   {/* 01. ERP */}
-                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
                     <div className="w-20 h-20 rounded-full bg-black/40 border border-[#5E5CE6]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(94,92,230,0.15)] backdrop-blur-md relative">
                       <span className="material-symbols-outlined text-[28px] text-white/80">database</span>
                     </div>
@@ -228,7 +240,7 @@ export default function Home() {
                   </div>
 
                   {/* 02. PLUGEEFY (Main Highlight) */}
-                  <div className="flex flex-col items-center text-center w-[170px] shrink-0">
+                  <div className="flex flex-col items-center text-center w-[180px] shrink-0">
                     <div className="w-24 h-24 -mt-2 rounded-full bg-gradient-to-br from-[#5E5CE6] to-[#30D158]/20 border border-[#5E5CE6]/60 flex items-center justify-center mb-3 shadow-[0_0_30px_rgba(94,92,230,0.4),inset_0_0_15px_rgba(255,255,255,0.2)] backdrop-blur-md relative">
                       {/* Glow extra no fundo */}
                       <div className="absolute inset-0 rounded-full bg-[#5E5CE6] opacity-30 animate-pulse blur-[10px]"></div>
@@ -246,7 +258,7 @@ export default function Home() {
                   </div>
 
                   {/* 03. LLMS */}
-                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
                     <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
                       <span className="material-symbols-outlined text-[28px] text-white/80">memory</span>
                     </div>
@@ -256,7 +268,7 @@ export default function Home() {
                   </div>
 
                   {/* 04. CLIENTE */}
-                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
                     <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
                       <span className="material-symbols-outlined text-[28px] text-white/80">person</span>
                     </div>
@@ -266,6 +278,10 @@ export default function Home() {
                   </div>
 
                 </div>
+
+                {/* Spacer Right Invisível - Força o respiro direito IMPEDINDO O CORTE */}
+                <div className="w-12 md:w-20 shrink-0"></div>
+
               </div>
             </div>
           </div>
