@@ -36,15 +36,15 @@ export default function Home() {
           </section>
         </article>
 
-        {/* Fluxograma Escuro Premium (Pipeline 7 Steps) - FORA DO ARTICLE RESTRITO */}
-        <div className="w-full max-w-[1100px] mx-auto px-4 mb-16 md:mb-24">
-          <div className="bg-[#131315] rounded-[2rem] border border-white/5 shadow-2xl p-8 md:p-12 overflow-hidden">
-            <div className="overflow-x-auto custom-scrollbar pb-6">
-              <div className="min-w-max relative z-10 px-4">
-                <div className="flex items-start justify-between gap-12 relative">
+        {/* Fluxograma Escuro Premium (Pipeline 7 Steps) */}
+        <div className="w-full max-w-[1000px] mx-auto px-4 mb-16 md:mb-24">
+          <div className="relative w-full">
+            <div className="overflow-x-auto custom-scrollbar pb-10">
+              <div className="min-w-max relative z-10 px-4 py-4">
+                <div className="flex items-start justify-between gap-8 relative">
                   
                   {/* Linha conectora de fundo com pontilhados/glow */}
-                  <div className="absolute top-10 left-12 right-12 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-8">
+                  <div className="absolute top-8 left-10 right-10 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-6">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#30D158] shadow-[0_0_8px_#30D158]"></div>
                     <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
@@ -54,74 +54,74 @@ export default function Home() {
                   </div>
 
                   {/* 01. Cliente */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">person</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">person</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">01</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">Cliente</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">O cliente inicia a conversa</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">01</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Cliente</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">O cliente inicia a conversa</p>
                   </div>
 
                   {/* 02. WhatsApp (Glow Verde) */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/50 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(48,209,88,0.15),inset_0_0_20px_rgba(48,209,88,0.1)] backdrop-blur-md relative">
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-[#30D158]/50 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15),inset_0_0_15px_rgba(48,209,88,0.1)] backdrop-blur-md relative">
                       <div className="absolute inset-0 rounded-full bg-[#30D158]/5 animate-pulse"></div>
-                      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-[#30D158]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-[#30D158]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-3">02</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">WhatsApp</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">Recebe a mensagem nos canais</p>
+                    <span className="bg-[#30D158]/20 text-[#30D158] text-[9px] font-bold px-3 py-1 rounded-md mb-2">02</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">WhatsApp</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">Recebe a mensagem nos canais</p>
                   </div>
 
                   {/* 03. Agente */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">smart_toy</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">smart_toy</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">03</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">Agente</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">IA compreende e inicia o atendimento</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">03</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Agente</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">IA compreende e inicia o atendimento</p>
                   </div>
 
                   {/* 04. ERP */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">database</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">database</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">04</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">ERP</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">Consulta dados e informações</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">04</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">ERP</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">Consulta dados e informações</p>
                   </div>
 
                   {/* 05. Estoque */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">inventory_2</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">inventory_2</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">05</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">Estoque</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">Verifica disponibilidade de produtos</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">05</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Estoque</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">Verifica disponibilidade de produtos</p>
                   </div>
 
                   {/* 06. Frete */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">local_shipping</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">local_shipping</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">06</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">Frete</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">Calcula o melhor frete e prazo</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">06</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Frete</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">Calcula o melhor frete e prazo</p>
                   </div>
 
                   {/* 07. Pedido */}
-                  <div className="flex flex-col items-center text-center w-32 shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">shopping_bag</span>
+                  <div className="flex flex-col items-center text-center w-28 shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[24px] text-white/80">shopping_bag</span>
                     </div>
-                    <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-md mb-3">07</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-2">Pedido</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed">Cria o pedido e acompanha o processo</p>
+                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">07</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[12px] text-white mb-1">Pedido</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed">Cria o pedido e acompanha o processo</p>
                   </div>
 
                 </div>
@@ -202,67 +202,67 @@ export default function Home() {
           </section>
         </article>
 
-        {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) - FORA DO ARTICLE */}
-        <div className="w-full max-w-[1000px] mx-auto px-4 mb-16 md:mb-24">
-          <div className="bg-[#131315] rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden p-8 md:p-12">
-            <div className="overflow-x-auto custom-scrollbar pb-6">
-              <div className="min-w-max relative z-10 px-4">
+        {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) */}
+        <div className="w-full max-w-[800px] mx-auto px-4 mb-16 md:mb-24">
+          <div className="relative w-full">
+            <div className="overflow-x-auto custom-scrollbar pb-10">
+              <div className="min-w-max relative z-10 px-4 py-4">
                 
                 {/* Linha conectora de fundo com pontilhados/glow */}
-                <div className="absolute top-12 left-24 right-24 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-16">
+                <div className="absolute top-10 left-20 right-20 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-12">
                   <div className="w-2 h-2 rounded-full bg-[#5E5CE6] shadow-[0_0_10px_#5E5CE6]"></div>
                   <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
                   <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
                 </div>
 
-                <div className="flex items-start justify-between gap-16 relative">
+                <div className="flex items-start justify-between gap-12 relative">
                   
                   {/* 01. ERP */}
-                  <div className="flex flex-col items-center text-center w-[180px] shrink-0">
-                    <div className="w-24 h-24 rounded-full bg-black/40 border border-[#5E5CE6]/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(94,92,230,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[32px] text-white/80">database</span>
+                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#5E5CE6]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(94,92,230,0.15)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[28px] text-white/80">database</span>
                     </div>
-                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-3">01</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[14px] text-white mb-2">ERP</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed px-2">Dados, produtos, estoque e clientes</p>
+                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-2">01</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">ERP</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Dados, produtos, estoque e clientes</p>
                   </div>
 
                   {/* 02. PLUGEEFY (Main Highlight) */}
-                  <div className="flex flex-col items-center text-center w-[200px] shrink-0">
-                    <div className="w-32 h-32 -mt-4 rounded-full bg-gradient-to-br from-[#5E5CE6] to-[#30D158]/20 border border-[#5E5CE6]/60 flex items-center justify-center mb-4 shadow-[0_0_50px_rgba(94,92,230,0.4),inset_0_0_20px_rgba(255,255,255,0.2)] backdrop-blur-md relative">
+                  <div className="flex flex-col items-center text-center w-[170px] shrink-0">
+                    <div className="w-24 h-24 -mt-2 rounded-full bg-gradient-to-br from-[#5E5CE6] to-[#30D158]/20 border border-[#5E5CE6]/60 flex items-center justify-center mb-3 shadow-[0_0_30px_rgba(94,92,230,0.4),inset_0_0_15px_rgba(255,255,255,0.2)] backdrop-blur-md relative">
                       {/* Glow extra no fundo */}
-                      <div className="absolute inset-0 rounded-full bg-[#5E5CE6] opacity-30 animate-pulse blur-[15px]"></div>
-                      <span className="material-symbols-outlined text-[48px] text-white relative z-10 drop-shadow-lg">layers</span>
+                      <div className="absolute inset-0 rounded-full bg-[#5E5CE6] opacity-30 animate-pulse blur-[10px]"></div>
+                      <span className="material-symbols-outlined text-[36px] text-white relative z-10 drop-shadow-lg">layers</span>
                       {/* Detalhes ao redor do anel estilo orbital */}
-                      <div className="absolute inset-[-15px] border border-[#5E5CE6]/40 rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
-                      <div className="absolute inset-[-15px] border border-transparent rounded-full flex items-center justify-between animate-[spin_12s_linear_infinite_reverse]">
-                         <div className="w-1.5 h-6 bg-[#5E5CE6] rounded-full -ml-1 shadow-[0_0_10px_#5E5CE6]"></div>
-                         <div className="w-1.5 h-6 bg-[#5E5CE6] rounded-full -mr-1 shadow-[0_0_10px_#5E5CE6]"></div>
+                      <div className="absolute inset-[-12px] border border-[#5E5CE6]/40 rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
+                      <div className="absolute inset-[-12px] border border-transparent rounded-full flex items-center justify-between animate-[spin_12s_linear_infinite_reverse]">
+                         <div className="w-1.5 h-5 bg-[#5E5CE6] rounded-full -ml-1 shadow-[0_0_8px_#5E5CE6]"></div>
+                         <div className="w-1.5 h-5 bg-[#5E5CE6] rounded-full -mr-1 shadow-[0_0_8px_#5E5CE6]"></div>
                       </div>
                     </div>
-                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-3">02</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[14px] text-white mb-2">Plugeefy</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed px-2">Infraestrutura inteligente e integração nativa</p>
+                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-2">02</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">Plugeefy</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Infraestrutura inteligente e integração nativa</p>
                   </div>
 
                   {/* 03. LLMS */}
-                  <div className="flex flex-col items-center text-center w-[180px] shrink-0">
-                    <div className="w-24 h-24 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[32px] text-white/80">memory</span>
+                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[28px] text-white/80">memory</span>
                     </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-3">03</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[14px] text-white mb-2">LLMs</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed px-2">Modelos de IA acessando dados em tempo real</p>
+                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-2">03</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">LLMs</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Modelos de IA acessando dados em tempo real</p>
                   </div>
 
                   {/* 04. CLIENTE */}
-                  <div className="flex flex-col items-center text-center w-[180px] shrink-0">
-                    <div className="w-24 h-24 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[32px] text-white/80">person</span>
+                  <div className="flex flex-col items-center text-center w-[150px] shrink-0">
+                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
+                      <span className="material-symbols-outlined text-[28px] text-white/80">person</span>
                     </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-3">04</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[14px] text-white mb-2">Cliente</h4>
-                    <p className="text-[12px] text-white/50 leading-relaxed px-2">Descoberta, atendimento e compra assistida</p>
+                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-2">04</span>
+                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">Cliente</h4>
+                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Descoberta, atendimento e compra assistida</p>
                   </div>
 
                 </div>
