@@ -43,27 +43,50 @@ export default function Home() {
               <p>Foi nesse momento que a ficha caiu: não estávamos construindo um chatbot. Estávamos conectando toda a operação da empresa.</p>
             </div>
             
-            {/* Fluxograma CSS: ERP -> Agent -> Cliente */}
-            <div className="mt-8 border border-white/10 rounded-2xl bg-surface-container/30 p-8">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex-1 bg-surface-container border border-white/5 p-4 rounded-xl text-center">
-                  <span className="block text-primary-container font-headline-md text-lg mb-1">Bling ERP</span>
-                  <span className="text-[10px] uppercase tracking-widest text-on-surface-variant">Estoque & Clientes</span>
+            {/* Fluxograma Horizontal: Estilo Plugeefy */}
+            <div className="mt-12 bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-black/5 relative overflow-hidden">
+              <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 relative z-10">
+                {/* Passo 1 */}
+                <div className="flex-1 flex flex-col items-center text-center">
+                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
+                    <span className="font-bold">1</span>
+                  </div>
+                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Recepção (WhatsApp)</h4>
+                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
+                    O lead chega. A IA recepciona em segundos e identifica a intenção.
+                  </p>
                 </div>
-                <div className="hidden md:flex text-primary-container/50 animate-pulse">
-                  <span className="material-symbols-outlined">sync_alt</span>
+
+                {/* Conector */}
+                <div className="hidden md:flex flex-col justify-center items-center px-2">
+                  <div className="w-8 border-t-2 border-dashed border-black/10"></div>
                 </div>
-                <div className="flex-1 bg-primary-container/10 border border-primary-container/30 p-4 rounded-xl text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-primary-container/5 animate-pulse"></div>
-                  <span className="block text-primary font-headline-md text-lg mb-1 relative z-10">Agente Autônomo</span>
-                  <span className="text-[10px] uppercase tracking-widest text-primary-container relative z-10">LangGraph (Estado)</span>
+
+                {/* Passo 2 */}
+                <div className="flex-1 flex flex-col items-center text-center">
+                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
+                    <span className="font-bold">2</span>
+                  </div>
+                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Consulta (ERP)</h4>
+                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
+                    A IA consulta o Bling em tempo real: estoque, preços e regras de negócio.
+                  </p>
                 </div>
-                <div className="hidden md:flex text-primary-container/50 animate-pulse">
-                  <span className="material-symbols-outlined">sync_alt</span>
+
+                {/* Conector */}
+                <div className="hidden md:flex flex-col justify-center items-center px-2">
+                  <div className="w-8 border-t-2 border-dashed border-black/10"></div>
                 </div>
-                <div className="flex-1 bg-surface-container border border-white/5 p-4 rounded-xl text-center">
-                  <span className="block text-[#25D366] font-headline-md text-lg mb-1">WhatsApp</span>
-                  <span className="text-[10px] uppercase tracking-widest text-on-surface-variant">Cliente Final</span>
+
+                {/* Passo 3 */}
+                <div className="flex-1 flex flex-col items-center text-center">
+                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
+                    <span className="font-bold">3</span>
+                  </div>
+                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Fechamento</h4>
+                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
+                    Cotação de frete, link de pagamento e criação do pedido no sistema.
+                  </p>
                 </div>
               </div>
             </div>
@@ -120,13 +143,24 @@ export default function Home() {
               <p>A <strong className="text-primary font-semibold">Plugeefy</strong> conecta ERPs, canais de atendimento, logística, pagamentos, modelos de IA e mecanismos de descoberta semântica em uma única infraestrutura coesa.</p>
               <p>O objetivo continua sendo o mesmo do primeiro dia: permitir que uma empresa continue vendendo, atendendo e crescendo, mesmo quando ninguém estiver operando as máquinas.</p>
             </div>
+            <div className="mt-8">
+              <a 
+                href="https://plugeefy.site" 
+                target="_blank" 
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-surface-container border border-white/10 hover:border-primary/50 text-on-surface font-label-md text-xs uppercase tracking-widest rounded-full transition-all"
+              >
+                Ver Projeto Plugeefy
+                <span className="material-symbols-outlined text-[16px]">open_in_new</span>
+              </a>
+            </div>
           </section>
 
           {/* TIMELINE (Minimalista) */}
           <section className="mb-24 md:mb-32 border-l border-white/10 pl-6 md:pl-8 space-y-12 py-4">
             <div className="relative">
               <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary-container rounded-full"></div>
-              <h4 className="text-sm font-label-caps text-on-surface-variant uppercase tracking-widest mb-4">A Evolução em 2025</h4>
+              <h4 className="text-sm font-label-caps text-on-surface-variant uppercase tracking-widest mb-4">A Evolução em 2026</h4>
               <ul className="space-y-3 font-body-md text-on-surface text-base">
                 <li>Começamos estudando gargalos de AI Commerce</li>
                 <li className="text-white/20">↓</li>
@@ -142,7 +176,7 @@ export default function Home() {
             
             <div className="relative">
               <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary rounded-full shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]"></div>
-              <h4 className="text-sm font-label-caps text-primary uppercase tracking-widest mb-4">O Presente em 2026</h4>
+              <h4 className="text-sm font-label-caps text-primary uppercase tracking-widest mb-4">E Atualmente</h4>
               <ul className="space-y-3 font-body-md text-on-surface text-base">
                 <li>Arquitetura em produção preparada para o AI Mode do Google</li>
                 <li>Estrutura hibrida (Humanos + Agentes Autônomos via LangGraph)</li>
@@ -193,7 +227,7 @@ export default function Home() {
               <p>"Antes eu acreditava que integrar sistemas era a parte difícil. Hoje, acredito que entender o processo de negócio que roda nesses sistemas é muito mais complexo."</p>
               <p>"Descobri que a IA não veio para substituir pessoas de alto nível. Ela existe para eliminar o atrito entre pessoas e sistemas legados."</p>
               <p>"A arquitetura certa reduz muito mais custo e dor de cabeça do que simplesmente trocar para o modelo de linguagem mais recente."</p>
-              <p className="pt-4 font-label-md not-italic text-sm text-primary uppercase tracking-widest">— Jorge Gomes Júnior</p>
+              <p className="pt-4 font-label-md not-italic text-sm text-primary uppercase tracking-widest">— Jorge Júnior</p>
             </div>
           </section>
 
@@ -220,16 +254,6 @@ export default function Home() {
 
         </article>
       </main>
-
-      {/* ── Footer ────────────────────────────────────── */}
-      <footer className="px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto pb-10 border-t border-white/5 pt-10 flex justify-center items-center gap-6 relative z-10">
-        <a href="https://www.instagram.com/ojorge.jr?igsh=MWdvejY1YXZ6aWpiag==" target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-[#E1306C] transition-colors" title="Instagram">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <a href={whatsappUrl} target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-[#25D366] transition-colors" title="WhatsApp">
-          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-        </a>
-      </footer>
     </>
   );
 }

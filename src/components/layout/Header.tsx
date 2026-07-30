@@ -36,13 +36,6 @@ export function Header() {
           >
             Blog
           </Link>
-
-          <Link
-            href="/sobre"
-            className={`transition-colors duration-300 ${pathname === "/sobre" ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
-          >
-            Sobre Mim
-          </Link>
         </nav>
       </div>
     </header>
