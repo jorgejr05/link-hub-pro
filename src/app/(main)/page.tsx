@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { whatsappUrl } from "@/lib/constants";
+
+const whatsappUrl = "https://wa.me/5518988183746";
 
 export const metadata = {
   title: "Laboratório de Engenharia | Jorge Gomes Jr.",
