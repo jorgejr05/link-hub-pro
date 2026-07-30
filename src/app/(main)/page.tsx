@@ -17,7 +17,7 @@ export default function Home() {
           {/* HEADER / INTRO */}
           <header className="mb-20 md:mb-32">
             <h1 className="font-headline-xl text-4xl md:text-5xl text-primary leading-tight tracking-tight mb-8">
-              Tudo começou tentando responder uma única pergunta.
+              A Plugeefy nasceu quando estávamos tentando responder uma única pergunta.
             </h1>
             <p className="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium">
               Como uma empresa pode continuar vendendo quando ninguém está trabalhando?
