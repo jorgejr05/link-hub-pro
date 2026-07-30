@@ -37,11 +37,11 @@ export default function Home() {
         </article>
 
         {/* Fluxograma Escuro Premium (Pipeline 7 Steps) */}
-        <div className="w-full max-w-[1200px] mx-auto mb-16 md:mb-24">
+        <div className="w-full max-w-[960px] mx-auto mb-16 md:mb-24">
           <div className="relative w-full">
             {/* Margens negativas no mobile para o scroll ir de ponta a ponta na tela sem encavalar */}
             <div className="overflow-x-auto custom-scrollbar pt-8 pb-12 w-full">
-              <div className="min-w-max relative z-10 py-4 flex">
+              <div className="w-fit min-w-max relative z-10 py-4 flex md:mx-auto">
                 
                 {/* Spacer Left Invisível - Força o respiro esquerdo */}
                 <div className="w-6 md:w-12 shrink-0"></div>
@@ -212,10 +212,10 @@ export default function Home() {
         </article>
 
         {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) */}
-        <div className="w-full max-w-[1000px] mx-auto mb-16 md:mb-24">
+        <div className="w-full max-w-[960px] mx-auto mb-16 md:mb-24">
           <div className="relative w-full">
             <div className="overflow-x-auto custom-scrollbar pt-12 pb-16 w-full">
-              <div className="min-w-max relative z-10 py-4 flex">
+              <div className="w-fit min-w-max relative z-10 py-4 flex md:mx-auto">
                 
                 {/* Spacer Left Invisível */}
                 <div className="w-6 md:w-16 shrink-0"></div>
