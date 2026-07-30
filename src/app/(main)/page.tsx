@@ -16,7 +16,7 @@ export default function Home() {
           
           {/* HEADER / INTRO */}
           <header className="mb-20 md:mb-32">
-            <h1 className="font-headline-xl text-4xl md:text-5xl text-primary leading-tight tracking-tight mb-8">
+            <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl text-primary leading-tight tracking-tight mb-8">
               A Plugeefy nasceu quando estávamos tentando responder uma única pergunta.
             </h1>
             <p className="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium">
