@@ -378,22 +378,17 @@ export default function Home() {
           </section>
 
           {/* O NÃO-CTA */}
-          <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="font-headline-lg text-2xl text-primary mb-6">Se essa história parece familiar...</h3>
-              <div className="font-body-md text-on-surface-variant leading-relaxed space-y-4">
-                <p>...talvez sua empresa esteja enfrentando desafios parecidos.</p>
-                <p>Nós passamos os últimos dezoito meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
-                <p>Se você acredita que sua operação também pode evoluir dessa forma, vamos conversar.</p>
-                <p className="text-sm">Sem apresentações comerciais. Sem discursos prontos. Apenas uma conversa entre pessoas que gostam de resolver problemas difíceis.</p>
-              </div>
+          <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col items-center text-center gap-10">
+            <div className="max-w-2xl font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed space-y-6">
+              <p>Nós passamos os últimos dezoito meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
+              <p className="text-primary font-medium">Se você quer e acredita que sua operação também pode evoluir dessa forma, clique no botão abaixo.</p>
             </div>
-            <div className="shrink-0 flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <a 
                 href={whatsappUrl} 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                className="inline-flex px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
               >
                 Vamos conversar
               </a>
