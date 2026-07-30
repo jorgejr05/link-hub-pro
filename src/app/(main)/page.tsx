@@ -35,9 +35,9 @@ export default function Home() {
             </div>
             
             {/* Fluxograma Escuro Premium (Pipeline) */}
-            <div className="mt-12 bg-[#131315] rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden">
-              <div className="overflow-x-auto custom-scrollbar">
-                <div className="p-8 md:p-12 min-w-max relative z-10 pr-12">
+            <div className="mt-12 relative w-full">
+              <div className="overflow-x-auto custom-scrollbar pb-8">
+                <div className="min-w-max relative z-10 py-4 pr-12">
                   <div className="flex items-start justify-between gap-8 relative">
                     
                     {/* Linha conectora de fundo com pontilhados/glow */}
@@ -197,9 +197,9 @@ export default function Home() {
             </div>
 
             {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) */}
-            <div className="mt-12 bg-[#131315] rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden">
-              <div className="overflow-x-auto custom-scrollbar">
-                <div className="p-8 md:p-12 min-w-max relative z-10 pr-12">
+            <div className="mt-12 relative w-full">
+              <div className="overflow-x-auto custom-scrollbar pb-8">
+                <div className="min-w-max relative z-10 py-4 pr-12">
                   
                   {/* Linha conectora de fundo com pontilhados/glow */}
                   <div className="absolute top-20 left-24 right-24 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-16">
