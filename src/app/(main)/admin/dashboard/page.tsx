@@ -4,8 +4,22 @@ import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { groq } from "@/lib/groq";
-import type { BlogPost } from "../../blog/page";
 
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  read_time: string;
+  social_instagram: string;
+  social_linkedin: string;
+  social_tiktok: string;
+  date: string;
+  author: string;
+  views: number;
+}
 export default function AdminDashboard() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
