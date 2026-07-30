@@ -59,13 +59,13 @@ export default function SobreMim() {
             </div>
             <div className="md:col-span-7 glass-panel rounded-3xl p-8 space-y-6">
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                No coração do que construo hoje, está o <strong className="text-primary font-semibold">Plugeefy</strong>. Uma plataforma SaaS multi-tenant que rompe a barreira entre catálogos de e-commerce e assistentes de IA (ChatGPT, Gemini, Perplexity).
+                No coração do que construo hoje, está o <strong className="text-primary font-semibold">Plugeefy</strong>. Uma plataforma SaaS multi-tenant focada em <strong className="text-primary font-semibold">AI Commerce</strong> que rompe a barreira entre o inventário das empresas e os assistentes globais de Inteligência Artificial.
               </p>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Para tornar isso possível, implementei servidores <strong className="text-primary font-semibold">MCP nativos (Protocolo de Contexto de Modelo)</strong>, permitindo que a IA consulte estoques reais em tempo real. Orquestro fluxos de venda complexos de B2C no WhatsApp utilizando agentes de estado com <strong className="text-primary font-semibold">LangGraph</strong>.
+                Projetamos infraestruturas capazes de processar milhares de eventos simultaneamente sem perda de dados, garantindo operações resilientes mesmo sob altíssima demanda.
               </p>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Lidar com alta volumetria exige infraestrutura séria. Utilizo <strong className="text-primary font-semibold">BullMQ + Redis</strong> para gerenciar webhooks assíncronos em múltiplas filas independentes. Zero perda de dados e retentativas inteligentes. Tudo apoiado por <strong className="text-primary font-semibold">Supabase (RLS)</strong>, garantindo isolamento absoluto de dados.
+                Em vez de apenas "conectar APIs", nós orquestramos fluxos de venda complexos e autônomos. A Inteligência Artificial toma decisões baseadas no contexto real do negócio, acessando estoques e executando ações com isolamento absoluto de segurança e privacidade.
               </p>
               <div className="flex flex-wrap gap-2 pt-4">
                 {['LangGraph', 'MCP', 'Supabase', 'BullMQ', 'Hono', 'Docker'].map(tag => (

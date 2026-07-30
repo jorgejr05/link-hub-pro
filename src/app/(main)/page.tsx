@@ -12,12 +12,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-aurora z-[-1]"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10">
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 md:mb-6 leading-[1.1] uppercase tracking-tight">
-            Sua empresa <span className="neon-text">já tem dados.</span><br />
-            Nós os transformamos em vantagem competitiva.
+            Sua empresa <span className="neon-text">já possui a matéria-prima</span><br />
+            da Inteligência Artificial.
           </h1>
           
           <p className="text-sm md:text-base lg:text-lg text-on-surface-variant mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2 md:px-0">
-            Ajudamos empresas a crescer utilizando Inteligência Artificial aplicada aos seus processos. Identificamos onde a IA realmente gera retorno e construímos soluções integradas ao seu negócio.
+            Dados, processos e conhecimento já existem. Nós projetamos a arquitetura que transforma tudo isso em crescimento, automação e vantagem competitiva.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-4 sm:px-0">
@@ -176,7 +176,7 @@ export default function Home() {
 
         {/* Expertise Tags */}
         <div className="mt-8 flex flex-wrap justify-center gap-3 opacity-70">
-          {["Especialista em:", "IA Generativa", "LLMs", "Protocolo MCP", "Sistemas RAG", "Integrações ERP", "Automação B2B", "Search & SEO"].map((tag, i) => (
+          {["Especialista em:", "Engenharia de Sistemas Inteligentes", "Arquitetura de IA", "Protocolo MCP", "Integrações Corporativas (ERP/CRM)", "AI Commerce", "Search & SEO"].map((tag, i) => (
             <span key={i} className={`text-xs md:text-sm ${i === 0 ? 'text-on-surface-variant font-semibold' : 'px-3 py-1 bg-surface-container border border-white/5 rounded-full text-on-surface'}`}>
               {tag}
             </span>
@@ -334,6 +334,7 @@ export default function Home() {
           &copy; {new Date().getFullYear()} Jorge Júnior. Todos os direitos reservados.
         </div>
         <div className="flex flex-wrap justify-center gap-6">
+          <a href="https://www.instagram.com/ojorge.jr?igsh=MWdvejY1YXZ6aWpiag==" target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">Instagram</a>
           <a href="https://github.com/jorgejr05" target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">GitHub</a>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">WhatsApp</a>
           <a href="mailto:contato@jorgejr.site" className="text-on-surface-variant hover:text-primary transition-colors text-xs md:text-sm uppercase tracking-widest font-label-md">E-mail</a>
