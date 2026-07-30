@@ -5,7 +5,7 @@ const whatsappUrl = "https://wa.me/5518988183746";
 
 export const metadata = {
   title: "Laboratório de Engenharia | Jorge Gomes Jr.",
-  description: "Construindo a próxima geração do comércio digital. Como problemas operacionais nos levaram a criar infraestruturas inteligentes.",
+  description: "Tudo começou tentando responder uma única pergunta: Como uma empresa pode continuar vendendo quando ninguém está trabalhando?",
 };
 
 export default function Home() {
@@ -17,131 +17,221 @@ export default function Home() {
           {/* HEADER / INTRO */}
           <header className="mb-20 md:mb-32">
             <h1 className="font-headline-xl text-4xl md:text-5xl text-primary leading-tight tracking-tight mb-8">
-              Não começamos criando uma empresa de Inteligência Artificial.
+              Tudo começou tentando responder uma única pergunta.
             </h1>
-            <p className="font-body-lg text-lg text-on-surface-variant leading-relaxed">
-              Tudo começou com uma pergunta que acreditávamos definir o futuro do comércio digital.
-              A empresa, a arquitetura e a inteligência nasceram como uma consequência rigorosa dessa busca.
+            <p className="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium">
+              Como uma empresa pode continuar vendendo quando ninguém está trabalhando?
             </p>
           </header>
 
-          {/* CAPÍTULO 1 */}
+          {/* O PROBLEMA INICIAL */}
           <section className="mb-16 md:mb-24">
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Tudo começou com um problema simples.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
               <p>O atendimento parava quando o expediente terminava.</p>
               <p>Durante as noites, finais de semana e feriados, clientes continuavam chegando pelo WhatsApp e Instagram, mas a equipe comercial já não estava disponível. Não faltavam vendedores. Faltava uma operação que continuasse funcionando quando as pessoas saíssem da empresa.</p>
+              <p className="pt-4">Rapidamente percebemos que responder perguntas era apenas uma pequena parte do problema.</p>
+              <p>Para vender de verdade, um agente precisava conhecer toda a operação da empresa.</p>
+            </div>
+            
+            {/* Fluxo Simplificado (Cliente -> WhatsApp -> Agente -> ERP...) */}
+            <div className="mt-12 bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-black/5 relative overflow-x-auto">
+              <div className="flex items-center gap-3 min-w-max pb-2">
+                
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">person</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Cliente</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-[#25D366]/10 border-2 border-[#25D366]/30 flex items-center justify-center mb-2 shadow-sm text-[#25D366]">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">WhatsApp</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">smart_toy</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Agente</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">database</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">ERP</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">inventory_2</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Estoque</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">local_shipping</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Frete</span>
+                </div>
+
+                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
+
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                    <span className="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  </div>
+                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Pedido</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="mt-10 font-body-md text-base text-on-surface-variant leading-relaxed border-l-2 border-primary/50 pl-6 italic">
+              <p>Foi nesse momento que percebemos que o problema nunca foi o atendimento.</p>
+              <p>O problema era a operação inteira.</p>
             </div>
           </section>
 
-          {/* CAPÍTULO 2 */}
+          {/* O EFEITO DOMINÓ */}
           <section className="mb-16 md:mb-24">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Descobrimos que responder era a parte fácil.</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>Quando começamos a automatizar o atendimento, percebemos que um agente não vende apenas respondendo perguntas.</p>
-              <p>Ele precisa saber quem é o cliente, se já possui cadastro, consultar o ERP, encontrar o produto correto, calcular o frete, criar os pedidos e acompanhar todo o processo comercial.</p>
-              <p>Foi nesse momento que a ficha caiu: não estávamos construindo um chatbot. Estávamos conectando toda a operação da empresa.</p>
-            </div>
+            <h3 className="font-headline-lg text-2xl text-primary mb-8">Cada resposta revelou uma pergunta ainda maior.</h3>
             
-            {/* Fluxograma Horizontal: Estilo Plugeefy */}
-            <div className="mt-12 bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-black/5 relative overflow-hidden">
-              <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 relative z-10">
-                {/* Passo 1 */}
-                <div className="flex-1 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
-                    <span className="font-bold">1</span>
-                  </div>
-                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Recepção (WhatsApp)</h4>
-                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
-                    O lead chega. A IA recepciona em segundos e identifica a intenção.
-                  </p>
-                </div>
-
-                {/* Conector */}
-                <div className="hidden md:flex flex-col justify-center items-center px-2">
-                  <div className="w-8 border-t-2 border-dashed border-black/10"></div>
-                </div>
-
-                {/* Passo 2 */}
-                <div className="flex-1 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
-                    <span className="font-bold">2</span>
-                  </div>
-                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Consulta (ERP)</h4>
-                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
-                    A IA consulta o Bling em tempo real: estoque, preços e regras de negócio.
-                  </p>
-                </div>
-
-                {/* Conector */}
-                <div className="hidden md:flex flex-col justify-center items-center px-2">
-                  <div className="w-8 border-t-2 border-dashed border-black/10"></div>
-                </div>
-
-                {/* Passo 3 */}
-                <div className="flex-1 flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-4 shadow-sm text-primary">
-                    <span className="font-bold">3</span>
-                  </div>
-                  <h4 className="font-headline-md text-on-surface font-bold mb-2">Fechamento</h4>
-                  <p className="text-sm text-on-surface-variant font-body-md leading-relaxed">
-                    Cotação de frete, link de pagamento e criação do pedido no sistema.
-                  </p>
-                </div>
+            <div className="space-y-4 font-body-md text-on-surface-variant">
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                <p>Integramos o ERP.</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/80"></div>
+                <p>Descobrimos que precisávamos da logística.</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/60"></div>
+                <p>A logística revelou os pagamentos.</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/50"></div>
+                <p>Os pagamentos nos levaram ao CRM.</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/40"></div>
+                <p>O CRM nos levou aos canais da Meta.</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/30"></div>
+                <p>Os canais nos levaram aos LLMs (Modelos de Linguagem).</p>
+              </div>
+              <div className="pl-1 text-white/20 text-xs">↓</div>
+              <div className="flex items-center gap-4">
+                <div className="w-2 h-2 rounded-full bg-primary/20"></div>
+                <p>Os LLMs nos levaram ao AI Commerce.</p>
               </div>
             </div>
           </section>
 
-          {/* CAPÍTULO 3 */}
-          <section className="mb-16 md:mb-24">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Cada integração revelou um novo desafio.</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>A integração com o Bling nos levou à logística.</p>
-              <p>A logística nos levou aos pagamentos.</p>
-              <p>Os pagamentos nos levaram ao CRM.</p>
-              <p>O CRM nos levou aos canais de atendimento (WhatsApp e Instagram).</p>
-              <p>Os canais nos tornaram Tech Providers oficiais da Meta.</p>
-              <p>E a necessidade de interpretar todos esses dados nos levou aos Modelos de IA.</p>
-              <p>Sem perceber, um simples projeto de automação havia se transformado em uma infraestrutura arquitetural completa.</p>
-            </div>
-          </section>
-
-          {/* CAPÍTULO 4 */}
+          {/* O CLÍMAX */}
           <section className="mb-16 md:mb-24">
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Uma nova forma de descoberta.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>Enquanto resolvíamos o atendimento, um novo comportamento começou a surgir no mercado.</p>
-              <p>As pessoas deixaram de procurar produtos navegando em páginas de categorias de e-commerces. Elas começaram a perguntar diretamente para assistentes como ChatGPT, Gemini, e o AI Mode do Google.</p>
-              <p>Se a IA se tornaria a nova porta de entrada para a compra, ela precisaria conversar nativamente com os dados reais das empresas. Foi aí que consolidamos o conceito de AI Commerce e criamos nosso servidor MCP (Model Context Protocol) nativo.</p>
+              <p>Enquanto resolvíamos um problema operacional... o comportamento dos consumidores também estava mudando.</p>
+              <p>Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar:</p>
+              
+              <ul className="pl-6 space-y-2 italic text-on-surface/80 border-l border-white/10 my-6 py-2">
+                <li>"Qual creatina vocês recomendam?"</li>
+                <li>"Onde encontro esse medicamento?"</li>
+                <li>"Qual protetor solar é melhor para pele oleosa?"</li>
+              </ul>
+
+              <p>Se a descoberta passaria a acontecer dentro de assistentes inteligentes, nossa infraestrutura também precisava estar preparada para isso.</p>
+              
+              <div className="bg-surface-container border border-white/5 p-6 rounded-2xl mt-8">
+                <p className="text-primary font-medium">
+                  Foi nesse momento que a Plugeefy deixou de resolver apenas atendimento. Ela passou a conectar empresas à próxima geração do comércio digital.
+                </p>
+              </div>
             </div>
 
-            {/* Terminal Log CSS */}
-            <div className="mt-8 border border-white/10 rounded-2xl bg-[#0a0a0a] p-6 font-mono text-[11px] md:text-xs text-on-surface-variant overflow-x-auto shadow-inner">
-              <div className="flex gap-2 mb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
+            {/* Arquitetura Elegante */}
+            <div className="mt-12 bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-black/5 relative overflow-hidden flex flex-col md:flex-row items-center justify-center gap-4">
+              
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                  <span className="material-symbols-outlined text-[24px]">database</span>
+                </div>
+                <span className="text-[11px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">ERP</span>
               </div>
-              <div className="space-y-1">
-                <p><span className="text-primary-container">➜</span> <span className="text-white">~/plugeefy</span> <span className="text-primary">npm run</span> mcp-server</p>
-                <p className="text-white/40">[INFO] Iniciando Servidor MCP...</p>
-                <p className="text-white/40">[INFO] Conectando ao cluster de banco de dados...</p>
-                <p className="text-green-400">[SUCCESS] ERP Bling sincronizado (4.302 produtos)</p>
-                <p className="text-white/40">[INFO] Expondo tools para Claude 3.5 Sonnet:</p>
-                <p className="text-primary">  - get_product_stock(sku: string)</p>
-                <p className="text-primary">  - create_order(customer_id: string, items: array)</p>
-                <p className="text-green-400">[SUCCESS] Servidor rodando na porta 3001. Aguardando requests via LLM.</p>
-                <p className="animate-pulse">_</p>
+
+              <div className="flex md:hidden flex-col justify-center items-center py-2">
+                <div className="h-6 border-l-2 border-dashed border-black/10"></div>
               </div>
+              <div className="hidden md:flex flex-col justify-center items-center px-4">
+                <div className="w-12 border-t-2 border-dashed border-black/10"></div>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center mb-2 shadow-sm text-primary">
+                  <span className="material-symbols-outlined text-[24px]">schema</span>
+                </div>
+                <span className="text-[11px] font-label-caps uppercase tracking-widest text-primary font-bold">Servidor MCP</span>
+              </div>
+
+              <div className="flex md:hidden flex-col justify-center items-center py-2">
+                <div className="h-6 border-l-2 border-dashed border-black/10"></div>
+              </div>
+              <div className="hidden md:flex flex-col justify-center items-center px-4">
+                <div className="w-12 border-t-2 border-dashed border-black/10"></div>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                  <span className="material-symbols-outlined text-[24px]">memory</span>
+                </div>
+                <span className="text-[11px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">LLMs</span>
+              </div>
+
+              <div className="flex md:hidden flex-col justify-center items-center py-2">
+                <div className="h-6 border-l-2 border-dashed border-black/10"></div>
+              </div>
+              <div className="hidden md:flex flex-col justify-center items-center px-4">
+                <div className="w-12 border-t-2 border-dashed border-black/10"></div>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
+                  <span className="material-symbols-outlined text-[24px]">person</span>
+                </div>
+                <span className="text-[11px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Cliente</span>
+              </div>
+
             </div>
           </section>
 
-          {/* CAPÍTULO 5 */}
+          {/* O PROJETO HOJE */}
           <section className="mb-24 md:mb-32">
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Hoje, resolvemos o mesmo problema, só que em outra escala.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
               <p>A <strong className="text-primary font-semibold">Plugeefy</strong> conecta ERPs, canais de atendimento, logística, pagamentos, modelos de IA e mecanismos de descoberta semântica em uma única infraestrutura coesa.</p>
-              <p>O objetivo continua sendo o mesmo do primeiro dia: permitir que uma empresa continue vendendo, atendendo e crescendo, mesmo quando ninguém estiver operando as máquinas.</p>
             </div>
             <div className="mt-8">
               <a 
@@ -156,67 +246,62 @@ export default function Home() {
             </div>
           </section>
 
-          {/* TIMELINE (Minimalista) */}
+          {/* TIMELINE (Jornada) */}
           <section className="mb-24 md:mb-32 border-l border-white/10 pl-6 md:pl-8 space-y-12 py-4">
             <div className="relative">
               <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary-container rounded-full"></div>
-              <h4 className="text-sm font-label-caps text-on-surface-variant uppercase tracking-widest mb-4">A Evolução em 2026</h4>
+              <h4 className="text-sm font-label-caps text-on-surface-variant uppercase tracking-widest mb-4">A Jornada da Arquitetura</h4>
               <ul className="space-y-3 font-body-md text-on-surface text-base">
-                <li>Começamos estudando gargalos de AI Commerce</li>
+                <li>O Problema</li>
                 <li className="text-white/20">↓</li>
-                <li>Primeiras integrações complexas com ERPs (Bling)</li>
+                <li>O Primeiro Agente</li>
                 <li className="text-white/20">↓</li>
-                <li>Sincronização de catálogo e estoques em tempo real</li>
+                <li>A Primeira Integração de ERP</li>
                 <li className="text-white/20">↓</li>
-                <li>Tornamo-nos Tech Provider homologado da Meta</li>
+                <li>O Primeiro Pedido Automatizado</li>
                 <li className="text-white/20">↓</li>
-                <li>Implementação do primeiro Servidor MCP próprio</li>
+                <li>O Primeiro Cliente Atendido 24h</li>
+                <li className="text-white/20">↓</li>
+                <li>Homologação Meta Tech Provider</li>
+                <li className="text-white/20">↓</li>
+                <li>O Primeiro Servidor MCP</li>
+                <li className="text-white/20">↓</li>
+                <li>AI Commerce</li>
               </ul>
             </div>
             
             <div className="relative">
               <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary rounded-full shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]"></div>
-              <h4 className="text-sm font-label-caps text-primary uppercase tracking-widest mb-4">E Atualmente</h4>
-              <ul className="space-y-3 font-body-md text-on-surface text-base">
-                <li>Arquitetura em produção preparada para o AI Mode do Google</li>
-                <li>Estrutura hibrida (Humanos + Agentes Autônomos via LangGraph)</li>
-              </ul>
+              <h4 className="text-sm font-label-caps text-primary uppercase tracking-widest mb-2">Hoje</h4>
+              <p className="font-body-sm text-on-surface-variant text-sm">Infraestrutura rodando em produção.</p>
             </div>
           </section>
 
           {/* CONCLUSÕES */}
           <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-3xl text-primary mb-10">O que aprendemos construindo em produção.</h3>
+            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que aprendemos construindo em produção.</h3>
             
-            <div className="space-y-8">
-              <div className="glass-panel p-8 rounded-2xl">
-                <h4 className="font-label-md text-primary-container uppercase tracking-widest text-sm mb-3">1. IA não resolve processos ruins.</h4>
-                <p className="font-body-md text-on-surface-variant leading-relaxed">
-                  Automatizar um gargalo apenas faz o erro acontecer mais rápido. Antes de escrever qualquer linha de código ou prompt, mapeamos como a operação realmente funciona. O modelo de IA é apenas uma peça do quebra-cabeça.
+            <div className="space-y-4">
+              <div className="border-l-2 border-white/10 pl-4 py-1">
+                <p className="font-body-md text-on-surface leading-relaxed font-medium">
+                  IA não resolve processos ruins. Ela apenas acelera o caos.
                 </p>
               </div>
-
-              <div className="glass-panel p-8 rounded-2xl">
-                <h4 className="font-label-md text-primary-container uppercase tracking-widest text-sm mb-3">2. O maior desafio não é responder. É acessar os dados.</h4>
-                <p className="font-body-md text-on-surface-variant leading-relaxed">
-                  Na prática, o verdadeiro desafio da Engenharia de IA está na qualidade dos dados, na estabilidade das integrações corporativas e na arquitetura que conecta tudo isso com segurança e isolamento.
+              <div className="border-l-2 border-white/10 pl-4 py-1">
+                <p className="font-body-md text-on-surface leading-relaxed font-medium">
+                  Bons agentes dependem de bons dados.
                 </p>
               </div>
-
-              <div className="glass-panel p-8 rounded-2xl">
-                <h4 className="font-label-md text-primary-container uppercase tracking-widest text-sm mb-3">3. A experiência começa muito antes da resposta.</h4>
-                <p className="font-body-md text-on-surface-variant leading-relaxed">
-                  Uma arquitetura inteligente reduz atritos, organiza informações silenciosamente e permite que humanos e agentes artificiais trabalhem juntos no mesmo processo sem quebrar o fluxo da operação.
+              <div className="border-l-2 border-white/10 pl-4 py-1">
+                <p className="font-body-md text-on-surface leading-relaxed font-medium">
+                  A inteligência está muito mais na arquitetura do que no modelo.
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* PESQUISA APLICADA */}
-          <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">O que estamos explorando agora</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>Atualmente nossa pesquisa principal se debruça sobre como LLMs podem se tornar o <strong className="text-primary font-semibold">novo e definitivo canal de descoberta para produtos</strong>, permitindo que empresas e estoques sejam encontrados e transacionados diretamente dentro de assistentes conversacionais, sem precisar passar pela jornada de e-commerce tradicional.</p>
+              <div className="border-l-2 border-white/10 pl-4 py-1">
+                <p className="font-body-md text-on-surface leading-relaxed font-medium">
+                  A experiência começa antes da IA responder. Ela começa quando todos os sistemas conseguem conversar entre si.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -232,14 +317,17 @@ export default function Home() {
           </section>
 
           {/* O NÃO-CTA */}
-          <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex-1">
-              <h3 className="font-headline-lg text-2xl text-primary mb-4">Está construindo algo parecido?</h3>
-              <p className="font-body-md text-on-surface-variant leading-relaxed mb-0">
-                Ou acredita que a sua empresa já passou da hora de se beneficiar dessa nova infraestrutura de descoberta digital?
-              </p>
+          <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="font-headline-lg text-2xl text-primary mb-6">Se essa história parece familiar...</h3>
+              <div className="font-body-md text-on-surface-variant leading-relaxed space-y-4">
+                <p>...talvez sua empresa esteja enfrentando desafios parecidos.</p>
+                <p>Nós passamos os últimos dezoito meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
+                <p>Se você acredita que sua operação também pode evoluir dessa forma, vamos conversar.</p>
+                <p className="text-sm">Sem apresentações comerciais. Sem discursos prontos. Apenas uma conversa entre pessoas que gostam de resolver problemas difíceis.</p>
+              </div>
             </div>
-            <div>
+            <div className="shrink-0 flex flex-col items-center">
               <a 
                 href={whatsappUrl} 
                 target="_blank" 
@@ -248,7 +336,7 @@ export default function Home() {
               >
                 Vamos conversar
               </a>
-              <p className="text-center text-[10px] text-on-surface-variant mt-3 uppercase tracking-widest">Sem compromisso.</p>
+              <p className="text-[10px] text-on-surface-variant mt-3 uppercase tracking-widest">Sem compromisso.</p>
             </div>
           </section>
 
