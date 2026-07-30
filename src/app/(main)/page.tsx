@@ -34,69 +34,89 @@ export default function Home() {
               <p>Para vender de verdade, um agente precisava conhecer toda a operação da empresa.</p>
             </div>
             
-            {/* Fluxo Simplificado (Cliente -> WhatsApp -> Agente -> ERP...) */}
-            <div className="mt-12 bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-black/5 relative overflow-x-auto">
-              <div className="flex items-center gap-3 min-w-max pb-2">
+            {/* Fluxograma Escuro Premium (Pipeline) */}
+            <div className="mt-12 bg-[#131315] rounded-[2rem] p-8 md:p-12 border border-white/5 shadow-2xl relative overflow-x-auto custom-scrollbar">
+              <div className="flex items-start justify-between gap-2 min-w-max relative z-10">
                 
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">person</span>
-                  </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Cliente</span>
+                {/* Linha conectora de fundo com pontilhados/glow */}
+                <div className="absolute top-10 left-12 right-12 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-10">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#30D158] shadow-[0_0_8px_#30D158]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-[#25D366]/10 border-2 border-[#25D366]/30 flex items-center justify-center mb-2 shadow-sm text-[#25D366]">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                {/* 01. Cliente */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">person</span>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">WhatsApp</span>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">01</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">Cliente</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">O cliente inicia a conversa</p>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">smart_toy</span>
+                {/* 02. WhatsApp (Glow Verde) */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/50 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(48,209,88,0.15),inset_0_0_20px_rgba(48,209,88,0.1)] backdrop-blur-md relative">
+                    <div className="absolute inset-0 rounded-full bg-[#30D158]/5 animate-pulse"></div>
+                    <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-[#30D158]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Agente</span>
+                  <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-full mb-3">02</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">WhatsApp</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">Recebe a mensagem nos canais</p>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">database</span>
+                {/* 03. Agente */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">smart_toy</span>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">ERP</span>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">03</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">Agente</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">IA compreende e inicia o atendimento</p>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">inventory_2</span>
+                {/* 04. ERP */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">database</span>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Estoque</span>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">04</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">ERP</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">Consulta dados e informações</p>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">local_shipping</span>
+                {/* 05. Estoque */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">inventory_2</span>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Frete</span>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">05</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">Estoque</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">Verifica disponibilidade de produtos</p>
                 </div>
 
-                <div className="w-6 border-t-2 border-dashed border-black/10"></div>
-
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-lowest border-2 border-primary/20 flex items-center justify-center mb-2 shadow-sm text-primary">
-                    <span className="material-symbols-outlined text-[18px]">shopping_bag</span>
+                {/* 06. Frete */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">local_shipping</span>
                   </div>
-                  <span className="text-[10px] font-label-caps uppercase tracking-widest text-on-surface font-semibold">Pedido</span>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">06</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">Frete</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">Calcula o melhor frete e prazo</p>
+                </div>
+
+                {/* 07. Pedido */}
+                <div className="flex flex-col items-center text-center w-32">
+                  <div className="w-20 h-20 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-6 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md">
+                    <span className="material-symbols-outlined text-[28px] text-white/80">shopping_bag</span>
+                  </div>
+                  <span className="bg-white/10 text-white/60 text-[10px] font-bold px-3 py-1 rounded-full mb-3">07</span>
+                  <h4 className="font-label-caps uppercase tracking-widest text-xs text-white mb-2">Pedido</h4>
+                  <p className="text-[11px] text-white/50 leading-relaxed px-2">Cria o pedido e acompanha o processo</p>
                 </div>
 
               </div>
