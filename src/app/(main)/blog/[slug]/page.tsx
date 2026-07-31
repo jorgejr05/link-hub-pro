@@ -84,33 +84,56 @@ const articlesDB = {
     )
   },
   "whatsapp-api-mudanca-precos-outubro-2026": {
-    title: "O fim do chatbot 'tagarela'. Como a mudança de preços do WhatsApp em Outubro de 2026 afeta sua arquitetura.",
-    description: "A Meta mudou as regras do jogo. Pagar por mensagem exige que a sua IA seja cirúrgica, não conversadora.",
+    title: "Alerta: A mudança de preços do WhatsApp em Outubro vai quebrar automações ineficientes.",
+    description: "A Meta mudou as regras do jogo. A partir de Outubro, empresas precisarão remodelar urgentemente sua operação no WhatsApp.",
     subtitle: "Seu agente usa 10 mensagens para tirar um pedido? Prepare-se para ver sua margem de lucro desaparecer.",
     content: (
       <>
-        <p>Construir sobre terreno alugado tem um preço. Em Outubro de 2026, a Meta implementará sua nova política de custos para o WhatsApp Business API, faturando empresas com base no volume de mensagens disparadas, alterando drasticamente o modelo de custos de conversação livre que ajudou a popularizar a plataforma.</p>
-        <p>A reação imediata do mercado foi de pânico. Muitas empresas pausaram seus projetos de IA no WhatsApp temendo que as interações automatizadas estourassem os caixas. Mas o problema não está no novo preço da Meta. <strong className="text-primary font-semibold">O problema está na forma como o mercado vinha construindo Inteligência Artificial.</strong></p>
+        <p>Este é um aviso direto para qualquer operação que dependa de automação no WhatsApp hoje. Em Outubro de 2026, a Meta implementará uma nova política de custos para o WhatsApp Business API. A cobrança passará a penalizar fortemente o volume de mensagens trocadas, alterando drasticamente o modelo que ajudou a popularizar a plataforma corporativa.</p>
         
-        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A falácia do bot amigável (e caro)</h3>
-        <p>Até ontem, as empresas aplaudiam seus agentes baseados em LLM que agiam como vendedores prolixos. O bot perguntava "Como você está?", pedia detalhes em múltiplas mensagens, enviava emojis separados, e pedia confirmações constantes. Um pedido simples levava de 8 a 12 transações na API.</p>
-        <p>Nós descobrimos cedo no nosso laboratório que a eficiência arquitetural é o único antídoto contra custos de infraestrutura de terceiros. Quando a Meta passa a cobrar pela volumetria do disparo, a métrica de sucesso da sua automação deixa de ser "quantas conversas o bot teve" e passa a ser "em quantos turnos o problema foi resolvido".</p>
+        <p>A reação imediata do mercado tem sido de pânico. Muitas empresas estão pausando seus projetos de IA temendo que as interações automatizadas estourem o orçamento. Mas a verdade é que o problema não está no novo preço da Meta. <strong className="text-primary font-semibold">O problema está na forma amadora como o mercado vinha construindo Inteligência Artificial.</strong></p>
+        
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A urgência de remodelar sua operação</h3>
+        <p>Até ontem, as empresas aplaudiam bots que agiam como vendedores prolixos. O robô perguntava "Como você está?", pedia detalhes em múltiplas mensagens, enviava emojis separados, e pedia confirmações constantes. Um pedido simples levava de 8 a 12 transações na API. Na nova economia da Meta, esse bot "tagarela" se tornará um passivo financeiro insustentável.</p>
         
         <div className="bg-surface-container-lowest border-l-4 border-primary-container p-6 rounded-r-2xl my-8">
           <p className="text-primary font-semibold">
-            Na nova economia de APIs, ser conciso e contextual não é uma questão de boa experiência de usuário. É uma questão de sobrevivência de margem de lucro.
+            Na nova regra do jogo, ser conciso e contextual não é mais uma questão apenas de boa experiência do usuário. É uma questão urgente de sobrevivência da margem de lucro.
           </p>
         </div>
         
-        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">Engenharia orientada a contexto (Zero-Shot Resolution)</h3>
-        <p>É aqui que a infraestrutura que passamos 18 meses construindo brilha. Se o agente robótico tiver integração nativa e em tempo real com o ERP, o CRM e o catálogo de frete, ele não precisa fazer 5 perguntas ao cliente.</p>
-        <p>Ele lê o histórico, reconhece o número, entende a intenção, consulta a base inteira em milissegundos nos bastidores (sem trafegar pelo WhatsApp) e devolve <strong className="text-primary">uma única mensagem definitiva</strong>: a solução, o link de pagamento ou o rastreio.</p>
-        <p>Empresas que tratam IA como "um script de respostas de texto" vão quebrar pagando a conta da Meta. Empresas que tratam IA como uma orquestração de sistemas vão operar de forma mais barata do que nunca.</p>
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">Como sanar isso antes de Outubro?</h3>
+        <p>A resposta está na <strong>engenharia orientada a contexto</strong>. Se o seu agente tiver integração nativa e em tempo real com o ERP, o CRM e todo o barramento de dados, ele não precisa fazer dezenas de perguntas ao cliente.</p>
+        <ul className="pl-6 space-y-2 list-disc list-outside text-on-surface-variant my-6 py-2">
+          <li><strong>Leitura de Intenção:</strong> A IA interpreta o contexto em milissegundos sem responder textos descartáveis como "Vou verificar pra você...".</li>
+          <li><strong>Zero-Shot Resolution:</strong> A infraestrutura busca dados cruciais no banco de forma silenciosa e devolve uma <strong className="text-primary">única mensagem definitiva</strong> contendo a solução, os detalhes do produto e o link de pagamento.</li>
+          <li><strong>Agrupamento de Dados:</strong> O envio de faturas, rastreios e respostas vão no mesmo pacote inteligente, reduzindo os disparos de API em até 80%.</li>
+        </ul>
+        <p>Empresas que tratam IA apenas como "um script de respostas" vão quebrar pagando a conta da Meta. Mas aquelas que remodelarem suas automações como uma orquestração de sistemas silenciosa, vão operar de forma mais enxuta e barata do que nunca.</p>
 
         <div className="mt-8 pt-6 border-t border-white/10">
-          <p className="text-sm text-on-surface-variant font-label-md">
-            Fonte sugerida para aprofundamento: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noreferrer" className="text-primary hover:underline">Meta for Developers - WhatsApp Business Platform Pricing</a>
+          <p className="text-sm text-on-surface-variant font-label-md mb-8">
+            Fonte de referência sobre a mudança: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noreferrer" className="text-primary hover:underline">Meta for Developers - WhatsApp Pricing</a>
           </p>
+        </div>
+
+        {/* NOTA DO AUTOR E CTA */}
+        <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-8 md:p-10 mt-12 flex flex-col items-center text-center">
+          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 mb-6">
+            <img src="/jorge-trabalhando.jpg" alt="Jorge Júnior" className="w-full h-full object-cover" />
+          </div>
+          <h4 className="font-headline-md text-2xl text-primary mb-4">Nota Pessoal</h4>
+          <p className="font-body-md text-on-surface-variant text-lg leading-relaxed mb-8 italic max-w-xl">
+            "Sinceramente? Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blinda-la contra esses custos invisíveis, me chama no botão abaixo."
+          </p>
+          <a 
+            href="https://wa.me/5518988183746" 
+            target="_blank" 
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-[0_0_30px_rgba(48,209,88,0.2)] whitespace-nowrap"
+          >
+            Falar com a Plugeefy
+          </a>
         </div>
       </>
     )
