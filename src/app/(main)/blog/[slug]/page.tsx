@@ -155,10 +155,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 Ler mais artigos
               </Link>
             </div>
-          </div>widest">
-                Ler mais artigos
-              </Link>
-            </div>
           </div>
         </article>
       </div>
