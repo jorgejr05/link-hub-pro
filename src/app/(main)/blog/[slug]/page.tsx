@@ -82,6 +82,38 @@ const articlesDB = {
         </div>
       </>
     )
+  },
+  "whatsapp-api-mudanca-precos-outubro-2026": {
+    title: "O fim do chatbot 'tagarela'. Como a mudança de preços do WhatsApp em Outubro de 2026 afeta sua arquitetura.",
+    description: "A Meta mudou as regras do jogo. Pagar por mensagem exige que a sua IA seja cirúrgica, não conversadora.",
+    subtitle: "Seu agente usa 10 mensagens para tirar um pedido? Prepare-se para ver sua margem de lucro desaparecer.",
+    content: (
+      <>
+        <p>Construir sobre terreno alugado tem um preço. Em Outubro de 2026, a Meta implementará sua nova política de custos para o WhatsApp Business API, faturando empresas com base no volume de mensagens disparadas, alterando drasticamente o modelo de custos de conversação livre que ajudou a popularizar a plataforma.</p>
+        <p>A reação imediata do mercado foi de pânico. Muitas empresas pausaram seus projetos de IA no WhatsApp temendo que as interações automatizadas estourassem os caixas. Mas o problema não está no novo preço da Meta. <strong className="text-primary font-semibold">O problema está na forma como o mercado vinha construindo Inteligência Artificial.</strong></p>
+        
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A falácia do bot amigável (e caro)</h3>
+        <p>Até ontem, as empresas aplaudiam seus agentes baseados em LLM que agiam como vendedores prolixos. O bot perguntava "Como você está?", pedia detalhes em múltiplas mensagens, enviava emojis separados, e pedia confirmações constantes. Um pedido simples levava de 8 a 12 transações na API.</p>
+        <p>Nós descobrimos cedo no nosso laboratório que a eficiência arquitetural é o único antídoto contra custos de infraestrutura de terceiros. Quando a Meta passa a cobrar pela volumetria do disparo, a métrica de sucesso da sua automação deixa de ser "quantas conversas o bot teve" e passa a ser "em quantos turnos o problema foi resolvido".</p>
+        
+        <div className="bg-surface-container-lowest border-l-4 border-primary-container p-6 rounded-r-2xl my-8">
+          <p className="text-primary font-semibold">
+            Na nova economia de APIs, ser conciso e contextual não é uma questão de boa experiência de usuário. É uma questão de sobrevivência de margem de lucro.
+          </p>
+        </div>
+        
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">Engenharia orientada a contexto (Zero-Shot Resolution)</h3>
+        <p>É aqui que a infraestrutura que passamos 18 meses construindo brilha. Se o agente robótico tiver integração nativa e em tempo real com o ERP, o CRM e o catálogo de frete, ele não precisa fazer 5 perguntas ao cliente.</p>
+        <p>Ele lê o histórico, reconhece o número, entende a intenção, consulta a base inteira em milissegundos nos bastidores (sem trafegar pelo WhatsApp) e devolve <strong className="text-primary">uma única mensagem definitiva</strong>: a solução, o link de pagamento ou o rastreio.</p>
+        <p>Empresas que tratam IA como "um script de respostas de texto" vão quebrar pagando a conta da Meta. Empresas que tratam IA como uma orquestração de sistemas vão operar de forma mais barata do que nunca.</p>
+
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-sm text-on-surface-variant font-label-md">
+            Fonte sugerida para aprofundamento: <a href="https://developers.facebook.com/docs/whatsapp/pricing/" target="_blank" rel="noreferrer" className="text-primary hover:underline">Meta for Developers - WhatsApp Business Platform Pricing</a>
+          </p>
+        </div>
+      </>
+    )
   }
 };
 

@@ -8,6 +8,13 @@ export const metadata = {
 
 const articles = [
   {
+    slug: "whatsapp-api-mudanca-precos-outubro-2026",
+    title: "O fim do chatbot 'tagarela'. Como a mudança de preços do WhatsApp em Outubro de 2026 afeta sua arquitetura.",
+    date: "31 JUL 2026",
+    readingTime: "5 min de leitura",
+    category: "Infra & Meta",
+  },
+  {
     slug: "o-google-ja-escolhe-empresas-antes-do-cliente-clicar",
     title: "O Google já escolhe empresas antes do cliente clicar. Pouca gente percebeu isso.",
     date: "31 JUL 2026",
