@@ -118,21 +118,18 @@ const articlesDB = {
         </div>
 
         {/* NOTA DO AUTOR E CTA */}
-        <div className="bg-primary/5 border border-primary/20 rounded-[2rem] p-8 md:p-10 mt-12 flex flex-col items-center text-center">
-          <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30 mb-6">
-            <img src="/jorge-trabalhando.jpg" alt="Jorge Júnior" className="w-full h-full object-cover" />
-          </div>
-          <h4 className="font-headline-md text-2xl text-primary mb-4">Nota Pessoal</h4>
-          <p className="font-body-md text-on-surface-variant text-lg leading-relaxed mb-8 italic max-w-xl">
-            "Sinceramente? Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blinda-la contra esses custos invisíveis, me chama no botão abaixo."
+        <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
+          <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
+          <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
+            Sinceramente? Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blindá-la contra esses custos invisíveis, me chama no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-[0_0_30px_rgba(48,209,88,0.2)] whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
           >
-            Falar com a Plugeefy
+            Vamos conversar
           </a>
         </div>
       </>
@@ -160,7 +157,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="w-full min-h-screen bg-background text-on-background font-body-md selection:bg-primary-container/30 selection:text-white pt-24 pb-24 px-margin-mobile md:px-margin-desktop">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         
         {/* BREADCRUMB */}
         <div className="mb-10">
