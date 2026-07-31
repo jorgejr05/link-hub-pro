@@ -142,21 +142,21 @@ const articlesDB = {
         <p>A reação imediata do mercado tem sido de pânico em relação à IA, mas o problema é muito mais profundo. <strong className="text-primary font-semibold">Isso não afeta apenas robôs. Afeta diretamente as operações humanas.</strong> Empresas que usam ferramentas Omnichannel para que múltiplos atendentes respondam via API Oficial vão sofrer o exato mesmo impacto de custo se seus processos de vendas forem tagarelas e ineficientes.</p>
         
         <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A matemática da falência operacional</h3>
-        <p>Vamos olhar para os números frios. Imagine um cenário extremamente comum: uma operação comercial de pequeno a médio porte que atende em média <strong>100 clientes únicos por dia</strong>. Em um mês, são cerca de 3.000 clientes.</p>
-        <p>Seja com IA genérica ou com atendentes humanos prolixos, um atendimento médio de vendas (tirar dúvidas, enviar fotos, cobrar dados) troca tranquilamente entre 20 e 30 mensagens (onde a empresa envia cerca de 15 mensagens). Com a proposta da Meta de cobrar aproximadamente <strong>R$ 0,08 por cada mensagem enviada pela empresa</strong> (substituindo ou estrangulando o modelo antigo por conversa de 24h), a conta se desenha assim:</p>
+        <p>Vamos olhar para os números frios baseados na nova tabela de preços. Imagine uma operação comercial de pequeno a médio porte que atende em média <strong>100 clientes únicos por dia</strong>. Em um mês, são cerca de 3.000 clientes.</p>
+        <p>Seja com IA genérica ou com atendentes humanos prolixos, um atendimento médio de vendas e suporte troca tranquilamente entre 20 e 30 mensagens (onde a empresa envia cerca de 15 mensagens de retorno/utilidade). Com a tabela anunciada pela Meta cobrando <strong>R$ 0,0350 por cada mensagem de Utilidade enviada</strong> (extinguindo a gratuidade infinita dentro da janela de 24h), a conta se desenha assim:</p>
         <div className="bg-surface-container border border-white/10 p-6 md:p-8 rounded-2xl my-8 font-mono text-sm md:text-base">
           <ul className="space-y-4">
             <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Clientes no mês:</span> <span className="text-primary font-bold">3.000</span></li>
             <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Msg enviadas/cliente:</span> <span className="text-primary font-bold">15 msgs</span></li>
             <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Total de envios:</span> <span className="text-primary font-bold">45.000 msgs</span></li>
-            <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Custo por mensagem (Meta):</span> <span className="text-primary font-bold">R$ 0,08</span></li>
+            <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Tarifa por Msg (Utilidade):</span> <span className="text-primary font-bold">R$ 0,0350</span></li>
             <li className="flex flex-col md:flex-row md:items-center justify-between font-bold pt-4 text-lg">
-              <span>Custo mensal APENAS de WhatsApp:</span> 
-              <span className="text-error mt-2 md:mt-0 text-right">R$ 3.600,00</span>
+              <span>Custo mensal APENAS em tarifas:</span> 
+              <span className="text-error mt-2 md:mt-0 text-right">R$ 1.575,00</span>
             </li>
           </ul>
         </div>
-        <p>Esse valor de <strong>R$ 3.600,00</strong> é apenas o "pedágio" bruto da Meta para você conversar com seus clientes (que antes era quase isento dentro da janela de 24h). E isso sem contar a mensalidade do seu ERP, da plataforma Omnichannel e os custos de tokens das APIs de LLM. Uma operação que hoje tem custo fixo controlado passará a ter um rombo variável insustentável.</p>
+        <p>Esse valor de <strong>R$ 1.575,00</strong> é apenas o "pedágio" bruto da Meta para você responder seus próprios clientes, e o valor pode disparar se qualquer mensagem for categorizada como Marketing (R$ 0,32) ou se usar a IA nativa da Meta (R$ 0,23). E isso sem contar a mensalidade do seu ERP, Omnichannel e os custos de processamento do seu próprio LLM. Uma operação que hoje tem custo fixo controlado passará a ter um rombo variável constante.</p>
         
         <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">As 3 Rotas de Fuga Arquiteturais</h3>
         <p>A solução não é abandonar o WhatsApp — o cliente está lá —, mas parar de usá-lo como um terminal burro de chat infinito. No laboratório da Plugeefy, construímos três abordagens arquiteturais reais para blindar nossos clientes:</p>
