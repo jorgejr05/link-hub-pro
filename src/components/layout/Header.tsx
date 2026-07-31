@@ -19,7 +19,7 @@ export function Header() {
               src="/jorge-junior.jpg"
             />
           </div>
-          <span className="font-display-lg text-lg md:text-xl font-bold tracking-tight text-primary">
+          <span className="font-display-lg text-base md:text-lg font-bold tracking-tight text-primary">
             Jorge Jr.
           </span>
         </Link>

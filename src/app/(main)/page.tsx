@@ -11,7 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-8 md:pt-32 overflow-hidden">
+      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-32 pb-8 md:pt-48 overflow-hidden">
         <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           
           {/* HEADER / INTRO */}

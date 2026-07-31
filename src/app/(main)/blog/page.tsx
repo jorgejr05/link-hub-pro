@@ -39,7 +39,7 @@ const articles = [
 
 export default function BlogHub() {
   return (
-    <main className="w-full min-h-screen bg-background text-on-background font-body-md selection:bg-primary-container/30 selection:text-white pt-32 pb-24 px-margin-mobile md:px-margin-desktop">
+    <main className="w-full min-h-screen bg-background text-on-background font-body-md selection:bg-primary-container/30 selection:text-white pt-36 md:pt-48 pb-24 px-margin-mobile md:px-margin-desktop">
       <div className="max-w-4xl mx-auto">
         <header className="mb-16 md:mb-24 text-center md:text-left">
           <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl text-primary uppercase mb-6 leading-tight tracking-tight">
