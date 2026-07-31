@@ -141,48 +141,51 @@ export default function Home() {
 
         <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
           <div className="font-body-md text-base text-on-surface-variant leading-relaxed border-l-2 border-primary/50 pl-6 italic mb-16 md:mb-24">
-            <p>Foi nesse momento que percebemos que o problema nunca foi o atendimento.</p>
-            <p>O problema era a operação inteira.</p>
+            <p>No começo acreditávamos que estávamos construindo um agente.</p>
+            <p>Depois de alguns meses percebemos que o agente era apenas a ponta visível.</p>
+            <p className="font-semibold text-primary">O verdadeiro produto sempre foi a arquitetura.</p>
           </div>
 
           {/* O EFEITO DOMINÓ */}
           <section className="mb-16 md:mb-24">
             <h3 className="font-headline-lg text-2xl text-primary mb-8">Cada resposta revelou uma pergunta ainda maior.</h3>
             
+            <p className="font-body-md text-base text-on-surface-variant leading-relaxed mb-6">
+              Toda vez que resolvíamos um problema, descobríamos outro que estava escondido atrás dele.
+            </p>
+            
             <div className="space-y-4 font-body-md text-on-surface-variant">
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary"></div>
-                <p>Integramos o ERP.</p>
+                <p>Automatizar o atendimento exigiu integrar o ERP.</p>
               </div>
               <div className="pl-1 text-white/20 text-xs">↓</div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary/80"></div>
-                <p>Descobrimos que precisávamos da logística.</p>
+                <p>Integrar o ERP revelou que vender também dependia do cálculo de frete.</p>
               </div>
               <div className="pl-1 text-white/20 text-xs">↓</div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary/60"></div>
-                <p>A logística revelou os pagamentos.</p>
+                <p>O frete nos obrigou a entender pagamentos.</p>
               </div>
               <div className="pl-1 text-white/20 text-xs">↓</div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary/50"></div>
-                <p>Os pagamentos nos levaram ao CRM.</p>
+                <p>Os pagamentos exigiram CRM.</p>
               </div>
               <div className="pl-1 text-white/20 text-xs">↓</div>
               <div className="flex items-center gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary/40"></div>
-                <p>O CRM nos levou aos canais da Meta.</p>
+                <p>O CRM aproximou todos os canais de atendimento.</p>
               </div>
               <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/30"></div>
-                <p>Os canais nos levaram aos LLMs (Modelos de Linguagem).</p>
-              </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/20"></div>
-                <p>Os LLMs nos levaram ao AI Commerce.</p>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary/20"></div>
+                  <p>E, quando tudo finalmente estava conectado, percebemos que o próximo canal já não era mais o WhatsApp.</p>
+                </div>
+                <p className="pl-6 font-medium text-primary">Eram os próprios modelos de IA.</p>
               </div>
             </div>
           </section>
@@ -191,7 +194,7 @@ export default function Home() {
           <section className="mb-12 md:mb-16">
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Uma nova forma de descoberta.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>Enquanto resolvíamos um problema operacional... o comportamento dos consumidores também estava mudando.</p>
+              <p>Enquanto construíamos a arquitetura, o comportamento dos consumidores também estava mudando.</p>
               <p>Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar:</p>
               
               <ul className="pl-6 space-y-2 italic text-on-surface/80 border-l border-white/10 my-6 py-2">
@@ -202,9 +205,12 @@ export default function Home() {
 
               <p>Se a descoberta passaria a acontecer dentro de assistentes inteligentes, nossa infraestrutura também precisava estar preparada para isso.</p>
               
-              <div className="bg-surface-container border border-white/5 p-6 rounded-2xl mt-8">
-                <p className="text-primary font-medium">
-                  Foi nesse momento que a Plugeefy deixou de resolver apenas atendimento. Ela passou a conectar empresas à próxima geração do comércio digital.
+              <div className="bg-surface-container border border-white/5 p-6 md:p-8 rounded-2xl mt-10 text-center">
+                <p className="text-xl md:text-2xl font-headline-lg text-white mb-4">
+                  A Plugeefy nunca foi criada para vender software.
+                </p>
+                <p className="text-primary font-medium text-lg leading-relaxed">
+                  Ela é o laboratório onde investigamos como empresas irão operar na era da Inteligência Artificial.
                 </p>
               </div>
             </div>
@@ -290,77 +296,62 @@ export default function Home() {
         <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
           {/* O PROJETO HOJE */}
           <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Hoje, resolvemos o mesmo problema, só que em outra escala.</h3>
+            <h3 className="font-headline-lg text-2xl text-primary mb-6">Hoje continuamos resolvendo exatamente o mesmo problema do primeiro dia.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>A <strong className="text-primary font-semibold">Plugeefy</strong> conecta ERPs, canais de atendimento, logística, pagamentos, modelos de IA e mecanismos de descoberta semântica em uma única infraestrutura coesa.</p>
-            </div>
-            <div className="mt-8">
-              <a 
-                href="https://plugeefy.site" 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-surface-container border border-white/10 hover:border-primary/50 text-on-surface font-label-md text-xs uppercase tracking-widest rounded-full transition-all"
-              >
-                Ver Projeto Plugeefy
-                <span className="material-symbols-outlined text-[16px]">open_in_new</span>
-              </a>
-            </div>
-          </section>
-
-          {/* TIMELINE (Jornada) */}
-          <section className="mb-24 md:mb-32 border-l border-white/10 pl-6 md:pl-8 space-y-12 py-4">
-            <div className="relative">
-              <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary-container rounded-full"></div>
-              <h4 className="text-sm font-label-caps text-on-surface-variant uppercase tracking-widest mb-4">A Jornada da Arquitetura</h4>
-              <ul className="space-y-3 font-body-md text-on-surface text-base">
-                <li>O Problema</li>
-                <li className="text-white/20">↓</li>
-                <li>O Primeiro Agente</li>
-                <li className="text-white/20">↓</li>
-                <li>A Primeira Integração de ERP</li>
-                <li className="text-white/20">↓</li>
-                <li>O Primeiro Pedido Automatizado</li>
-                <li className="text-white/20">↓</li>
-                <li>O Primeiro Cliente Atendido 24h</li>
-                <li className="text-white/20">↓</li>
-                <li>Homologação Meta Tech Provider</li>
-                <li className="text-white/20">↓</li>
-                <li>O Primeiro Servidor MCP</li>
-                <li className="text-white/20">↓</li>
-                <li>AI Commerce</li>
-              </ul>
-            </div>
-            
-            <div className="relative">
-              <div className="absolute -left-[29px] md:-left-[37px] top-1 w-3 h-3 bg-background border-2 border-primary rounded-full shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]"></div>
-              <h4 className="text-sm font-label-caps text-primary uppercase tracking-widest mb-2">Hoje</h4>
-              <p className="font-body-sm text-on-surface-variant text-sm">Infraestrutura rodando em produção.</p>
+              <p>A diferença é que, em vez de automatizar apenas um atendimento, construímos uma infraestrutura capaz de conectar toda a operação comercial de uma empresa à nova geração da Inteligência Artificial.</p>
+              
+              <div className="pt-6">
+                <p className="mb-4 text-white font-medium">O diferencial nunca foi IA. IA qualquer um chama via API.</p>
+                <p className="mb-4">O difícil de verdade foi orquestrar os bastidores de um negócio em tempo real:</p>
+                
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 font-mono text-[11px] uppercase tracking-widest text-primary/80 mt-6">
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sincronização de Estoque</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Concorrência</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sistemas de Filas</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Webhooks Nativos</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Autenticação</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Compliance LGPD</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Isolamento Multi-tenant</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Criação de Pedidos</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Recuperação de Falhas</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Múltiplos Canais</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Infraestrutura Meta</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Clusters de ERP</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Servidores MCP</div>
+                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sincronização de Catálogo</div>
+                </div>
+              </div>
             </div>
           </section>
 
           {/* CONCLUSÕES */}
           <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que aprendemos construindo em produção.</h3>
+            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que dezoito meses em produção nos ensinaram.</h3>
             
             <div className="space-y-4">
               <div className="border-l-2 border-white/10 pl-4 py-1">
                 <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  IA não resolve processos ruins. Ela apenas acelera o caos.
+                  A IA nunca foi o gargalo. Os dados eram.
                 </p>
               </div>
               <div className="border-l-2 border-white/10 pl-4 py-1">
                 <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  Bons agentes dependem de bons dados.
+                  Modelos mudam todos os meses. Arquiteturas duram anos.
                 </p>
               </div>
               <div className="border-l-2 border-white/10 pl-4 py-1">
                 <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  A inteligência está muito mais na arquitetura do que no modelo.
+                  Automatizar um processo ruim apenas faz o problema acontecer mais rápido.
                 </p>
               </div>
               <div className="border-l-2 border-white/10 pl-4 py-1">
                 <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  A experiência começa antes da IA responder. Ela começa quando todos os sistemas conseguem conversar entre si.
+                  Toda integração parece simples até precisar funcionar às três da manhã de um domingo.
+                </p>
+              </div>
+              <div className="border-l-2 border-white/10 pl-4 py-1">
+                <p className="font-body-md text-on-surface leading-relaxed font-medium">
+                  Quanto mais inteligente o agente, mais importante se torna a qualidade dos dados que ele recebe.
                 </p>
               </div>
             </div>
@@ -368,12 +359,13 @@ export default function Home() {
 
           {/* REFLEXÕES PESSOAIS */}
           <section className="mb-24 md:mb-32 border-t border-white/5 pt-16">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">Notas do Arquiteto</h3>
-            <div className="space-y-6 text-on-surface-variant font-body-md italic border-l-4 border-white/10 pl-6">
-              <p>"Antes eu acreditava que integrar sistemas era a parte difícil. Hoje, acredito que entender o processo de negócio que roda nesses sistemas é muito mais complexo."</p>
-              <p>"Descobri que a IA não veio para substituir pessoas de alto nível. Ela existe para eliminar o atrito entre pessoas e sistemas legados."</p>
-              <p>"A arquitetura certa reduz muito mais custo e dor de cabeça do que simplesmente trocar para o modelo de linguagem mais recente."</p>
-              <p className="pt-4 font-label-md not-italic text-sm text-primary uppercase tracking-widest">— Jorge Júnior</p>
+            <h3 className="font-headline-lg text-2xl text-primary mb-8">Algumas conclusões depois de construir tudo isso.</h3>
+            <div className="space-y-8 text-on-surface-variant font-body-md italic border-l-4 border-white/10 pl-6">
+              <p>"Integrar sistemas nunca foi a parte mais difícil. Difícil é entender o negócio que existe entre eles."</p>
+              <div className="w-12 h-[1px] bg-white/10"></div>
+              <p>"Hoje acredito que IA não substitui profissionais. Ela elimina o atrito entre processos."</p>
+              <div className="w-12 h-[1px] bg-white/10"></div>
+              <p>"A arquitetura certa economiza muito mais dinheiro do que escolher o modelo de linguagem mais recente."</p>
             </div>
           </section>
 
