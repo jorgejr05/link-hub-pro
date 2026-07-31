@@ -209,9 +209,9 @@ const articlesDB = {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = articlesDB[slug as keyof typeof articlesDB];
-  if (!article) return { title: "Artigo não encontrado | Jorge Gomes Jr." };
+  if (!article) return { title: "Artigo não encontrado | Arquiteto de IA | Jorge Jr." };
   return {
-    title: `${article.title} | Jorge Gomes Jr.`,
+    title: `${article.title} | Arquiteto de IA | Jorge Jr.`,
     description: article.description,
   };
 }

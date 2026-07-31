@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Insights & Estratégia | Jorge Gomes Jr.",
+  title: "Arquiteto de IA | Jorge Jr.",
   description: "Artigos e análises sobre o impacto da Inteligência Artificial e Arquitetura de Sistemas nos negócios.",
 };
 
