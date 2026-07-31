@@ -66,7 +66,7 @@ export default function BlogHub() {
                     {article.category}
                   </span>
                   <span className="text-on-surface-variant text-xs font-label-md uppercase tracking-widest opacity-60">
-                    {article.date} • {article.readingTime}
+                    {article.date}
                   </span>
                 </div>
                 <h2 className="font-headline-md text-xl md:text-2xl text-primary font-bold group-hover:text-primary-container transition-colors leading-snug">

@@ -39,7 +39,7 @@ const articlesDB = {
             href="https://wa.me/5518988183746" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
           >
             Vamos conversar
           </a>
@@ -81,7 +81,7 @@ const articlesDB = {
             href="https://wa.me/5518988183746" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
           >
             Vamos conversar
           </a>
@@ -123,7 +123,7 @@ const articlesDB = {
             href="https://wa.me/5518988183746" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
           >
             Vamos conversar
           </a>
@@ -175,7 +175,7 @@ const articlesDB = {
             href="https://wa.me/5518988183746" 
             target="_blank" 
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
           >
             Vamos conversar
           </a>

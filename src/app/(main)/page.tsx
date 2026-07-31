@@ -11,7 +11,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-24 md:pt-32 overflow-hidden">
+      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-8 md:pt-32 overflow-hidden">
         <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           
           {/* HEADER / INTRO */}
@@ -370,7 +370,7 @@ export default function Home() {
           </section>
 
           {/* O NÃO-CTA */}
-          <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col items-center text-center gap-10">
+          <section className="mb-0 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col items-center text-center gap-10">
             <div className="max-w-2xl font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed space-y-6">
               <p>Nós passamos os últimos 18 meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
               <p className="text-primary font-medium">Se você quer e acredita que sua operação também pode evoluir dessa forma, clique no botão abaixo.</p>
@@ -380,7 +380,7 @@ export default function Home() {
                 href={whatsappUrl} 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+                className="inline-flex px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
               >
                 Vamos conversar
               </a>
