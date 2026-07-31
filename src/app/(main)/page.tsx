@@ -195,19 +195,19 @@ export default function Home() {
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Uma nova forma de descoberta.</h3>
             <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
               <p>Enquanto construíamos a arquitetura, o comportamento dos consumidores também estava mudando.</p>
-              <p>Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar:</p>
+              <p>Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar para os modelos de IA e motores de buscas:</p>
               
               <ul className="pl-6 space-y-2 italic text-on-surface/80 border-l border-white/10 my-6 py-2">
                 <li>"Qual creatina vocês recomendam?"</li>
-                <li>"Onde encontro esse medicamento?"</li>
-                <li>"Qual protetor solar é melhor para pele oleosa?"</li>
+                <li>"Onde encontro essa roupa?"</li>
+                <li>"Qual sapato combina com esse modelo de blusa?"</li>
               </ul>
 
               <p>Se a descoberta passaria a acontecer dentro de assistentes inteligentes, nossa infraestrutura também precisava estar preparada para isso.</p>
               
               <div className="bg-surface-container border border-white/5 p-6 md:p-8 rounded-2xl mt-10 text-center">
                 <p className="text-xl md:text-2xl font-headline-lg text-white mb-4">
-                  A Plugeefy nunca foi criada para vender software.
+                  A Plugeefy evoluiu de um simples software para uma infra de crescimento.
                 </p>
                 <p className="text-primary font-medium text-lg leading-relaxed">
                   Ela é o laboratório onde investigamos como empresas irão operar na era da Inteligência Artificial.
@@ -326,7 +326,7 @@ export default function Home() {
 
           {/* CONCLUSÕES */}
           <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que dezoito meses em produção nos ensinaram.</h3>
+            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que 18 meses em produção nos ensinaram.</h3>
             
             <div className="space-y-4">
               <div className="border-l-2 border-white/10 pl-4 py-1">
@@ -372,7 +372,7 @@ export default function Home() {
           {/* O NÃO-CTA */}
           <section className="mb-24 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col items-center text-center gap-10">
             <div className="max-w-2xl font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed space-y-6">
-              <p>Nós passamos os últimos dezoito meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
+              <p>Nós passamos os últimos 18 meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
               <p className="text-primary font-medium">Se você quer e acredita que sua operação também pode evoluir dessa forma, clique no botão abaixo.</p>
             </div>
             <div className="flex flex-col items-center">
