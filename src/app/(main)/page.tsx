@@ -4,7 +4,7 @@ import Link from "next/link";
 const whatsappUrl = "https://wa.me/5518988183746";
 
 export const metadata = {
-  title: "Laboratório de Engenharia | Jorge Gomes Jr.",
+  title: "Arquiteto de IA | Jorge Jr.",
   description: "A Plugeefy nasceu quando estávamos tentando responder uma única pergunta: Como uma empresa pode continuar vendendo quando ninguém está trabalhando?",
 };
 
