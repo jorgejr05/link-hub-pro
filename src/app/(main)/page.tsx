@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-24 pb-24 md:pt-32 overflow-hidden">
-        <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
+        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           
           {/* HEADER / INTRO */}
           <header className="mb-20 md:mb-32">
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
         </div>
 
-        <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
+        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           <div className="font-body-md text-base text-on-surface-variant leading-relaxed border-l-2 border-primary/50 pl-6 italic mb-16 md:mb-24">
             <p>No começo acreditávamos que estávamos construindo um agente.</p>
             <p>Depois de alguns meses percebemos que o agente era apenas a ponta visível.</p>
@@ -293,7 +293,7 @@ export default function Home() {
           </div>
         </div>
 
-        <article className="max-w-3xl mx-auto px-margin-mobile md:px-0">
+        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           {/* O PROJETO HOJE */}
           <section className="mb-24 md:mb-32">
             <h3 className="font-headline-lg text-2xl text-primary mb-6">Hoje continuamos resolvendo exatamente o mesmo problema do primeiro dia.</h3>

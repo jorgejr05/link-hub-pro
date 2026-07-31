@@ -30,13 +30,13 @@ export function Header() {
             href="/"
             className={`transition-colors duration-300 ${pathname === "/" ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
           >
-            Início
+            Jornada
           </Link>
           <Link
             href="/blog"
             className={`transition-colors duration-300 ${pathname.startsWith("/blog") ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
           >
-            Blog
+            Novidades
           </Link>
         </nav>
 
@@ -59,14 +59,14 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
               className={`transition-colors duration-300 ${pathname === "/" ? "text-primary" : "text-on-surface-variant"}`}
             >
-              Início
+              Jornada
             </Link>
             <Link
               href="/blog"
               onClick={() => setIsMenuOpen(false)}
               className={`transition-colors duration-300 ${pathname.startsWith("/blog") ? "text-primary" : "text-on-surface-variant"}`}
             >
-              Blog
+              Novidades
             </Link>
             
             <div className="w-12 h-[1px] bg-white/10 my-4"></div>
