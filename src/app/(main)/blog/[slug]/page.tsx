@@ -28,6 +28,22 @@ const articlesDB = {
             Fonte sugerida para aprofundamento: <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noreferrer" className="text-primary hover:underline">Google Search Central - Entendendo Dados Estruturados</a>
           </p>
         </div>
+
+        {/* NOTA DO AUTOR E CTA */}
+        <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
+          <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
+          <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
+            Sinceramente? Eu via as agências de SEO correndo atrás do próprio rabo há anos, trocando palavras-chave em títulos enquanto a fundação da busca estava mudando completamente. A IA não pesquisa no Google, ela absorve dados. Construir a infraestrutura semântica do seu negócio não é mais um 'plus' de marketing, é a garantia de que as máquinas saibam que a sua empresa existe. Se você sente que a sua empresa está ficando invisível nessa nova era da busca e quer entender como a Plugeefy pode estruturar seus dados para o GEO, me chama no botão abaixo.
+          </p>
+          <a 
+            href="https://wa.me/5518988183746" 
+            target="_blank" 
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+          >
+            Vamos conversar
+          </a>
+        </div>
       </>
     )
   },
@@ -54,6 +70,22 @@ const articlesDB = {
             Fonte sugerida para aprofundamento: <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noreferrer" className="text-primary hover:underline">Anthropic - Model Context Protocol (MCP)</a>
           </p>
         </div>
+
+        {/* NOTA DO AUTOR E CTA */}
+        <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
+          <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
+          <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
+            Sinceramente? Me dá arrepios ver empresas pagando milhares de reais em 'chatbots' que não conseguem nem checar se um produto está no estoque. A verdadeira mágica acontece nos bastidores, quando conectamos o agente diretamente no coração do seu ERP. A IA se torna apenas a interface de comunicação; a inteligência real está na integração fluida dos dados. Se você quer parar de brincar de IA e começar a usar agentes autônomos que realmente vendem, faturam e rastreiam dentro da sua operação, clica no botão abaixo.
+          </p>
+          <a 
+            href="https://wa.me/5518988183746" 
+            target="_blank" 
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+          >
+            Vamos conversar
+          </a>
+        </div>
       </>
     )
   },
@@ -79,6 +111,22 @@ const articlesDB = {
           <p className="text-sm text-on-surface-variant font-label-md">
             Fonte sugerida para aprofundamento: <a href="https://hbr.org/2022/07/how-to-build-a-data-driven-enterprise" target="_blank" rel="noreferrer" className="text-primary hover:underline">Harvard Business Review - The Data-Driven Enterprise</a>
           </p>
+        </div>
+
+        {/* NOTA DO AUTOR E CTA */}
+        <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
+          <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
+          <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
+            Sinceramente? A maioria das empresas acha que Inteligência Artificial é um passe de mágica que vai curar uma operação desorganizada. A realidade é dura: IA burra em cima de um processo quebrado só gera caos automatizado em alta velocidade. No nosso laboratório, a regra é clara: nós arrumamos a casa antes de colocar o robô pra trabalhar nela. Mapeamos os gargalos e criamos a arquitetura limpa que a IA precisa para agir com autonomia segura. Quer entender se a sua empresa está estruturalmente pronta para essa automação inteligente? Me chama no botão abaixo.
+          </p>
+          <a 
+            href="https://wa.me/5518988183746" 
+            target="_blank" 
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white hover:text-black transition-colors shadow-lg whitespace-nowrap"
+          >
+            Vamos conversar
+          </a>
         </div>
       </>
     )
@@ -163,7 +211,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="mb-10">
           <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-label-caps text-on-surface-variant hover:text-primary-container transition-colors uppercase tracking-widest">
             <span className="material-symbols-outlined text-[14px]">arrow_back</span>
-            Voltar para o Blog
+            Voltar
           </Link>
         </div>
 
