@@ -132,32 +132,52 @@ const articlesDB = {
     )
   },
   "whatsapp-api-mudanca-precos-outubro-2026": {
-    title: "Alerta: A mudança de preços do WhatsApp em Outubro vai quebrar automações ineficientes.",
+    title: "Alerta: A mudança de preços do WhatsApp em Outubro vai quebrar operações ineficientes.",
     description: "A Meta mudou as regras do jogo. A partir de Outubro, empresas precisarão remodelar urgentemente sua operação no WhatsApp.",
-    subtitle: "Seu agente usa 10 mensagens para tirar um pedido? Prepare-se para ver sua margem de lucro desaparecer.",
+    subtitle: "Seu time ou seu agente usa 20 mensagens para tirar um pedido? Prepare-se para ver sua margem de lucro desaparecer.",
     content: (
       <>
-        <p>Este é um aviso direto para qualquer operação que dependa de automação no WhatsApp hoje. Em Outubro de 2026, a Meta implementará uma nova política de custos para o WhatsApp Business API. A cobrança passará a penalizar fortemente o volume de mensagens trocadas, alterando drasticamente o modelo que ajudou a popularizar a plataforma corporativa.</p>
+        <p>Este é um aviso direto para qualquer operação que dependa do WhatsApp Business API hoje. Em Outubro de 2026, a Meta implementará uma nova política de custos que passará a penalizar fortemente o <strong>volume de mensagens trafegadas</strong> por empresas. O modelo antigo focado na janela de 24 horas está sendo substituído por cobranças mais agressivas sobre o uso intensivo da rede.</p>
         
-        <p>A reação imediata do mercado tem sido de pânico. Muitas empresas estão pausando seus projetos de IA temendo que as interações automatizadas estourem o orçamento. Mas a verdade é que o problema não está no novo preço da Meta. <strong className="text-primary font-semibold">O problema está na forma amadora como o mercado vinha construindo Inteligência Artificial.</strong></p>
+        <p>A reação imediata do mercado tem sido de pânico em relação à IA, mas o problema é muito mais profundo. <strong className="text-primary font-semibold">Isso não afeta apenas robôs. Afeta diretamente as operações humanas.</strong> Empresas que usam ferramentas Omnichannel para que múltiplos atendentes respondam via API Oficial vão sofrer o exato mesmo impacto de custo se seus processos de vendas forem tagarelas e ineficientes.</p>
         
-        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A urgência de remodelar sua operação</h3>
-        <p>Até ontem, as empresas aplaudiam bots que agiam como vendedores prolixos. O robô perguntava "Como você está?", pedia detalhes em múltiplas mensagens, enviava emojis separados, e pedia confirmações constantes. Um pedido simples levava de 8 a 12 transações na API. Na nova economia da Meta, esse bot "tagarela" se tornará um passivo financeiro insustentável.</p>
-        
-        <div className="bg-surface-container-lowest border-l-4 border-primary-container p-6 rounded-r-2xl my-8">
-          <p className="text-primary font-semibold">
-            Na nova regra do jogo, ser conciso e contextual não é mais uma questão apenas de boa experiência do usuário. É uma questão urgente de sobrevivência da margem de lucro.
-          </p>
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A matemática da falência operacional</h3>
+        <p>Vamos olhar para os números. Imagine um cenário extremamente comum: uma operação comercial de pequeno a médio porte que atende em média <strong>100 clientes únicos por dia</strong>. Em um mês, são cerca de 3.000 clientes.</p>
+        <p>Seja com IA genérica ou com atendentes humanos prolixos, um atendimento médio de vendas (tirar dúvidas, enviar fotos, cobrar dados) troca tranquilamente entre 20 e 30 mensagens (15 enviadas pela empresa). Se considerarmos a cobrança de tráfego que está vindo, a conta se desenha assim:</p>
+        <div className="bg-surface-container border border-white/10 p-6 md:p-8 rounded-2xl my-8 font-mono text-sm md:text-base">
+          <ul className="space-y-4">
+            <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Clientes no mês:</span> <span className="text-primary font-bold">3.000</span></li>
+            <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Msg enviadas/cliente:</span> <span className="text-primary font-bold">~15 msgs</span></li>
+            <li className="flex justify-between items-center border-b border-white/5 pb-3"><span>Total de envios:</span> <span className="text-primary font-bold">45.000 msgs</span></li>
+            <li className="flex flex-col md:flex-row md:items-center justify-between font-bold pt-4 text-lg">
+              <span>Impacto financeiro extra:</span> 
+              <span className="text-error mt-2 md:mt-0 text-right">Milhares de reais evaporando da margem de lucro.</span>
+            </li>
+          </ul>
         </div>
+        <p>Esse custo é apenas o "pedágio" da Meta para você conversar com seu próprio cliente. E isso sem contar a mensalidade do seu ERP, da plataforma Omnichannel e os custos de tokens das APIs de LLM.</p>
         
-        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">Como sanar isso antes de Outubro?</h3>
-        <p>A resposta está na <strong>engenharia orientada a contexto</strong>. Se o seu agente tiver integração nativa e em tempo real com o ERP, o CRM e todo o barramento de dados, ele não precisa fazer dezenas de perguntas ao cliente.</p>
-        <ul className="pl-6 space-y-2 list-disc list-outside text-on-surface-variant my-6 py-2">
-          <li><strong>Leitura de Intenção:</strong> A IA interpreta o contexto em milissegundos sem responder textos descartáveis como "Vou verificar pra você...".</li>
-          <li><strong>Zero-Shot Resolution:</strong> A infraestrutura busca dados cruciais no banco de forma silenciosa e devolve uma <strong className="text-primary">única mensagem definitiva</strong> contendo a solução, os detalhes do produto e o link de pagamento.</li>
-          <li><strong>Agrupamento de Dados:</strong> O envio de faturas, rastreios e respostas vão no mesmo pacote inteligente, reduzindo os disparos de API em até 80%.</li>
-        </ul>
-        <p>Empresas que tratam IA apenas como "um script de respostas" vão quebrar pagando a conta da Meta. Mas aquelas que remodelarem suas automações como uma orquestração de sistemas silenciosa, vão operar de forma mais enxuta e barata do que nunca.</p>
+        <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">As 3 Rotas de Fuga Arquiteturais</h3>
+        <p>A solução não é abandonar o WhatsApp — o cliente está lá —, mas parar de usá-lo como um terminal burro de chat infinito. No laboratório da Plugeefy, construímos três abordagens arquiteturais reais para blindar nossos clientes:</p>
+        
+        <div className="space-y-10 my-10">
+          <div className="border-l-[3px] border-primary-container pl-6 md:pl-8">
+            <h4 className="font-headline-md text-xl md:text-2xl text-primary mb-3">1. Adoção agressiva de WhatsApp Flows</h4>
+            <p className="text-on-surface-variant text-lg leading-relaxed">Em vez de o atendente (ou a IA) enviar 10 mensagens para coletar o nome, CPF, endereço e modelo do produto escolhido, enviamos <strong>apenas uma única mensagem</strong> contendo um Flow nativo. O cliente abre um mini-aplicativo incrivelmente rápido dentro do próprio WhatsApp, preenche os dados visualmente e envia de volta de uma só vez. A transação acontece instantaneamente, o ERP é alimentado e a empresa economiza 90% das chamadas de API.</p>
+          </div>
+          
+          <div className="border-l-[3px] border-primary-container pl-6 md:pl-8">
+            <h4 className="font-headline-md text-xl md:text-2xl text-primary mb-3">2. Chat Web Personalizado (A ponte Off-Meta)</h4>
+            <p className="text-on-surface-variant text-lg leading-relaxed">Quando identificamos que o atendimento será longo ou exigirá uma troca densa (suporte técnico, vendas consultivas, envio de múltiplos PDFs), a primeira mensagem automática do WhatsApp entrega um <strong>link mágico customizado</strong>. Ao clicar, o cliente é levado a uma interface Web com a cara da sua empresa, onde ele continua conversando normalmente com suporte a áudio, imagens e documentos. A grande sacada? Todo o processamento passa a ocorrer na nossa infraestrutura, <strong>anulando 100% dos custos da Meta</strong> independentemente de quantas horas o cliente passar no chat.</p>
+          </div>
+
+          <div className="border-l-[3px] border-primary-container pl-6 md:pl-8">
+            <h4 className="font-headline-md text-xl md:text-2xl text-primary mb-3">3. Otimização de Tokens com Zero-Shot</h4>
+            <p className="text-on-surface-variant text-lg leading-relaxed">Para interações rápidas que de fato devem terminar dentro do WhatsApp, treinamos os agentes de IA usando <em>Zero-Shot Resolution</em>. A IA não pede "um minuto para checar". Ela interpreta a necessidade, roda o código seguro no banco de dados e devolve o catálogo dinâmico, o status logístico e o link de pagamento <strong>em um único disparo cirúrgico</strong>, reduzindo o custo de tokens e da API Oficial ao mesmo tempo.</p>
+          </div>
+        </div>
+
+        <p>Empresas que não atualizarem sua arquitetura de comunicação nos próximos meses vão pagar muito caro por cada "bom dia" que enviarem. A era de jogar dinheiro fora por falta de engenharia acabou.</p>
 
         <div className="mt-8 pt-6 border-t border-white/10">
           <p className="text-sm text-on-surface-variant font-label-md mb-8">
@@ -169,7 +189,7 @@ const articlesDB = {
         <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
           <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
           <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
-            Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blindá-la contra esses custos invisíveis, me chama no botão abaixo.
+            Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. Se você quiser entender como podemos reestruturar a sua operação implementando WhatsApp Flows e nosso Chat Web Proprietário antes de Outubro, blindando sua empresa contra essa quebra iminente de margem, me chama no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
