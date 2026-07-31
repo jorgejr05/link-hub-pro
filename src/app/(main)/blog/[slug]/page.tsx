@@ -33,7 +33,7 @@ const articlesDB = {
         <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
           <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
           <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
-            Sinceramente? Eu via as agências de SEO correndo atrás do próprio rabo há anos, trocando palavras-chave em títulos enquanto a fundação da busca estava mudando completamente. A IA não pesquisa no Google, ela absorve dados. Construir a infraestrutura semântica do seu negócio não é mais um 'plus' de marketing, é a garantia de que as máquinas saibam que a sua empresa existe. Se você sente que a sua empresa está ficando invisível nessa nova era da busca e quer entender como a Plugeefy pode estruturar seus dados para o GEO, me chama no botão abaixo.
+            Eu via as agências de SEO correndo atrás do próprio rabo há anos, trocando palavras-chave em títulos enquanto a fundação da busca estava mudando completamente. A IA não pesquisa no Google, ela absorve dados. Construir a infraestrutura semântica do seu negócio não é mais um 'plus' de marketing, é a garantia de que as máquinas saibam que a sua empresa existe. Se você sente que a sua empresa está ficando invisível nessa nova era da busca e quer entender como a Plugeefy pode estruturar seus dados para o GEO, me chama no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
@@ -75,7 +75,7 @@ const articlesDB = {
         <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
           <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
           <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
-            Sinceramente? Me dá arrepios ver empresas pagando milhares de reais em 'chatbots' que não conseguem nem checar se um produto está no estoque. A verdadeira mágica acontece nos bastidores, quando conectamos o agente diretamente no coração do seu ERP. A IA se torna apenas a interface de comunicação; a inteligência real está na integração fluida dos dados. Se você quer parar de brincar de IA e começar a usar agentes autônomos que realmente vendem, faturam e rastreiam dentro da sua operação, clica no botão abaixo.
+            Me dá arrepios ver empresas pagando milhares de reais em 'chatbots' que não conseguem nem checar se um produto está no estoque. A verdadeira mágica acontece nos bastidores, quando conectamos o agente diretamente no coração do seu ERP. A IA se torna apenas a interface de comunicação; a inteligência real está na integração fluida dos dados. Se você quer parar de brincar de IA e começar a usar agentes autônomos que realmente vendem, faturam e rastreiam dentro da sua operação, clica no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
@@ -117,7 +117,7 @@ const articlesDB = {
         <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
           <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
           <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
-            Sinceramente? A maioria das empresas acha que Inteligência Artificial é um passe de mágica que vai curar uma operação desorganizada. A realidade é dura: IA burra em cima de um processo quebrado só gera caos automatizado em alta velocidade. No nosso laboratório, a regra é clara: nós arrumamos a casa antes de colocar o robô pra trabalhar nela. Mapeamos os gargalos e criamos a arquitetura limpa que a IA precisa para agir com autonomia segura. Quer entender se a sua empresa está estruturalmente pronta para essa automação inteligente? Me chama no botão abaixo.
+            A maioria das empresas acha que Inteligência Artificial é um passe de mágica que vai curar uma operação desorganizada. A realidade é dura: IA burra em cima de um processo quebrado só gera caos automatizado em alta velocidade. No nosso laboratório, a regra é clara: nós arrumamos a casa antes de colocar o robô pra trabalhar nela. Mapeamos os gargalos e criamos a arquitetura limpa que a IA precisa para agir com autonomia segura. Quer entender se a sua empresa está estruturalmente pronta para essa automação inteligente? Me chama no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
@@ -169,7 +169,7 @@ const articlesDB = {
         <div className="mt-16 pt-10 border-t border-white/10 flex flex-col items-start text-left">
           <h4 className="font-headline-md text-2xl text-primary mb-6">Minha visão</h4>
           <p className="font-body-lg text-on-surface-variant text-lg leading-relaxed mb-8">
-            Sinceramente? Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blindá-la contra esses custos invisíveis, me chama no botão abaixo.
+            Eu já esperava esse movimento da Meta. Construir negócios sobre um terreno alugado sempre tem um preço. É por isso que, desde o primeiro dia, estruturamos as arquiteturas no nosso laboratório para serem brutalmente eficientes. O código que desenvolvemos já funciona com 'Zero-Shot Resolution', indo até a base de dados da empresa sem gastar mensagens inúteis. Se você quiser entender como podemos reestruturar a sua operação antes de Outubro e blindá-la contra esses custos invisíveis, me chama no botão abaixo.
           </p>
           <a 
             href="https://wa.me/5518988183746" 
