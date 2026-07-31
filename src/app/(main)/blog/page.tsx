@@ -10,21 +10,21 @@ const articles = [
   {
     slug: "o-google-ja-escolhe-empresas-antes-do-cliente-clicar",
     title: "O Google já escolhe empresas antes do cliente clicar. Pouca gente percebeu isso.",
-    date: "12 AGO 2026",
+    date: "31 JUL 2026",
     readingTime: "4 min de leitura",
     category: "Search & GEO",
   },
   {
     slug: "seu-erp-pode-conversar-com-o-chatgpt",
     title: "Seu ERP pode conversar com o ChatGPT. A maioria das empresas ainda não sabe disso.",
-    date: "05 AGO 2026",
+    date: "25 JUL 2026",
     readingTime: "5 min de leitura",
     category: "Integrações",
   },
   {
     slug: "por-que-projetos-de-ia-fracassam",
     title: "Por que a maioria dos projetos de IA nunca gera retorno financeiro?",
-    date: "28 JUL 2026",
+    date: "18 JUL 2026",
     readingTime: "6 min de leitura",
     category: "Estratégia",
   }
@@ -35,8 +35,7 @@ export default function BlogHub() {
     <main className="w-full min-h-screen bg-background text-on-background font-body-md selection:bg-primary-container/30 selection:text-white pt-32 pb-24 px-margin-mobile md:px-margin-desktop">
       <div className="max-w-4xl mx-auto">
         <header className="mb-16 md:mb-24 text-center md:text-left">
-          <span className="font-label-caps text-xs text-primary-container uppercase tracking-widest mb-4 block">Insights & Estratégia</span>
-          <h1 className="font-headline-xl text-4xl md:text-6xl text-primary uppercase mb-6 leading-tight tracking-tight">
+          <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl text-primary uppercase mb-6 leading-tight tracking-tight">
             Navegando a Nova <br className="hidden md:block" />
             <span className="neon-text">Era dos Sistemas.</span>
           </h1>

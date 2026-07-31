@@ -20,8 +20,14 @@ const articlesDB = {
         </div>
         <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">A morte do SEO tradicional e o nascimento do GEO</h3>
         <p>A otimização de busca (SEO) como conhecíamos está morrendo. O que está nascendo é o <strong>GEO (Generative Engine Optimization)</strong>.</p>
-        <p>O GEO não se importa se a palavra-chave aparece 10 vezes no seu rodapé. Ele se importa com contexto, autoridade e estrutura de dados semânticos (JSON-LD). A IA precisa conseguir "ler" seu catálogo, seus diferenciais e suas respostas técnicas de forma nativa.</p>
-        <p>Se a infraestrutura da sua empresa não estiver preparada e conectada de forma que os LLMs consigam interpretar em tempo real, você será apagado do novo mapa digital.</p>
+        <p>O GEO não se importa se a palavra-chave aparece 10 vezes no seu rodapé. Ele se importa com contexto, autoridade e estrutura de dados semânticos (JSON-LD). A IA precisa conseguir "ler" seu catálogo, seus diferenciais e suas respostas técnicas de forma nativa. O pipeline de RAG (Retrieval-Augmented Generation) dos grandes modelos busca a verdade em dados estruturados, não em textos marqueteiros.</p>
+        <p>Se a infraestrutura da sua empresa não estiver preparada e conectada de forma que os LLMs consigam interpretar em tempo real, você será apagado do novo mapa digital. As empresas que apenas "publicam conteúdo" vão sumir; as que estruturam dados para consumo de máquinas vão herdar todo o tráfego orgânico.</p>
+        
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-sm text-on-surface-variant font-label-md">
+            Fonte sugerida para aprofundamento: <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noreferrer" className="text-primary hover:underline">Google Search Central - Entendendo Dados Estruturados</a>
+          </p>
+        </div>
       </>
     )
   },
@@ -32,16 +38,22 @@ const articlesDB = {
     content: (
       <>
         <p>A maior falácia atual sobre automação corporativa é achar que "alimentar" um PDF de produtos para uma Inteligência Artificial é suficiente para vender online.</p>
-        <p>Quando o estoque muda, o PDF fica defasado. Quando o preço sobe, a IA continua prometendo descontos que não existem. Sem acesso à verdade, a IA não é uma assistente, é uma bomba relógio de passivo comercial.</p>
+        <p>Quando o estoque muda, o PDF fica defasado. Quando o preço sobe, a IA continua prometendo descontos que não existem. Sem acesso à verdade em tempo real, a IA não é uma assistente, é uma bomba relógio de passivo comercial. A verdadeira revolução não está em modelos de linguagem mais inteligentes, mas sim em dar a eles "mãos" para operar seus sistemas internos.</p>
         <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">O poder do Protocolo MCP</h3>
-        <p>Foi aí que o mercado começou a adotar o <strong>Model Context Protocol (MCP)</strong>. Em vez de enviar o dado estático para o modelo, criamos pontes dinâmicas.</p>
-        <p>Quando um cliente no WhatsApp pergunta se tem uma furadeira 220v, o agente (construído com LangGraph) entende a intenção e executa uma "Tool" que vai diretamente no Bling, roda uma query no estoque, confere o saldo real e responde.</p>
+        <p>Foi aí que o mercado começou a adotar o <strong>Model Context Protocol (MCP)</strong> e os frameworks baseados em Agentes Autônomos (como LangChain e LangGraph). Em vez de enviar o dado estático para o modelo, criamos pontes dinâmicas.</p>
+        <p>Quando um cliente no WhatsApp pergunta se tem uma furadeira 220v, o agente entende a intenção e executa uma "Tool" (ferramenta) que vai diretamente no Bling ou SAP, roda uma query SQL ou chamada de API no estoque, confere o saldo real e responde. O agente se torna um micro-funcionário que sabe operar o seu sistema.</p>
         <div className="bg-surface-container-lowest border-l-4 border-primary-container p-6 rounded-r-2xl my-8">
           <p className="text-primary font-semibold">
-            Um ERP que conversa com o ChatGPT transforma uma simples ferramenta de troca de mensagens em um braço operacional de vendas altamente escalável.
+            Um ERP que conversa com o ChatGPT transforma uma simples ferramenta de troca de mensagens em um braço operacional de vendas altamente escalável e infalível.
           </p>
         </div>
-        <p>As integrações modernas não são apenas sobre mover dados do Ponto A ao Ponto B. São sobre fornecer <strong>contexto ao vivo</strong> para que máquinas tomem decisões confiáveis.</p>
+        <p>As integrações modernas não são apenas sobre mover dados do Ponto A ao Ponto B. São sobre fornecer <strong>contexto ao vivo</strong> para que máquinas tomem decisões confiáveis. Uma arquitetura de software sólida é o que separa um chatbot inútil de um verdadeiro braço direito digital.</p>
+
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-sm text-on-surface-variant font-label-md">
+            Fonte sugerida para aprofundamento: <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noreferrer" className="text-primary hover:underline">Anthropic - Model Context Protocol (MCP)</a>
+          </p>
+        </div>
       </>
     )
   },
@@ -51,17 +63,23 @@ const articlesDB = {
     subtitle: "E por que a culpa quase sempre é do processo de negócio e não da tecnologia.",
     content: (
       <>
-        <p>O roteiro clássico do fracasso corporativo moderno: o CEO assiste a uma palestra no Vale do Silício, contrata uma API e pede para a equipe "colocar IA na empresa".</p>
-        <p>Seis meses depois, o projeto consumiu orçamento de infraestrutura, os clientes odeiam o bot genérico e o time humano trabalha dobrado para consertar as alucinações da máquina.</p>
+        <p>O roteiro clássico do fracasso corporativo moderno: o CEO assiste a uma palestra no Vale do Silício, contrata uma API cara e pede para a equipe "colocar IA na empresa para ontem".</p>
+        <p>Seis meses depois, o projeto consumiu um orçamento gigantesco de infraestrutura, os clientes odeiam o bot genérico engessado, e o time humano trabalha dobrado para consertar as alucinações comerciais que a máquina tomou por conta própria.</p>
         <h3 className="font-headline-lg text-2xl text-primary uppercase tracking-tight mt-12 mb-6">IA não conserta processos ruins</h3>
-        <p>Se a sua empresa não tem uma padronização de nomenclatura de produtos, a IA vai errar. Se o seu fluxo logístico exige 4 e-mails para aprovar um desconto, a IA não vai encurtar o tempo de venda — ela só vai mandar os 4 e-mails mais rápido.</p>
+        <p>A dura verdade corporativa: se a sua empresa não tem uma padronização de nomenclatura de produtos (MDM), a IA vai errar. Se o seu fluxo logístico exige 4 e-mails dispersos para aprovar um desconto, a IA não vai encurtar o tempo de venda — ela só vai mandar os 4 e-mails mais rápido, gerando caos escalonado.</p>
         <div className="bg-surface-container-lowest border-l-4 border-primary-container p-6 rounded-r-2xl my-8">
           <p className="text-primary font-semibold">
-            O maior gargalo da Inteligência Artificial hoje é a <strong>Inteligência Humana de Processos</strong>. Você não pode automatizar a desordem.
+            O maior gargalo da Inteligência Artificial hoje é a <strong>Inteligência Humana de Processos</strong>. Você não pode automatizar a desordem sem criar desordem automatizada.
           </p>
         </div>
-        <p>Projetos reais de arquitetura começam mapeando a realidade. Antes de escrever código, você desenha caixas. Onde o dado nasce? Onde ele morre? Quem valida?</p>
+        <p>Projetos reais de arquitetura começam mapeando a realidade. Antes de escrever uma única linha de código em Python ou TypeScript, você desenha caixas de processos de negócios. Onde o dado nasce? Onde ele morre? Quem é o dono dele? Quem o valida? A arquitetura de dados (data lakes limpos vs data swamps caóticos) dita o sucesso do LLM.</p>
         <p>A arquitetura não resolve só onde armazenar o dado, ela resolve como garantir que o agente robótico consiga tomar a decisão comercial com a mesma confiabilidade que um funcionário de 10 anos de casa teria.</p>
+
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-sm text-on-surface-variant font-label-md">
+            Fonte sugerida para aprofundamento: <a href="https://hbr.org/2022/07/how-to-build-a-data-driven-enterprise" target="_blank" rel="noreferrer" className="text-primary hover:underline">Harvard Business Review - The Data-Driven Enterprise</a>
+          </p>
+        </div>
       </>
     )
   }
@@ -132,14 +150,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
             {article.content}
 
-            <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-label-caps tracking-widest text-on-surface-variant">Compartilhe no Instagram</span>
-                  <a href="https://www.instagram.com/ojorge.jr?igsh=MWdvejY1YXZ6aWpiag==" target="_blank" rel="noreferrer" className="text-sm font-label-md text-primary-container hover:text-primary transition-colors">@ojorge.jr</a>
-                </div>
-              </div>
+            <div className="mt-12 pt-8 flex items-center justify-end">
               <Link href="/blog" className="px-6 py-3 rounded-full border border-white/10 hover:bg-white/5 transition-colors text-xs font-label-caps uppercase tracking-widest">
+                Ler mais artigos
+              </Link>
+            </div>
+          </div>widest">
                 Ler mais artigos
               </Link>
             </div>
