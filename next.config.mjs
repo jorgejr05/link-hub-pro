@@ -3,7 +3,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/projeto/farmacia-princesa',
+        source: '/princesa',
         destination: '/farmacia-princesa',
         permanent: true,
       },
