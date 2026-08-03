@@ -411,7 +411,7 @@ export default function FarmaciaPrincesaPitch() {
           <div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">{"Jorge Júnior"}</h2>
             <p className="text-indigo-400 text-sm md:text-base font-bold uppercase tracking-widest mb-8">
-              {"Head de IA e Arquitetura"}
+              {"Arquiteto de soluções em IA"}
             </p>
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
               {"Responsável por liderar a estratégia de Inteligência Artificial, arquitetura tecnológica e evolução contínua, conectando dados, automação e software para posicionar a Farmácia Princesa como "}
