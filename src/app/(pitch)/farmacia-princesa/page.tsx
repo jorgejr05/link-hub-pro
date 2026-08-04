@@ -291,6 +291,66 @@ export default function FarmaciaPrincesaPitch() {
 
       {/* Seção 'O Potencial' deletada para evitar redundância com o Dashboard acima */}
 
+      {/* 04. GOVERNANÇA E REGULAMENTAÇÃO */}
+      <section className="py-24 px-6 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto">
+          
+          <div className="text-center mb-16">
+            <p className="text-indigo-600 text-sm font-bold uppercase tracking-widest mb-4">
+              {"Segurança e Regulamentação"}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight leading-tight">
+              {"O papel da Inteligência Artificial não é substituir o farmacêutico."}
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              {"Os modelos de IA não realizam diagnósticos nem prescrevem medicamentos. Seu papel é compreender a intenção do consumidor, apresentar informações públicas e conectar o usuário a empresas capazes de realizar o atendimento adequado."}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-800 mb-6">
+                {"Arquitetura preparada para operar em conformidade com as diretrizes do setor farmacêutico."}
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Consulta informações oficiais e bulas.",
+                  "Diferencia medicamentos sujeitos à prescrição (RX) dos isentos (MIP).",
+                  "Respeita restrições regulatórias sanitárias e comerciais.",
+                  "Utiliza dados estruturados (Schema.org).",
+                  "Permite descoberta segura em mecanismos de IA.",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="material-symbols-outlined text-indigo-600 text-[14px] font-bold">check</span>
+                    </div>
+                    <span className="text-sm md:text-base text-slate-600 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="flex flex-col justify-center">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                {"Uma camada de governança para IA"}
+              </h3>
+              <p className="text-base text-slate-600 mb-6 leading-relaxed">
+                {"Nossa proposta prepara a Farmácia Princesa para que seus produtos, serviços e informações possam ser compreendidos por esses mecanismos, respeitando as regulamentações vigentes e direcionando o consumidor ao atendimento da equipe farmacêutica quando necessário."}
+              </p>
+              
+              <div className="bg-indigo-600 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 -mr-4 -mt-4 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+                <span className="material-symbols-outlined text-indigo-300 text-3xl mb-4">security</span>
+                <p className="text-sm md:text-base font-medium leading-relaxed">
+                  {"Não estamos automatizando recomendações médicas. Estamos preparando a Farmácia Princesa para ser encontrada quando um consumidor procura, de forma legítima, por produtos, serviços e orientação farmacêutica dentro da nova geração de mecanismos de busca."}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* 05. PROJETO DESCOBERTA */}
       <section className="py-24 px-6 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
