@@ -100,12 +100,12 @@ export default function PerfilPage() {
         </div>
       </section>
 
-      {/* 04. CERTIFICAÇÕES E CURSOS (NOCODE STARTUP) */}
+      {/* 04. DOMÍNIO TÉCNICO E COMPETÊNCIAS */}
       <section className="w-full py-24 px-6 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">Certificações</h2>
+          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">Competências Técnicas</h2>
           <p className="text-on-surface font-body-md text-base md:text-lg max-w-2xl mx-auto">
-            Mais de 35 credenciais oficiais comprovando o domínio em arquiteturas modernas.
+            Mais de 35 credenciais oficiais sintetizadas em capacidades reais de engenharia e negócios.
           </p>
         </div>
 
@@ -117,17 +117,11 @@ export default function PerfilPage() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Inteligência Artificial & Agentes</h3>
-            <ul className="space-y-3 font-body-sm text-sm text-on-surface-variant flex-1">
-              <li>• MasterClass IA & Engenharia de Prompts</li>
-              <li>• Agentes IA Nocode (Fundamentos 2)</li>
-              <li>• Seu Primeiro Agente IA em 30min</li>
-              <li>• Fundamentos Dify (M1)</li>
-              <li>• RAG - Converse com PDF e Planilhas (M2)</li>
-              <li>• Dify Tools - Bancos de Dados e APIs (M3)</li>
-              <li>• Workflows e Agendamento Dify (M4, M5)</li>
-              <li>• Agente Vendedor e Agente SDR</li>
-              <li>• Agente de Voz</li>
-              <li>• Geração Automática de Vídeos UGC</li>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento de arquiteturas RAG (Retrieval-Augmented Generation) para conversar com bases de dados e documentos.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Construção de Agentes Autônomos especializados (SDR, Vendas, Atendimento) com tomada de decisão.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Engenharia de Prompts avançada e orquestração de modelos (LLMs) usando Dify e LangChain.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Implementação de agentes conversacionais de voz e automação de vídeos UGC (User-Generated Content).</li>
             </ul>
           </div>
 
@@ -137,17 +131,11 @@ export default function PerfilPage() {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Automação & Backend</h3>
-            <ul className="space-y-3 font-body-sm text-sm text-on-surface-variant flex-1">
-              <li>• Fundamentos N8N</li>
-              <li>• Sua Primeira Automação (N8N)</li>
-              <li>• Multi Agentes - Cases Essenciais</li>
-              <li>• O Poder das APIs - Fundamentos Essenciais</li>
-              <li>• Converse com Banco de Dados e APIs - Tools</li>
-              <li>• Hacks para Chats com IA (N8N)</li>
-              <li>• API Instagram (Agente Direct/Comentários)</li>
-              <li>• API Não Oficial (Agente Whatsapp)</li>
-              <li>• Policies Avançadas no Supabase - RLS</li>
-              <li>• Gerenciando Pagamentos N8N / Supabase</li>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Orquestração de APIs e automação de fluxos de dados complexos em larga escala utilizando n8n.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Arquitetura e modelagem de banco de dados relacionais (PostgreSQL / Supabase).</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Implementação de segurança avançada através de Row Level Security (RLS) e permissões granulares.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Automação completa de pagamentos, cobranças financeiras e integrações nativas com WhatsApp/Instagram.</li>
             </ul>
           </div>
 
@@ -156,18 +144,12 @@ export default function PerfilPage() {
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Software & Mobile (FlutterFlow)</h3>
-            <ul className="space-y-3 font-body-sm text-sm text-on-surface-variant flex-1">
-              <li>• Fundamentos Desen. de Software (F1.3)</li>
-              <li>• Fundamentos Desen. de Produtos (F1.2)</li>
-              <li>• Fundamentos FlutterFlow - Design e Backend</li>
-              <li>• Zero ao App - Aplicativo de Finanças</li>
-              <li>• Meu Primeiro Super App (App dos Sonhos)</li>
-              <li>• App de Agendamento - Operações com Datas</li>
-              <li>• Geração de PDF e Publicação nas Lojas</li>
-              <li>• Pagamentos Supabase + Flutterflow</li>
-              <li>• Plano de Estudos FF</li>
-              <li>• MasterClass NoCode</li>
+            <h3 className="text-xl font-bold text-white mb-4">Software & Mobile</h3>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento Full-Stack de aplicativos móveis e sistemas web complexos utilizando FlutterFlow.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Integração fluida entre design de interfaces (UI/UX) imersivas e lógicas de backend (BaaS).</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Criação de arquiteturas modulares voltadas a alta performance, escalabilidade e manutenibilidade.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Processo ponta a ponta: do levantamento de requisitos de produto até a geração de builds e publicação nas Lojas.</li>
             </ul>
           </div>
 
