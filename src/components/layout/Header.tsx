@@ -52,6 +52,12 @@ export function Header() {
               Perfil
             </Link>
             <Link
+              href="/projetos"
+              className={`transition-colors duration-300 ${pathname.startsWith("/projetos") ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
+            >
+              Projetos
+            </Link>
+            <Link
               href="/"
               className={`transition-colors duration-300 ${pathname === "/" ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
             >
@@ -85,6 +91,13 @@ export function Header() {
                 className={`transition-colors duration-300 ${pathname.startsWith("/perfil") ? "text-primary" : "text-on-surface-variant"}`}
               >
                 Perfil
+              </Link>
+              <Link
+                href="/projetos"
+                onClick={() => setIsMenuOpen(false)}
+                className={`transition-colors duration-300 ${pathname.startsWith("/projetos") ? "text-primary" : "text-on-surface-variant"}`}
+              >
+                Projetos
               </Link>
               <Link
                 href="/"
