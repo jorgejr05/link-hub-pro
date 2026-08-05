@@ -34,14 +34,14 @@ export default function PerfilPage() {
           </p>
         </div>
 
-        <div className="relative border-l border-white/10 ml-4 md:ml-[50%] md:-translate-x-px space-y-12 pb-12">
+        <div className="relative border-l border-white/10 ml-4 md:ml-8 lg:ml-12 space-y-12 pb-12">
           
           {/* 2023 */}
-          <div className="relative pl-8 md:pl-0 md:w-full md:-ml-full md:pr-[calc(100%+2rem)] md:text-right group">
-            <div className="absolute top-0 left-[-5px] md:right-[calc(100%-5px)] md:left-auto w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-[#0a0a0b]"></div>
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-[#0a0a0b]"></div>
             <div className="text-primary font-label-sm uppercase tracking-widest mb-2">Início de 2023</div>
             <h3 className="text-xl font-bold text-white mb-2">O Front-End e o Mercado Digital</h3>
-            <p className="text-on-surface font-body-sm leading-relaxed text-sm">
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
               O início da jornada. Criação de Landing Pages, VSLs e sites de alta performance para a venda de infoprodutos como afiliado, onde o foco em conversão e resultados ditava a regra.
             </p>
           </div>
@@ -51,17 +51,17 @@ export default function PerfilPage() {
             <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-[#0a0a0b] group-hover:bg-primary transition-colors"></div>
             <div className="text-on-surface-variant group-hover:text-primary transition-colors font-label-sm uppercase tracking-widest mb-2">2023 - 2024</div>
             <h3 className="text-xl font-bold text-white mb-2">Engenharia e Low-Code</h3>
-            <p className="text-on-surface font-body-sm leading-relaxed text-sm">
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
               A necessidade de estruturas mais robustas levou a um aprofundamento técnico. A entrada no desenvolvimento de software tradicional e no low-code (com FlutterFlow) permitiu escalar a complexidade das soluções entregues.
             </p>
           </div>
 
           {/* Final 2024 */}
-          <div className="relative pl-8 md:pl-0 md:w-full md:-ml-full md:pr-[calc(100%+2rem)] md:text-right group">
-            <div className="absolute top-0 left-[-5px] md:right-[calc(100%-5px)] md:left-auto w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-[#0a0a0b] group-hover:bg-primary transition-colors"></div>
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-[#0a0a0b] group-hover:bg-primary transition-colors"></div>
             <div className="text-on-surface-variant group-hover:text-primary transition-colors font-label-sm uppercase tracking-widest mb-2">Final de 2024</div>
             <h3 className="text-xl font-bold text-white mb-2">O Boom dos Agentes Autônomos</h3>
-            <p className="text-on-surface font-body-sm leading-relaxed text-sm">
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
               Imersão profunda na nova geração de aplicações. Integração de ecossistemas com n8n, Dify e LLMs, consolidando uma vasta base de certificações em Inteligência Artificial e automação extrema.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function PerfilPage() {
             <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-[#0a0a0b] shadow-[0_0_15px_rgba(202,243,0,0.5)]"></div>
             <div className="text-primary font-label-sm uppercase tracking-widest mb-2">Atualmente</div>
             <h3 className="text-xl font-bold text-white mb-2">Engenharia de Software (FIAP)</h3>
-            <p className="text-on-surface font-body-sm leading-relaxed text-sm">
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
               Cursando o 2º ciclo de Engenharia de Software pela FIAP. O objetivo é coroar a bagagem técnica, as certificações e a experiência prática com uma base acadêmica sólida, formando-se como Engenheiro de Software.
             </p>
           </div>
