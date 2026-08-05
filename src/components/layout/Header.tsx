@@ -46,6 +46,12 @@ export function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 font-label-md text-sm uppercase tracking-widest">
             <Link
+              href="/perfil"
+              className={`transition-colors duration-300 ${pathname.startsWith("/perfil") ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
+            >
+              Perfil
+            </Link>
+            <Link
               href="/"
               className={`transition-colors duration-300 ${pathname === "/" ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
             >
@@ -73,6 +79,13 @@ export function Header() {
           {/* Mobile Dropdown Menu */}
           <div className={`absolute top-0 left-0 w-full bg-[#0a0a0b] border-b border-white/10 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden flex flex-col md:hidden z-40 ${isMenuOpen ? "max-h-[400px] py-24 opacity-100 shadow-2xl" : "max-h-0 py-0 opacity-0 pointer-events-none"}`}>
             <nav className="flex flex-col items-center gap-6 font-label-md text-sm uppercase tracking-widest">
+              <Link
+                href="/perfil"
+                onClick={() => setIsMenuOpen(false)}
+                className={`transition-colors duration-300 ${pathname.startsWith("/perfil") ? "text-primary" : "text-on-surface-variant"}`}
+              >
+                Perfil
+              </Link>
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
