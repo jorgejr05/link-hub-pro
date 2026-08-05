@@ -115,11 +115,16 @@ export default function PerfilPage() {
           <div className="bg-surface border border-white/5 rounded-2xl p-8 flex flex-col h-full hover:border-primary/20 transition-colors">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                <path d="M5 3v4"/>
-                <path d="M19 17v4"/>
-                <path d="M3 5h4"/>
-                <path d="M17 19h4"/>
+                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                <path d="M15 2v2"/>
+                <path d="M15 20v2"/>
+                <path d="M2 15h2"/>
+                <path d="M2 9h2"/>
+                <path d="M20 15h2"/>
+                <path d="M20 9h2"/>
+                <path d="M9 2v2"/>
+                <path d="M9 20v2"/>
               </svg>
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Inteligência Artificial & Agentes</h3>
