@@ -139,7 +139,7 @@ export default function PerfilPage() {
             <div className="text-on-surface-variant group-hover:text-primary transition-colors font-label-sm uppercase tracking-widest mb-2">2023 - 2024</div>
             <h3 className="text-xl font-bold text-white mb-2">Engenharia e Low-Code</h3>
             <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
-              A necessidade de estruturas mais robustas levou a um aprofundamento técnico. A entrada no desenvolvimento de software tradicional e no low-code (com FlutterFlow) permitiu escalar a complexidade das soluções entregues.
+              A necessidade de estruturas mais robustas levou a um aprofundamento técnico. A entrada no desenvolvimento de software tradicional e no low-code permitiu escalar a complexidade das soluções entregues.
             </p>
           </div>
 
