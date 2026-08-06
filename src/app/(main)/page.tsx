@@ -91,7 +91,7 @@ export default function PerfilPage() {
           <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8 min-h-[1.5em]">
             {stage >= 1 && (
               <Typewriter 
-                text="Arquiteto de IA & Engenheiro de Software" 
+                text="Arquiteto de Soluções em IA" 
                 delay={40} 
                 onComplete={() => setStage(2)} 
                 showCursor={stage === 1}
@@ -225,7 +225,7 @@ export default function PerfilPage() {
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Software & Mobile</h3>
             <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
-              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento Full-Stack de aplicativos móveis e sistemas web complexos utilizando FlutterFlow.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento Full-Stack de aplicativos móveis e sistemas web complexos.</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Integração fluida entre design de interfaces (UI/UX) imersivas e lógicas de backend (BaaS).</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Criação de arquiteturas modulares voltadas a alta performance, escalabilidade e manutenibilidade.</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Processo ponta a ponta: do levantamento de requisitos de produto até a geração de builds e publicação nas Lojas.</li>
