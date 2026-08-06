@@ -79,7 +79,7 @@ export default function PerfilPage() {
         {/* Texto (Aparece em baixo no Mobile -> order-2, Lado Esquerdo no Desktop -> order-1) */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1 relative z-10 -mt-12 md:mt-0">
           
-          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 min-h-[1.2em]">
+          <h1 className="font-headline-xl text-4xl md:text-5xl lg:text-6xl uppercase font-bold tracking-tight text-white mb-6 min-h-[1.2em] leading-tight">
             <Typewriter 
               text="Jorge Jr." 
               delay={80} 

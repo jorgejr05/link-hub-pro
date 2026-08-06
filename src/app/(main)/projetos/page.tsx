@@ -11,7 +11,7 @@ export default function ProjetosHubPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
         
         <div className="relative z-10 max-w-4xl flex flex-col items-center">
-          <h1 className="font-display-lg text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl uppercase font-bold tracking-tight text-white mb-6 leading-tight">
             Engenharia e Arquitetura<br className="hidden md:block"/> Aplicadas a Problemas Reais.
           </h1>
           <p className="text-on-surface-variant text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl">
