@@ -1,47 +1,121 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
+
+// Simple Typewriter component
+function Typewriter({ 
+  text, 
+  delay = 30, 
+  startDelay = 0, 
+  className,
+  onComplete,
+  showCursor = true
+}: { 
+  text: string, 
+  delay?: number, 
+  startDelay?: number, 
+  className?: string,
+  onComplete?: () => void,
+  showCursor?: boolean
+}) {
+  const [displayedText, setDisplayedText] = useState("");
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
+
+  useEffect(() => {
+    const startTimer = setTimeout(() => setStarted(true), startDelay);
+    return () => clearTimeout(startTimer);
+  }, [startDelay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(text.substring(0, i + 1));
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        setFinished(true);
+        if (onComplete) onComplete();
+      }
+    }, delay);
+    return () => clearInterval(interval);
+  }, [text, delay, started]);
+
+  return (
+    <span className={className}>
+      {displayedText}
+      {showCursor && !finished && <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle animate-pulse"></span>}
+    </span>
+  );
+}
 
 export default function PerfilPage() {
+  const [stage, setStage] = useState(0);
+
   return (
     <main className="w-full flex-1 flex flex-col items-center">
       
-      {/* 01. HERO */}
-      <section className="w-full min-h-[70vh] py-24 md:py-32 px-6 relative flex flex-col items-center justify-center text-center mt-10">
+      {/* 01. HERO (Layout lado a lado no Desktop, Imagem acima no Mobile) */}
+      <section className="w-full max-w-7xl mx-auto py-24 md:py-32 px-6 flex flex-col md:flex-row items-center justify-between gap-12 mt-10">
         
-        {/* Imagem de Fundo (Jorge) fundida com a tela */}
-        <div className="fixed inset-0 z-0 pointer-events-none flex justify-center items-start">
+        {/* Imagem (Aparece primeiro no Mobile -> order-1, Lado Direito no Desktop -> order-2) */}
+        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2 relative">
+          {/* Background glow sutil atrás da imagem */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/10 rounded-full blur-[80px] pointer-events-none mix-blend-screen -z-10"></div>
+          
           <div 
-            className="w-full max-w-[400px] md:max-w-[600px] h-[60vh] md:h-[80vh] mt-24 md:mt-12 opacity-40 md:opacity-30"
+            className="w-full max-w-[400px] md:max-w-[500px] aspect-[3/4] opacity-90"
             style={{
               backgroundImage: "url('/jorge-bg.jpg')",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
               backgroundPosition: "center top",
-              maskImage: "radial-gradient(ellipse at center 45%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)",
-              WebkitMaskImage: "radial-gradient(ellipse at center 45%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)"
+              maskImage: "radial-gradient(ellipse at center 40%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center 40%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)"
             }}
           ></div>
         </div>
         
-        {/* Background glow sutíl */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
-        
-        <div className="relative z-10 max-w-3xl flex flex-col items-center mt-32 md:mt-40">
-          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
-            Jorge Jr.
+        {/* Texto (Aparece em baixo no Mobile -> order-2, Lado Esquerdo no Desktop -> order-1) */}
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1 relative z-10">
+          
+          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 min-h-[1.2em]">
+            <Typewriter 
+              text="Jorge Jr." 
+              delay={80} 
+              onComplete={() => setStage(1)} 
+              showCursor={stage === 0}
+            />
           </h1>
-          <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8 drop-shadow-[0_0_10px_rgba(0,0,0,1)]">
-            Arquiteto de IA & Engenheiro de Software
+          
+          <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8 min-h-[1.5em]">
+            {stage >= 1 && (
+              <Typewriter 
+                text="Arquiteto de IA & Engenheiro de Software" 
+                delay={40} 
+                onComplete={() => setStage(2)} 
+                showCursor={stage === 1}
+              />
+            )}
           </p>
-          <p className="text-on-surface text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl drop-shadow-[0_0_10px_rgba(0,0,0,1)]">
-            Unindo engenharia de software e inteligência artificial para construir ecossistemas escaláveis. De interfaces imersivas a agentes autônomos que resolvem problemas reais de negócios.
+          
+          <p className="text-on-surface text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl min-h-[4em]">
+            {stage >= 2 && (
+              <Typewriter 
+                text="Unindo engenharia de software e inteligência artificial para construir ecossistemas escaláveis. De interfaces imersivas a agentes autônomos que resolvem problemas reais de negócios." 
+                delay={20} 
+                showCursor={stage === 2}
+              />
+            )}
           </p>
+          
         </div>
       </section>
 
       {/* 02. TIMELINE (A JORNADA) */}
       <section className="w-full py-20 px-6 max-w-5xl">
         <div className="text-center mb-16">
-          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">A Trajetória</h2>
+          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">Trajetória</h2>
           <p className="text-on-surface font-body-md text-base md:text-lg max-w-2xl mx-auto">
             A evolução contínua da criação visual para a engenharia de dados e autonomia.
           </p>
