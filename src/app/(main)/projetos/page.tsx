@@ -28,17 +28,9 @@ export default function ProjetosHubPage() {
             <div key={idx} className="bg-surface border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col group hover:border-white/10 hover:shadow-2xl hover:shadow-black/50 transition-all duration-300">
               
               {/* Header do Card */}
-              <div className="flex items-start justify-between mb-6">
-                <div className={`w-14 h-14 rounded-2xl ${project.bg} flex items-center justify-center flex-shrink-0`}>
-                  <span className={`material-symbols-outlined text-3xl ${project.color}`}>{project.icon}</span>
-                </div>
-                <div className="flex flex-col items-end gap-2">
-                  <div className="bg-[#111113] border border-white/5 px-3 py-1.5 rounded-full">
-                    <span className="text-xs font-label-sm text-on-surface uppercase tracking-wider">{project.tag}</span>
-                  </div>
-                  <div className="text-xs font-medium text-on-surface-variant opacity-70">
-                    {project.dateStart} - {project.dateLastDeploy}
-                  </div>
+              <div className="flex items-start justify-end mb-4">
+                <div className="text-[10px] font-medium text-on-surface-variant opacity-70 uppercase tracking-widest">
+                  {project.dateStart} - {project.dateLastDeploy}
                 </div>
               </div>
 
@@ -49,26 +41,25 @@ export default function ProjetosHubPage() {
 
               <div className="space-y-6 flex-1">
                 {/* A Dor Resumida */}
-                <div className="bg-[#0a0a0b] border border-white/5 rounded-2xl p-6 relative overflow-hidden h-full">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500/20"></div>
-                  <h3 className="text-sm font-label-md uppercase tracking-widest text-red-400 mb-3 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[16px]">warning</span>
+                <div className="bg-[#0a0a0b] border border-white/5 rounded-xl p-4 relative overflow-hidden h-full">
+                  <div className="absolute left-0 top-0 bottom-0 w-[2px] bg-red-500/30"></div>
+                  <h3 className="text-[10px] font-label-sm uppercase tracking-widest text-red-400 mb-2 flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-[14px]">warning</span>
                     O Problema Central
                   </h3>
-                  <p className="text-on-surface text-sm font-body-md leading-relaxed">
+                  <p className="text-on-surface text-sm font-body-sm leading-relaxed">
                     {project.shortPain}
                   </p>
                 </div>
               </div>
 
               {/* Botão de Ver Estudo */}
-              <div className="mt-8 pt-6">
+              <div className="mt-6">
                 <Link 
                   href={`/projetos/${project.slug}`}
-                  className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-xl transition-colors duration-300 group-hover:border-primary/50"
+                  className="w-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold uppercase tracking-widest text-[10px] px-4 py-3 rounded-lg transition-colors duration-300 group-hover:border-primary/50"
                 >
                   VER JORNADA
-                  <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
               </div>
 

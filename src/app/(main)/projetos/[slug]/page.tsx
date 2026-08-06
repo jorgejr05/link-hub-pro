@@ -29,7 +29,7 @@ export default async function ProjectJornadaPage({
             className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-sm font-label-md uppercase tracking-widest"
           >
             <span className="material-symbols-outlined text-[18px]">arrow_back</span>
-            Voltar ao Hub
+            Voltar
           </Link>
         </div>
 
