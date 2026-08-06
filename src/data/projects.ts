@@ -104,7 +104,7 @@ export const projectsData: Project[] = [
   },
   {
     slug: "gestao-de-entregas",
-    title: "Gestão de Entregas (Speedy Chain)",
+    title: "Gestão de Entregas",
     subtitle: "Ecossistema de vitrine e despacho local",
     dateStart: "Out/2025",
     dateLastDeploy: "Mai/2026",
@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     bg: "bg-emerald-500/10",
     shortPain: "Taxas abusivas dos grandes apps e gestão caótica de frotas próprias.",
     
-    heroTitle: "O Speedy Chain nasceu de uma indignação operacional comum no varejo alimentício.",
+    heroTitle: "O Gestão de Entregas nasceu de uma indignação operacional comum no varejo alimentício.",
     heroSubtitle: "Como libertar lojistas das taxas de 27% dos grandes marketplaces sem destruir a logística de entrega?",
     
     problemTitle: "Tudo começou com um problema simples.",
@@ -144,7 +144,7 @@ export const projectsData: Project[] = [
       "Em cidades médias, os consumidores precisam de um agregador local para encontrar as opções.",
       "Foi aí que o sistema evoluiu para um modelo de Marketplace Próprio Regional, onde o lojista não paga comissão por venda, mas usufrui de uma malha logística unificada."
     ],
-    climaxHighlightTitle: "O Speedy Chain se tornou uma infraestrutura de independência.",
+    climaxHighlightTitle: "O Gestão de Entregas se tornou uma infraestrutura de independência.",
     climaxHighlightText: "Um motor que orquestra pedidos, despachos e marketing sem extorquir a margem de lucro do empreendedor local.",
     
     techGrid: [
@@ -158,116 +158,6 @@ export const projectsData: Project[] = [
       "Lidar com dinheiro físico na entrega exige fechamento de caixa milimétrico no sistema.",
       "O cliente perdoa erro no pedido, mas não perdoa demora na entrega.",
       "Arquiteturas de tempo real (WebSockets) são obrigatórias quando o pão de alho esfria."
-    ]
-  },
-  {
-    slug: "roteirizador-delivery",
-    title: "Sistema Logístico Delivery",
-    subtitle: "Roteirização inteligente e acerto financeiro",
-    dateStart: "Mar/2026",
-    dateLastDeploy: "Mar/2026",
-    liveUrl: "https://roterizadorai.vercel.app/",
-    tag: "Algoritmos & Logística",
-    icon: "route",
-    color: "text-orange-400",
-    bg: "bg-orange-500/10",
-    shortPain: "Gestão manual de motoboys e rotas resultando em atrasos e furos no caixa.",
-    
-    heroTitle: "O Roteirizador nasceu observando o desespero de um despachante às 20h de sábado.",
-    heroSubtitle: "Como uma mente humana pode agrupar 40 pedidos e dividir para 10 entregadores simultaneamente?",
-    
-    problemTitle: "Tudo começou com uma prancheta de papel.",
-    problemParagraphs: [
-      "Nas grandes lanchonetes locais, pedidos chegam por WhatsApp, telefone e iFood ao mesmo tempo.",
-      "O despachante olha para os pacotes na mesa e precisa decidir: qual motoboy leva o pedido do bairro A junto com o bairro B? E se o motoboy 3 acabou de chegar e está na vez?",
-      "Isso gerava viagens ineficientes (motoboys cruzando a cidade inteira com um único lanche) e pior: o fechamento financeiro no final da noite demorava 2 horas para conferir quem recebeu quanto em dinheiro, cartão ou pix."
-    ],
-    
-    dominoTitle: "O efeito cascata da roteirização.",
-    dominoSubtitle: "Resolver apenas a rota não fechava a conta final da noite.",
-    dominoSteps: [
-      "Criar rotas exigiu integrar os pedidos automaticamente do iFood.",
-      "Agrupar por bairros exigiu uma API de geolocalização e raio geográfico.",
-      "Distribuir justamente exigiu criar uma fila (roleta) de motoboys.",
-      "O motoboy aceitar a corrida exigiu registrar o valor exato da taxa de entrega.",
-      "Taxas de entrega variadas exigiram um cofre digital por entregador."
-    ],
-    dominoConclusion: "O software de rota virou um sistema bancário de acerto de contas.",
-    
-    climaxTitle: "A otimização em fração de segundos.",
-    climaxParagraphs: [
-      "Implementamos um motor lógico que consolida a volumetria da noite.",
-      "Ao invés de despachar lanches um a um, o sistema encontra os nós (pontos de entrega) mais próximos num mapa, junta os pedidos e emite o romaneio completo.",
-      "O dono do restaurante e os motoboys passaram a ir embora 1 hora mais cedo, com a tranquilidade de que os números sempre batiam."
-    ],
-    climaxHighlightTitle: "De roteador de mapas para controlador de fluxo de caixa.",
-    climaxHighlightText: "Um algoritmo que maximiza a taxa/hora do entregador e zera os erros contábeis do estabelecimento.",
-    
-    techGrid: [
-      "Algoritmos de Agrupamento", "Integração API iFood", "Contabilidade Realtime", "Filas Virtuais",
-      "React", "TypeScript", "Dashboard Financeiro", "Gestão de Turnos"
-    ],
-    
-    learningsTitle: "O que o chão de fábrica nos ensinou.",
-    learnings: [
-      "O algoritmo mais avançado do mundo é inútil se a impressora térmica da cozinha falhar.",
-      "Interfaces para motoboys devem operar em 'dark mode' para economizar bateria e não ofuscar à noite.",
-      "A confiança no sistema vem quando o motoboy confere o saldo na tela e bate centavo por centavo com o bolso dele."
-    ]
-  },
-  {
-    slug: "ju-ai",
-    title: "JUAI 2026",
-    subtitle: "Sua assistente de mente, rotina e finanças",
-    dateStart: "Mar/2026",
-    dateLastDeploy: "Mai/2026",
-    liveUrl: "https://ju-ai2026.vercel.app/",
-    tag: "IA Humanizada",
-    icon: "psychology",
-    color: "text-purple-400",
-    bg: "bg-purple-500/10",
-    shortPain: "Múltiplos aplicativos de produtividade gerando mais estresse e pouca consistência.",
-    
-    heroTitle: "A JUAI nasceu quando percebemos que planilhas e trackers não mudam comportamentos.",
-    heroSubtitle: "Como construir uma inteligência que age não como software, mas como parceira diária?",
-    
-    problemTitle: "A fadiga dos aplicativos.",
-    problemParagraphs: [
-      "As pessoas usam Notion para notas, planilhas para finanças e apps coloridos para hábitos.",
-      "A fricção de abrir o app certo, preencher o dado e fechar quebrava o momento. A motivação acabava na primeira semana de janeiro.",
-      "Mais do que 'anotar', faltava cobrança. Faltava alguém, não algo, para dizer: 'Você prometeu que ia treinar hoje de manhã. Tá de pé?'"
-    ],
-    
-    dominoTitle: "A humanização da máquina.",
-    dominoSubtitle: "Tornar a IA proativa exigiu repensar toda a estrutura de prompts e memória.",
-    dominoSteps: [
-      "Para ser uma assistente útil, a IA precisou de uma memória de longo prazo.",
-      "Lembrar do que o usuário falou exigiu bancos de dados vetoriais (Embeddings).",
-      "Ser proativa exigiu rotinas autônomas e triggers baseados em tempo (CRON).",
-      "Agir sobre as finanças exigiu que a IA calculasse o Saldo Livre (deduzindo despesas fixas).",
-      "Ser natural obrigou a saída do texto e a adoção maciça de Voz (Hands-free)."
-    ],
-    dominoConclusion: "O objetivo era remover a interface da frente do relacionamento humano-máquina.",
-    
-    climaxTitle: "A quebra das grandes metas em microrrotinas.",
-    climaxParagraphs: [
-      "Descobrimos que a JUAI brilhava não quando gerava um plano anual enorme, mas quando focava no micro.",
-      "Se o usuário quisesse ler 12 livros no ano, a JUAI cobrava apenas a meta diária palpável: 10 páginas antes de dormir.",
-      "Esse ecossistema fechado (metas, hábitos, dinheiro, calendário) operado apenas por conversa redefiniu a forma como interagimos com as nossas obrigações."
-    ],
-    climaxHighlightTitle: "Mais humanizada. Mais focada. Mais presente.",
-    climaxHighlightText: "A JUAI não é um aplicativo que você abre. É um ecossistema com o qual você convive.",
-    
-    techGrid: [
-      "LLM Fine-tuning", "Processamento de Voz", "Vector Databases", "Embeddings",
-      "Animações CSS Avançadas", "Microinterações de UX", "Gestão de Estado Complexa", "Arquitetura Proativa"
-    ],
-    
-    learningsTitle: "O que a Inteligência Pessoal nos ensinou.",
-    learnings: [
-      "O tom de voz de uma IA muda brutalmente como o usuário absorve uma crítica ou cobrança.",
-      "Digitar é lento e cognitivamente exaustivo. Voz é o futuro da interface de entrada.",
-      "Um Saldo Livre real (dinheiro na conta menos contas fixas) evita mais dívidas do que qualquer gráfico de pizza colorido."
     ]
   },
   {
@@ -378,6 +268,116 @@ export const projectsData: Project[] = [
       "A iluminação e a textura no micro-render são os detalhes que diferenciam 'IA barata' de 'Hyper-realismo'.",
       "Processamentos em vídeo quebram integrações sincrônicas. Usar Webhooks é a única forma segura de lidar com renderizações longas.",
       "O fator humano (emoção na voz, timing) ainda é o diferencial. A IA precisa receber direção de arte minuciosa através do prompt."
+    ]
+  },
+  {
+    slug: "roteirizador-delivery",
+    title: "Sistema Logístico Delivery",
+    subtitle: "Roteirização inteligente e acerto financeiro",
+    dateStart: "Mar/2026",
+    dateLastDeploy: "Mar/2026",
+    liveUrl: "https://roterizadorai.vercel.app/",
+    tag: "Algoritmos & Logística",
+    icon: "route",
+    color: "text-orange-400",
+    bg: "bg-orange-500/10",
+    shortPain: "Gestão manual de motoboys e rotas resultando em atrasos e furos no caixa.",
+    
+    heroTitle: "O Roteirizador nasceu observando o desespero de um despachante às 20h de sábado.",
+    heroSubtitle: "Como uma mente humana pode agrupar 40 pedidos e dividir para 10 entregadores simultaneamente?",
+    
+    problemTitle: "Tudo começou com uma prancheta de papel.",
+    problemParagraphs: [
+      "Nas grandes lanchonetes locais, pedidos chegam por WhatsApp, telefone e iFood ao mesmo tempo.",
+      "O despachante olha para os pacotes na mesa e precisa decidir: qual motoboy leva o pedido do bairro A junto com o bairro B? E se o motoboy 3 acabou de chegar e está na vez?",
+      "Isso gerava viagens ineficientes (motoboys cruzando a cidade inteira com um único lanche) e pior: o fechamento financeiro no final da noite demorava 2 horas para conferir quem recebeu quanto em dinheiro, cartão ou pix."
+    ],
+    
+    dominoTitle: "O efeito cascata da roteirização.",
+    dominoSubtitle: "Resolver apenas a rota não fechava a conta final da noite.",
+    dominoSteps: [
+      "Criar rotas exigiu integrar os pedidos automaticamente do iFood.",
+      "Agrupar por bairros exigiu uma API de geolocalização e raio geográfico.",
+      "Distribuir justamente exigiu criar uma fila (roleta) de motoboys.",
+      "O motoboy aceitar a corrida exigiu registrar o valor exato da taxa de entrega.",
+      "Taxas de entrega variadas exigiram um cofre digital por entregador."
+    ],
+    dominoConclusion: "O software de rota virou um sistema bancário de acerto de contas.",
+    
+    climaxTitle: "A otimização em fração de segundos.",
+    climaxParagraphs: [
+      "Implementamos um motor lógico que consolida a volumetria da noite.",
+      "Ao invés de despachar lanches um a um, o sistema encontra os nós (pontos de entrega) mais próximos num mapa, junta os pedidos e emite o romaneio completo.",
+      "O dono do restaurante e os motoboys passaram a ir embora 1 hora mais cedo, com a tranquilidade de que os números sempre batiam."
+    ],
+    climaxHighlightTitle: "De roteador de mapas para controlador de fluxo de caixa.",
+    climaxHighlightText: "Um algoritmo que maximiza a taxa/hora do entregador e zera os erros contábeis do estabelecimento.",
+    
+    techGrid: [
+      "Algoritmos de Agrupamento", "Integração API iFood", "Contabilidade Realtime", "Filas Virtuais",
+      "React", "TypeScript", "Dashboard Financeiro", "Gestão de Turnos"
+    ],
+    
+    learningsTitle: "O que o chão de fábrica nos ensinou.",
+    learnings: [
+      "O algoritmo mais avançado do mundo é inútil se a impressora térmica da cozinha falhar.",
+      "Interfaces para motoboys devem operar em 'dark mode' para economizar bateria e não ofuscar à noite.",
+      "A confiança no sistema vem quando o motoboy confere o saldo na tela e bate centavo por centavo com o bolso dele."
+    ]
+  },
+  {
+    slug: "ju-ai",
+    title: "JUAI 2026",
+    subtitle: "Sua assistente de mente, rotina e finanças",
+    dateStart: "Mar/2026",
+    dateLastDeploy: "Mai/2026",
+    liveUrl: "https://ju-ai2026.vercel.app/",
+    tag: "IA Humanizada",
+    icon: "psychology",
+    color: "text-purple-400",
+    bg: "bg-purple-500/10",
+    shortPain: "Múltiplos aplicativos de produtividade gerando mais estresse e pouca consistência.",
+    
+    heroTitle: "A JUAI nasceu quando percebemos que planilhas e trackers não mudam comportamentos.",
+    heroSubtitle: "Como construir uma inteligência que age não como software, mas como parceira diária?",
+    
+    problemTitle: "A fadiga dos aplicativos.",
+    problemParagraphs: [
+      "As pessoas usam Notion para notas, planilhas para finanças e apps coloridos para hábitos.",
+      "A fricção de abrir o app certo, preencher o dado e fechar quebrava o momento. A motivação acabava na primeira semana de janeiro.",
+      "Mais do que 'anotar', faltava cobrança. Faltava alguém, não algo, para dizer: 'Você prometeu que ia treinar hoje de manhã. Tá de pé?'"
+    ],
+    
+    dominoTitle: "A humanização da máquina.",
+    dominoSubtitle: "Tornar a IA proativa exigiu repensar toda a estrutura de prompts e memória.",
+    dominoSteps: [
+      "Para ser uma assistente útil, a IA precisou de uma memória de longo prazo.",
+      "Lembrar do que o usuário falou exigiu bancos de dados vetoriais (Embeddings).",
+      "Ser proativa exigiu rotinas autônomas e triggers baseados em tempo (CRON).",
+      "Agir sobre as finanças exigiu que a IA calculasse o Saldo Livre (deduzindo despesas fixas).",
+      "Ser natural obrigou a saída do texto e a adoção maciça de Voz (Hands-free)."
+    ],
+    dominoConclusion: "O objetivo era remover a interface da frente do relacionamento humano-máquina.",
+    
+    climaxTitle: "A quebra das grandes metas em microrrotinas.",
+    climaxParagraphs: [
+      "Descobrimos que a JUAI brilhava não quando gerava um plano anual enorme, mas quando focava no micro.",
+      "Se o usuário quisesse ler 12 livros no ano, a JUAI cobrava apenas a meta diária palpável: 10 páginas antes de dormir.",
+      "Esse ecossistema fechado (metas, hábitos, dinheiro, calendário) operado apenas por conversa redefiniu a forma como interagimos com as nossas obrigações."
+    ],
+    climaxHighlightTitle: "Mais humanizada. Mais focada. Mais presente.",
+    climaxHighlightText: "A JUAI não é um aplicativo que você abre. É um ecossistema com o qual você convive.",
+    
+    techGrid: [
+      "LLM Fine-tuning", "Processamento de Voz", "Vector Databases", "Embeddings",
+      "Animações CSS Avançadas", "Microinterações de UX", "Gestão de Estado Complexa", "Arquitetura Proativa"
+    ],
+    
+    learningsTitle: "O que a Inteligência Pessoal nos ensinou.",
+    learnings: [
+      "O tom de voz de uma IA muda brutalmente como o usuário absorve uma crítica ou cobrança.",
+      "Digitar é lento e cognitivamente exaustivo. Voz é o futuro da interface de entrada.",
+      "Um Saldo Livre real (dinheiro na conta menos contas fixas) evita mais dívidas do que qualquer gráfico de pizza colorido."
     ]
   },
   {

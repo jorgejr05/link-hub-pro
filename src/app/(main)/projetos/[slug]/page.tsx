@@ -20,7 +20,7 @@ export default async function ProjectJornadaPage({
 
   return (
     <>
-      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-32 pb-8 md:pt-48 overflow-hidden">
+      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-32 pb-8 md:pt-48 overflow-x-hidden">
         
         {/* BACK BUTTON */}
         <div className="max-w-4xl mx-auto px-margin-mobile md:px-0 mb-12">
@@ -31,17 +31,6 @@ export default async function ProjectJornadaPage({
             <span className="material-symbols-outlined text-[18px]">arrow_back</span>
             Voltar ao Hub
           </Link>
-          {project.liveUrl && (
-            <a 
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white text-[10px] font-bold uppercase px-3 py-1.5 rounded-lg transition-colors ml-6"
-            >
-              Acessar Sistema Vivo
-              <span className="material-symbols-outlined text-[14px]">open_in_new</span>
-            </a>
-          )}
         </div>
 
         <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
