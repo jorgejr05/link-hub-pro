@@ -8,7 +8,7 @@ export default function PerfilPage() {
       <section className="w-full min-h-[70vh] py-24 md:py-32 px-6 relative flex flex-col items-center justify-center text-center mt-10">
         
         {/* Imagem de Fundo (Jorge) fundida com a tela */}
-        <div className="absolute inset-0 z-0 pointer-events-none flex justify-center">
+        <div className="fixed inset-0 z-0 pointer-events-none flex justify-center">
           <div 
             className="absolute inset-0 mt-16 md:mt-24 w-full max-w-[1000px] mx-auto h-full opacity-50 md:opacity-40"
             style={{
