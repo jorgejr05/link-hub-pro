@@ -1,395 +1,259 @@
-import React from "react";
-import Link from "next/link";
+"use client";
 
-const whatsappUrl = "https://wa.me/5518988183746";
+import React, { useState, useEffect } from "react";
 
-export const metadata = {
-  title: "Arquiteto de IA | Jorge Jr.",
-  description: "A Plugeefy nasceu quando estávamos tentando responder uma única pergunta: Como uma empresa pode continuar vendendo quando ninguém está trabalhando?",
-};
+// Simple Typewriter component
+function Typewriter({ 
+  text, 
+  delay = 30, 
+  startDelay = 0, 
+  className,
+  onComplete,
+  showCursor = true
+}: { 
+  text: string, 
+  delay?: number, 
+  startDelay?: number, 
+  className?: string,
+  onComplete?: () => void,
+  showCursor?: boolean
+}) {
+  const [displayedText, setDisplayedText] = useState("");
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
 
-export default function Home() {
+  useEffect(() => {
+    const startTimer = setTimeout(() => setStarted(true), startDelay);
+    return () => clearTimeout(startTimer);
+  }, [startDelay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayedText(text.substring(0, i + 1));
+      i++;
+      if (i >= text.length) {
+        clearInterval(interval);
+        setFinished(true);
+        if (onComplete) onComplete();
+      }
+    }, delay);
+    return () => clearInterval(interval);
+  }, [text, delay, started]);
+
   return (
-    <>
-      <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-32 pb-8 md:pt-48 overflow-hidden">
-        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
+    <span className={className}>
+      {displayedText}
+      {showCursor && !finished && <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle animate-pulse"></span>}
+    </span>
+  );
+}
+
+export default function PerfilPage() {
+  const [stage, setStage] = useState(0);
+
+  return (
+    <main className="w-full flex-1 flex flex-col items-center">
+      
+      {/* 01. HERO (Layout lado a lado no Desktop, Imagem acima no Mobile) */}
+      <section className="w-full max-w-7xl mx-auto py-24 md:py-32 px-6 flex flex-col md:flex-row items-center justify-between gap-12 mt-10">
+        
+        {/* Imagem (Aparece primeiro no Mobile -> order-1, Lado Direito no Desktop -> order-2) */}
+        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2 relative">
+          {/* Background glow sutil atrás da imagem */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-primary/10 rounded-full blur-[80px] pointer-events-none mix-blend-screen -z-10"></div>
           
-          {/* HEADER / INTRO */}
-          <header className="mb-20 md:mb-32">
-            <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl text-primary leading-tight tracking-tight mb-8">
-              A Plugeefy nasceu quando estávamos tentando responder uma única pergunta.
-            </h1>
-            <p className="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium">
-              Como uma empresa pode continuar vendendo quando ninguém está trabalhando?
-            </p>
-          </header>
+          <div 
+            className="w-full max-w-[400px] md:max-w-[500px] aspect-[3/4] opacity-90"
+            style={{
+              backgroundImage: "url('/jorge-bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center top",
+              maskImage: "radial-gradient(ellipse at center 40%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center 40%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 75%)"
+            }}
+          ></div>
+        </div>
+        
+        {/* Texto (Aparece em baixo no Mobile -> order-2, Lado Esquerdo no Desktop -> order-1) */}
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1 relative z-10">
+          
+          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 min-h-[1.2em]">
+            <Typewriter 
+              text="Jorge Jr." 
+              delay={80} 
+              onComplete={() => setStage(1)} 
+              showCursor={stage === 0}
+            />
+          </h1>
+          
+          <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8 min-h-[1.5em]">
+            {stage >= 1 && (
+              <Typewriter 
+                text="Arquiteto de IA & Engenheiro de Software" 
+                delay={40} 
+                onComplete={() => setStage(2)} 
+                showCursor={stage === 1}
+              />
+            )}
+          </p>
+          
+          <p className="text-on-surface text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl min-h-[4em]">
+            {stage >= 2 && (
+              <Typewriter 
+                text="Unindo engenharia de software e inteligência artificial para construir ecossistemas escaláveis. De interfaces imersivas a agentes autônomos que resolvem problemas reais de negócios." 
+                delay={20} 
+                showCursor={stage === 2}
+              />
+            )}
+          </p>
+          
+        </div>
+      </section>
 
-          {/* O PROBLEMA INICIAL */}
-          <section className="mb-12 md:mb-16">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Tudo começou com um problema simples.</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>O atendimento parava quando o expediente terminava.</p>
-              <p>Durante as noites, finais de semana e feriados, clientes continuavam chegando pelo WhatsApp e Instagram, mas a equipe comercial já não estava disponível. Não faltavam vendedores. Faltava uma operação que continuasse funcionando quando as pessoas saíssem da empresa.</p>
-              <p className="pt-4">Rapidamente percebemos que responder perguntas era apenas uma pequena parte do problema.</p>
-              <p>Para vender de verdade, um agente precisava conhecer toda a operação da empresa.</p>
-            </div>
-          </section>
-        </article>
-
-        {/* Fluxograma Escuro Premium (Pipeline 7 Steps) */}
-        <div className="w-full max-w-[960px] mx-auto mb-16 md:mb-24">
-          <div className="relative w-full">
-            {/* Margens negativas no mobile para o scroll ir de ponta a ponta na tela sem encavalar */}
-            <div className="overflow-x-auto custom-scrollbar pt-8 pb-12 w-full">
-              <div className="w-fit min-w-max relative z-10 py-4 flex md:mx-auto">
-                
-                {/* Spacer Left Invisível - Força o respiro esquerdo */}
-                <div className="w-6 md:w-12 shrink-0"></div>
-                
-                <div className="flex items-start justify-between gap-6 relative">
-                  
-                  {/* Linha conectora de fundo com pontilhados/glow */}
-                  <div className="absolute top-8 left-8 right-8 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#30D158] shadow-[0_0_8px_#30D158]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#5E5CE6] shadow-[0_0_8px_#5E5CE6]"></div>
-                  </div>
-
-                  {/* 01. Cliente */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">person</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">01</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Cliente</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">O cliente inicia a conversa</p>
-                  </div>
-
-                  {/* 02. WhatsApp (Glow Verde) */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-[#30D158]/50 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15),inset_0_0_15px_rgba(48,209,88,0.1)] backdrop-blur-md relative">
-                      <div className="absolute inset-0 rounded-full bg-[#30D158]/5 animate-pulse"></div>
-                      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" className="text-[#30D158]"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                    </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[9px] font-bold px-3 py-1 rounded-md mb-2">02</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">WhatsApp</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Recebe a mensagem nos canais</p>
-                  </div>
-
-                  {/* 03. Agente */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">smart_toy</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">03</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Agente</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">IA compreende e inicia o atendimento</p>
-                  </div>
-
-                  {/* 04. ERP */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">database</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">04</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">ERP</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Consulta dados e informações</p>
-                  </div>
-
-                  {/* 05. Estoque */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">inventory_2</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">05</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Estoque</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Verifica disponibilidade de produtos</p>
-                  </div>
-
-                  {/* 06. Frete */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">local_shipping</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">06</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Frete</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Calcula o melhor frete e prazo</p>
-                  </div>
-
-                  {/* 07. Pedido */}
-                  <div className="flex flex-col items-center text-center w-28 shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center mb-4 shadow-[inset_0_0_20px_rgba(255,255,255,0.02)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[24px] text-white/80">shopping_bag</span>
-                    </div>
-                    <span className="bg-white/10 text-white/60 text-[9px] font-bold px-3 py-1 rounded-md mb-2">07</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[11px] text-white mb-1">Pedido</h4>
-                    <p className="text-[10px] text-white/50 leading-relaxed px-1">Cria pedido e acompanha processo</p>
-                  </div>
-
-                </div>
-                
-                {/* Spacer Right Invisível - Força o respiro direito IMPEDINDO O CORTE */}
-                <div className="w-10 md:w-16 shrink-0"></div>
-                
-              </div>
-            </div>
-          </div>
+      {/* 02. TIMELINE (A JORNADA) */}
+      <section className="w-full py-20 px-6 max-w-5xl">
+        <div className="text-center mb-16">
+          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">Trajetória</h2>
+          <p className="text-on-surface font-body-md text-base md:text-lg max-w-2xl mx-auto">
+            A evolução contínua da criação visual para a engenharia de dados e autonomia.
+          </p>
         </div>
 
-        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
-          <div className="font-body-md text-base text-on-surface-variant leading-relaxed border-l-2 border-primary/50 pl-6 italic mb-16 md:mb-24">
-            <p>No começo acreditávamos que estávamos construindo um agente.</p>
-            <p>Depois de alguns meses percebemos que o agente era apenas a ponta visível.</p>
-            <p className="font-semibold text-primary">O verdadeiro produto sempre foi a arquitetura.</p>
+        <div className="relative border-l border-white/10 ml-4 md:ml-8 lg:ml-12 space-y-12 pb-12">
+          
+          {/* 2023 */}
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-[#0a0a0b]"></div>
+            <div className="text-primary font-label-sm uppercase tracking-widest mb-2">Início de 2023</div>
+            <h3 className="text-xl font-bold text-white mb-2">O Front-End e o Mercado Digital</h3>
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
+              O início da jornada. Criação de Landing Pages, VSLs e sites de alta performance para a venda de infoprodutos como afiliado, onde o foco em conversão e resultados ditava a regra.
+            </p>
           </div>
 
-          {/* O EFEITO DOMINÓ */}
-          <section className="mb-16 md:mb-24">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">Cada resposta revelou uma pergunta ainda maior.</h3>
-            
-            <p className="font-body-md text-base text-on-surface-variant leading-relaxed mb-6">
-              Toda vez que resolvíamos um problema, descobríamos outro que estava escondido atrás dele.
+          {/* 2023-2024 */}
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-[#0a0a0b] group-hover:bg-primary transition-colors"></div>
+            <div className="text-on-surface-variant group-hover:text-primary transition-colors font-label-sm uppercase tracking-widest mb-2">2023 - 2024</div>
+            <h3 className="text-xl font-bold text-white mb-2">Engenharia e Low-Code</h3>
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
+              A necessidade de estruturas mais robustas levou a um aprofundamento técnico. A entrada no desenvolvimento de software tradicional e no low-code (com FlutterFlow) permitiu escalar a complexidade das soluções entregues.
             </p>
-            
-            <div className="space-y-4 font-body-md text-on-surface-variant">
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary"></div>
-                <p>Automatizar o atendimento exigiu integrar o ERP.</p>
+          </div>
+
+          {/* Final 2024 */}
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-white/30 ring-4 ring-[#0a0a0b] group-hover:bg-primary transition-colors"></div>
+            <div className="text-on-surface-variant group-hover:text-primary transition-colors font-label-sm uppercase tracking-widest mb-2">Final de 2024</div>
+            <h3 className="text-xl font-bold text-white mb-2">O Boom dos Agentes Autônomos</h3>
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
+              Imersão profunda na nova geração de aplicações. Integração de ecossistemas com n8n, Dify e LLMs, consolidando uma vasta base de certificações em Inteligência Artificial e automação extrema.
+            </p>
+          </div>
+
+          {/* Atualmente */}
+          <div className="relative pl-8 md:pl-12 group">
+            <div className="absolute top-0 left-[-5px] w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-[#0a0a0b] shadow-[0_0_15px_rgba(202,243,0,0.5)]"></div>
+            <div className="text-primary font-label-sm uppercase tracking-widest mb-2">Atualmente</div>
+            <h3 className="text-xl font-bold text-white mb-2">Engenharia de Software (FIAP)</h3>
+            <p className="text-on-surface font-body-sm leading-relaxed text-sm max-w-2xl">
+              Cursando o 2º ciclo de Engenharia de Software pela FIAP. O objetivo é coroar a bagagem técnica, as certificações e a experiência prática com uma base acadêmica sólida, formando-se como Engenheiro de Software.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 03. HARD SKILLS */}
+      <section className="w-full py-20 px-6 max-w-5xl">
+        <div className="bg-surface border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
+          
+          <h2 className="font-display-md text-3xl font-bold text-white mb-10 relative z-10">Stack Principal</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+            {[
+              "Next.js", "React", "TypeScript", "Node.js", 
+              "Python", "LangChain", "n8n (Automação)", "Dify (IA)", 
+              "Supabase", "PostgreSQL", "FlutterFlow", "APIs REST"
+            ].map((skill, idx) => (
+              <div key={idx} className="bg-[#111113] border border-white/5 rounded-xl p-4 text-center hover:border-primary/30 transition-colors flex items-center justify-center">
+                <span className="font-label-sm text-sm text-on-surface font-medium">{skill}</span>
               </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/80"></div>
-                <p>Integrar o ERP revelou que vender também dependia do cálculo de frete.</p>
-              </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/60"></div>
-                <p>O frete nos obrigou a entender pagamentos.</p>
-              </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/50"></div>
-                <p>Os pagamentos exigiram CRM.</p>
-              </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex items-center gap-4">
-                <div className="w-2 h-2 rounded-full bg-primary/40"></div>
-                <p>O CRM aproximou todos os canais de atendimento.</p>
-              </div>
-              <div className="pl-1 text-white/20 text-xs">↓</div>
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-4">
-                  <div className="w-2 h-2 rounded-full bg-primary/20"></div>
-                  <p>E, quando tudo finalmente estava conectado, percebemos que o próximo canal já não era mais o WhatsApp.</p>
-                </div>
-                <p className="pl-6 font-medium text-primary">Eram os próprios modelos de IA.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* O CLÍMAX */}
-          <section className="mb-12 md:mb-16">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Uma nova forma de descoberta.</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>Enquanto construíamos a arquitetura, o comportamento dos consumidores também estava mudando.</p>
-              <p>Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar para os modelos de IA e motores de buscas:</p>
-              
-              <ul className="pl-6 space-y-2 italic text-on-surface/80 border-l border-white/10 my-6 py-2">
-                <li>"Qual creatina vocês recomendam?"</li>
-                <li>"Onde encontro essa roupa?"</li>
-                <li>"Qual sapato combina com esse modelo de blusa?"</li>
-              </ul>
-
-              <p>Se a descoberta passaria a acontecer dentro de assistentes inteligentes, nossa infraestrutura também precisava estar preparada para isso.</p>
-              
-              <div className="bg-surface-container border border-white/5 p-6 md:p-8 rounded-2xl mt-10 text-center">
-                <p className="text-xl md:text-2xl font-headline-lg text-white mb-4">
-                  A Plugeefy evoluiu de um simples software para uma infra de crescimento.
-                </p>
-                <p className="text-primary font-medium text-lg leading-relaxed">
-                  Ela é o laboratório onde investigamos como empresas irão operar na era da Inteligência Artificial.
-                </p>
-              </div>
-            </div>
-          </section>
-        </article>
-
-        {/* Arquitetura Elegante (Design Novo: 4 Ícones Dark) */}
-        <div className="w-full max-w-[960px] mx-auto mb-16 md:mb-24">
-          <div className="relative w-full">
-            <div className="overflow-x-auto custom-scrollbar pt-12 pb-16 w-full">
-              <div className="w-fit min-w-max relative z-10 py-4 flex md:mx-auto">
-                
-                {/* Spacer Left Invisível */}
-                <div className="w-6 md:w-16 shrink-0"></div>
-
-                <div className="flex items-start justify-between gap-10 md:gap-14 relative">
-                  
-                  {/* Linha conectora de fundo com pontilhados/glow */}
-                  <div className="absolute top-10 left-16 right-16 h-[2px] border-t-2 border-dashed border-white/10 -z-10 flex items-center justify-between px-10">
-                    <div className="w-2 h-2 rounded-full bg-[#5E5CE6] shadow-[0_0_10px_#5E5CE6]"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
-                    <div className="w-2 h-2 rounded-full bg-[#30D158] shadow-[0_0_10px_#30D158]"></div>
-                  </div>
-
-                  {/* 01. ERP */}
-                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#5E5CE6]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(94,92,230,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">database</span>
-                    </div>
-                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-2">01</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">ERP</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Dados, produtos, estoque e clientes</p>
-                  </div>
-
-                  {/* 02. PLUGEEFY (Main Highlight) */}
-                  <div className="flex flex-col items-center text-center w-[180px] shrink-0">
-                    <div className="w-24 h-24 -mt-2 rounded-full bg-gradient-to-br from-[#5E5CE6] to-[#30D158]/20 border border-[#5E5CE6]/60 flex items-center justify-center mb-3 shadow-[0_0_30px_rgba(94,92,230,0.4),inset_0_0_15px_rgba(255,255,255,0.2)] backdrop-blur-md relative">
-                      {/* Glow extra no fundo */}
-                      <div className="absolute inset-0 rounded-full bg-[#5E5CE6] opacity-30 animate-pulse blur-[10px]"></div>
-                      <span className="material-symbols-outlined text-[36px] text-white relative z-10 drop-shadow-lg">layers</span>
-                      {/* Detalhes ao redor do anel estilo orbital */}
-                      <div className="absolute inset-[-12px] border border-[#5E5CE6]/40 rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
-                      <div className="absolute inset-[-12px] border border-transparent rounded-full flex items-center justify-between animate-[spin_12s_linear_infinite_reverse]">
-                         <div className="w-1.5 h-5 bg-[#5E5CE6] rounded-full -ml-1 shadow-[0_0_8px_#5E5CE6]"></div>
-                         <div className="w-1.5 h-5 bg-[#5E5CE6] rounded-full -mr-1 shadow-[0_0_8px_#5E5CE6]"></div>
-                      </div>
-                    </div>
-                    <span className="bg-[#5E5CE6]/20 text-[#5E5CE6] text-[10px] font-bold px-3 py-1 rounded-md mb-2">02</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">Plugeefy</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Infraestrutura inteligente e integração nativa</p>
-                  </div>
-
-                  {/* 03. LLMS */}
-                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">memory</span>
-                    </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-2">03</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">LLMs</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Modelos de IA acessando dados em tempo real</p>
-                  </div>
-
-                  {/* 04. CLIENTE */}
-                  <div className="flex flex-col items-center text-center w-[160px] shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-black/40 border border-[#30D158]/30 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(48,209,88,0.15)] backdrop-blur-md relative">
-                      <span className="material-symbols-outlined text-[28px] text-white/80">person</span>
-                    </div>
-                    <span className="bg-[#30D158]/20 text-[#30D158] text-[10px] font-bold px-3 py-1 rounded-md mb-2">04</span>
-                    <h4 className="font-label-caps uppercase tracking-widest text-[13px] text-white mb-1">Cliente</h4>
-                    <p className="text-[11px] text-white/50 leading-relaxed px-2">Descoberta, atendimento e compra assistida</p>
-                  </div>
-
-                </div>
-
-                {/* Spacer Right Invisível - Força o respiro direito IMPEDINDO O CORTE */}
-                <div className="w-12 md:w-20 shrink-0"></div>
-
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
-          {/* O PROJETO HOJE */}
-          <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-6">Hoje continuamos resolvendo exatamente o mesmo problema do primeiro dia.</h3>
-            <div className="font-body-md text-base text-on-surface-variant leading-relaxed space-y-4">
-              <p>A diferença é que, em vez de automatizar apenas um atendimento, construímos uma infraestrutura capaz de conectar toda a operação comercial de uma empresa à nova geração da Inteligência Artificial.</p>
-              
-              <div className="pt-6">
-                <p className="mb-4 text-white font-medium">O diferencial nunca foi IA. IA qualquer um chama via API.</p>
-                <p className="mb-4">O difícil de verdade foi orquestrar os bastidores de um negócio em tempo real:</p>
-                
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 font-mono text-[11px] uppercase tracking-widest text-primary/80 mt-6">
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sincronização de Estoque</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Concorrência</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sistemas de Filas</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Webhooks Nativos</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Autenticação</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Compliance LGPD</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Isolamento Multi-tenant</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Criação de Pedidos</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Recuperação de Falhas</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Múltiplos Canais</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Infraestrutura Meta</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Clusters de ERP</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Servidores MCP</div>
-                  <div className="bg-surface-container border border-white/5 px-3 py-2 rounded">Sincronização de Catálogo</div>
-                </div>
-              </div>
-            </div>
-          </section>
+      {/* 04. DOMÍNIO TÉCNICO E COMPETÊNCIAS */}
+      <section className="w-full py-24 px-6 max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="font-display-md text-3xl md:text-5xl font-bold text-white mb-4">Competências Técnicas</h2>
+          <p className="text-on-surface font-body-md text-base md:text-lg max-w-2xl mx-auto">
+            Mais de 35 credenciais oficiais sintetizadas em capacidades reais de engenharia e negócios.
+          </p>
+        </div>
 
-          {/* CONCLUSÕES */}
-          <section className="mb-24 md:mb-32">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">O que 18 meses em produção nos ensinaram.</h3>
-            
-            <div className="space-y-4">
-              <div className="border-l-2 border-white/10 pl-4 py-1">
-                <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  A IA nunca foi o gargalo. Os dados eram.
-                </p>
-              </div>
-              <div className="border-l-2 border-white/10 pl-4 py-1">
-                <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  Modelos mudam todos os meses. Arquiteturas duram anos.
-                </p>
-              </div>
-              <div className="border-l-2 border-white/10 pl-4 py-1">
-                <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  Automatizar um processo ruim apenas faz o problema acontecer mais rápido.
-                </p>
-              </div>
-              <div className="border-l-2 border-white/10 pl-4 py-1">
-                <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  Toda integração parece simples até precisar funcionar às três da manhã de um domingo.
-                </p>
-              </div>
-              <div className="border-l-2 border-white/10 pl-4 py-1">
-                <p className="font-body-md text-on-surface leading-relaxed font-medium">
-                  Quanto mais inteligente o agente, mais importante se torna a qualidade dos dados que ele recebe.
-                </p>
-              </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          
+          {/* Categoria: Inteligência Artificial */}
+          <div className="bg-surface border border-white/5 rounded-2xl p-8 flex flex-col h-full hover:border-primary/20 transition-colors">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/>
+                <rect width="6" height="6" x="9" y="9" rx="1"/>
+                <path d="M15 2v2"/>
+                <path d="M15 20v2"/>
+                <path d="M2 15h2"/>
+                <path d="M2 9h2"/>
+                <path d="M20 15h2"/>
+                <path d="M20 9h2"/>
+                <path d="M9 2v2"/>
+                <path d="M9 20v2"/>
+              </svg>
             </div>
-          </section>
+            <h3 className="text-xl font-bold text-white mb-4">Inteligência Artificial & Agentes</h3>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento de arquiteturas RAG (Retrieval-Augmented Generation) para conversar com bases de dados e documentos.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Construção de Agentes Autônomos especializados (SDR, Vendas, Atendimento) com tomada de decisão.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Engenharia de Prompts avançada e orquestração de modelos (LLMs) usando Dify e LangChain.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Implementação de agentes conversacionais de voz e automação de vídeos UGC (User-Generated Content).</li>
+            </ul>
+          </div>
 
-          {/* REFLEXÕES PESSOAIS */}
-          <section className="mb-24 md:mb-32 border-t border-white/5 pt-16">
-            <h3 className="font-headline-lg text-2xl text-primary mb-8">Algumas conclusões depois de construir tudo isso.</h3>
-            <div className="space-y-8 text-on-surface-variant font-body-md italic border-l-4 border-white/10 pl-6">
-              <p>"Integrar sistemas nunca foi a parte mais difícil. Difícil é entender o negócio que existe entre eles."</p>
-              <div className="w-12 h-[1px] bg-white/10"></div>
-              <p>"Hoje acredito que IA não substitui profissionais. Ela elimina o atrito entre processos."</p>
-              <div className="w-12 h-[1px] bg-white/10"></div>
-              <p>"A arquitetura certa economiza muito mais dinheiro do que escolher o modelo de linguagem mais recente."</p>
+          {/* Categoria: Automações e Backend */}
+          <div className="bg-surface border border-white/5 rounded-2xl p-8 flex flex-col h-full hover:border-primary/20 transition-colors">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
-          </section>
+            <h3 className="text-xl font-bold text-white mb-4">Automação & Backend</h3>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Orquestração de APIs e automação de fluxos de dados complexos em larga escala utilizando n8n.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Arquitetura e modelagem de banco de dados relacionais (PostgreSQL / Supabase).</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Implementação de segurança avançada através de Row Level Security (RLS) e permissões granulares.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Automação completa de pagamentos, cobranças financeiras e integrações nativas com WhatsApp/Instagram.</li>
+            </ul>
+          </div>
 
-          {/* O NÃO-CTA */}
-          <section className="mb-0 bg-surface-container-lowest border border-white/5 p-10 md:p-16 rounded-[2rem] flex flex-col items-center text-center gap-10">
-            <div className="max-w-2xl font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed space-y-6">
-              <p>Nós passamos os últimos 18 meses transformando problemas operacionais em uma arquitetura que hoje funciona em produção.</p>
-              <p className="text-primary font-medium">Se você quer e acredita que sua operação também pode evoluir dessa forma, clique no botão abaixo.</p>
+          {/* Categoria: Mobile e Produtos */}
+          <div className="bg-surface border border-white/5 rounded-2xl p-8 flex flex-col h-full hover:border-primary/20 transition-colors">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
             </div>
-            <div className="flex flex-col items-center">
-              <a 
-                href={whatsappUrl} 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-flex px-8 py-4 bg-primary-container text-[#131313] font-bold font-label-md text-sm uppercase tracking-widest rounded-full hover:bg-white transition-colors shadow-[0_0_30px_rgba(202,243,0,0.2)] whitespace-nowrap"
-              >
-                Vamos conversar
-              </a>
-              <p className="text-[10px] text-on-surface-variant mt-3 uppercase tracking-widest">Sem compromisso.</p>
-            </div>
-          </section>
+            <h3 className="text-xl font-bold text-white mb-4">Software & Mobile</h3>
+            <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento Full-Stack de aplicativos móveis e sistemas web complexos utilizando FlutterFlow.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Integração fluida entre design de interfaces (UI/UX) imersivas e lógicas de backend (BaaS).</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Criação de arquiteturas modulares voltadas a alta performance, escalabilidade e manutenibilidade.</li>
+              <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Processo ponta a ponta: do levantamento de requisitos de produto até a geração de builds e publicação nas Lojas.</li>
+            </ul>
+          </div>
 
-        </article>
-      </main>
-    </>
+        </div>
+      </section>
+
+    </main>
   );
 }

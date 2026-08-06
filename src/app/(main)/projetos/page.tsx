@@ -4,7 +4,7 @@ import { projectsData } from "@/data/projects";
 
 export default function ProjetosHubPage() {
   return (
-    <main className="w-full flex-1 flex flex-col items-center">
+    <main className="w-full flex-1 flex flex-col items-center overflow-x-hidden">
       
       {/* 01. HERO */}
       <section className="w-full py-24 md:py-32 px-6 relative flex flex-col items-center text-center mt-10">
