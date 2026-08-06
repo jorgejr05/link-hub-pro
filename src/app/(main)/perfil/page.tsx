@@ -10,7 +10,7 @@ export default function PerfilPage() {
         {/* Imagem de Fundo (Jorge) fundida com a tela */}
         <div className="absolute inset-0 z-0 pointer-events-none flex justify-center">
           <div 
-            className="absolute inset-0 w-full max-w-[1000px] mx-auto h-full opacity-50 md:opacity-40"
+            className="absolute inset-0 mt-16 md:mt-24 w-full max-w-[1000px] mx-auto h-full opacity-50 md:opacity-40"
             style={{
               backgroundImage: "url('/jorge-bg.jpg')",
               backgroundSize: "cover",
