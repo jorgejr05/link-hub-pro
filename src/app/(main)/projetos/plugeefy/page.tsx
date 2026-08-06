@@ -14,6 +14,17 @@ export default function Home() {
       <main className="w-full min-h-screen bg-background text-on-background selection:bg-primary-container/30 selection:text-white pt-32 pb-8 md:pt-48 overflow-hidden">
         <article className="max-w-4xl mx-auto px-margin-mobile md:px-0">
           
+          {/* BOTÃO DE VOLTAR */}
+          <div className="mb-12">
+            <Link 
+              href="/projetos" 
+              className="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors text-sm font-label-md uppercase tracking-widest"
+            >
+              <span className="material-symbols-outlined text-[18px]">arrow_back</span>
+              Voltar
+            </Link>
+          </div>
+          
           {/* HEADER / INTRO */}
           <header className="mb-20 md:mb-32">
             <h1 className="font-headline-xl text-3xl md:text-4xl lg:text-5xl text-primary leading-tight tracking-tight mb-8">

@@ -57,12 +57,7 @@ export function Header() {
             >
               Projetos
             </Link>
-            <Link
-              href="/jornada"
-              className={`transition-colors duration-300 ${pathname.startsWith("/jornada") ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
-            >
-              Jornada
-            </Link>
+
             <Link
               href="/blog"
               className={`transition-colors duration-300 ${pathname.startsWith("/blog") ? "text-primary border-b-2 border-primary pb-1" : "text-on-surface-variant hover:text-primary"}`}
@@ -99,13 +94,7 @@ export function Header() {
               >
                 Projetos
               </Link>
-              <Link
-                href="/jornada"
-                onClick={() => setIsMenuOpen(false)}
-                className={`transition-colors duration-300 ${pathname.startsWith("/jornada") ? "text-primary" : "text-on-surface-variant"}`}
-              >
-                Jornada
-              </Link>
+
               <Link
                 href="/blog"
                 onClick={() => setIsMenuOpen(false)}
