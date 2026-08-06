@@ -5,21 +5,33 @@ export default function PerfilPage() {
     <main className="w-full flex-1 flex flex-col items-center">
       
       {/* 01. HERO */}
-      <section className="w-full py-24 md:py-32 px-6 relative flex flex-col items-center text-center mt-10">
-        {/* Background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <section className="w-full min-h-[70vh] py-24 md:py-32 px-6 relative flex flex-col items-center justify-center text-center mt-10">
         
-        <div className="relative z-10 max-w-3xl flex flex-col items-center">
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-white/10 mb-8 shadow-2xl">
-            <img src="/jorge-junior.jpg" alt="Jorge Jr." className="w-full h-full object-cover object-top" />
-          </div>
-          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
+        {/* Imagem de Fundo (Jorge) fundida com a tela */}
+        <div className="absolute inset-0 z-0 pointer-events-none flex justify-center">
+          <div 
+            className="absolute inset-0 w-full max-w-[1000px] mx-auto h-full opacity-50 md:opacity-40"
+            style={{
+              backgroundImage: "url('/jorge-bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center 20%",
+              maskImage: "radial-gradient(ellipse at 50% 40%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)",
+              WebkitMaskImage: "radial-gradient(ellipse at 50% 40%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)"
+            }}
+          ></div>
+        </div>
+        
+        {/* Background glow sutíl */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+        
+        <div className="relative z-10 max-w-3xl flex flex-col items-center mt-32 md:mt-40">
+          <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
             Jorge Jr.
           </h1>
-          <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8">
+          <p className="text-primary text-sm md:text-base font-label-md tracking-widest uppercase mb-8 drop-shadow-[0_0_10px_rgba(0,0,0,1)]">
             Arquiteto de IA & Engenheiro de Software
           </p>
-          <p className="text-on-surface text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl">
+          <p className="text-on-surface text-lg md:text-xl font-body-lg leading-relaxed font-light max-w-2xl drop-shadow-[0_0_10px_rgba(0,0,0,1)]">
             Unindo engenharia de software e inteligência artificial para construir ecossistemas escaláveis. De interfaces imersivas a agentes autônomos que resolvem problemas reais de negócios.
           </p>
         </div>
