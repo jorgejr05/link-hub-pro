@@ -11,35 +11,96 @@ export interface Project {
   color: string;
   bg: string;
   shortPain: string;
-  // Deep-Dive Content
-  genesis: string;
-  challenge: string;
-  solution: string;
-  techDecisions: string[];
-  techStack: string[];
+  
+  // Jornada Content
+  heroTitle: string;
+  heroSubtitle: string;
+  
+  problemTitle: string;
+  problemParagraphs: string[];
+  
+  dominoTitle: string;
+  dominoSubtitle: string;
+  dominoSteps: string[];
+  dominoConclusion: string;
+  
+  climaxTitle: string;
+  climaxParagraphs: string[];
+  climaxList?: string[];
+  climaxHighlightTitle: string;
+  climaxHighlightText: string;
+  
+  techGrid: string[];
+  
+  learningsTitle: string;
+  learnings: string[];
 }
 
 export const projectsData: Project[] = [
   {
     slug: "plugeefy",
     title: "Plugeefy",
-    subtitle: "A ponte estrutural entre farmácias e IAs locais",
-    dateStart: "Fev/2026",
+    subtitle: "Infraestrutura de crescimento para a era da Inteligência Artificial",
+    dateStart: "Jan/2025",
     dateLastDeploy: "Jul/2026",
     tag: "Infraestrutura & SEO",
-    icon: "storefront",
+    icon: "layers",
     color: "text-blue-400",
     bg: "bg-blue-500/10",
-    shortPain: "Catálogos offline invisíveis para LLMs (Google AI, ChatGPT).",
-    genesis: "O projeto nasceu ao notar que, com a ascensão dos motores de busca guiados por IA, o comércio físico estava sendo apagado. Se uma farmácia local não estivesse estruturada em grafos e dados granulares (JSON-LD), as IAs jamais a recomendariam.",
-    challenge: "O maior desafio não era apenas construir um site, mas criar uma arquitetura de governança e interoperabilidade (SEO voltado para IA) que lesse inventários de farmácias e normalizasse esses dados respeitando regulamentações sanitárias rigorosas.",
-    solution: "Desenvolvemos a plataforma Plugeefy, que engloba tanto um marketplace otimizado quanto uma API profunda que formata os dados de estoque em esquemas universais (Schema.org).",
-    techDecisions: [
-      "Next.js App Router para SSR avançado e indexação massiva no Google.",
-      "Arquitetura de dados orientada a Grafos de Conhecimento, essencial para LLMs.",
-      "TypeScript no backend (plugeefy-api) para garantir contratos rigorosos de payload."
+    shortPain: "O atendimento parava quando o expediente terminava.",
+    
+    heroTitle: "A Plugeefy nasceu quando estávamos tentando responder uma única pergunta.",
+    heroSubtitle: "Como uma empresa pode continuar vendendo quando ninguém está trabalhando?",
+    
+    problemTitle: "Tudo começou com um problema simples.",
+    problemParagraphs: [
+      "O atendimento parava quando o expediente terminava.",
+      "Durante as noites, finais de semana e feriados, clientes continuavam chegando pelo WhatsApp e Instagram, mas a equipe comercial já não estava disponível. Não faltavam vendedores. Faltava uma operação que continuasse funcionando quando as pessoas saíssem da empresa.",
+      "Rapidamente percebemos que responder perguntas era apenas uma pequena parte do problema.",
+      "Para vender de verdade, um agente precisava conhecer toda a operação da empresa."
     ],
-    techStack: ["Next.js", "TypeScript", "Node.js", "Schema.org", "SEO para IA"]
+    
+    dominoTitle: "Cada resposta revelou uma pergunta ainda maior.",
+    dominoSubtitle: "Toda vez que resolvíamos um problema, descobríamos outro que estava escondido atrás dele.",
+    dominoSteps: [
+      "Automatizar o atendimento exigiu integrar o ERP.",
+      "Integrar o ERP revelou que vender também dependia do cálculo de frete.",
+      "O frete nos obrigou a entender pagamentos.",
+      "Os pagamentos exigiram CRM.",
+      "O CRM aproximou todos os canais de atendimento.",
+      "E, quando tudo finalmente estava conectado, percebemos que o próximo canal já não era mais o WhatsApp."
+    ],
+    dominoConclusion: "Eram os próprios modelos de IA.",
+    
+    climaxTitle: "Uma nova forma de descoberta.",
+    climaxParagraphs: [
+      "Enquanto construíamos a arquitetura, o comportamento dos consumidores também estava mudando.",
+      "Pela primeira vez, percebemos que as pessoas estavam deixando de navegar por categorias de um e-commerce. Elas começaram a simplesmente perguntar para os modelos de IA e motores de buscas:",
+      "Se a descoberta passaria a acontecer dentro de assistentes inteligentes, nossa infraestrutura também precisava estar preparada para isso."
+    ],
+    climaxList: [
+      "\"Qual creatina vocês recomendam?\"",
+      "\"Onde encontro essa roupa?\"",
+      "\"Qual sapato combina com esse modelo de blusa?\""
+    ],
+    climaxHighlightTitle: "A Plugeefy evoluiu de um simples software para uma infra de crescimento.",
+    climaxHighlightText: "Ela é o laboratório onde investigamos como empresas irão operar na era da Inteligência Artificial.",
+    
+    techGrid: [
+      "Sincronização de Estoque", "Concorrência", "Sistemas de Filas", "Webhooks Nativos",
+      "Autenticação", "Compliance LGPD", "Isolamento Multi-tenant", "Criação de Pedidos",
+      "Recuperação de Falhas", "Múltiplos Canais", "Infraestrutura Meta", "Clusters de ERP",
+      "Servidores MCP", "Sincronização de Catálogo"
+    ],
+    
+    learningsTitle: "O que 18 meses em produção nos ensinaram.",
+    learnings: [
+      "A IA nunca foi o gargalo. Os dados eram.",
+      "Modelos mudam todos os meses. Arquiteturas duram anos.",
+      "Automatizar um processo ruim apenas faz o problema acontecer mais rápido.",
+      "Toda integração parece simples até precisar funcionar às três da manhã de um domingo.",
+      "Quanto mais inteligente o agente, mais importante se torna a qualidade dos dados que ele recebe."
+    ]
   },
   {
     slug: "gestao-de-entregas",
@@ -52,20 +113,57 @@ export const projectsData: Project[] = [
     icon: "local_shipping",
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
-    shortPain: "Altas taxas do iFood e gestão caótica da frota própria de motoboys.",
-    genesis: "Negócios locais como lanchonetes e restaurantes estavam reféns das taxas abusivas dos grandes marketplaces, mas tentar fazer frota própria resultava em caos no WhatsApp e caderninho.",
-    challenge: "Unificar a frente de loja (a vitrine onde o cliente pede) com o painel de despacho (onde o dono envia o pedido para o entregador), tudo em tempo real e sem complexidade de adoção.",
-    solution: "Foi construído o sistema Integra Araçatuba / Speedy Chain Link. Ele opera como um marketplace independente, conectando clientes diretamente às lojas, com um painel de gestão completo para roteamento dos pedidos.",
-    techDecisions: [
-      "Uso de arquitetura serverless na Vercel para escalabilidade durante picos de pedidos (sexta à noite).",
-      "Bancos de dados relacionais e em tempo real para sincronização de status de pedido."
+    shortPain: "Taxas abusivas dos grandes apps e gestão caótica de frotas próprias.",
+    
+    heroTitle: "O Speedy Chain nasceu de uma indignação operacional comum no varejo alimentício.",
+    heroSubtitle: "Como libertar lojistas das taxas de 27% dos grandes marketplaces sem destruir a logística de entrega?",
+    
+    problemTitle: "Tudo começou com um problema simples.",
+    problemParagraphs: [
+      "Lanchonetes e restaurantes estavam reféns das altas taxas do iFood.",
+      "O desejo de vender pelos próprios canais (WhatsApp, Instagram) era grande, mas a execução era desastrosa. Anotar pedidos no caderno e coordenar 5 motoboys no grito pelo balcão gerava atrasos de horas e entregas erradas.",
+      "Rapidamente percebemos que tirar a loja do grande aplicativo era fácil.",
+      "Difícil era replicar a infraestrutura logística que o aplicativo fornecia."
     ],
-    techStack: ["Next.js", "Supabase", "Serverless", "TailwindCSS"]
+    
+    dominoTitle: "A construção do ecossistema revelou buracos maiores.",
+    dominoSubtitle: "Construir um catálogo digital foi só o primeiro passo. A complexidade estava no mundo real.",
+    dominoSteps: [
+      "Ter o cardápio digital exigiu receber pagamentos.",
+      "Receber pagamentos exigiu calcular a distância até a casa do cliente.",
+      "Calcular a distância obrigou a conexão com mapas (Geocoding).",
+      "Saber o endereço exigiu um painel (KDS) para a cozinha produzir.",
+      "A cozinha terminando, precisava avisar o motoboy.",
+      "O motoboy precisava de um app ou painel de despacho próprio."
+    ],
+    dominoConclusion: "O verdadeiro produto não era o cardápio. Era o roteamento logístico em tempo real.",
+    
+    climaxTitle: "A fundação do Integra Araçatuba.",
+    climaxParagraphs: [
+      "Enquanto montávamos a infraestrutura para lojas isoladas, percebemos que o gargalo de marketing local também existia.",
+      "Em cidades médias, os consumidores precisam de um agregador local para encontrar as opções.",
+      "Foi aí que o sistema evoluiu para um modelo de Marketplace Próprio Regional, onde o lojista não paga comissão por venda, mas usufrui de uma malha logística unificada."
+    ],
+    climaxHighlightTitle: "O Speedy Chain se tornou uma infraestrutura de independência.",
+    climaxHighlightText: "Um motor que orquestra pedidos, despachos e marketing sem extorquir a margem de lucro do empreendedor local.",
+    
+    techGrid: [
+      "Arquitetura Serverless", "Sincronização Realtime", "Supabase", "Next.js",
+      "Mapas e Geocoding", "Cálculo de Rotas", "Painel de Despacho", "Gestão de Frota"
+    ],
+    
+    learningsTitle: "O que a logística urbana nos ensinou.",
+    learnings: [
+      "Entregadores não têm tempo para apps complexos. A interface precisa ser de 1 clique.",
+      "Lidar com dinheiro físico na entrega exige fechamento de caixa milimétrico no sistema.",
+      "O cliente perdoa erro no pedido, mas não perdoa demora na entrega.",
+      "Arquiteturas de tempo real (WebSockets) são obrigatórias quando o pão de alho esfria."
+    ]
   },
   {
     slug: "roteirizador-delivery",
     title: "Sistema Logístico Delivery",
-    subtitle: "Roteirização inteligente e fechamento de caixa",
+    subtitle: "Roteirização inteligente e acerto financeiro",
     dateStart: "Mar/2026",
     dateLastDeploy: "Mar/2026",
     liveUrl: "https://roterizadorai.vercel.app/",
@@ -73,15 +171,49 @@ export const projectsData: Project[] = [
     icon: "route",
     color: "text-orange-400",
     bg: "bg-orange-500/10",
-    shortPain: "Roteirização manual que gerava atrasos, entregas erradas e furos no acerto de caixa.",
-    genesis: "Concebido após acompanhar a rotina insana de despachantes em grandes lanchonetes. Eles precisam agrupar pedidos do iFood e balcão por proximidade geográfica manualmente, enquanto controlam quanto cada motoboy tem a receber no fim da noite.",
-    challenge: "Construir um motor lógico que integrasse fluxos do iFood, pegasse a ordem de chegada dos motoboys, formasse rotas ótimas baseadas em mapa e contabilizasse centavos do fechamento noturno (dinheiro vs máquina).",
-    solution: "O Roteirizador AI é um painel de alta performance que recebe pedidos, otimiza agrupamentos de áreas de entrega, designa a carga de forma justa para a frota e emite relatórios automáticos de acerto.",
-    techDecisions: [
-      "Lógicas de agrupamento baseadas em raios geográficos e setores.",
-      "Dashboards e relatórios focados em performance contábil (gestão financeira de frota)."
+    shortPain: "Gestão manual de motoboys e rotas resultando em atrasos e furos no caixa.",
+    
+    heroTitle: "O Roteirizador nasceu observando o desespero de um despachante às 20h de sábado.",
+    heroSubtitle: "Como uma mente humana pode agrupar 40 pedidos e dividir para 10 entregadores simultaneamente?",
+    
+    problemTitle: "Tudo começou com uma prancheta de papel.",
+    problemParagraphs: [
+      "Nas grandes lanchonetes locais, pedidos chegam por WhatsApp, telefone e iFood ao mesmo tempo.",
+      "O despachante olha para os pacotes na mesa e precisa decidir: qual motoboy leva o pedido do bairro A junto com o bairro B? E se o motoboy 3 acabou de chegar e está na vez?",
+      "Isso gerava viagens ineficientes (motoboys cruzando a cidade inteira com um único lanche) e pior: o fechamento financeiro no final da noite demorava 2 horas para conferir quem recebeu quanto em dinheiro, cartão ou pix."
     ],
-    techStack: ["React", "TypeScript", "Maps API", "Algoritmos de Roteirização", "Dashboard"]
+    
+    dominoTitle: "O efeito cascata da roteirização.",
+    dominoSubtitle: "Resolver apenas a rota não fechava a conta final da noite.",
+    dominoSteps: [
+      "Criar rotas exigiu integrar os pedidos automaticamente do iFood.",
+      "Agrupar por bairros exigiu uma API de geolocalização e raio geográfico.",
+      "Distribuir justamente exigiu criar uma fila (roleta) de motoboys.",
+      "O motoboy aceitar a corrida exigiu registrar o valor exato da taxa de entrega.",
+      "Taxas de entrega variadas exigiram um cofre digital por entregador."
+    ],
+    dominoConclusion: "O software de rota virou um sistema bancário de acerto de contas.",
+    
+    climaxTitle: "A otimização em fração de segundos.",
+    climaxParagraphs: [
+      "Implementamos um motor lógico que consolida a volumetria da noite.",
+      "Ao invés de despachar lanches um a um, o sistema encontra os nós (pontos de entrega) mais próximos num mapa, junta os pedidos e emite o romaneio completo.",
+      "O dono do restaurante e os motoboys passaram a ir embora 1 hora mais cedo, com a tranquilidade de que os números sempre batiam."
+    ],
+    climaxHighlightTitle: "De roteador de mapas para controlador de fluxo de caixa.",
+    climaxHighlightText: "Um algoritmo que maximiza a taxa/hora do entregador e zera os erros contábeis do estabelecimento.",
+    
+    techGrid: [
+      "Algoritmos de Agrupamento", "Integração API iFood", "Contabilidade Realtime", "Filas Virtuais",
+      "React", "TypeScript", "Dashboard Financeiro", "Gestão de Turnos"
+    ],
+    
+    learningsTitle: "O que o chão de fábrica nos ensinou.",
+    learnings: [
+      "O algoritmo mais avançado do mundo é inútil se a impressora térmica da cozinha falhar.",
+      "Interfaces para motoboys devem operar em 'dark mode' para economizar bateria e não ofuscar à noite.",
+      "A confiança no sistema vem quando o motoboy confere o saldo na tela e bate centavo por centavo com o bolso dele."
+    ]
   },
   {
     slug: "ju-ai",
@@ -94,15 +226,49 @@ export const projectsData: Project[] = [
     icon: "psychology",
     color: "text-purple-400",
     bg: "bg-purple-500/10",
-    shortPain: "Falta de consistência diária e gestão financeira fragmentada.",
-    genesis: "As pessoas usam vários apps soltos (um pra finanças, outro pra hábitos, outro pra notas), mas não conseguem manter consistência. A ideia foi criar não um software, mas uma 'entidade' parceira.",
-    challenge: "Como fazer uma Inteligência Artificial parecer humana e proativa? Não podia ser só mais um chat. Tinha que ser uma assistente de voz que calcula saldos futuros reais e cobra metas de longo prazo em tarefas diárias.",
-    solution: "JUAI é um ecossistema. Ela responde por voz (hands-free), atua como Mestre Financeira deduzindo contas fixas do saldo, e quebra grandes metas anuais em trilhas de 1 dia, cobrando proativamente o usuário.",
-    techDecisions: [
-      "Integração profunda de modelos de processamento de linguagem natural e voz.",
-      "Interfaces imersivas e microinterações (como a animação de escuta 'hands-free') para transmitir 'humanidade'."
+    shortPain: "Múltiplos aplicativos de produtividade gerando mais estresse e pouca consistência.",
+    
+    heroTitle: "A JUAI nasceu quando percebemos que planilhas e trackers não mudam comportamentos.",
+    heroSubtitle: "Como construir uma inteligência que age não como software, mas como parceira diária?",
+    
+    problemTitle: "A fadiga dos aplicativos.",
+    problemParagraphs: [
+      "As pessoas usam Notion para notas, planilhas para finanças e apps coloridos para hábitos.",
+      "A fricção de abrir o app certo, preencher o dado e fechar quebrava o momento. A motivação acabava na primeira semana de janeiro.",
+      "Mais do que 'anotar', faltava cobrança. Faltava alguém, não algo, para dizer: 'Você prometeu que ia treinar hoje de manhã. Tá de pé?'"
     ],
-    techStack: ["Next.js", "Integração de LLMs (Voz/Texto)", "Arquitetura Proativa", "Design Imersivo"]
+    
+    dominoTitle: "A humanização da máquina.",
+    dominoSubtitle: "Tornar a IA proativa exigiu repensar toda a estrutura de prompts e memória.",
+    dominoSteps: [
+      "Para ser uma assistente útil, a IA precisou de uma memória de longo prazo.",
+      "Lembrar do que o usuário falou exigiu bancos de dados vetoriais (Embeddings).",
+      "Ser proativa exigiu rotinas autônomas e triggers baseados em tempo (CRON).",
+      "Agir sobre as finanças exigiu que a IA calculasse o Saldo Livre (deduzindo despesas fixas).",
+      "Ser natural obrigou a saída do texto e a adoção maciça de Voz (Hands-free)."
+    ],
+    dominoConclusion: "O objetivo era remover a interface da frente do relacionamento humano-máquina.",
+    
+    climaxTitle: "A quebra das grandes metas em microrrotinas.",
+    climaxParagraphs: [
+      "Descobrimos que a JUAI brilhava não quando gerava um plano anual enorme, mas quando focava no micro.",
+      "Se o usuário quisesse ler 12 livros no ano, a JUAI cobrava apenas a meta diária palpável: 10 páginas antes de dormir.",
+      "Esse ecossistema fechado (metas, hábitos, dinheiro, calendário) operado apenas por conversa redefiniu a forma como interagimos com as nossas obrigações."
+    ],
+    climaxHighlightTitle: "Mais humanizada. Mais focada. Mais presente.",
+    climaxHighlightText: "A JUAI não é um aplicativo que você abre. É um ecossistema com o qual você convive.",
+    
+    techGrid: [
+      "LLM Fine-tuning", "Processamento de Voz", "Vector Databases", "Embeddings",
+      "Animações CSS Avançadas", "Microinterações de UX", "Gestão de Estado Complexa", "Arquitetura Proativa"
+    ],
+    
+    learningsTitle: "O que a Inteligência Pessoal nos ensinou.",
+    learnings: [
+      "O tom de voz de uma IA muda brutalmente como o usuário absorve uma crítica ou cobrança.",
+      "Digitar é lento e cognitivamente exaustivo. Voz é o futuro da interface de entrada.",
+      "Um Saldo Livre real (dinheiro na conta menos contas fixas) evita mais dívidas do que qualquer gráfico de pizza colorido."
+    ]
   },
   {
     slug: "agendamento-ia",
@@ -115,20 +281,54 @@ export const projectsData: Project[] = [
     icon: "calendar_clock",
     color: "text-amber-400",
     bg: "bg-amber-500/10",
-    shortPain: "Leads de altíssimo valor perdem o interesse na contratação pelo tempo de resposta.",
-    genesis: "Observando clínicas e prestadores de serviços high-ticket perderem milhares de reais diariamente por não responderem o WhatsApp imediatamente à noite ou aos finais de semana.",
-    challenge: "Implementar um bot comum de 'digite 1 ou 2' apenas afastava pacientes VIP. O desafio era criar um Agente conversacional que entendesse áudios, mantivesse contexto e operasse o calendário real.",
-    solution: "Sistemas baseados em Agentes SDR. A IA qualifica a dor do lead, explica procedimentos com linguagem empática, e escreve diretamente no banco de dados e agenda, tudo 24/7.",
-    techDecisions: [
-      "Orquestração utilizando n8n para amarrar WhatsApp API à LLMs.",
-      "Uso de RAG (Retrieval-Augmented Generation) para o bot conhecer as diretrizes e tabela de preços exclusivas de cada clínica."
+    shortPain: "Leads caros esfriando por demora nas respostas via WhatsApp à noite e finais de semana.",
+    
+    heroTitle: "O Agendamento IA surgiu para estancar um sangramento silencioso.",
+    heroSubtitle: "Quantos milhares de reais são perdidos quando a clínica está fechada e não atende o WhatsApp?",
+    
+    problemTitle: "Um gargalo de conversão milionário.",
+    problemParagraphs: [
+      "Clínicas e negócios High-Ticket rodam anúncios pesados no Instagram. O lead clica, chega no WhatsApp às 21h, animado com o procedimento.",
+      "Ninguém responde. No dia seguinte, às 08h, a secretária manda um 'Bom dia'. O lead já esfriou, desistiu ou encontrou o concorrente.",
+      "Colocar um bot burro de 'Digite 1 para preço, 2 para endereço' ofendia o cliente High-Ticket e derrubava a conversão do mesmo jeito."
     ],
-    techStack: ["n8n", "LangChain/Dify", "WhatsApp API", "PostgreSQL", "RAG"]
+    
+    dominoTitle: "A sofisticação do atendimento.",
+    dominoSubtitle: "Atender um paciente VIP não é sobre responder rápido, é sobre entender o contexto.",
+    dominoSteps: [
+      "Remover os menus burros exigiu o uso de Modelos de Linguagem Naturais (LLMs).",
+      "Impedir a IA de alucinar exigiu a implementação de RAG (base de conhecimento injetada no contexto).",
+      "Processar a queixa do paciente exigiu transcrever áudios do WhatsApp.",
+      "A IA concordar com a data exigiu leitura em tempo real da agenda da clínica.",
+      "Confirmar a marcação exigiu agendar no Google Calendar ou ERP."
+    ],
+    dominoConclusion: "O Agente SDR precisava operar o sistema da clínica com a mesma perícia da recepcionista.",
+    
+    climaxTitle: "A recepcionista que nunca dorme.",
+    climaxParagraphs: [
+      "Criamos um fluxo de orquestração via n8n onde a IA recepciona, é empática, qualifica a dor do paciente, consulta a tabela de valores exata via banco vetorial e propõe os melhores horários.",
+      "Quando o paciente diz 'na quarta à tarde', a IA valida e reserva.",
+      "O resultado: o CPA (Custo por Aquisição) despencou, e a agenda passou a encher de madrugada."
+    ],
+    climaxHighlightTitle: "O fim das perdas de funil noturnas.",
+    climaxHighlightText: "Não é um chatbot de FAQ. É uma IA autônoma capaz de fechar negócios de alto valor.",
+    
+    techGrid: [
+      "n8n (Orquestração)", "LangChain / RAG", "Integração WhatsApp API", "Supabase",
+      "LLMs (OpenAI/Claude)", "Webhooks de Agenda", "Análise de Sentimento", "Transcription API"
+    ],
+    
+    learningsTitle: "O que o atendimento autônomo nos ensinou.",
+    learnings: [
+      "Pacientes preferem ser bem atendidos por uma IA do que ignorados por um humano.",
+      "Controlar o tamanho das mensagens da IA é vital. Ninguém lê blocos gigantes no WhatsApp.",
+      "A base de conhecimento (RAG) da clínica deve ser revisada constantemente, pois o modelo trata ela como verdade absoluta."
+    ]
   },
   {
     slug: "ucg-studio",
     title: "UGC Studio",
-    subtitle: "Geração de criativos em escala com Inteligência Artificial",
+    subtitle: "Geração de criativos em escala com IA",
     dateStart: "Nov/2025",
     dateLastDeploy: "Nov/2025",
     liveUrl: "https://ugcjorgejr.vercel.app/",
@@ -136,15 +336,49 @@ export const projectsData: Project[] = [
     icon: "movie_creation",
     color: "text-pink-400",
     bg: "bg-pink-500/10",
-    shortPain: "O custo altíssimo e a lentidão de produzir User Generated Content e vídeos comerciais.",
-    genesis: "Equipes de growth e tráfego pago queimam dezenas de milhares de reais em testes de criativos. Produzir vídeos físicos é demorado. Por que não escalar isso com modelos gerativos?",
-    challenge: "Criar prompts e orquestrações perfeitamente calibradas para gerar não apenas 'arte de IA', mas vídeos e imagens fotorrealistas que pareçam de fato criados por usuários comuns gravando do celular.",
-    solution: "Uma plataforma dedicada a automatizar e estruturar a geração de mídia. O UCG Studio engloba o pipeline de geração de scripts milionários até o render final de áudio e vídeo em avatares ou cenas hyper-realistas.",
-    techDecisions: [
-      "Integrações de ponta com APIs de Image/Video Generation (Midjourney, Runway, ElevenLabs).",
-      "Processamento de jobs assíncronos pesados (arquitetura de filas)."
+    shortPain: "O alto custo, fricção e lentidão para se produzir User Generated Content (Vídeos Curtos).",
+    
+    heroTitle: "O UGC Studio nasceu para resolver o gargalo da mídia de performance.",
+    heroSubtitle: "Como gerar dezenas de criativos em vídeo por dia sem montar um estúdio profissional?",
+    
+    problemTitle: "A fome infinita por criativos (Ad Fatigue).",
+    problemParagraphs: [
+      "Agências de tráfego pago enfrentam sempre a mesma barreira: depois de algumas semanas, os vídeos dos anúncios cansam a audiência (fadiga criativa).",
+      "Contratar influenciadores e atores para regravar depoimentos ou apresentar novos ângulos do produto era caro e o ciclo de feedback era lento demais.",
+      "Enquanto isso, modelos generativos de imagem, voz e vídeo estavam se tornando hiper-realistas, mas estavam espalhados em ferramentas isoladas."
     ],
-    techStack: ["Next.js", "APIs de Geração Visual", "ElevenLabs", "Orquestração Assíncrona"]
+    
+    dominoTitle: "Unificando os pedaços da IA.",
+    dominoSubtitle: "Gerar um simples vídeo com áudio sincronizado envolvia coordenar 4 sistemas diferentes.",
+    dominoSteps: [
+      "Gerar o roteiro (Prompt Engineering) precisava ser guiado por frameworks de copywriting.",
+      "A voz do ator exigiu integração com a ElevenLabs (Text-to-Speech avançado).",
+      "Gerar o rosto exigiu Midjourney/Stable Diffusion.",
+      "Sincronizar a fala (Lip-sync) exigiu APIs robustas de renderização (Runway, HeyGen).",
+      "Juntar tudo isso em uma esteira contínua exigiu uma arquitetura assíncrona baseada em Filas."
+    ],
+    dominoConclusion: "Criamos a linha de montagem industrial do marketing generativo.",
+    
+    climaxTitle: "Vídeos em escala, sem câmeras.",
+    climaxParagraphs: [
+      "O UGC Studio encapsula toda a complexidade. A pessoa entra com um link de produto ou ideia, e a plataforma cuida do pipeline inteiro.",
+      "Com a geração massiva, as agências podem realizar testes A/B profundos (mesmo roteiro, avatares diferentes; ou mesmo avatar, scripts diferentes), descobrindo os vencedores antes de queimar o orçamento (Budget).",
+      "O custo por criativo e o tempo de lançamento despencaram em 90%."
+    ],
+    climaxHighlightTitle: "Fábrica autônoma de conversão.",
+    climaxHighlightText: "A plataforma que democratiza o acesso a recursos audiovisuais que antes custavam dezenas de milhares de reais.",
+    
+    techGrid: [
+      "Next.js App Router", "Integração ElevenLabs", "Integração HeyGen/Runway", "Jobs Assíncronos",
+      "AWS S3 (Armazenamento)", "Pipelines de Geração de Prompts", "Filas (Queues)", "React"
+    ],
+    
+    learningsTitle: "O que a geração sintética nos ensinou.",
+    learnings: [
+      "A iluminação e a textura no micro-render são os detalhes que diferenciam 'IA barata' de 'Hyper-realismo'.",
+      "Processamentos em vídeo quebram integrações sincrônicas. Usar Webhooks é a única forma segura de lidar com renderizações longas.",
+      "O fator humano (emoção na voz, timing) ainda é o diferencial. A IA precisa receber direção de arte minuciosa através do prompt."
+    ]
   },
   {
     slug: "gravapro-ai",
@@ -157,14 +391,46 @@ export const projectsData: Project[] = [
     icon: "mic",
     color: "text-cyan-400",
     bg: "bg-cyan-500/10",
-    shortPain: "Bloqueio criativo e dificuldades técnicas na hora de gravar conteúdos densos.",
-    genesis: "O momento da gravação é solitário. Criadores e educadores perdem horas estruturando ideias ou ajustando o fluxo, necessitando de um parceiro estratégico em tempo real.",
-    challenge: "Fornecer uma interface livre de distrações, mas com poder cognitivo massivo para co-criar scripts e estruturas de ensino no instante que a ideia surge.",
-    solution: "GravaPro AI Companion. Um assistente que entende a linha editorial do criador e molda roteiros, revisa takes e serve como cérebro auxiliar de altíssima velocidade.",
-    techDecisions: [
-      "Afinamento (Fine-tuning) e prompts sistêmicos direcionados a pedagogia e retenção de atenção.",
-      "Interface baseada em conversação focada na experiência do usuário (UX)."
+    shortPain: "O bloqueio criativo solitário de educadores na hora de formatar ideias e scripts.",
+    
+    heroTitle: "O GravaPro AI nasceu para matar o cursor piscando na tela em branco.",
+    heroSubtitle: "Como dar a um produtor de conteúdo um assistente de direção implacável?",
+    
+    problemTitle: "A gravação de cursos e conteúdos longos é uma ilha deserta.",
+    problemParagraphs: [
+      "O criador de conteúdo domina o assunto, mas transformar esse conhecimento de sua mente para uma estrutura didática, roteirizada e envolvente leva dias.",
+      "Quando a câmera liga, ele frequentemente se perde, refaz takes, e gasta dezenas de horas na pós-edição para consertar problemas de estruturação.",
+      "Eles precisavam de um parceiro de brainstorm que também fosse um roteirista sênior."
     ],
-    techStack: ["Next.js", "AI Assistants API", "LLMs", "UX Minimalista"]
+    
+    dominoTitle: "Codificando a didática.",
+    dominoSubtitle: "Fazer a IA gerar texto é fácil. Fazer ela gerar metodologias de ensino engajadoras, não.",
+    dominoSteps: [
+      "O chat genérico do ChatGPT não servia, exigindo a criação de Prompts de Sistema densos.",
+      "Entender o tom do criador exigiu carregar históricos de vídeos antigos no banco vetorial.",
+      "Estruturar cursos exigiu que a IA entendesse formatos clássicos (Gatilhos, Retenção, Clímax).",
+      "Reduzir o atrito do criador exigiu uma interface limpa, focada e minimalista."
+    ],
+    dominoConclusion: "O GravaPro não apenas escreve, ele direciona a arquitetura da informação.",
+    
+    climaxTitle: "O cérebro auxiliar do professor digital.",
+    climaxParagraphs: [
+      "Com a plataforma operando, criadores passaram a ditar ideias soltas em áudio, e o sistema devolvia roteiros fracionados com tempos de câmera, notas de entonação (B-Roll) e ganchos para manter o público atento.",
+      "A barreira de entrada técnica desabou, permitindo que mentes brilhantes foquem apenas em entregar a mensagem, enquanto a IA estrutura a forma."
+    ],
+    climaxHighlightTitle: "Foco no Flow de Gravação.",
+    climaxHighlightText: "Tiramos a frustração do papel em branco e colocamos um estúdio criativo hiper focado nas mãos de um só indivíduo.",
+    
+    techGrid: [
+      "Assistants API", "Fine-Tuning Educacional", "Context Window Optimization",
+      "Next.js", "Tailwind CSS", "UX Livre de Distrações", "Processamento de Linguagem Natural"
+    ],
+    
+    learningsTitle: "O que a companhia criativa nos ensinou.",
+    learnings: [
+      "Quando o assunto é criatividade, as IAs precisam provocar com perguntas desafiadoras, e não apenas concordar com tudo.",
+      "A UX precisa ser imaculada. Qualquer botão desnecessário quebra o estado de Flow do criador.",
+      "Prompts estruturais (forçando saídas em JSON ou Markdown) transformam textos flácidos em roteiros acionáveis."
+    ]
   }
 ];

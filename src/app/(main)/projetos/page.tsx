@@ -70,7 +70,7 @@ export default function ProjetosHubPage() {
                   href={`/projetos/${project.slug}`}
                   className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold uppercase tracking-widest text-xs px-6 py-4 rounded-xl transition-colors duration-300 group-hover:border-primary/50"
                 >
-                  Ler Estudo de Caso (Arquitetura)
+                  VER JORNADA
                   <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
               </div>
