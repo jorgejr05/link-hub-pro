@@ -77,7 +77,7 @@ export default function PerfilPage() {
         </div>
         
         {/* Texto (Aparece em baixo no Mobile -> order-2, Lado Esquerdo no Desktop -> order-1) */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1 relative z-10">
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1 relative z-10 -mt-12 md:mt-0">
           
           <h1 className="font-display-lg text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 min-h-[1.2em]">
             <Typewriter 
@@ -166,26 +166,7 @@ export default function PerfilPage() {
         </div>
       </section>
 
-      {/* 03. HARD SKILLS */}
-      <section className="w-full py-20 px-6 max-w-5xl">
-        <div className="bg-surface border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
-          
-          <h2 className="font-display-md text-3xl font-bold text-white mb-10 relative z-10">Stack Principal</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
-            {[
-              "Next.js", "React", "TypeScript", "Node.js", 
-              "Python", "LangChain", "n8n (Automação)", "Dify (IA)", 
-              "Supabase", "PostgreSQL", "FlutterFlow", "APIs REST"
-            ].map((skill, idx) => (
-              <div key={idx} className="bg-[#111113] border border-white/5 rounded-xl p-4 text-center hover:border-primary/30 transition-colors flex items-center justify-center">
-                <span className="font-label-sm text-sm text-on-surface font-medium">{skill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 04. DOMÍNIO TÉCNICO E COMPETÊNCIAS */}
       <section className="w-full py-24 px-6 max-w-6xl">
