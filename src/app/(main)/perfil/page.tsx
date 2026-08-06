@@ -8,15 +8,16 @@ export default function PerfilPage() {
       <section className="w-full min-h-[70vh] py-24 md:py-32 px-6 relative flex flex-col items-center justify-center text-center mt-10">
         
         {/* Imagem de Fundo (Jorge) fundida com a tela */}
-        <div className="fixed inset-0 z-0 pointer-events-none flex justify-center">
+        <div className="fixed inset-0 z-0 pointer-events-none flex justify-center items-start">
           <div 
-            className="absolute inset-0 mt-16 md:mt-24 w-full max-w-[1000px] mx-auto h-full opacity-50 md:opacity-40"
+            className="w-full max-w-[400px] md:max-w-[600px] h-[60vh] md:h-[80vh] mt-24 md:mt-12 opacity-40 md:opacity-30"
             style={{
               backgroundImage: "url('/jorge-bg.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center 20%",
-              maskImage: "radial-gradient(ellipse at 50% 40%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)",
-              WebkitMaskImage: "radial-gradient(ellipse at 50% 40%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)"
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center top",
+              maskImage: "radial-gradient(ellipse at center 45%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)",
+              WebkitMaskImage: "radial-gradient(ellipse at center 45%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%)"
             }}
           ></div>
         </div>
