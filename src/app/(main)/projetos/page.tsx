@@ -57,7 +57,7 @@ export default function ProjetosHubPage() {
               <div className="mt-6">
                 <Link 
                   href={`/projetos/${project.slug}`}
-                  className="w-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold uppercase tracking-widest text-[10px] px-4 py-3 rounded-lg transition-colors duration-300 group-hover:border-primary/50"
+                  className="w-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-primary-container border border-white/10 font-bold uppercase tracking-widest text-[10px] px-4 py-3 rounded-lg transition-colors duration-300 group-hover:border-primary-container/50 group-hover:bg-primary-container/5"
                 >
                   VER JORNADA
                 </Link>
