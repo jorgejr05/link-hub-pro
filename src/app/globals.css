@@ -118,6 +118,22 @@
     background-color: #000000;
     color: var(--color-on-background);
     font-family: var(--font-body-md);
+    
+    /* Bloqueia seleção de texto globalmente */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  img {
+    /* Bloqueia o 'arrastar' de imagens */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    /* pointer-events: none; - opcional, mas pode quebrar interações de clique, então deixamos comentado ou ausente */
   }
 
   .material-symbols-outlined {
