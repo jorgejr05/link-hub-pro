@@ -81,7 +81,7 @@ export default function PerfilPage() {
           
           <h1 className="font-headline-xl text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 min-h-[1.2em] leading-tight">
             <Typewriter 
-              text="Jorge Jr" 
+              text="Jorge Jr." 
               delay={80} 
               onComplete={() => setStage(1)} 
               showCursor={stage === 0}

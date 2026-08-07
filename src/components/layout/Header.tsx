@@ -39,7 +39,7 @@ export function Header() {
               />
             </div>
             <span className="font-display-lg text-base md:text-lg font-bold tracking-tight text-primary">
-              Jorge Jr
+              Jorge Jr.
             </span>
           </Link>
           
