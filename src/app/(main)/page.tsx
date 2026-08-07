@@ -195,7 +195,7 @@ export default function PerfilPage() {
                 <path d="M9 20v2"/>
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Inteligência Artificial & Agentes</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Inteligência Artificial e Agentes</h3>
             <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento de arquiteturas RAG (Retrieval-Augmented Generation) para conversar com bases de dados e documentos.</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Construção de Agentes Autônomos especializados (SDR, Vendas, Atendimento) com tomada de decisão.</li>
@@ -209,7 +209,7 @@ export default function PerfilPage() {
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Automação & Backend</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Automação e Backend</h3>
             <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Orquestração de APIs e automação de fluxos de dados complexos em larga escala utilizando n8n.</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Arquitetura e modelagem de banco de dados relacionais (PostgreSQL / Supabase).</li>
@@ -223,7 +223,7 @@ export default function PerfilPage() {
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Software & Mobile</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Software e Mobile</h3>
             <ul className="space-y-4 font-body-sm text-sm text-on-surface-variant flex-1">
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Desenvolvimento Full-Stack de aplicativos móveis e sistemas web complexos.</li>
               <li className="flex items-start gap-3"><span className="text-primary mt-1">•</span> Integração fluida entre design de interfaces (UI/UX) imersivas e lógicas de backend (BaaS).</li>
