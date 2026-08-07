@@ -3,8 +3,7 @@ import "./globals.css";
 import { Shield } from "@/components/Shield";
 
 export const metadata: Metadata = {
-  title: "Jorge jr - Como eu arquiteto soluções com IA",
-  description: "Hub de alta performance focado em ecossistemas de IA, automação de conteúdo e construção de autoridade real.",
+  title: "Jorge jr - Como eu arquiteto soluções com IA"
 };
 
 export const viewport: Viewport = {
