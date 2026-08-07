@@ -115,13 +115,13 @@ export const projectsData: Project[] = [
     bg: "bg-emerald-500/10",
     shortPain: "Taxas abusivas dos grandes apps e gestão caótica de frotas próprias.",
     
-    heroTitle: "O Gestão de Entregas nasceu de uma indignação operacional comum no varejo alimentício.",
-    heroSubtitle: "Como libertar lojistas das taxas de 27% dos grandes marketplaces sem destruir a logística de entrega?",
+    heroTitle: "O Gestão de Entregas nasceu de uma indignação operacional comum no varejo local.",
+    heroSubtitle: "Como libertar lojistas das taxas abusivas dos grandes marketplaces sem destruir a logística de entrega?",
     
     problemTitle: "Tudo começou com um problema simples.",
     problemParagraphs: [
-      "Lanchonetes e restaurantes estavam reféns das altas taxas do iFood.",
-      "O desejo de vender pelos próprios canais (WhatsApp, Instagram) era grande, mas a execução era desastrosa. Anotar pedidos no caderno e coordenar 5 motoboys no grito pelo balcão gerava atrasos de horas e entregas erradas.",
+      "Comerciantes de diversos nichos (de lanchonetes a lojas do centro) estavam reféns das altas taxas de grandes aplicativos e marketplaces.",
+      "O desejo de vender pelos próprios canais (WhatsApp, Instagram) era grande, mas a execução era desastrosa. Anotar pedidos no caderno e coordenar entregadores no grito gerava atrasos e envios incorretos.",
       "Rapidamente percebemos que tirar a loja do grande aplicativo era fácil.",
       "Difícil era replicar a infraestrutura logística que o aplicativo fornecia."
     ],
@@ -129,16 +129,16 @@ export const projectsData: Project[] = [
     dominoTitle: "A construção do ecossistema revelou buracos maiores.",
     dominoSubtitle: "Construir um catálogo digital foi só o primeiro passo. A complexidade estava no mundo real.",
     dominoSteps: [
-      "Ter o cardápio digital exigiu receber pagamentos.",
+      "Ter o catálogo digital exigiu receber pagamentos.",
       "Receber pagamentos exigiu calcular a distância até a casa do cliente.",
       "Calcular a distância obrigou a conexão com mapas (Geocoding).",
-      "Saber o endereço exigiu um painel (KDS) para a cozinha produzir.",
-      "A cozinha terminando, precisava avisar o motoboy.",
-      "O motoboy precisava de um app ou painel de despacho próprio."
+      "Saber o endereço exigiu um painel (KDS/Dashboard) para a separação ou cozinha preparar o pedido.",
+      "O pedido pronto precisava avisar o entregador.",
+      "O entregador precisava de um app ou painel de despacho próprio."
     ],
-    dominoConclusion: "O verdadeiro produto não era o cardápio. Era o roteamento logístico em tempo real.",
+    dominoConclusion: "O verdadeiro produto não era o catálogo. Era o roteamento logístico em tempo real.",
     
-    climaxTitle: "A fundação do Integra Araçatuba.",
+    climaxTitle: "A fundação do Gestão de Entregas.",
     climaxParagraphs: [
       "Enquanto montávamos a infraestrutura para lojas isoladas, percebemos que o gargalo de marketing local também existia.",
       "Em cidades médias, os consumidores precisam de um agregador local para encontrar as opções.",
@@ -157,7 +157,7 @@ export const projectsData: Project[] = [
       "Entregadores não têm tempo para apps complexos. A interface precisa ser de 1 clique.",
       "Lidar com dinheiro físico na entrega exige fechamento de caixa milimétrico no sistema.",
       "O cliente perdoa erro no pedido, mas não perdoa demora na entrega.",
-      "Arquiteturas de tempo real (WebSockets) são obrigatórias quando o pão de alho esfria."
+      "Arquiteturas de tempo real (WebSockets) são obrigatórias quando a promessa é a entrega expressa."
     ]
   },
   {
