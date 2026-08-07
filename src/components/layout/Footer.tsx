@@ -7,7 +7,7 @@ export function Footer() {
         <p className="text-[10px] md:text-[11px] font-medium uppercase tracking-widest text-on-surface-variant text-center opacity-50">
           © 2026 Jorge Jr. - Todos os Direitos Reservados.
         </p>
-        <div className="flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6">
           <a href="https://www.instagram.com/ojorge.jr?igsh=MWdvejY1YXZ6aWpiag==" target="_blank" rel="noreferrer" className="text-on-surface-variant hover:text-[#E1306C] transition-colors" title="Instagram">
             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           </a>
