@@ -4,7 +4,7 @@ export function Footer() {
       className="w-full relative mt-16 bg-surface-container-lowest border-t border-white/5"
     >
       <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-8 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-[10px] md:text-[11px] font-medium uppercase tracking-widest text-on-surface-variant text-center opacity-50">
+        <p className="text-[9px] md:text-[11px] font-medium tracking-widest text-on-surface-variant text-center opacity-50">
           © 2026 Jorge Jr. - Todos os Direitos Reservados.
         </p>
         <div className="hidden md:flex items-center gap-6">
